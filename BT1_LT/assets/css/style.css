@@ -1,0 +1,121 @@
+@charset="utf-8";
+
+body {
+	font-family: Georgia, Times, serif;
+	margin: 0px; 
+	padding: 0px;
+}
+
+p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.clear:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0px;
+}
+
+/* container class */
+div#container {
+	margin: 0px auto;
+	width: 500px;
+	min-height: 700px;
+	border:1px solid #0033ff;
+}
+
+/* title class */
+.title {
+	margin: 0 auto;
+	height: 25px;
+	line-height: 1.6;
+	font-weight: bold;
+	padding-left: 4px; 
+}
+
+/* player-profile */
+.player-profile {
+}
+
+.player-info {
+	display: flex;
+ }
+
+.player-profile .title {
+	background: url("../../img/title_bg.gif") repeat-x;	
+}
+
+.player-profile img {
+	width: 100px;
+	height: 90px;
+}
+
+.player-list {
+	margin: 0px 0px 0px 15px;
+	width: 400px;
+	height:100px;
+	padding-left: 0px;
+	list-style-type: none;
+	overflow: scroll;
+}
+
+/*Fact*/
+div.facts li{
+	padding: 4px 0px; 
+}
+
+.facts-list {
+	margin-top:0px;
+	margin-left: 20px;
+	list-style-type: none;
+}
+
+.facts ul li:before {
+	content: url("../../img/star.gif");
+	margin-right: 4px;
+}
+
+/*post*/
+.post {
+	margin-top: 40px;
+	padding-left: 4px;
+	padding-right: 4px; 
+}
+
+.post-content {
+	background-color: #ECECEC;
+	padding-left: 4px;
+}
+
+.post-info a {
+	text-decoration: none;
+	color: #0c35f1;	
+}
+
+.post-info:before {
+	content: url("../../img/comment_bg.gif");
+	margin-left: 45px;
+	margin-right: 4px;
+}
+
+/*your-comment*/
+.your-comment {
+	padding-top: 20px;
+	font-size: 15px;
+}
+
+.your-comment h3 {
+	text-align: center;
+	margin: 0px;
+}
+
+.your-comment table input[type="text"] {
+	width: 140px;
+}
+
+.your-comment form {
+	padding-left: 4px;
+	padding-right: 4px;
+}	

@@ -65,19 +65,18 @@ div#container {
 .facts {
 	padding-top: 5px;
 }
-div.facts li{
-	padding: 1px 0px; 
-}
+
 
 .facts-list {
 	margin-top:0px;
-	margin-left: 20px;
+	margin-left: 2px;
 	list-style-type: none;
 }
 
 .facts ul li:before {
 	content: url("../../img/star.gif");
 	margin-right: 4px;
+	padding:0px;
 }
 
 /*post*/

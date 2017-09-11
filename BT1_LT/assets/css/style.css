@@ -63,9 +63,11 @@ div#container {
 
 /*Fact*/
 .facts {
-	padding-top: 5px;
+	padding-top: 15px;
 }
-
+.facts .title {
+	margin-bottom: 15px;
+}
 
 .facts-list {
 	margin-top:0px;
@@ -83,7 +85,8 @@ div#container {
 .post {
 	margin-top: 40px;
 	padding-left: 4px;
-	padding-right: 4px; 
+	padding-right: 4px;
+	font-size: 14px; 
 }
 
 .post-content {
@@ -118,11 +121,9 @@ p.post-info {
 }
 
 .your-comment table input[type="text"] {
-	width: 140px;
+	width: 120px;
 }
 .your-comment table textarea {
 	max-width: 350px;
 	height: 100px;
 }	
-.your-comment comment-cell {
-	max-width: 100px;

@@ -53,7 +53,7 @@ div#container {
 }
 
 .player-list {
-	margin: 0px 0px 0px 15px;
+	margin: 0px 0px 0px 9px;
 	width: 400px;
 	height:100px;
 	padding-left: 0px;
@@ -62,8 +62,11 @@ div#container {
 }
 
 /*Fact*/
+.facts {
+	padding-top: 5px;
+}
 div.facts li{
-	padding: 4px 0px; 
+	padding: 1px 0px; 
 }
 
 .facts-list {
@@ -85,8 +88,14 @@ div.facts li{
 }
 
 .post-content {
+	position:relative;
 	background-color: #ECECEC;
-	padding-left: 4px;
+}
+
+p.post-info {
+	margin-left: 50px;
+	padding 1px 0px;
+	font-size: 14px;
 }
 
 .post-info a {
@@ -94,10 +103,8 @@ div.facts li{
 	color: #0c35f1;	
 }
 
-.post-info:before {
-	content: url("../../img/comment_bg.gif");
-	margin-left: 45px;
-	margin-right: 4px;
+.post-info img {
+	height: 15px;	
 }
 
 /*your-comment*/

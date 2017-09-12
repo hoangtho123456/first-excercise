@@ -91,6 +91,7 @@ div#container {
 
 .post-content {
 	position:relative;
+	padding-left: 4px;
 	background-color: #ECECEC;
 }
 

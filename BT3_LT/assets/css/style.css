@@ -91,6 +91,9 @@
 		list-style-type: none;
 		margin-bottom: 5px; 
 	}
+	.content-list ul li a {
+		color: #595959;
+	}
 	.content-list ul li::before {
 		content: url(../../img/arr.gif);
 		margin-right: 10px; 

@@ -1,36 +1,31 @@
 * {
 	font-family: arial, helvetica, sans-serif;
 	font-size: 11px;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 /*container*/
 .container {
 	max-width: 320px;
-	margin: 0px auto auto auto;
+	margin: 0 auto auto auto;
 	min-height: 800px;
 	background-color: #e6f3fb;
 }
 
 /*title use for all news-box*/
 .title {
-	font-size: 12px;
+	font-size: 13px;
 	color: black;
-	padding: 10px 0px 0px 10px; 
+	padding: 3px 0 0 10px; 
 }
 
 /*news-box*/
 .news-box {
 	border-top: 2px solid #ffa500;
 	background-color: #ffffff;
-	margin: 0px 10px 0px 10px;  
+	margin: 0 10px 0 10px;  
 }	
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-	}
 
 /*Blogroll*/
 /*blog-1 include img and text*/
@@ -40,8 +35,7 @@
 .blog-img {
 	float: left;
 	width: 55%;
-	border: 1px solid #cccccc;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	margin-right: 10px;  
 }
 .blog-1 {
@@ -51,8 +45,9 @@
 	float:left;
 	width: 40%;
 }
-.blog-1 img {
+.blog-1 img { 
 	width: 100%;
+	border: 1px solid #cccccc;
 }
 
 /*blog-2 consist link*/
@@ -67,18 +62,14 @@ ul.blog-2 li{
 
 /*Horoscopes*/
 	/*hero-1 consist the first content*/
-	.hero-1 {
-		padding: 15px;
-	}
+	.hero-1 { padding: 15px; }
 	.hero-1 p {
 		padding-top: 10px;
 		float: left;
 		width: 65%;
 		line-height: 1.4;
 	}
-	.hero-1 #day {
-		color: #808080;
-	}
+	.hero-1 #day { color: #808080; }
 	#hero-img img{
 		float: left;
 		width: 35%;
@@ -87,16 +78,15 @@ ul.blog-2 li{
 	/*hero-2 consist the second content*/
 	.hero-2 {
 		position: relative;
-		height: 35px;
 		padding:15px; 
 		background-color: #f4f4ec;
 	} 
 	.hero-2 img { 
 		position: absolute;
 		top: -4px;
-		right:0px;
+		right:0;
 		width: 94px;
-		height: 68px;
+		height: 60px;
 	}
 	.hero-2 a{
 		text-decoration: none;
@@ -105,23 +95,33 @@ ul.blog-2 li{
 
 /*Get on the go*/
 	.news-mobie {
-		padding: 0px 0px 0px 15px;
+		position: relative;
+		padding: 0 0 20px 15px;
 		line-height: 1.6;
 	}
 	.news-mobie img {
-		float: right;
-		border: none;
-		width: 55%;
+		position: absolute;
+		right: 0;
+		width: 45%;
+		height: 130px;
 	}
-	.news-mobie p {
+	.news-mobie p { 
+		width: 45%;
 		margin-top: 25px;
 	}
-	.news-mobie::after {
+	//.news-mobie::after {
 		content: '';
 		display: block;
 		clear: both;
 		height: 0;
 		visibility: hidden;
+	}
+	#title-news {
+		margin-top: 15px; 
+	}
+	.news-mobie a{
+		text-decoration: none;
+		color: #0a6395;
 	}
 
 /*conpetition box*/
@@ -138,6 +138,7 @@ ul.blog-2 li{
 	}
 	.competition-box li a {
 		text-decoration: none;
+		color: #0a6395;
 	}
 	#competition-title {
 		margin-top: 10px; 

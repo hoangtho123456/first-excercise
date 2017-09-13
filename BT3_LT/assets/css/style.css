@@ -8,22 +8,18 @@
 		color: #595959;
 		font-size: 0.6875em;
 	}
-	.clearfix::after {
-		content: "";
-		clear: both;
-		display: table;
-	}
+
 
 /*container*/
 	.container {
-		max-width: 1200px;
+		max-width: 900px;
 		min-height: 630px;
 		margin: auto;
 		padding-top: 5px;
 		background-color: #121214;
 	}
 
-	/*title, link-more for each box*/
+/*title, link-more for each box*/
 	.title {
 		color: #fff;
 		margin-bottom: 15px;
@@ -42,15 +38,15 @@
 
 /*content*/
 	.content-left {
-		width: 550px;
+		width: 520px;
 		float: left;
-		margin-top: 15px;
+		margin-top: 0;
 	}
 	/*content-box use for content-1 and content-2*/
 	.content-box {
 		line-height: 18px;
 		border-bottom: 1px dotted #595959;
-		padding: 12px 0px;
+		padding: 5px 0;
 	}
 	.content-box::after {
 		content: "";
@@ -63,15 +59,15 @@
 	/*content-1 */
 	.content-1 {
 		margin: 30px 20px 20px 70px;
+		padding-top: 10px;
 	}
 	#dethi {
-		margin-bottom: 35px; 
+		padding: 0 0 30px 0; 
 	}
 	.content-1 img {
 		float: left;
-		margin-right: 25px;
-		margin-bottom: 25px;
-		margin-left: 0px; 
+		margin: 4px 15px 10px 0;
+		padding-bottom: 0;
 		height: 100px;
 	}
 
@@ -102,9 +98,8 @@
 /*content-right*/
 	.content-right {
 		float: left;
-		width: 250px;
 		height: 400px;
-		margin: 30px 20px; 
+		margin: 20px 20px; 
 		background-color: #232326;
 	}
 	.content-e {
@@ -117,7 +112,7 @@
 		color: #ffffff;
 	}
 	.content-e-text {
-		margin-bottom: 40px; 
+		margin: 0 0 40px 8px; 
 		padding-top: 20px;
 	}
 	.content-e-text p:last-child {
@@ -125,5 +120,8 @@
 	}
 	.content-e img {
 		border-radius: 15px;
-		padding: 0px;
+		padding: 5px;
+	}
+	.content-bigcap {
+		font-size: 12.5px;
 	}

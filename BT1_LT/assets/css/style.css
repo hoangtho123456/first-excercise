@@ -2,28 +2,21 @@
 
 body {
 	font-family: Georgia, Times, serif;
-	margin: 0px; 
-	padding: 0px;
+	margin: 0; 
+	padding: 0;
 }
 
 p {
-	margin: 0px;
-	padding: 0px;
-}
-
-.clear:after {
-	content: '';
-	display: block;
-	clear: both;
-	height: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 /* container class */
-div#container {
-	margin: 0px auto;
+#container {
+	margin: 0 auto;
 	width: 500px;
 	min-height: 700px;
-	border:1px solid #0033ff;
+	border: 1px solid #0033ff;
 }
 
 /* title class */
@@ -35,17 +28,10 @@ div#container {
 	padding-left: 4px; 
 }
 
-/* player-profile */
-.player-profile {
-}
+/* profile of Nam*/
+.player-info { display: flex; }
 
-.player-info {
-	display: flex;
- }
-
-.player-profile .title {
-	background: url("../../img/title_bg.gif") repeat-x;	
-}
+.player-profile .title { background: url("../../img/title_bg.gif") repeat-x; }
 
 .player-profile img {
 	width: 100px;
@@ -53,35 +39,32 @@ div#container {
 }
 
 .player-list {
-	margin: 0px 0px 0px 9px;
+	margin: 0 0 0 9px;
 	width: 400px;
-	height:100px;
-	padding-left: 0px;
+	height: 100px;
+	padding-left: 0;
 	list-style-type: none;
 	overflow: scroll;
 }
 
-/*Fact*/
-.facts {
-	padding-top: 15px;
-}
-.facts .title {
-	margin-bottom: 15px;
-}
+/*Fact of Nam*/
+.facts { padding-top: 15px; }
+
+.facts .title { margin-bottom: 15px; }
 
 .facts-list {
-	margin-top:0px;
+	margin-top: 0;
 	margin-left: 2px;
 	list-style-type: none;
 }
 
-.facts ul li:before {
+.facts ul li::before {
 	content: url("../../img/star.gif");
 	margin-right: 4px;
-	padding:0px;
+	padding: 0;
 }
 
-/*post*/
+/*Fan's post*/
 .post {
 	margin-top: 40px;
 	padding-left: 4px;
@@ -90,14 +73,13 @@ div#container {
 }
 
 .post-content {
-	position:relative;
+	position: relative;
 	padding-left: 4px;
 	background-color: #ECECEC;
 }
 
-p.post-info {
+.post-info {
 	margin-left: 50px;
-	padding 1px 0px;
 	font-size: 14px;
 }
 
@@ -106,11 +88,9 @@ p.post-info {
 	color: #0c35f1;	
 }
 
-.post-info img {
-	height: 15px;	
-}
+.post-info img { height: 15px; }
 
-/*your-comment*/
+/*Your comment*/
 .your-comment {
 	padding: 20px 6px 5px;
 	font-size: 14px;
@@ -118,12 +98,13 @@ p.post-info {
 
 .your-comment h3 {
 	text-align: center;
-	margin: 0px;
+	margin: 0;
 }
 
 .your-comment table input[type="text"] {
 	width: 120px;
 }
+
 .your-comment table textarea {
 	max-width: 350px;
 	height: 100px;

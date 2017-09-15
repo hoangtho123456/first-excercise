@@ -4,60 +4,199 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Competible" content="IE=Edge">
 	<link rel="stylesheet" href="./assets/css/style.css">
-	<title>Bài tập 3- Lý thuyết</title>
+	<title>Bài tập 2- Thực hành</title>
 </head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		color: white;
+		font-family: sans-serif;
+		font-size: 12px;
+	}
+	.container {
+		width: 990px;
+		min-height: 800px;
+		margin: auto;
+		background-color: #2a2729;
+	}
+
+	#footer {
+		clear: right;
+		width: 985px;
+		height: 82px;
+		border-top: 1px dashed white;
+	}
+
+	.list-icon {
+		width: 892px;
+		height: 65px;
+		list-style-type: none;
+		padding: 0;
+		margin: 10px auto;
+	}
+	.list-icon li {
+		margin-right: 86px; 
+		display: inline-block;
+	}
+	#last {
+		margin: 0 0 0 15px;
+	}
+	
+	.gallery img {
+		margin: auto;
+		display: block;
+	}
+	.decs {
+		margin: 0;
+		text-align: center;
+	}
+/*content*/
+.content {
+	width: 902px;
+	height: 630px;
+	margin-right: 0;
+	padding: 25px 64px 0 6px;
+}
+.content-news {
+	float: left;
+}
+
+/*Entertanment box*/
+	.content-search {
+		float: right;
+	}
+
+/*box contact consist the contact infomations */
+	.contact {
+		height: 31px;
+		background-color: white;
+		padding-top: 9px;
+		font-size: 11px;
+	}
+	.contact-list {
+		width: 873px;
+		height: 13px;
+		padding: 0;
+		margin: 0 0 0 113px;
+		list-style-type: none;
+	}
+	.contact-list li{
+		color: #2196f3;
+		display: inline;
+	}
+	.contact-list li a{
+		color: #2196f3;
+		text-decoration: none;
+	}
+	.contact-copy {
+		margin: 0;
+		color: #2196f3;
+		text-align: center;
+	}
+	li #to-Top {
+		margin-left: 45px; 
+	}
+</style>
 <body>
 	<div class="container">
-		<div class="content-left">
-			<div class="content-1">
-				<p id="dethi">De thi ly thuyet</p>
-				<img src="./img/1_pic_1.jpg" alt="pic-group">
-				
-				<div class="content-box">
-					<p class="title">Phần này là tiêu đề của khối, chữ màu trắng.</p>
-					<p>Phông chữ của cả trang là arial với cỡ chữ là 0.6875em. Trừ những thẻ đặc biệt chữ có màu #595959. Các liên kết
-					được làm nổi bật bằng cách tô màu trắng, tuy nhiên lại không có gạch chân ở dưới liên kết. Ảnh có kích thước thật 
-					300px*150px. Trong khối này thì chỉ hiển thị với kích thước 200px*100px.<br></p>
-					Hãy thể hiện khối thành hai phần như trên.. còn khối này chỉ 1 mà thôi
-				</div><!--content-box of content-1-->
-				<a class="link-more" href="#">more info</a>
-			</div><!--content-1 of content-left-->
-			<div class="content-2">
-				<div class="content-box">
-					<p>Hãy thể hiện khối tin này với style giống khối bên</p>
-					<p>Và bên dưới khối tin này được chia dồi, hãy hiển thị đúng</p>
-					<div class="content-list">
-						<ul>
-							<li><a href="#">Quisque nullalibero nis l portserisque</a></li>
-							<li><a href="#">Eget males uada at nequivamus</a></li>
-							<li><a href="#">Eget nibhtiam ours us leo vel metus er</a></li>
-							<li><a href="#">Nulla facilissienean nec er os estibulum</a></li>
-						</ul>
+		<div class="content">
+			<div class="content-news">
+					<div class="content-news-daily">
+						<img src="./img/news_1.png">
 					</div>
-					<div class="content-list">
-						<ul>
-							<li><a href="#">Opget, malesuada at, nequivamus</a></li>
-							<li><a href="#">Eget nibhtiam ours us leo vel metus er</a></li>
-							<li><a href="#">Nulla facilisienean nec er os estibulum</a></li>
-							<li><a href="#">ante ips um primis in faucibus or ci</a></li>
-						</ul>
+					<div class="content-news-movie">
+						<div class="movie-trailer">
+							<img src="./img/news_1.png">
+						</div>
+						<div class="movie-news-review">
+							<img src="./img/news_1.png">
+						</div>
 					</div>
-				</div>
-				<a class="link-more" href="#">more info</a>
+			</div>
+			<div class="content-search">
+				<img src="./img/Entertainment.gif" alt="Entertainment">
+				<form>
+					<input type="text" name="search_input">
+					<button type="button" name="search">SEARCH</button>
+				</form>
 			</div>
 		</div>
-		<div class="content-right">
-			<div class="content-e">
-				<img src="./img/1_pic_2.jpg" alt="pic-E">
-				<div class="content-e-text">
-					<p class="white">Đây là khối thông tin bên phải</p>
-					<p>Ảnh phía trên là E.gif<br> <span class="content-bigcap">Màu nền của khối là #232326</span></p>
-					<p><span class="white">Aenean nec eros</span>. Vestibulum ate<br><span class="content-bigcap">Ảnh
-					của dòng more info là info.gif</span></p>
-				</div><!--content-e-text of content-right-->
-				<a class="link-more" href="#">more info</a>				
-			</div>
+
+		<div id="footer">
+			<ul class="list-icon">
+				<li>
+					<div class="gallery">
+						<img src="./img/phone.jpg" alt="phone">
+						<div class="decs">News on your mobie</div>
+					</div>
+				</li>
+				<li>
+					<div class="gallery">
+						<img src="./img/wifi.jpg" alt="phone">
+						<div class="decs">RSS feeds</div>
+					</div>
+				</li>
+				<li>
+					<div class="gallery">
+						<img src="./img/mail.jpg" alt="mail">
+						<div class="decs">Newsletter</div>
+					</div>
+				</li>
+				<li>
+					<div class="gallery">
+						<img src="./img/talk.jpg" alt="talk">
+						<div class="decs">Send your news stories</div>
+					</div>
+				</li>
+				<li id="last">
+					<div class="gallery">
+						<img src="./img/photo.jpg" alt="photo">
+						<div class="decs">Send your news photos</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="contact">
+			<ul class="contact-list">
+				<li><a href="#">Help</a></li>
+				<li><a href="#">| Contact Us</a></li>
+				<li><a href="#">| Advertise with Us</a></li>
+				<li><a href="#">| Job Oppotunities</a></li>
+				<li><a href="#">| Term $ Conditions</a></li>
+				<li><a href="#">| Privacy Policy</a></li>
+				<li><a href="#">| Accessibility</a></li>
+				<li><a href="#">| Sitemap</a></li>
+				<li><a href="#">| News Headlines from Ours Partners</a></li>
+				<li><a id="to-Top" href="#">Back to top</a></li>
+			</ul>
+			<div class="contact-copy">Copyright 2008 News Limited. All times AEST (GMT +10)</div>
 		</div>
 	</div>
 </body>
 </html>
+
+
+<!--
+<div class="library-icon">
+				<div class="gallery">
+					<img src="./img/phone.jpg" alt="phone">
+					<div class="decs">News on your mobie</div>
+				</div>
+				<div class="gallery">
+					<img src="./img/phone.jpg" alt="phone">
+					<div class="decs">RSS feeds</div>
+				</div>
+				<div class="gallery">
+					<img src="./img/phone.jpg" alt="phone">
+					<div class="decs">Newsletter</div>
+				</div>
+				<div class="gallery">
+					<img src="./img/phone.jpg" alt="phone">
+					<div class="decs">Send your news stories</div>
+				</div>
+				<div class="gallery">
+					<img src="./img/phone.jpg" alt="phone">
+					<div class="decs">Send your news photos</div>
+				</div>		
+</div>*/-->

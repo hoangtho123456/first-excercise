@@ -7,50 +7,51 @@
 	<title>Bài tập 2- Thực hành</title>
 </head>
 <style type="text/css">
-	body {
-		margin: 0;
-		padding: 0;
-		color: white;
-		font-family: sans-serif;
-		font-size: 12px;
-	}
-	.container {
-		width: 990px;
-		min-height: 800px;
-		margin: auto;
-		background-color: #2a2729;
-	}
+body {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+.container {
+	width: 990px;
+	min-height: 800px;
+	margin: auto;
+	background-color: #2a2729;
+}
 
-	#footer {
-		clear: right;
-		width: 985px;
-		height: 82px;
-		border-top: 1px dashed white;
-	}
+#footer {
+	clear: right;
+	width: 985px;
+	height: 82px;
+	border-top: 1px dashed white;
+}
 
-	.list-icon {
-		width: 892px;
-		height: 65px;
-		list-style-type: none;
-		padding: 0;
-		margin: 10px auto;
-	}
-	.list-icon li {
-		margin-right: 86px; 
-		display: inline-block;
-	}
-	#last {
-		margin: 0 0 0 15px;
-	}
-	
-	.gallery img {
-		margin: auto;
-		display: block;
-	}
-	.decs {
-		margin: 0;
-		text-align: center;
-	}
+.list-icon {
+	width: 892px;
+	height: 65px;
+	list-style-type: none;
+	padding: 0;
+	margin: 10px auto;
+}
+.list-icon li {
+	margin-right: 86px; 
+	display: inline-block;
+}
+#last {
+	margin: 0 0 0 15px;
+}
+
+.gallery img {
+	margin: auto;
+	display: block;
+}
+.decs {
+	margin: 0;
+	text-align: center;
+}
+
 /*content*/
 .content {
 	width: 902px;
@@ -59,13 +60,30 @@
 	padding: 25px 64px 0 6px;
 }
 .content-news {
+	width: 652px;
+	height: 257px;
+	float: left;
+	background-color: white;
+}
+.daily-title {
+	background-color: red;
+	color: white;
+	padding-top: 2px;
+}
+/*news-daily*/
+.news-daily {
+	height: 303px;
+}
+.news-daily-gos {
 	float: left;
 }
-
+.news-daily-pics {
+	float: left;
+}
 /*Entertanment box*/
-	.content-search {
-		float: right;
-	}
+.content-search {
+	float: right;
+}
 
 /*box contact consist the contact infomations */
 	.contact {
@@ -102,17 +120,26 @@
 	<div class="container">
 		<div class="content">
 			<div class="content-news">
-					<div class="content-news-daily">
+				<div class="news-daily">
+					<div class="news-daily-gos">
+						<h3 class="daily-title">DAILY CELEBRITY GOSSIP</h3>
 						<img src="./img/news_1.png">
 					</div>
-					<div class="content-news-movie">
-						<div class="movie-trailer">
-							<img src="./img/news_1.png">
-						</div>
-						<div class="movie-news-review">
-							<img src="./img/news_1.png">
-						</div>
+					<div class="news-daily-pics">
+						<h3 class="daily-title">DAILY CELEBRITY PICS</h3>
+						<img src="./img/news_1.png">
 					</div>
+				</div>
+
+				<div class="news-movie">
+					<div class="movie-trailer">
+						<img src="./img/news_1.png">
+					</div>
+					<div class="movie-review">
+						<img src="./img/news_1.png">
+					</div>
+				</div>
+
 			</div>
 			<div class="content-search">
 				<img src="./img/Entertainment.gif" alt="Entertainment">

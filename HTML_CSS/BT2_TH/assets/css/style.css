@@ -5,12 +5,18 @@ body {
 	font-family: sans-serif;
 	font-size: 12px;
 }
+
 .container {
 	width: 990px;
 	min-height: 655px;
 	margin: auto;
 	padding-bottom: 28px;
 	background-color: #2a2729;
+}
+
+a {
+	text-decoration: none;
+	color: #2092c5;
 }
 
 #footer {
@@ -21,7 +27,7 @@ body {
 	border-top: 1px dashed white;
 	background-color: #2a2729;
 }
-
+/*list icon of footer bar*/
 .list-icon {
 	width: 892px;
 	height: 65px;
@@ -30,9 +36,10 @@ body {
 	margin: 10px auto;
 }
 .list-icon li {
-	margin-right: 86px; 
+	margin-right: 80px; 
 	display: inline-block;
 }
+/*the last icon will be controlled follow the sample*/
 #last {
 	margin: 0 0 0 15px;
 }
@@ -46,19 +53,19 @@ body {
 	text-align: center;
 }
 
-/*content*/
 .content {
 	width: 902px;
-	//height: 630px;
 	display: flex;
 	padding: 23px 0 0 6px; 
 	color: black;
 }
+
+/*the news in the left of the page*/
 .content-news {
 	width: 652px;
 	height: 629px;
-	//float: left;
 }
+/*In content-news, it will have the daily-news box and movie-box*/
 .daily-title {
 	background-image: url(../../img/h2-confidential-heading-bg.gif);
 	color: white;
@@ -71,7 +78,7 @@ body {
 	font-weight: 500;
 	border-left: 1px solid black;
 }
-/*news-daily*/
+
 .news-daily {
 	display: flex;
 	height: 303px;
@@ -128,7 +135,6 @@ body {
 .movie-box { float: left; }
 
 .content-search {
-	//float: left;
 	width: 227px;
 	margin-left: 22px;
 	margin-right: 0;
@@ -136,6 +142,7 @@ body {
 form {
 	margin: 12px 0 0 13px ;
 }
+/*the box in the right of the page*/
 .content-search input[type="text"] {
 	width: 140px;
 	height: 18px;
@@ -200,18 +207,10 @@ li #to-Top {
 	cursor: pointer;
 }
 /*box of news about movies*/
-.panel {
-	display: flex;
-}
-.hide{
-	display: none;
-}
-.panel img {
-	margin: 6px;
-}
-.panel .click-info {
-	padding-right: 23px;
-}
+.panel { display: flex; }
+.hide{ display: none; }
+.panel img { margin: 6px; }
+.panel .click-info { padding-right: 23px; }
 
 .click-info a {
 	text-decoration: none;
@@ -224,9 +223,7 @@ li #to-Top {
 	float: left;
 }
 
-.now-showing {
-	padding-top: 5px;
-}
+.now-showing { padding-top: 5px; }
 .now-showing b::before {
 	content: url(../../img/now-showing-icon.gif);
 	float: left;
@@ -273,10 +270,6 @@ li #to-Top {
 .review-content { display: flex; }
 .review-content p { margin-top: 0; }
 .review-img { margin-right: 8px; }
-a {
-	text-decoration: none;
-	color: #2092c5;
-}
 .review-img .watch {
 	width: 18px;
 	height: 15px;

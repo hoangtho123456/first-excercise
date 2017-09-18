@@ -14,9 +14,7 @@ body {
 }
 
 #footer {
-	clear: right;
 	width: 985px;
-	height: 82px;
 	border-top: 1px dashed white;
 }
 
@@ -111,14 +109,11 @@ body {
 }
 /*MOVIE THEATER*/
 .news-movie {
-	display: flex;
 	width: 651px;
-	height: 312px;
-	margin: 23px 0 0 0;
+	margin: 12px 0 0 0;
 }
 .movie-trailer {
 	width: 316px;
-	height: 213px;
 	background-color: white;
 }
 .movie-news {
@@ -134,6 +129,9 @@ body {
 	font-weight: 500;
 }
 
+.movie-box {
+	float: left;
+}
 /*Movie trailer*/
 
 /*Entertanment box*/

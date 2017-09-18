@@ -78,7 +78,7 @@ body {
 /*image Thumbnail of the page*/
 .contain-img {
 	height: 140px;
-	background-color: #25262b;
+	background-color: #2d2f35;
 }
  /*class cover around images*/
 .list-img {
@@ -111,7 +111,7 @@ body {
 
 /*class contact include the contact infomation*/
 .contact {
-	height: 395px;
+	height: 415px;
 	background-color: #2d2f35;
 	border-top: 2px solid #37393f;
 	border-bottom: 1px solid #37393f;

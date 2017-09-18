@@ -56,33 +56,115 @@ body {
 .content {
 	width: 902px;
 	height: 630px;
-	margin-right: 0;
-	padding: 25px 64px 0 6px;
+	display: flex;
+	padding: 23px 0 0 6px;
+	color: black;
 }
 .content-news {
 	width: 652px;
-	height: 257px;
-	float: left;
-	background-color: white;
+	height: 629px;
 }
 .daily-title {
-	background-color: red;
+	background-image: url(./img/h2-confidential-heading-bg.gif);
 	color: white;
-	padding-top: 2px;
+	height: 26px;
+}
+.daily-title h2 {
+	margin: 1px 0;
+	padding: 3px 10px;
+	font-size: 17.5px;
+	font-weight: 500;
+	border-left: 1px solid black;
 }
 /*news-daily*/
 .news-daily {
+	display: flex;
 	height: 303px;
+	background-image: url(./img/confidential-logo.gif);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background-color: white;
 }
-.news-daily-gos {
-	float: left;
+
+.box {
+	width: 50%;
+	height: 265px;
 }
-.news-daily-pics {
-	float: left;
+.border-right {
+	border-right: 1px dotted black;	
 }
+.daily-img img {
+	display: block;
+	margin: 7px auto;
+}
+
+.daily-img-title {
+	position: relative;
+}
+.daily-more {
+	position: absolute;
+	top: 0;
+	right: 30px;
+	font-weight: bold;
+}
+.daily-text {
+	padding: 0 9px;
+}
+.daily-text h4 {
+	margin: 0;
+}
+.daily-text p {
+	margin: 3px 0;
+	font-size: 10px;
+}
+/*MOVIE THEATER*/
+.news-movie {
+	display: flex;
+	width: 651px;
+	height: 312px;
+	margin: 23px 0 0 0;
+}
+.movie-trailer {
+	width: 316px;
+	height: 213px;
+	background-color: white;
+}
+.movie-news {
+	background-image: url(./img/h2-top-movie-trailers-bg.gif);
+	color: white;
+	height: 26px;
+	border-bottom: 1px dashed black;
+}
+.movie-news h2 {
+	margin: 1px 0;
+	padding: 3px 10px;
+	font-size: 17.5px;
+	font-weight: 500;
+}
+
+/*Movie trailer*/
+.movie
+
 /*Entertanment box*/
 .content-search {
-	float: right;
+	width: 227px;
+	margin-left: 22px;
+}
+form {
+	margin: 12px 0 0 13px ;
+}
+.content-search input[type="text"] {
+	width: 140px;
+	height: 18px;
+}
+.content-search button[type="button"] {
+	width: 66px;
+	height: 19px;
+	font-size: 11px;
+	background-color: #a8407d;
+	border: none;
+	font-weight: bold;
+	color: white;
 }
 
 /*box contact consist the contact infomations */
@@ -121,22 +203,64 @@ body {
 		<div class="content">
 			<div class="content-news">
 				<div class="news-daily">
-					<div class="news-daily-gos">
-						<h3 class="daily-title">DAILY CELEBRITY GOSSIP</h3>
-						<img src="./img/news_1.png">
+					<div class="box border-right">
+						<div class="daily-title">
+							<h2>DAILY CELEBRITY GOSSIP</h2>
+						</div>
+						<div class="daily-img">
+							<img src="./img/news_1.png" alt="news_1">
+							<div class="daily-img-title">
+								<img src="./img/h3-confidential-showbuzz-bg.gif" alt="news_1">
+								<span class="daily-more">MORE</span>
+							</div>
+						</div>
+						<div class="daily-text">
+							<h4>+ RUSSELL CROWE + MORE ...</h4>
+							<p>RUSSELL Crowe's son to marry Keith & Nicole's daughter , plus Renee Zellweger reveals her breast 
+							cancer scare</p>
+						</div>
 					</div>
-					<div class="news-daily-pics">
-						<h3 class="daily-title">DAILY CELEBRITY PICS</h3>
-						<img src="./img/news_1.png">
+					<div class="box">
+						<div class="daily-title">
+							<h2>DAILY CELEBRITY PICS</h2>
+						</div>
+						<div class="daily-img">
+							<img src="./img/news_2.png" alt="news_2">
+							<div class="daily-img-title">
+								<img src="./img/h3-confidential-shootingstars-bg.gif" alt="news_2">
+								<span class="daily-more">MORE</span>
+							</div>
+						</div>
+						<div class="daily-text">
+							<h4>+ BECKHAMS, CLAUDIA SCHIFFER</h4>
+							<p>VICTORIA and David Beckham dine out in NY, as top models Claudia Schiffer and Eva Herzigova hit the shops in Milan.</p>
+						</div>
 					</div>
 				</div>
 
 				<div class="news-movie">
 					<div class="movie-trailer">
-						<img src="./img/news_1.png">
+						<div class="movie-news">
+							<h2>TOP 3 MOVIE TRAILERS</h2>
+						</div>
+						<button class="movie-bunny active">The House Bunny (M)</button>
+						<div class="panel">
+							<img src="./img/m_bunny.jpg" alt="bunny girl">
+							<div class="movie-info">
+								<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls form Zeta Alpha Zeta.</p>
+								<a href="#"><b>Watch Now</b></a>
+							</div>
+						</div>
+						</div>
+						<div class="movie-eagle">
+
+						</div>
+						<div class="movie-journey">
+							
+						</div>
 					</div>
 					<div class="movie-review">
-						<img src="./img/news_1.png">
+					<!--	<img src="./img/news_1.png">-->
 					</div>
 				</div>
 

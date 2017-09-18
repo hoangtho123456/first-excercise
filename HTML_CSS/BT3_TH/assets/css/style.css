@@ -81,7 +81,7 @@ header {
 	border-top: 1px solid #404342;	
 }
 .box-2 li { margin-bottom: 15px; }
-.box-2 li:before {
+.box-2 li::before {
 	content: url(../../img/arr.gif);
 	margin-right: 11px;
 }

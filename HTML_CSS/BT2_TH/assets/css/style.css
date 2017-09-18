@@ -195,7 +195,7 @@ li #to-Top {
 	font-weight: bold;
 	font-size: 14px;
 	color: #0189bb;
-	background-image: url(./img/h3-movie-trailers-bg.gif);
+	background-image: url(../../img/h3-movie-trailers-bg.gif);
 	border: none;
 	cursor: pointer;
 }
@@ -228,7 +228,7 @@ li #to-Top {
 	padding-top: 5px;
 }
 .now-showing b::before {
-	content: url(./img/now-showing-icon.gif);
+	content: url(../../img/now-showing-icon.gif);
 	float: left;
 	margin: 0 3px 0 6px;
 }
@@ -242,14 +242,10 @@ li #to-Top {
 	right: 15px;
 	width: 8px;
 	height: 8px;
-	background: url('./img/top-movie-trailers-arrows.gif') no-repeat;
+	background: url('../../img/top-movie-trailers-arrows.gif') no-repeat;
 }
-.icon-open {
-	background-position: top;
-}
-.icon-close {
-	background-position: bottom;
-}
+.icon-open { background-position: top; }
+.icon-close { background-position: bottom; }
 
 .movie-review {
 	width: 315px;
@@ -257,9 +253,7 @@ li #to-Top {
 	margin: 0 0 0 18px;
 	background-color: white;
 }
-.review-box {
-	padding: 9px 10px; 
-}
+.review-box { padding: 9px 10px;  }
 .review-box h3{
 	position: relative;
 	margin: 0 0 9px;
@@ -272,23 +266,13 @@ li #to-Top {
 	height: 15px;
 	top: 4px;
 	right: 5px;
-	background-image: url('./img/topic-star-ratings.gif');
+	background-image: url('../../img/topic-star-ratings.gif');
 }
-.star-37 {
-	background-position: 0 37%;
-}
-.star-48 {
-	background-position: 0 48%;
-}
-.review-content {
-	display: flex;
-}
-.review-content p  {
-	margin-top: 0;
-}
-.review-img {
-	margin-right: 8px;
-}
+.star-37 { background-position: 0 37%; }
+.star-48 { background-position: 0 48%; }
+.review-content { display: flex; }
+.review-content p { margin-top: 0; }
+.review-img { margin-right: 8px; }
 a {
 	text-decoration: none;
 	color: #2092c5;
@@ -301,19 +285,13 @@ a {
 }
 
 /*create a border-bottom below a box*/
-.dot {
-	border-top: 1px dotted black;
-}
+.dot { border-top: 1px dotted black; }
 .review-footer {
 	margin: 0px 10px 0px 8px;
 	padding-left: 20px;
 	padding-top: 5px;
-	background: url('./img/icon_2.jpg') left center no-repeat;	
+	background: url('../../img/icon_2.jpg') left center no-repeat;	
 }
-.review-footer p {
-	margin: 0;
-}
+.review-footer p { margin: 0; }
 
-#movie-more {
-	float: right;
-}
+#movie-more { float: right; }

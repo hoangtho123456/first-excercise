@@ -7,6 +7,7 @@
 	<title>Bài tập 2- Thực hành</title>
 </head>
 <style type="text/css">
+/*Click at button and show the news*/
 .movie-click {
 	position: relative;
 	width: 100%;
@@ -21,6 +22,7 @@
 	border: none;
 	cursor: pointer;
 }
+/*box of news about movies*/
 .panel {
 	display: flex;
 }
@@ -56,6 +58,7 @@
 .now-showing select {
 	width: 64%;
 }
+/*icon show the action open or close the box-news*/
 .icon {
 	position: absolute;
 	top: 8px;
@@ -73,17 +76,19 @@
 
 .movie-review {
 	width: 315px;
-	height: 350px;
+	height: 312px;
 	margin: 0 0 0 18px;
 	background-color: white;
 }
 .review-box {
-	position: relative;
-	margin: 9px 10px; 
+	padding: 9px 10px; 
 }
 .review-box h3{
+	position: relative;
 	margin: 0 0 9px;
+	color: #2A85C9;
 }
+/*icon star on the tile of box-movies*/
 .star {
 	position: absolute;
 	width: 59px;
@@ -105,15 +110,35 @@
 	margin-top: 0;
 }
 .review-img {
-	margin-right: 5px;
+	margin-right: 8px;
 }
-.review-img a {
+a {
 	text-decoration: none;
+	color: #2092c5;
 }
-.watch {
+.review-img .watch {
 	width: 18px;
 	height: 15px;
+	margin: 0 2px 0 -2px;
 	float: left;
+}
+
+/*create a border-bottom below a box*/
+.dot {
+	border-top: 1px dotted black;
+}
+.review-footer {
+	margin: 0px 10px 0px 8px;
+	padding-left: 20px;
+	padding-top: 5px;
+	background: url('./img/icon_2.jpg') left center no-repeat;	
+}
+.review-footer p {
+	margin: 0;
+}
+
+#movie-more {
+	float: right;
 }
 </style>
 <body>
@@ -171,17 +196,17 @@
 					<button class="movie-click" onclick="clickopen(2)"><span class="icon icon-close" id="ic-eagle"></span>Eagle Eye (M)</button>
 					<div class="panel hide" id="movie-2">
 						<img src="./img/m_bunny.jpg" alt="bunny girl">
-						<div class="movie-info">
+						<div class="click-info">
 							<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls form Zeta Alpha Zeta.</p>
-							<a href="#"><b>Watch Now</b></a>
+							<a href="#"><img src="./img/icon_1.png"><b>Watch Now</b></a>
 						</div>
 					</div>
 					<button class="movie-click" onclick="clickopen(3)"><span class="icon icon-close" id="ic-centre"></span>Journey To The Centre Of The Earth(PG)</button>
 					<div class="panel hide" id="movie-3">
 						<img src="./img/m_bunny.jpg" alt="bunny girl">
-						<div class="movie-info">
+						<div class="click-info">
 							<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls form Zeta Alpha Zeta.</p>
-							<a href="#"><b>Watch Now</b></a>
+							<a href="#"><img src="./img/icon_1.png"><b>Watch Now</b></a>
 						</div>					
 					</div>
 					<div class="now-showing">
@@ -209,7 +234,7 @@
 							technological t...</p>
 						</div>
 					</div>
-					<div class="review-box">
+					<div class="review-box dot">
 						<h3>House Bunny<span class="star star-37"></span>
 						</h3>
 						<div class="review-content">
@@ -222,8 +247,8 @@
 							The House Bun...</p>
 						</div>
 					</div>
-					<div class="review-footer">
-						<p><a href=""><b>Local Cinema listings</b></a><span class="">+ MORE MOVIES</span></p>
+					<div class="review-footer dot">
+						<p><a href="#"><b>Local Cinema listings</b></a><span id="movie-more">+ MORE MOVIES</span></p>
 					</div>
 				</div>	
 			</div>
@@ -237,57 +262,56 @@
 			</form>
 		</div>
 	</div>
-	<div id="footer">
-		<ul class="list-icon">
-			<li>
-				<div class="gallery">
-					<img src="./img/phone.jpg" alt="phone">
-					<div class="decs">News on your mobie</div>
-				</div>
-			</li>
-			<li>
-				<div class="gallery">
-					<img src="./img/wifi.jpg" alt="phone">
-					<div class="decs">RSS feeds</div>
-				</div>
-			</li>
-			<li>
-				<div class="gallery">
-					<img src="./img/mail.jpg" alt="mail">
-					<div class="decs">Newsletter</div>
-				</div>
-			</li>
-			<li>
-				<div class="gallery">
-					<img src="./img/talk.jpg" alt="talk">
-					<div class="decs">Send your news stories</div>
-				</div>
-			</li>
-			<li id="last">
-				<div class="gallery">
-					<img src="./img/photo.jpg" alt="photo">
-					<div class="decs">Send your news photos</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<div class="contact">
-		<ul class="contact-list">
-			<li><a href="#">Help</a></li>
-			<li><a href="#">| Contact Us</a></li>
-			<li><a href="#">| Advertise with Us</a></li>
-			<li><a href="#">| Job Oppotunities</a></li>
-			<li><a href="#">| Term $ Conditions</a></li>
-			<li><a href="#">| Privacy Policy</a></li>
-			<li><a href="#">| Accessibility</a></li>
-			<li><a href="#">| Sitemap</a></li>
-			<li><a href="#">| News Headlines from Ours Partners</a></li>
-			<li><a id="to-Top" href="#">Back to top</a></li>
-		</ul>
-		<div class="contact-copy">Copyright 2008 News Limited. All times AEST (GMT +10)</div>
-	</div>
 </div>
-
+<div id="footer">
+	<ul class="list-icon">
+		<li>
+			<div class="gallery">
+				<img src="./img/phone.jpg" alt="phone">
+				<div class="decs">News on your mobie</div>
+			</div>
+		</li>
+		<li>
+			<div class="gallery">
+				<img src="./img/wifi.jpg" alt="phone">
+				<div class="decs">RSS feeds</div>
+			</div>
+		</li>
+		<li>
+			<div class="gallery">
+				<img src="./img/mail.jpg" alt="mail">
+				<div class="decs">Newsletter</div>
+			</div>
+		</li>
+		<li>
+			<div class="gallery">
+				<img src="./img/talk.jpg" alt="talk">
+				<div class="decs">Send your news stories</div>
+			</div>
+		</li>
+		<li id="last">
+			<div class="gallery">
+				<img src="./img/photo.jpg" alt="photo">
+				<div class="decs">Send your news photos</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="contact">
+	<ul class="contact-list">
+		<li><a href="#">Help</a></li>
+		<li><a href="#">| Contact Us</a></li>
+		<li><a href="#">| Advertise with Us</a></li>
+		<li><a href="#">| Job Oppotunities</a></li>
+		<li><a href="#">| Term $ Conditions</a></li>
+		<li><a href="#">| Privacy Policy</a></li>
+		<li><a href="#">| Accessibility</a></li>
+		<li><a href="#">| Sitemap</a></li>
+		<li><a href="#">| News Headlines from Ours Partners</a></li>
+		<li><a id="to-Top" href="#">Back to top</a></li>
+	</ul>
+	<div class="contact-copy">Copyright 2008 News Limited. All times AEST (GMT +10)</div>
+</div>
 <script type="text/javascript">
 var open1=true;
 var open2=false;

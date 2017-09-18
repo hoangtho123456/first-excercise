@@ -1,14 +1,13 @@
 /*use for all elements*/
 * {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 body {
 	font-family: arial;
 	color: #595959;
 	font-size: 0.6875em;
 }
-
 
 .container {
 	max-width: 900px;
@@ -27,7 +26,7 @@ body {
 	color: #fff;
 	text-decoration: none;
 	display: block;
-	padding: 15px 0px;
+	padding: 15px 0;
 }
 .link-more::before {
 	content: url("../../img/arr_1.gif");
@@ -43,7 +42,7 @@ body {
 }
 /*content-box use for content-1 and content-2*/
 .content-box {
-	letter-spacing: 0px;
+	letter-spacing: 0;
 	line-height: 18px;
 	border-bottom: 1px dotted #595959;
 	padding: 4px 0 15px;
@@ -51,7 +50,7 @@ body {
 .content-box::after {
 	content: "";
 	clear: both;
-	height: 0px;
+	height: 0;
 	display: block;
 	visibility: hidden;
 }
@@ -64,7 +63,6 @@ body {
 #title { padding: 0 0 25px 0; }
 .content-1 img {
 	float: left;
-	//margin: 4px 15px 10px 0;
 	margin: 7px 20px 20px 0;
 	padding-bottom: 0;
 	height: 90px;
@@ -111,9 +109,7 @@ body {
 	margin: 0 0 20px 8px; 
 	padding-top: 20px;
 }
-.content-e-text p:last-child {
-	padding-top: 10px; 
-}
+.content-e-text p:last-child { padding-top: 10px; }
 .content-e img {
 	border-radius: 15px;
 	padding: 5px;

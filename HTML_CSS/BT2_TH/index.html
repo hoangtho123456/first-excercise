@@ -7,347 +7,332 @@
 	<title>Bài tập 2- Thực hành</title>
 </head>
 <style type="text/css">
-body {
-	margin: 0;
-	padding: 0;
-	color: white;
-	font-family: sans-serif;
-	font-size: 12px;
-}
-.container {
-	width: 990px;
-	min-height: 800px;
-	margin: auto;
-	background-color: #2a2729;
-}
-
-#footer {
-	clear: right;
-	width: 985px;
-	height: 82px;
-	border-top: 1px dashed white;
-}
-
-.list-icon {
-	width: 892px;
-	height: 65px;
-	list-style-type: none;
-	padding: 0;
-	margin: 10px auto;
-}
-.list-icon li {
-	margin-right: 86px; 
-	display: inline-block;
-}
-#last {
-	margin: 0 0 0 15px;
-}
-
-.gallery img {
-	margin: auto;
-	display: block;
-}
-.decs {
-	margin: 0;
-	text-align: center;
-}
-
-/*content*/
-.content {
-	width: 902px;
-	height: 630px;
-	display: flex;
-	padding: 23px 0 0 6px;
-	color: black;
-}
-.content-news {
-	width: 652px;
-	height: 629px;
-}
-.daily-title {
-	background-image: url(./img/h2-confidential-heading-bg.gif);
-	color: white;
-	height: 26px;
-}
-.daily-title h2 {
-	margin: 1px 0;
-	padding: 3px 10px;
-	font-size: 17.5px;
-	font-weight: 500;
-	border-left: 1px solid black;
-}
-/*news-daily*/
-.news-daily {
-	display: flex;
-	height: 303px;
-	background-image: url(./img/confidential-logo.gif);
-	background-repeat: no-repeat;
-	background-position: bottom left;
-	background-color: white;
-}
-
-.box {
-	width: 50%;
-	height: 265px;
-}
-.border-right {
-	border-right: 1px dotted black;	
-}
-.daily-img img {
-	display: block;
-	margin: 7px auto;
-}
-
-.daily-img-title {
+.movie-click {
 	position: relative;
-}
-.daily-more {
-	position: absolute;
-	top: 0;
-	right: 30px;
+	width: 100%;
+	height: 24px;
+	padding: 3px 7px 7px 7px;
+	text-align: left;
+	font-family: sans-serif;
 	font-weight: bold;
+	font-size: 14px;
+	color: #0189bb;
+	background-image: url(./img/h3-movie-trailers-bg.gif);
+	border: none;
+	cursor: pointer;
 }
-.daily-text {
-	padding: 0 9px;
-}
-.daily-text h4 {
-	margin: 0;
-}
-.daily-text p {
-	margin: 3px 0;
-	font-size: 10px;
-}
-/*MOVIE THEATER*/
-.news-movie {
+.panel {
 	display: flex;
-	width: 651px;
-	height: 312px;
-	margin: 23px 0 0 0;
 }
-.movie-trailer {
-	width: 316px;
-	height: 213px;
+.hide{
+	display: none;
+}
+.panel img {
+	margin: 6px;
+}
+.panel .click-info {
+	padding-right: 23px;
+}
+
+.click-info a {
+	text-decoration: none;
+	color: #2092c5;
+}
+.click-info img {
+	width: 18px;
+	height: 15px;
+	margin: 0 2px 0 -2px;
+	float: left;
+}
+
+.now-showing {
+	padding-top: 5px;
+}
+.now-showing b::before {
+	content: url(./img/now-showing-icon.gif);
+	float: left;
+	margin: 0 3px 0 6px;
+}
+.now-showing select {
+	width: 64%;
+}
+.icon {
+	position: absolute;
+	top: 8px;
+	right: 15px;
+	width: 8px;
+	height: 8px;
+	background: url('./img/top-movie-trailers-arrows.gif') no-repeat;
+}
+.icon-open {
+	background-position: top;
+}
+.icon-close {
+	background-position: bottom;
+}
+
+.movie-review {
+	width: 315px;
+	height: 350px;
+	margin: 0 0 0 18px;
 	background-color: white;
 }
-.movie-news {
-	background-image: url(./img/h2-top-movie-trailers-bg.gif);
-	color: white;
-	height: 26px;
-	border-bottom: 1px dashed black;
+.review-box {
+	position: relative;
+	margin: 9px 10px; 
 }
-.movie-news h2 {
-	margin: 1px 0;
-	padding: 3px 10px;
-	font-size: 17.5px;
-	font-weight: 500;
+.review-box h3{
+	margin: 0 0 9px;
 }
-
-/*Movie trailer*/
-.movie
-
-/*Entertanment box*/
-.content-search {
-	width: 227px;
-	margin-left: 22px;
+.star {
+	position: absolute;
+	width: 59px;
+	height: 15px;
+	top: 4px;
+	right: 5px;
+	background-image: url('./img/topic-star-ratings.gif');
 }
-form {
-	margin: 12px 0 0 13px ;
+.star-37 {
+	background-position: 0 37%;
 }
-.content-search input[type="text"] {
-	width: 140px;
-	height: 18px;
+.star-48 {
+	background-position: 0 48%;
 }
-.content-search button[type="button"] {
-	width: 66px;
-	height: 19px;
-	font-size: 11px;
-	background-color: #a8407d;
-	border: none;
-	font-weight: bold;
-	color: white;
+.review-content {
+	display: flex;
 }
-
-/*box contact consist the contact infomations */
-	.contact {
-		height: 31px;
-		background-color: white;
-		padding-top: 9px;
-		font-size: 11px;
-	}
-	.contact-list {
-		width: 873px;
-		height: 13px;
-		padding: 0;
-		margin: 0 0 0 113px;
-		list-style-type: none;
-	}
-	.contact-list li{
-		color: #2196f3;
-		display: inline;
-	}
-	.contact-list li a{
-		color: #2196f3;
-		text-decoration: none;
-	}
-	.contact-copy {
-		margin: 0;
-		color: #2196f3;
-		text-align: center;
-	}
-	li #to-Top {
-		margin-left: 45px; 
-	}
+.review-content p  {
+	margin-top: 0;
+}
+.review-img {
+	margin-right: 5px;
+}
+.review-img a {
+	text-decoration: none;
+}
+.watch {
+	width: 18px;
+	height: 15px;
+	float: left;
+}
 </style>
 <body>
-	<div class="container">
-		<div class="content">
-			<div class="content-news">
-				<div class="news-daily">
-					<div class="box border-right">
-						<div class="daily-title">
-							<h2>DAILY CELEBRITY GOSSIP</h2>
-						</div>
-						<div class="daily-img">
-							<img src="./img/news_1.png" alt="news_1">
-							<div class="daily-img-title">
-								<img src="./img/h3-confidential-showbuzz-bg.gif" alt="news_1">
-								<span class="daily-more">MORE</span>
-							</div>
-						</div>
-						<div class="daily-text">
-							<h4>+ RUSSELL CROWE + MORE ...</h4>
-							<p>RUSSELL Crowe's son to marry Keith & Nicole's daughter , plus Renee Zellweger reveals her breast 
-							cancer scare</p>
+<div class="container">		
+	<div class="content">
+		<div class="content-news">
+			<div class="news-daily">
+				<div class="box border-right">
+					<div class="daily-title">
+						<h2>DAILY CELEBRITY GOSSIP</h2>
+					</div>
+					<div class="daily-img">
+						<img src="./img/news_1.png" alt="news_1">
+						<div class="daily-img-title">
+							<img src="./img/h3-confidential-showbuzz-bg.gif" alt="news_1">
+							<span class="daily-more">MORE</span>
 						</div>
 					</div>
-					<div class="box">
-						<div class="daily-title">
-							<h2>DAILY CELEBRITY PICS</h2>
-						</div>
-						<div class="daily-img">
-							<img src="./img/news_2.png" alt="news_2">
-							<div class="daily-img-title">
-								<img src="./img/h3-confidential-shootingstars-bg.gif" alt="news_2">
-								<span class="daily-more">MORE</span>
-							</div>
-						</div>
-						<div class="daily-text">
-							<h4>+ BECKHAMS, CLAUDIA SCHIFFER</h4>
-							<p>VICTORIA and David Beckham dine out in NY, as top models Claudia Schiffer and Eva Herzigova hit the shops in Milan.</p>
-						</div>
+					<div class="daily-text">
+						<h4>+ RUSSELL CROWE + MORE ...</h4>
+						<p>RUSSELL Crowe's son to marry Keith & Nicole's daughter , plus Renee Zellweger reveals her breast 
+						cancer scare</p>
 					</div>
 				</div>
-
-				<div class="news-movie">
-					<div class="movie-trailer">
-						<div class="movie-news">
-							<h2>TOP 3 MOVIE TRAILERS</h2>
-						</div>
-						<button class="movie-bunny active">The House Bunny (M)</button>
-						<div class="panel">
-							<img src="./img/m_bunny.jpg" alt="bunny girl">
-							<div class="movie-info">
-								<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls form Zeta Alpha Zeta.</p>
-								<a href="#"><b>Watch Now</b></a>
-							</div>
-						</div>
-						</div>
-						<div class="movie-eagle">
-
-						</div>
-						<div class="movie-journey">
-							
+				<div class="box">
+					<div class="daily-title">
+						<h2>DAILY CELEBRITY PICS</h2>
+					</div>
+					<div class="daily-img">
+						<img src="./img/news_2.png" alt="news_2">
+						<div class="daily-img-title">
+							<img src="./img/h3-confidential-shootingstars-bg.gif" alt="news_2">
+							<span class="daily-more">MORE</span>
 						</div>
 					</div>
-					<div class="movie-review">
-					<!--	<img src="./img/news_1.png">-->
+					<div class="daily-text">
+						<h4>+ BECKHAMS, CLAUDIA SCHIFFER</h4>
+						<p>VICTORIA and David Beckham dine out in NY, as top models Claudia Schiffer and Eva Herzigova hit the shops in Milan.</p>
 					</div>
 				</div>
-
 			</div>
-			<div class="content-search">
-				<img src="./img/Entertainment.gif" alt="Entertainment">
-				<form>
-					<input type="text" name="search_input">
-					<button type="button" name="search">SEARCH</button>
-				</form>
+			<div class="news-movie">
+				<div class="movie-box movie-trailer">
+					<div class="movie-news">
+						<h2>TOP 3 MOVIE TRAILERS</h2>
+					</div>
+					<button class="movie-click" onclick="clickopen(1)"><span class="icon icon-open" id="ic-house"></span> The House Bunny (M)</button>
+					<div class="panel" id="movie-1">
+						<img src="./img/m_bunny.jpg" alt="bunny girl">
+						<div class="click-info">
+							<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls form Zeta Alpha Zeta.</p>
+							<a href="#"><img src="./img/icon_1.png"><b>Watch Now</b></a>
+						</div>
+					</div>
+					<button class="movie-click" onclick="clickopen(2)"><span class="icon icon-close" id="ic-eagle"></span>Eagle Eye (M)</button>
+					<div class="panel hide" id="movie-2">
+						<img src="./img/m_bunny.jpg" alt="bunny girl">
+						<div class="movie-info">
+							<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls form Zeta Alpha Zeta.</p>
+							<a href="#"><b>Watch Now</b></a>
+						</div>
+					</div>
+					<button class="movie-click" onclick="clickopen(3)"><span class="icon icon-close" id="ic-centre"></span>Journey To The Centre Of The Earth(PG)</button>
+					<div class="panel hide" id="movie-3">
+						<img src="./img/m_bunny.jpg" alt="bunny girl">
+						<div class="movie-info">
+							<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls form Zeta Alpha Zeta.</p>
+							<a href="#"><b>Watch Now</b></a>
+						</div>					
+					</div>
+					<div class="now-showing">
+						<b>Now Showing</b>
+						<select name="movie" id="movie">
+							<option value="Select Movie">Select Movie</option>
+							<option value="Select Movie">Select Movie</option>
+							<option value="Select Movie">Select Movie</option>
+						</select>
+					</div>
+				</div>
+				<div class="movie-box movie-review">
+					<div class="movie-news">
+						<h2>MOVIE REVIEWS</h2>
+					</div>
+					<div class="review-box">
+						<h3>Eagle Eye<span class="star star-48"></span></h3>
+						<div  class="review-content">
+							<div class="review-img">
+								<img src="./img/thumb_1.jpg" alt="image">
+								<a href="#"><img class="watch" src="./img/icon_1.png"><b>View Trailer</b></a>
+							</div>
+							<p>SHIA LaBeouf hits the ground running in Eagle eye,
+							an againts the clock conspiracy thriller with a timely
+							technological t...</p>
+						</div>
+					</div>
+					<div class="review-box">
+						<h3>House Bunny<span class="star star-37"></span>
+						</h3>
+						<div class="review-content">
+							<div class="review-img">
+								<img src="./img/thumb_1.jpg" alt="image">
+								<a href="#"><img class="watch" src="./img/icon_1.png"><b>View Trailer</b></a>
+							</div>
+							<p>IF YOU left Legally Blonde and Revenge Of The Nerds
+							DVD in a darkened room for long enough, something like
+							The House Bun...</p>
+						</div>
+					</div>
+					<div class="review-footer">
+						<p><a href=""><b>Local Cinema listings</b></a><span class="">+ MORE MOVIES</span></p>
+					</div>
+				</div>	
 			</div>
-		</div>
+		</div>	
 
-		<div id="footer">
-			<ul class="list-icon">
-				<li>
-					<div class="gallery">
-						<img src="./img/phone.jpg" alt="phone">
-						<div class="decs">News on your mobie</div>
-					</div>
-				</li>
-				<li>
-					<div class="gallery">
-						<img src="./img/wifi.jpg" alt="phone">
-						<div class="decs">RSS feeds</div>
-					</div>
-				</li>
-				<li>
-					<div class="gallery">
-						<img src="./img/mail.jpg" alt="mail">
-						<div class="decs">Newsletter</div>
-					</div>
-				</li>
-				<li>
-					<div class="gallery">
-						<img src="./img/talk.jpg" alt="talk">
-						<div class="decs">Send your news stories</div>
-					</div>
-				</li>
-				<li id="last">
-					<div class="gallery">
-						<img src="./img/photo.jpg" alt="photo">
-						<div class="decs">Send your news photos</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="contact">
-			<ul class="contact-list">
-				<li><a href="#">Help</a></li>
-				<li><a href="#">| Contact Us</a></li>
-				<li><a href="#">| Advertise with Us</a></li>
-				<li><a href="#">| Job Oppotunities</a></li>
-				<li><a href="#">| Term $ Conditions</a></li>
-				<li><a href="#">| Privacy Policy</a></li>
-				<li><a href="#">| Accessibility</a></li>
-				<li><a href="#">| Sitemap</a></li>
-				<li><a href="#">| News Headlines from Ours Partners</a></li>
-				<li><a id="to-Top" href="#">Back to top</a></li>
-			</ul>
-			<div class="contact-copy">Copyright 2008 News Limited. All times AEST (GMT +10)</div>
+		<div class="content-search">
+			<img src="./img/Entertainment.gif" alt="Entertainment">
+			<form>
+				<input type="text" name="search_input">
+				<button type="button" name="search">SEARCH</button>
+			</form>
 		</div>
 	</div>
-</body>
-</html>
-
-
-<!--
-<div class="library-icon">
+	<div id="footer">
+		<ul class="list-icon">
+			<li>
 				<div class="gallery">
 					<img src="./img/phone.jpg" alt="phone">
 					<div class="decs">News on your mobie</div>
 				</div>
+			</li>
+			<li>
 				<div class="gallery">
-					<img src="./img/phone.jpg" alt="phone">
+					<img src="./img/wifi.jpg" alt="phone">
 					<div class="decs">RSS feeds</div>
 				</div>
+			</li>
+			<li>
 				<div class="gallery">
-					<img src="./img/phone.jpg" alt="phone">
+					<img src="./img/mail.jpg" alt="mail">
 					<div class="decs">Newsletter</div>
 				</div>
+			</li>
+			<li>
 				<div class="gallery">
-					<img src="./img/phone.jpg" alt="phone">
+					<img src="./img/talk.jpg" alt="talk">
 					<div class="decs">Send your news stories</div>
 				</div>
+			</li>
+			<li id="last">
 				<div class="gallery">
-					<img src="./img/phone.jpg" alt="phone">
+					<img src="./img/photo.jpg" alt="photo">
 					<div class="decs">Send your news photos</div>
-				</div>		
-</div>*/-->
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="contact">
+		<ul class="contact-list">
+			<li><a href="#">Help</a></li>
+			<li><a href="#">| Contact Us</a></li>
+			<li><a href="#">| Advertise with Us</a></li>
+			<li><a href="#">| Job Oppotunities</a></li>
+			<li><a href="#">| Term $ Conditions</a></li>
+			<li><a href="#">| Privacy Policy</a></li>
+			<li><a href="#">| Accessibility</a></li>
+			<li><a href="#">| Sitemap</a></li>
+			<li><a href="#">| News Headlines from Ours Partners</a></li>
+			<li><a id="to-Top" href="#">Back to top</a></li>
+		</ul>
+		<div class="contact-copy">Copyright 2008 News Limited. All times AEST (GMT +10)</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var open1=true;
+var open2=false;
+var open3=false;
+
+function clickopen(id) {
+	var i = id;
+	switch(i) {
+		case 1:
+			if (open1) {
+				document.getElementById("movie-1").style.display = "none"; // hidden content
+				document.getElementById("ic-house").style.backgroundPosition = "bottom"; // change icon
+				open1 = false; //value close
+			} else {
+				document.getElementById("movie-1").style.display = "flex"; // hidden content
+				document.getElementById("ic-house").style.backgroundPosition = "top"; // change icon
+				open1 = true; //value open
+			}
+			break;
+		case 2:
+			if (open2) {
+				document.getElementById("movie-2").style.display = "none"; // hidden content
+				document.getElementById("ic-eagle").style.backgroundPosition = "bottom"; // change icon
+				open2 = false; //value close
+			} else {
+				document.getElementById("movie-2").style.display = "flex"; // hidden content
+				document.getElementById("ic-eagle").style.backgroundPosition = "top"; // change icon
+				open2 = true; //value open
+			}
+			break;
+		case 3:
+			if (open3) {
+				document.getElementById("movie-3").style.display = "none"; // hidden content
+				document.getElementById("ic-centre").style.backgroundPosition = "bottom"; // change icon
+				open3 = false; //value close
+			} else {
+				document.getElementById("movie-3").style.display = "flex"; // hidden content
+				document.getElementById("ic-centre").style.backgroundPosition = "top"; // change icon
+				open3 = true; //value open
+			}
+			break;
+	}
+}
+</script>
+
+</body>
+</html>
+

@@ -6,116 +6,6 @@
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<title>Bài tập 2- Thực hành</title>
 </head>
-<style type="text/css">
-.movie-click {
-	position: relative;
-	width: 100%;
-	height: 24px;
-	padding: 3px 7px 7px 7px;
-	text-align: left;
-	font-family: sans-serif;
-	font-weight: bold;
-	font-size: 14px;
-	color: #0189bb;
-	background-image: url(./img/h3-movie-trailers-bg.gif);
-	border: none;
-	cursor: pointer;
-}
-.panel {
-	display: flex;
-}
-.hide{
-	display: none;
-}
-.panel img {
-	margin: 6px;
-}
-.panel .click-info {
-	padding-right: 23px;
-}
-
-.click-info a {
-	text-decoration: none;
-	color: #2092c5;
-}
-.click-info img {
-	width: 18px;
-	height: 15px;
-	margin: 0 2px 0 -2px;
-	float: left;
-}
-
-.now-showing {
-	padding-top: 5px;
-}
-.now-showing b::before {
-	content: url(./img/now-showing-icon.gif);
-	float: left;
-	margin: 0 3px 0 6px;
-}
-.now-showing select {
-	width: 64%;
-}
-.icon {
-	position: absolute;
-	top: 8px;
-	right: 15px;
-	width: 8px;
-	height: 8px;
-	background: url('./img/top-movie-trailers-arrows.gif') no-repeat;
-}
-.icon-open {
-	background-position: top;
-}
-.icon-close {
-	background-position: bottom;
-}
-
-.movie-review {
-	width: 315px;
-	height: 350px;
-	margin: 0 0 0 18px;
-	background-color: white;
-}
-.review-box {
-	position: relative;
-	margin: 9px 10px; 
-}
-.review-box h3{
-	margin: 0 0 9px;
-}
-.star {
-	position: absolute;
-	width: 59px;
-	height: 15px;
-	top: 4px;
-	right: 5px;
-	background-image: url('./img/topic-star-ratings.gif');
-}
-.star-37 {
-	background-position: 0 37%;
-}
-.star-48 {
-	background-position: 0 48%;
-}
-.review-content {
-	display: flex;
-}
-.review-content p  {
-	margin-top: 0;
-}
-.review-img {
-	margin-right: 5px;
-}
-.review-img a {
-	text-decoration: none;
-}
-.watch {
-	width: 18px;
-	height: 15px;
-	float: left;
-}
-</style>
 <body>
 <div class="container">		
 	<div class="content">
@@ -171,17 +61,17 @@
 					<button class="movie-click" onclick="clickopen(2)"><span class="icon icon-close" id="ic-eagle"></span>Eagle Eye (M)</button>
 					<div class="panel hide" id="movie-2">
 						<img src="./img/m_bunny.jpg" alt="bunny girl">
-						<div class="movie-info">
+						<div class="click-info">
 							<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls form Zeta Alpha Zeta.</p>
-							<a href="#"><b>Watch Now</b></a>
+							<a href="#"><img src="./img/icon_1.png"><b>Watch Now</b></a>
 						</div>
 					</div>
 					<button class="movie-click" onclick="clickopen(3)"><span class="icon icon-close" id="ic-centre"></span>Journey To The Centre Of The Earth(PG)</button>
 					<div class="panel hide" id="movie-3">
 						<img src="./img/m_bunny.jpg" alt="bunny girl">
-						<div class="movie-info">
+						<div class="click-info">
 							<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls form Zeta Alpha Zeta.</p>
-							<a href="#"><b>Watch Now</b></a>
+							<a href="#"><img src="./img/icon_1.png"><b>Watch Now</b></a>
 						</div>					
 					</div>
 					<div class="now-showing">
@@ -209,12 +99,12 @@
 							technological t...</p>
 						</div>
 					</div>
-					<div class="review-box">
+					<div class="review-box dot">
 						<h3>House Bunny<span class="star star-37"></span>
 						</h3>
 						<div class="review-content">
 							<div class="review-img">
-								<img src="./img/thumb_1.jpg" alt="image">
+								<img src="./img/thumb_2.jpg" alt="image">
 								<a href="#"><img class="watch" src="./img/icon_1.png"><b>View Trailer</b></a>
 							</div>
 							<p>IF YOU left Legally Blonde and Revenge Of The Nerds
@@ -222,8 +112,8 @@
 							The House Bun...</p>
 						</div>
 					</div>
-					<div class="review-footer">
-						<p><a href=""><b>Local Cinema listings</b></a><span class="">+ MORE MOVIES</span></p>
+					<div class="review-footer dot">
+						<p><a href="#"><b>Local Cinema listings</b></a><span id="movie-more">+ MORE MOVIES</span></p>
 					</div>
 				</div>	
 			</div>
@@ -237,57 +127,56 @@
 			</form>
 		</div>
 	</div>
-	<div id="footer">
-		<ul class="list-icon">
-			<li>
-				<div class="gallery">
-					<img src="./img/phone.jpg" alt="phone">
-					<div class="decs">News on your mobie</div>
-				</div>
-			</li>
-			<li>
-				<div class="gallery">
-					<img src="./img/wifi.jpg" alt="phone">
-					<div class="decs">RSS feeds</div>
-				</div>
-			</li>
-			<li>
-				<div class="gallery">
-					<img src="./img/mail.jpg" alt="mail">
-					<div class="decs">Newsletter</div>
-				</div>
-			</li>
-			<li>
-				<div class="gallery">
-					<img src="./img/talk.jpg" alt="talk">
-					<div class="decs">Send your news stories</div>
-				</div>
-			</li>
-			<li id="last">
-				<div class="gallery">
-					<img src="./img/photo.jpg" alt="photo">
-					<div class="decs">Send your news photos</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<div class="contact">
-		<ul class="contact-list">
-			<li><a href="#">Help</a></li>
-			<li><a href="#">| Contact Us</a></li>
-			<li><a href="#">| Advertise with Us</a></li>
-			<li><a href="#">| Job Oppotunities</a></li>
-			<li><a href="#">| Term $ Conditions</a></li>
-			<li><a href="#">| Privacy Policy</a></li>
-			<li><a href="#">| Accessibility</a></li>
-			<li><a href="#">| Sitemap</a></li>
-			<li><a href="#">| News Headlines from Ours Partners</a></li>
-			<li><a id="to-Top" href="#">Back to top</a></li>
-		</ul>
-		<div class="contact-copy">Copyright 2008 News Limited. All times AEST (GMT +10)</div>
-	</div>
 </div>
-
+<div id="footer">
+	<ul class="list-icon">
+		<li>
+			<div class="gallery">
+				<img src="./img/phone.jpg" alt="phone">
+				<div class="decs">News on your mobie</div>
+			</div>
+		</li>
+		<li>
+			<div class="gallery">
+				<img src="./img/wifi.jpg" alt="phone">
+				<div class="decs">RSS feeds</div>
+			</div>
+		</li>
+		<li>
+			<div class="gallery">
+				<img src="./img/mail.jpg" alt="mail">
+				<div class="decs">Newsletter</div>
+			</div>
+		</li>
+		<li>
+			<div class="gallery">
+				<img src="./img/talk.jpg" alt="talk">
+				<div class="decs">Send your news stories</div>
+			</div>
+		</li>
+		<li id="last">
+			<div class="gallery">
+				<img src="./img/photo.jpg" alt="photo">
+				<div class="decs">Send your news photos</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="contact">
+	<ul class="contact-list">
+		<li><a href="#">Help</a></li>
+		<li><a href="#">| Contact Us</a></li>
+		<li><a href="#">| Advertise with Us</a></li>
+		<li><a href="#">| Job Oppotunities</a></li>
+		<li><a href="#">| Term $ Conditions</a></li>
+		<li><a href="#">| Privacy Policy</a></li>
+		<li><a href="#">| Accessibility</a></li>
+		<li><a href="#">| Sitemap</a></li>
+		<li><a href="#">| News Headlines from Ours Partners</a></li>
+		<li><a id="to-Top" href="#">Back to top</a></li>
+	</ul>
+	<div class="contact-copy">Copyright 2008 News Limited. All times AEST (GMT +10)</div>
+</div>
 <script type="text/javascript">
 var open1=true;
 var open2=false;

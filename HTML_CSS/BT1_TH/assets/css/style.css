@@ -78,7 +78,7 @@ body {
 /*image Thumbnail of the page*/
 .contain-img {
 	height: 140px;
-	background-color: #25262b;
+	background-color: #2d2f35;
 }
  /*class cover around images*/
 .list-img {
@@ -98,9 +98,7 @@ body {
 }
 
 /*big image*/
-.gallery .img-content {
-	position: absolute;
-}
+.gallery .img-content { position: absolute; }
 /*small image*/
 .gallery .img-no {
 	position: absolute;
@@ -111,7 +109,7 @@ body {
 
 /*class contact include the contact infomation*/
 .contact {
-	height: 395px;
+	height: 415px;
 	background-color: #2d2f35;
 	border-top: 2px solid #37393f;
 	border-bottom: 1px solid #37393f;
@@ -124,7 +122,7 @@ body {
 .contact-title {
 	margin: 5px 0 0 0;
 	font-size: 22px;
-	font-weight: normal;
+	font-weight: bold;
 	letter-spacing: 2px;
 }
 

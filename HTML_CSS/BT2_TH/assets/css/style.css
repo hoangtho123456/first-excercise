@@ -21,7 +21,7 @@ a {
 
 #footer {
 	width: 1050px;
-	height: 81px;
+	height: 90px;
 	margin: auto;
 	clear: both;
 	border-top: 1px dashed white;
@@ -160,7 +160,7 @@ form {
 
 /*box contact consist the contact infomations */
 .contact {
-	width: 990px;
+	width: 1050px;
 	height: 31px;
 	padding: 5px 0 4px 0;
 	margin: auto; 
@@ -168,15 +168,16 @@ form {
 	background-color: white;
 }
 .contact-list {
-	width: 873px;
+	width: 940px;
 	height: 13px;
 	padding: 0;
 	margin: 0 0 0 113px;
 	list-style-type: none;
 }
 .contact-list li{
-	color: #2196f3;
+	color: #1D73A8;
 	display: inline;
+	margin-right: 3px;
 }
 .contact-list li a{
 	color: #2196f3;
@@ -189,7 +190,7 @@ form {
 }
 li #to-Top {
 	font-size: 12px;
-	margin-left: 45px; 
+	margin-left: 100px; 
 }
 
 /*Click at button and show the news*/

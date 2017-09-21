@@ -80,9 +80,10 @@ header {
 	margin-top: 42px;
 	padding: 25px 20px;
 	list-style-type: none;
+	font-size: 13px;
 	border-top: 1px solid #404342;	
 }
-.box-2 li { margin-bottom: 15px; }
+.box-2 li { margin-bottom: 10px; }
 .box-2 li::before {
 	content: url(../../img/arr.gif);
 	margin-right: 11px;
@@ -97,7 +98,7 @@ header {
 	margin-top: 42px;
 	margin-left: 12px; 
 }
-.info { margin: 19px 12px; }
+.info { margin: 25px 12px; }
 .info input[type="text"] {
 	width: 116px;
 	height: 23px;
@@ -110,7 +111,7 @@ header {
 	margin-top: 13px;
 	padding-bottom: 12px;
 	font-size: 11px;
-	color: #707070;
+	color: #404342;
 	border-bottom: 1px dotted #2c2c2c;
 }
 .launch {
@@ -133,7 +134,7 @@ footer {
 	padding: 24px 8px;
 	font-family: sans-serif;
 	font-size: 10px;
-	color: #707070!important;
+	color: #404342;
 	border-top: 1px dotted #2c2c2c;
 }
-footer a { color: #707070!important; }
+footer a { color: #404342; }

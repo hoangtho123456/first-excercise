@@ -1,16 +1,4 @@
 /*Set font-family of the page*/
-@font-face {
-	font-family: Arial;
-	src: url(../../font/arial.ttf);
-}
-@font-face {
-	font-family: Verdana;
-	src: url(../../font/Verdana.ttf);
-}
-@font-face {
-	font-family: Helvetica;
-	src: url(../../font/helveticaneue.ttf);
-}
 
 body {
 	margin: 0;

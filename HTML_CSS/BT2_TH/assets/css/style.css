@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-	width: 990px;
+	width: 1050px;
 	min-height: 655px;
 	margin: auto;
 	padding-bottom: 28px;
@@ -20,7 +20,7 @@ a {
 }
 
 #footer {
-	width: 990px;
+	width: 1050px;
 	height: 81px;
 	margin: auto;
 	clear: both;
@@ -29,19 +29,19 @@ a {
 }
 /*list icon of footer bar*/
 .list-icon {
-	width: 892px;
+	width: 990px;
 	height: 65px;
 	list-style-type: none;
-	padding: 0;
 	margin: 10px auto;
+	padding-left: 4px;
 }
 .list-icon li {
-	margin-right: 80px; 
+	margin-right: 105px; 
 	display: inline-block;
 }
 /*the last icon will be controlled follow the sample*/
 #last {
-	margin: 0 0 0 15px;
+	margin: 0 0 0 0px;
 }
 
 .gallery img {
@@ -113,7 +113,7 @@ a {
 }
 /*Movie box show the news of the movies*/
 .news-movie {
-	width: 651px;
+	width: 655px;
 	margin: 12px 0 0 0;
 }
 .movie-trailer {
@@ -252,15 +252,15 @@ li #to-Top {
 .icon-close { background-position: bottom; }
 
 .movie-review {
-	width: 315px;
-	height: 312px;
+	width: 319px;
+	height: 314px;
 	margin: 0 0 0 18px;
 	background-color: white;
 }
 .review-box { padding: 9px 10px;  }
 .review-box h3{
 	position: relative;
-	margin: 0 0 9px;
+	margin: 0 0 6px;
 	color: #2A85C9;
 }
 /*icon star on the tile of box-movies*/
@@ -276,14 +276,19 @@ li #to-Top {
 .star-48 { background-position: 0 48%; }
 .review-content { display: flex; }
 .review-content p { margin-top: 0; }
-.review-img { margin-right: 8px; }
+.review-img {
+	width: 101px;
+	margin-right: 8px; 
+ }
 .review-img .watch {
 	width: 18px;
 	height: 15px;
-	margin: 0 2px 0 -2px;
+	margin: 0 1px 0 -2px;
 	float: left;
 }
-
+.movie-big-img {
+	margin-bottom: 4px;
+}
 /*create a border-bottom below a box*/
 .dot { border-top: 1px dotted black; }
 .review-footer {

@@ -101,7 +101,7 @@ a {
 .daily-img-title { position: relative; }
 .daily-more {
 	position: absolute;
-	top: 0;
+	top: -1px;
 	right: 30px;
 	font-weight: bold;
 }
@@ -135,9 +135,10 @@ a {
 .movie-box { float: left; }
 
 .content-search {
-	width: 227px;
+	width: 228px;
 	margin-left: 22px;
 	margin-right: 0;
+	margin-top: 8px;
 }
 form {
 	margin: 12px 0 0 13px ;
@@ -209,9 +210,15 @@ li #to-Top {
 /*box of news about movies*/
 .panel { display: flex; }
 .hide{ display: none; }
-.panel img { margin: 6px; }
+.panel img { 
+	width: 101px;
+	height: 75px;
+	margin: 6px 6px 0 6px;
+}
 .panel .click-info { padding-right: 23px; }
-
+.click-info p{
+	margin: 2px 0 9px 0; 
+}
 .click-info a {
 	text-decoration: none;
 	color: #2092c5;

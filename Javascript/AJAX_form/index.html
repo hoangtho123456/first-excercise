@@ -3,40 +3,199 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<title>SLIDER_EXCERCISE</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+	<title>FROM_AJAX_EXCERCISE</title>
 </head>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+.calendar { display: none; }
+
+.form-group { padding: 7px 0; }
+.sr-only {
+	display: inline-block;
+	width: 20%;
+	font-size: 18px;
+	font-weight: bold;
+}
+.input-text {
+	max-width: 42%;
+	padding: 2px;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 6px blue; 
+}
+.validate {
+	color: red;
+	font-weight: bold;
+}
+.btn-submit { margin-left: 100px; }
+.btn-primary { 
+	padding: 6px 16px;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	background-color: #007acf;
+}
+.btn-primary:hover { 
+	color: black;
+	border: 1px solid blue; }
+
+</style>
 <body>
 
-<h2 class="sl-center"><span><img src="./img/icon.jpg"></span> SLIDER_EXCERCISE</h2>
+<h2 style="text-align: center;">FROM_AJAX_EXCERCISE</h2>
+<div class="container">
+	<form method="POST">
+		<div class="form-group">
+			<label class="sr-only">Username:</label>
+			<input type="text" class="input-text" id="username" name="username" value="" onchange="checkUsername();">
+			<span class="validate" id="validate_user"></span>
+		</div>
+		<div class="form-group">
+			<label class="sr-only">Password:</label>
+			<input type="password" class="input-text" id="password" name="password" value="">
+			<span class="validate" id="validate_pass"></span>			
+		</div>
+		<div class="form-group">
+			<label class="sr-only">Email:</label>
+			<input type="email" class="input-text" id="email" name="email" value="">
+			<span class="validate" id="validate_email"></span>			
+		</div>
 
-<div class="sl-content sl-display-container">
-  <img class="mySlides sl-animate-fading" src="./img/moon_1.jpg" style="width:100%">
-  <img class="mySlides sl-animate-fading" src="./img/moon_2.jpg" style="width:100%">
-  <img class="mySlides sl-animate-fading" src="./img/moon_3.jpg" style="width:100%">
-  <img class="mySlides sl-animate-fading" src="./img/moon_4.jpg" style="width:100%">
-
-  <button class="sl-button sl-black sl-display-left" onclick="plusDivs(-1)">&#10094;&#10094;</button>
-  <button class="sl-button sl-black sl-display-right" onclick="plusDivs(1)">&#10095;&#10095;</button>
-
-  <div class="sl-center">
-  	<div class="sl-row-padding sl-section">
-	    <div class="sl-col s3">
-	      <img class="demo sl-opacity sl-hover-opacity" src="./img/moon_1.jpg" style="width:100%" onclick="currentDiv(1)">
-	    </div>
-	    <div class="sl-col s3">
-	      <img class="demo sl-opacity sl-hover-opacity" src="./img/moon_2.jpg" style="width:100%" onclick="currentDiv(2)">
-	    </div>
-	    <div class="sl-col s3">
-	      <img class="demo sl-opacity sl-hover-opacity" src="./img/moon_3.jpg" style="width:100%" onclick="currentDiv(3)">
-	    </div>
-	     <div class="sl-col s3">
-	      <img class="demo sl-opacity sl-hover-opacity" src="./img/moon_4.jpg" style="width:100%" onclick="currentDiv(4)">
-	    </div>
-  	</div>
-   </div>
+		<div class="form-group" id="calen-title">
+			<label class="sr-only">Birthday:</label>
+			<input type="text" class="input-text" id="picked_day" name="calen-title" value="--/--/----">
+			<span class="" id="validate_day"></span>
+			<div class="calendar">
+				<div class="calen-show">
+				<table>
+					<tbody>
+						<tr class="calen-button">
+							<td onclick="chooseYear(-1)">&#10094;&#10094;</td>
+							<td onclick="chooseMonth(-1)">&#10094;</td>
+							<td colspan="2">
+								<select class="calen-select" id="calen_select_months" onchange="chooseFastMonth();">
+									<option value="0">January</option>
+									<option value="1">February</option>
+									<option value="2">March</option>
+									<option value="3">April</option>
+									<option value="4">May</option>
+									<option value="5">June</option>
+									<option value="6">July</option>
+									<option value="7">August</option>
+									<option value="8">September</option>
+									<option value="9">October</option>
+									<option value="10">November</option>
+									<option value="11">December</option>
+								</select>
+							</td>
+							<td>
+								<select class="calen-select" id="calen_select_years" onchange="chooseFastYear();">
+								</select><!--Combobox choose year-->
+							</td>
+							<td onclick="chooseMonth(1);">&#10095;</td>
+							<td onclick="chooseYear(1);">&#10095;&#10095;</td>
+						</tr>
+						<tr class="calen-days">
+							<td>Sun</td>
+							<td>Mon</td>
+							<td>Tue</td>
+							<td>Web</td>
+							<td>Thu</td>
+							<td>Fri</td>
+							<td>Sat</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>		
+		</div>	
+		<input type="submit" class="btn-submit btn-primary" name="submit" value="Submit">
+		<input type="button" class="btn-primary" name="reset" value="Reset">
+	</form>	
 </div>
-<script type="text/javascript" src="./js/javascript.js"></script>
+<script type="text/javascript">
+	/**
+	Feature: FROM_AJAX_EXCERCISE
+	*/
+	var USERNAME = document.getElementById("username").value;
+	var PASSWORD = document.getElementById("password").value;
+	var EMAIL = document.getElementById("email").value;
+	var BIRTHDAY = document.getElementById("picked_day").value;
+
+	function checkUsername() {
+
+	}
+	function checkPassword() {
+
+	}
+	function checkEmail() {
+
+	}
+	function checkBirthDay() {
+
+	}
+</script>
+<script type="text/javascript" src="./js/calender.js"></script>
 </body>
 </html>

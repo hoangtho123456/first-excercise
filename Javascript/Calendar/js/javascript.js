@@ -1,3 +1,10 @@
+/**
+*Idea: create the action for calender like:
+*show dates of the month
+*show days of a week
+*choose fast year or fast month
+@author danghoangtho1132@gmail.com (Đặng Hoàng Thọ)
+*/
 var now = new Date(); 
 var cur_day = now.getDate();  //the current day in pc
 var cur_mon = now.getMonth(); //the current month 
@@ -6,7 +13,7 @@ var cell_days = document.getElementsByTagName('td'); //the cells in calender
 var listMonth = document.getElementById("calen_select_months"); //list month in combobox-month
 var listYear = document.getElementById("calen_select_years"); //list years in combobox-year
 drawCalender(cur_year, cur_mon);  //function use draw the days in Calender
-showListYear();  //function use show list years in the combobox-year
+showListYear();  //function use show list years in the combobox-year(1954 -> 2099)
 chooseAnyDay(); //when you choose any day in calender, it will be show the border itself
 
 function drawCalender(year, month) {
@@ -36,12 +43,25 @@ function drawCalender(year, month) {
 	showTimeBox(); //show cur_mon and cur_year on combobox
 }
 
+//show list year in combobox of year
+function showListYear() {
+	var i;
+	for (i = 1954; i < 2100; i++) {
+		listYear.innerHTML += "<option value='" + i + "'>" + i + "</option>";
+	}
+	drawCalender(cur_year, cur_mon);
+}
+// show current date (update from pc) into the combobox-month and combobox-year
 function showTimeBox() {
 	listMonth.value = cur_mon;
 	listYear.value = cur_year;
 }
 
-
+/**
+*action choose Month:
+*if month < 0 (value 0 is January), current month is January
+*if month > 11 (value 11 is December), current month is December
+*/
 function chooseMonth(month) {
 	cur_mon += month;
 	if(cur_mon < 0) {
@@ -71,14 +91,6 @@ function chooseYear(year) {
 	cur_year = parseInt(cur_year) + parseInt(year);
 	checkTime();
 	drawCalender(cur_year,cur_mon);
-}
-//show list year in combobox-year
-function showListYear() {
-	var i;
-	for (i = 1954; i < 2100; i++) {
-		listYear.innerHTML += "<option value='" + i + "'>" + i + "</option>";
-	}
-	drawCalender(cur_year, cur_mon);
 }
 
 //it use for combobox choose fast month

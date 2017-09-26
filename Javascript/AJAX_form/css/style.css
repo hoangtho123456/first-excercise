@@ -1,58 +1,46 @@
-.sl-center { text-align: center; }
-.sl-content {
-	max-width: 500px;
-	margin: auto;
+.container {
+	max-width: 454px;
+	margin: auto; 
+	background-color: white;
 }
-.sl-display-container { position: relative; }
-
-/*button use for control the img you want*/
-.sl-button {
-	border: none;
-	display: inline-block;
-	padding: 8px 16px;
-	text-align: center;
+.calendar { 
+	margin-top: 7px; 
+	background-color: #2d2d2d; }
+.calen-show > table {
+	width: 454px;
+	height: 296px;
+}
+.calen-show tr > td {
 	cursor: pointer;
-}
-.sl-black {
-	font-size: 48px;
-	color: #000!important;
-	background-color: #fff;
-}
-.sl-black:hover { color: grey!important; }
-.sl-display-left {
-	position: absolute;
-	top: 50%;
-	left: -20%;
-	transform: translate(0%, -50%);
-}
-.sl-display-right {
-	position: absolute;
-	top: 50%;
-	right: -20%;
-	transform: translate(0%, -50%);
-}
-/*the image bar to choose any image to show*/
-.sl-section {
-	margin-top: 16px!important;
-	margin-bottom: 16px!important;
-}
-.sl-row-padding, .sl-row-padding>.sl-col { padding: 0 8px; }
-.sl-row-padding::before, .sl-row-padding::after {
-	content: "";
-	display: table;
-	clear: both;
-}
-.sl-col { float: left; }
-.sl-col.s3 { width: 24.99999%; }
-.sl-opacity  { opacity: 0.60; }
-.sl-hover-opacity:hover { opacity: 1; }
-.sl-opacity-off, 
-.sl-opacity-off:hover { opacity: 1; }
-.sl-center img {
-	width: 55px;
-	height: 62px;
-	transform: translate(0 , 25%);
+	width: 60px;
+	height: 30px;
+	text-align: center;
+	border: 1px solid white;
 }
 
-.sl-animate-fading { animation: fading 5s infinite; }
-@keyframes fading {	0% {opacity: 0} 50% {opacity: 1} 100%{opacity: 0} }
+/*When mouse over any cell, will show border of cell*/
+.calen-show tr > td:hover { border: 1px solid yellow; }
+
+
+.calen-button {
+	cursor: pointer;
+	text-align: center;
+	color: #80b5d8;
+	background-color: #a9cce3;
+}
+
+.calen-select { cursor: pointer; width: 100%; height: 100%; }
+
+.calen-days {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	color: red;
+	background-color: #bebebe;
+}
+
+input#picked_day { 
+	background: url(../img/calendar.png) no-repeat right;
+	background-size: contain;
+	text-align: center; 
+}

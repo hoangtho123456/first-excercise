@@ -108,8 +108,6 @@ function chooseFastYear() {
 
 //function choose day by click at the cell of the table
 function chooseAnyDay() {
-
-	pickedDay.value = cur_day + "/" + (cur_mon + 1) + "/"+ cur_year;
 	var i;
 	for (i = 13; i < 55; i++) {
 		cell_days[i].addEventListener("click", function() {

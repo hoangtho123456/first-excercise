@@ -4,49 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/formAJAX.css">
 	<title>FROM_AJAX_EXCERCISE</title>
 </head>
-<style type="text/css">
-* {
-	margin: 0;
-	padding: 0;
-}
-.calendar { display: none; }
-
-.form-group { padding: 7px 0; }
-.sr-only {
-	display: inline-block;
-	width: 20%;
-	font-size: 18px;
-	font-weight: bold;
-}
-.input-text {
-	max-width: 42%;
-	padding: 2px;
-	font-size: 18px;
-	border: none;
-	border-radius: 5px;
-	box-shadow: 0 0 6px blue; 
-}
-.validate {
-	color: red;
-	font-weight: bold;
-}
-.btn-submit { margin-left: 100px; }
-.btn-primary { 
-	padding: 6px 16px;
-	font-size: 18px;
-	text-transform: uppercase;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	background-color: #007acf;
-}
-.btn-primary:hover { 
-	color: black;
-	border: 1px solid blue; }
-
-</style>
 <body>
 
 <h2 style="text-align: center;">FROM_AJAX_EXCERCISE</h2>
@@ -54,23 +14,23 @@
 	<form method="POST">
 		<div class="form-group">
 			<label class="sr-only">Username:</label>
-			<input type="text" class="input-text" id="username" name="username" value="" onchange="checkUsername();">
+			<input type="text" class="input-text" id="username" name="username" onchange="checkUsername();">
 			<span class="validate" id="validate_user"></span>
 		</div>
 		<div class="form-group">
 			<label class="sr-only">Password:</label>
-			<input type="password" class="input-text" id="password" name="password" value="">
+			<input type="password" class="input-text" id="password" name="password" value="" onchange="checkPassword();">
 			<span class="validate" id="validate_pass"></span>			
 		</div>
 		<div class="form-group">
 			<label class="sr-only">Email:</label>
-			<input type="email" class="input-text" id="email" name="email" value="">
+			<input type="email" class="input-text" id="email" name="email" value="" onchange="checkEmail();">
 			<span class="validate" id="validate_email"></span>			
 		</div>
 
 		<div class="form-group" id="calen-title">
 			<label class="sr-only">Birthday:</label>
-			<input type="text" class="input-text" id="picked_day" name="calen-title" value="--/--/----">
+			<input type="text" class="input-text" id="picked_day" name="calen-title" placeholder="--/--/----" onchange="checkBirthDay();">
 			<span class="" id="validate_day"></span>
 			<div class="calendar">
 				<div class="calen-show">
@@ -170,31 +130,13 @@
 				</div>
 			</div>		
 		</div>	
-		<input type="submit" class="btn-submit btn-primary" name="submit" value="Submit">
-		<input type="button" class="btn-primary" name="reset" value="Reset">
+		<input type="button" class="btn-submit btn-primary" name="submit" onclick="clickSubmit();" value="Submit">
+		<input type="button" class="btn-primary" name="reset" value="Reset" onclick="refresh();">
 	</form>	
+	<div id="txtHint" class="show-notification"></div>
 </div>
-<script type="text/javascript">
-	/**
-	Feature: FROM_AJAX_EXCERCISE
-	*/
-	var USERNAME = document.getElementById("username").value;
-	var PASSWORD = document.getElementById("password").value;
-	var EMAIL = document.getElementById("email").value;
-	var BIRTHDAY = document.getElementById("picked_day").value;
+<script type="text/javascript" src="./js/checkvalidate.js">
 
-	function checkUsername() {
-
-	}
-	function checkPassword() {
-
-	}
-	function checkEmail() {
-
-	}
-	function checkBirthDay() {
-
-	}
 </script>
 <script type="text/javascript" src="./js/calender.js"></script>
 </body>

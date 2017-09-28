@@ -155,7 +155,7 @@ function clickSubmit() {
 				//return false;
 			}
 		};
-		xmlhttp.open("GET", "php/gethint.php?"+ url, true);
+		xmlhttp.open("GET", "gethint.php?"+ url, true);
 		xmlhttp.send();   
 	}
 	else return false;

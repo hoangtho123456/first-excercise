@@ -12,17 +12,17 @@ function checkUsername() {
 	var usernameRegex = new RegExp("^[A-Za-z0-9]+$"); //username has not any special character
 	var username = document.getElementById("username").value;
 	var validate_user = document.getElementById("validate_user");
-	if(username.length < 8) {
+	if (username.length < 8) {
 		validate_user.innerHTML = "Username length min 8 letter";
 		validate_user.style.color = "red";
 		return false;
 	}
-	else if(username.length > 25) {
+	else if (username.length > 25) {
 		validate_user.innerHTML = "Username length max 25 letter";
 		validate_user.style.color = "red";
 		return false;	
 	}
-	else if(!usernameRegex.test(username)) {
+	else if (!usernameRegex.test(username)) {
 		validate_user.innerHTML = "Username have some special character!";
 		validate_user.style.color = "red";
 		return false;
@@ -41,12 +41,12 @@ function checkUsername() {
 function checkPassword() {
 	var password = document.getElementById("password").value;
 	var validate_pass = document.getElementById("validate_pass");
-	if(password.length < 8) {
+	if (password.length < 8) {
 		validate_pass.innerHTML = "Password length min 8 letter";
 		validate_pass.style.color = "red";
 		return false;
 	}
-	else if(password.length > 25) {
+	else if (password.length > 25) {
 		validate_pass.innerHTML = "Password length max 25 letter";
 		validate_pass.style.color = "red";
 		return false;	
@@ -65,7 +65,7 @@ function checkEmail() {
 	var emailRegex = new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$"); //username has not any special character
 	var email = document.getElementById("email").value;
 	var validate_email = document.getElementById("validate_email");
-	if(!emailRegex.test(email)) {
+	if (!emailRegex.test(email)) {
 		validate_email.innerHTML = "Email wrong format";
 		validate_email.style.color = "red";
 		return false;
@@ -134,7 +134,7 @@ function refresh() {
 function clickSubmit() {
 	var xmlhttp;
 	//if all info is true, it will be sent to server
-	if(checkUsername() && checkPassword() && checkEmail() && checkBirthDay()) {
+	if (checkUsername() && checkPassword() && checkEmail() && checkBirthDay()) {
 		var checkedUser = document.getElementById("username").value;
 		var checkedPassword = document.getElementById("password").value;
 		var checkedEmail = document.getElementById("email").value;
@@ -143,10 +143,10 @@ function clickSubmit() {
 		calendar[0].style.display = "none"; // when click "submit", calendar will disappear
 		var url = "username=" + checkedUser + "&password=" + checkedPassword + 
 		   "&email=" + checkedEmail + "&calen=" + checkedDay;
-		if(url.length == 0) {
+		if (url.length == 0) {
 		  	document.getElementById("txtHint").innerHTML = "";
 		  	return;
-		} else if(window.XMLHttpRequest) {
+		} else if (window.XMLHttpRequest) {
 			xmlhttp = new XMLHttpRequest();
 		}
 		else {

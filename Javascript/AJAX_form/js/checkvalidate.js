@@ -3,7 +3,6 @@ Feature: FROM_AJAX_EXCERCISE
 Author: danghoangtho1132@gmail.com (Dang Hoang Tho)
 */
 
-
 /**
 *Action: check username is true og false?
 @username should delare in function
@@ -98,7 +97,7 @@ function checkBirthDay() {
 }
 
 /**
-*Action: refresh all input in formm
+*Action: refresh all input and text in form
 */
 function refresh() {
 	var username = document.getElementById("username");
@@ -109,6 +108,7 @@ function refresh() {
 	var validate_pass = document.getElementById("validate_pass");
 	var validate_email = document.getElementById("validate_email");
 	var validate_day = document.getElementById("validate_day");
+	var calendar = document.getElementsByClassName("calendar"); 
 
 	username.value = "";
 	password.value = "";
@@ -124,19 +124,25 @@ function refresh() {
 	validate_pass.innerHTML = "";
 	validate_email.innerHTML = "";
 	validate_day.innerHTML = "";
+	//set calendar is non-display and text for check bellow server is ""
+	calendar[0].style.display = "none";
+	document.getElementById("txtHint").innerHTML = "";
 }
 /**
 *AJAX FORM
 */
 function clickSubmit() {
 	var xmlhttp;
+	//if all info is true, it will be sent to server
 	if(checkUsername() && checkPassword() && checkEmail() && checkBirthDay()) {
 		var checkedUser = document.getElementById("username").value;
 		var checkedPassword = document.getElementById("password").value;
 		var checkedEmail = document.getElementById("email").value;
 		var checkedDay = document.getElementById("picked_day").value;
+		var calendar = document.getElementsByClassName("calendar");
+		calendar[0].style.display = "none"; // when click "submit", calendar will disappear
 		var url = "username=" + checkedUser + "&password=" + checkedPassword + 
-		   "&email=" + checkedEmail + "&birthday=" + checkedDay;
+		   "&email=" + checkedEmail + "&calen=" + checkedDay;
 		if(url.length == 0) {
 		  	document.getElementById("txtHint").innerHTML = "";
 		  	return;
@@ -150,12 +156,10 @@ function clickSubmit() {
 			if (this.readyState == 4 && this.status == 200) {
 				document.getElementById("txtHint").innerHTML = this.responseText;
 			} else {
-				document.getElementById("txtHint").innerHTML = "Not connect to server!";
-				//console.log("HTTP Error: " + " " + this.status + " " + this.statusText);
-				//return false;
+				console.log("HTTP Error: " + " " + this.status + " " + this.statusText);
 			}
 		};
-		xmlhttp.open("GET", "php/gethint.php?"+ url, true);
+		xmlhttp.open("GET", "gethint.php?"+ url, true);
 		xmlhttp.send();   
 	}
 	else return false;

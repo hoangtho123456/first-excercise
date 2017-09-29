@@ -6,7 +6,7 @@
 	display: none;
 	max-width: 454px;  
 }
-
+/*FORM-GROUP consist input and label*/
 .form-group { padding: 7px 0; }
 .sr-only {
 	display: inline-block;
@@ -22,6 +22,7 @@
 	border-radius: 5px;
 	box-shadow: 0 0 6px blue; 
 }
+/*class validate use for text validate if it show when info error*/
 .validate {
 	color: red;
 	font-weight: bold;
@@ -38,4 +39,5 @@
 }
 .btn-primary:hover { 
 	color: black;
-	border: 1px solid blue; }
+	border: 1px solid blue; 
+}

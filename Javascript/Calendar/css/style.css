@@ -17,17 +17,17 @@
 
 /*When mouse over any cell, will show border of cell*/
 .calen-show tr > td:hover { border: 1px solid yellow; }
-
-
 .calen-button {
 	cursor: pointer;
 	text-align: center;
 	color: #80b5d8;
 	background-color: #a9cce3;
 }
-
-.calen-select { cursor: pointer; width: 100%; height: 100%; }
-
+.calen-select { 
+	cursor: pointer; 
+	width: 100%; 
+	height: 100%; 
+}
 .calen-days {
 	font-size: 24px;
 	font-weight: bold;
@@ -41,4 +41,7 @@
 	height: 20px;
 	font-size: 18px;
 	text-align: center;
+	background: url(../img/calendar.png) no-repeat right;
+	background-size: contain;
+	background-color: white;
 }

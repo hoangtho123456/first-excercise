@@ -1,4 +1,4 @@
-/**
+/*
 *Create the animation for lides in HTML
 *@author danghoangtho1132@gmail.com (Đặng Hoàng Thọ)
 */
@@ -6,7 +6,7 @@ var SLIDE_INDEX = 0; //@SLIDE_INDEX is a value it increase or decrease follow th
 var RETIMEOUT; //@RETIMEOUT is a value will reset time of a slide if you pick another slides
 showDivs(SLIDE_INDEX); //function show slide animation.
 
-/**
+/*
 *when you click button ">" or "<":
 *@value SLIDE_INDEX will increase (or decrease), 
   the current slide move the next (or move the before slide).
@@ -23,6 +23,7 @@ function showDivs(n) {
 	var i;
 	var slide = document.getElementsByClassName("mySlides");
 	var dots = document.getElementsByClassName("demo");
+	
 	if (n >= slide.length) { 
 		SLIDE_INDEX = 0;
 	}

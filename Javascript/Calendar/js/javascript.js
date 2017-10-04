@@ -118,7 +118,7 @@ function chooseAnyDay() {
 		CELL_DAYS[i].addEventListener("click", function() {
 			var dayCheck = this.innerHTML;
 
-			for (var j = 13; j < 55 ;j++) {
+			for (var j = 13; j < 55; j++) {
 				CELL_DAYS[j].style.border = "";
 			}
 			this.style.border = "1px solid blue";

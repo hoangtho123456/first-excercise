@@ -277,7 +277,7 @@ function clickMenu(mouseX, mouseY) {
    var i;
    for (i = 0; i < monsters.length; i++) {
     if (monsters[i].mon_status != 0) {
-	  SCORE++;
+	  SCORE += 10;
 	  resetMonster(monsters[i]);
     }
   }
@@ -322,48 +322,48 @@ function resetMonster(monster) {
 function directionMove(value_x, value_y, value_direction) {
   value_direction = parseInt(value_direction);
   var speed = parseInt(LV_SPEED[LEVEL]);
-switch(value_direction) {
-  case 0: //Monster move: Top left -> Bottom right
+  switch(value_direction) {
+   case 0: //Monster move: Top left -> Bottom right
     value_x = speed;
     value_y = speed;
     return [value_x, value_y];
     break;
 
-  case 1: //Monster move:  center left -> center right
+   case 1: //Monster move:  center left -> center right
     value_x = speed;
     value_y = 0;
     return [value_x, value_y];
     break;
 
-  case 2: //Monster move: Bottom left -> Top right
+   case 2: //Monster move: Bottom left -> Top right
     value_x = speed;
     value_y = -speed; //? -speed
     return [value_x, value_y];
     break;
 
-  case 3: //Monster move: center top -> center bottom
+   case 3: //Monster move: center top -> center bottom
     value_x = 0;
     value_y = speed;
     return [value_x, value_y];
     break;
 
-  case 4: //Monster move: top right -> bottom left
+   case 4: //Monster move: top right -> bottom left
     value_x = -speed;
     value_y = speed;
     return [value_x, value_y];
     break;
 
-  case 5: //Monster move: right center ->left center
+   case 5: //Monster move: right center ->left center
     value_x = -speed;
     value_y = 0;
     return [value_x, value_y];
     break;
-  case 6: //Monster move: bottom right -> top left 
+   case 6: //Monster move: bottom right -> top left 
     value_x = -speed;
     value_y = -speed;
     return [value_x, value_y];
     break;
-  case 7: //Monster move: bottom center -> top center
+   case 7: //Monster move: bottom center -> top center
     value_x = 0;
     value_y = -speed;
     return [value_x, value_y];

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+     <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>JQUERY_CALENDER_EXCERCISE</title>
+</head>
+<body>
+<div class="container">
+	<div id="calen-title">
+		<input id="picked_day" name="calen-title" value="--/--/----" disabled="checked"/>
+	</div>
+	<div class="calen-show">
+		<table>
+			<tbody>
+				<tr class="calen-button">
+					<td>&#10094;&#10094;</td>
+					<td>&#10094;</td>
+					<td colspan="2">
+						<select class="calen-select" id="calen_select_months" >
+							<option value="0">January</option>
+							<option value="1">February</option>
+							<option value="2">March</option>
+							<option value="3">April</option>
+							<option value="4">May</option>
+							<option value="5">June</option>
+							<option value="6">July</option>
+							<option value="7">August</option>
+							<option value="8">September</option>
+							<option value="9">October</option>
+							<option value="10">November</option>
+							<option value="11">December</option>
+						</select>
+					</td>
+					<td>
+						<select class="calen-select" id="calen_select_years"></select><!--Combobox choose year-->
+					</td>
+					<td>&#10095;</td>
+					<td>&#10095;&#10095;</td>
+				</tr>
+				<tr class="calen-days">
+					<td>Sun</td>
+					<td>Mon</td>
+					<td>Tue</td>
+					<td>Web</td>
+					<td>Thu</td>
+					<td>Fri</td>
+					<td>Sat</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>		
+</div>
+
+<script type="text/javascript">
+/*
+*Excercise: create a calendar by jquery
+*Idea: create a function draw calendar, and use for other action
+*show dates of the month
+*show days of a week
+*choose fast year or fast month
+*Author: Dang Hoang Tho (danghoangtho1132@gmail.com)
+*/
+var NOW = new Date(); 
+var CUR_DAY = NOW.getDate();  //the current day in pc
+var CUR_MON = NOW.getMonth(); //the current month 
+var CUR_YEAR = NOW.getFullYear(); //the current year
+var CELL_DAYS = $("td");        //days of month
+var LIST_MONTHS = $("#calen_select_months"); //choose month
+var LIST_YEARS = $("#calen_select_years");  //choose year
+createCalendar(CUR_MON, CUR_YEAR);
+showListYear();
+/*
+*Action: create calendar, show current day in pc
+*/
+function createCalendar(month, year) {
+	parseInt(month);
+	parseInt(year);
+	var firstDay = new Date(year, month, 1).getDay(); //==> 1 (Mon)
+	var lastDate = new Date(year, month + 1, 0).getDate(); //==> last date of a month(30 or 31 pr 28 or 29)
+	var i, day;
+	day = 13 + firstDay;
+	//cells from 13 to 54 are the days of a month
+	for (i = day; i < CELL_DAYS.length; i++) {
+	 	CELL_DAYS.eq(i).html("");
+	 	CELL_DAYS.eq(i).css("background", "white");
+	 }
+	//write number into the cells
+	for (i = 1; i <= lastDate; i++) {
+	 	CELL_DAYS.eq(day).html(i);
+	 	day++;
+	}
+	//it will set color "red" for current day (in pc) on calendar
+	if (year === NOW.getFullYear()) {
+		if( month === NOW.getMonth()) {
+			var showCurDay = 12 + firstDay + NOW.getDate();
+			CELL_DAYS.eq(showCurDay).css("background", "red");
+		}
+	} 
+}
+/*
+*show list year from 1954 to 2099 in combobox
+*/
+function showListYear() {
+	var i;
+
+	for (i = 1954; i < 2100; i++) {
+		LIST_YEARS.append("<option value='" + i + "'>" + i + "</option>");
+	}
+}
+//function choose day by click at the cell of the table
+CELL_DAYS.bind("click",function() {
+	var click = CELL_DAYS.index(this);
+	//var 
+});
+</script>
+</body>
+</html>

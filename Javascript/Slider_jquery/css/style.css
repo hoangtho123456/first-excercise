@@ -48,7 +48,7 @@
 }
 .sl-col { float: left; }
 .sl-col.s3 { width: 24.99999%; }
-.sl-opacity  { opacity: 0.60; }
+.sl-opacity  { opacity: 0.40; }
 .sl-hover-opacity:hover { opacity: 1; }
 .sl-opacity-off, 
 .sl-opacity-off:hover {

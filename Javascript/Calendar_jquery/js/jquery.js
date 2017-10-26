@@ -1,6 +1,6 @@
 /*
 *Excercise: create a calendar by jquery
-*Idea: create a function create calendar, and use for other action
+*Idea: create a function draw calendar, and use for other action
 *show dates of the month
 *show days of a week
 *choose fast year or fast month
@@ -81,7 +81,6 @@ LIST_YEARS.on("change", function() {
 	CUR_YEAR = parseInt(LIST_YEARS.val());
 	createCalendar(CUR_MON, CUR_YEAR);
 });
-
 //click prev month
 $("#prev_month").on("click", function() {
 	CUR_MON = parseInt(CUR_MON) - 1;
@@ -92,14 +91,12 @@ $("#prev_month").on("click", function() {
 	checkTime();
 	createCalendar(CUR_MON, CUR_YEAR);
 });
-
 //click prev year
 $("#prev_year").on("click", function() {
 	CUR_YEAR = parseInt(CUR_YEAR) - 1;
 	checkTime();
 	createCalendar(CUR_MON, CUR_YEAR);
 });
-
 //click next month
 $("#next_month").on("click", function() {
 	CUR_MON = parseInt(CUR_MON) + 1;
@@ -110,7 +107,6 @@ $("#next_month").on("click", function() {
 	checkTime();
 	createCalendar(CUR_MON, CUR_YEAR);
 });
-
 //click next year
 $("#next_year").on("click", function() {
 	CUR_YEAR = parseInt(CUR_YEAR) + 1;

@@ -121,10 +121,9 @@ function chooseAnyDay() {
 			for (var j = 13; j < 55; j++) {
 				CELL_DAYS[j].style.border = "";
 			}
-			this.style.border = "1px solid blue";
-
 			if (dayCheck != "") {
 				pickedDay.value = dayCheck + "/" + (CUR_MON + 1) + "/"+ CUR_YEAR;
+				this.style.border = "1px solid blue";
 			}
 		});
 	}

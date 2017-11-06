@@ -1,0 +1,155 @@
+/*Set font-family of the page*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: white;
+}
+.container {
+	width: 1270px;
+	margin: auto;
+	padding: 0;
+}
+
+/*header bar and footer bar of the page*/
+#header {
+	border-bottom: 1px solid #474351;
+	background-color: #2D2F35;
+	width: 100%;
+	height: 110px; 
+}
+#footer {
+	width: 100%;
+	height: 110px;
+	background-color: #24262a;
+	text-align: center;
+}
+#footer img {
+	display: block;
+	margin: auto;
+}
+
+/*The bos "our- product"*/
+.product {  
+	position: relative;
+	height: 300px;
+	background-image: url(../../img/bg_home_intro.gif);
+	background-repeat: repeat;
+	background-position: right bottom;
+	background-color: #25262b;
+	border-bottom: 1px solid #474351;
+}
+.product-intro {
+	padding-left: 131px;
+	width: 402px;
+	height: 238px;
+}
+.product img {
+	position: absolute;
+	top: 0;
+	right: 120px;
+}
+.product-intro .title {
+	margin: 0 0 32px 0;
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+
+/*class "title" use all tags "title" of the page*/
+.title {
+	font-family: initial;
+	color: yellow;
+}
+
+/*image Thumbnail of the page*/
+.contain-img {
+	height: 140px;
+	background-color: #2d2f35;
+}
+ /*class cover around images*/
+.list-img {
+	width: 970px;
+	height: 101px;
+	margin: auto;
+	padding: 23px 0;
+}
+ /*class cover each img*/
+.gallery {
+	position: relative;
+	width: 222px;
+	height: 101px;
+	margin: 0 8px;
+	padding-left: 3px;
+	float: left;
+}
+
+/*big image*/
+.gallery .img-content { position: absolute; }
+/*small image*/
+.gallery .img-no {
+	position: absolute;
+	top: 2px;
+	right: 5px;
+	z-index: 1;
+}
+
+/*class contact include the contact infomation*/
+.contact {
+	height: 415px;
+	background-color: #2d2f35;
+	border-top: 2px solid #37393f;
+	border-bottom: 1px solid #37393f;
+}
+.contact-content {
+	width: 1005px;
+	height: 372px;
+	margin: auto;
+}
+.contact-title {
+	margin: 5px 0 0 0;
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+/*contact seperate 2 part: contact-email and contact-sms*/
+/*contact-email consist the contact info by email*/
+.contact-email {
+	position: relative;
+	float: left;
+	width: 404px;
+	height: 301px;
+	text-align: justify;
+}
+.contact-email img {
+	position: absolute;
+	top: 200px;
+	right: 0;
+	bottom: 0;
+}
+.contact-email p {
+	position: absolute;
+	z-index: 1;
+	margin: 0;
+}
+
+/*contact-sms consist the contact info by sms*/
+.contact-sms {
+	position: relative;
+	float: left;
+	margin-left: 195px;
+	width: 406px;
+	height: 366px;
+	text-align: justify;
+}
+.contact-sms img {
+	position: absolute;
+	bottom: 205px;
+}
+.contact-sms-content {
+	position: absolute;
+	z-index: 1;
+}
+.contact-sms-content p { margin-top: 45px; }

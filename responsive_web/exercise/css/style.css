@@ -1,0 +1,208 @@
+@charset "utf-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	/*font-weight: inherit;*/
+	margin: 0;
+	outline: 0;
+	padding: 0;
+}
+ol, ul {list-style-type: none;}
+a { 
+	text-decoration: none; 
+	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo, sans-serif;
+}
+body {
+	color: #73523f;
+	font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
+	font-size: 13px;
+	background-color: #fff;
+}
+header {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	margin: 0 auto;
+	position: relative;
+	z-index: 200;
+	border-top: 4px solid #f0831e;
+	float: left; 
+}
+.inner {
+	min-width: 960px;
+	max-width: 960px;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	clear: both;
+}
+h1 {
+	font-size: 12px;
+	width: 100%;
+	margin: 10px 0;
+	text-align: left;
+	display: inline-block;
+}
+.header-logo {
+	float: left;
+	max-width: 430px;
+	width: 100%;
+	height: 100px;
+	margin-top: 10px;
+}
+.header-info {
+	float: right;
+	max-width: 245px;
+	width: 100%;
+	height: auto;
+	margin-top: 0;
+	display: inline-block;
+	font-size: 12px;
+	text-align: right;
+}
+.header-info p {
+	width: 100%;
+	display: inline-block;
+	font-weight: bold;
+}
+.header-info span {
+	width: 100%;
+	color: #f0831e;
+}
+.phone-sp { display: none; }
+
+/*menu button*/
+nav {
+	width: 100%;
+	height: 55px;
+	display: inline-block;
+	position: relative;
+	float: left;
+	z-index: 999;
+	background: url(../images/bg_menu.jpg) repeat-x left top;
+	margin: 15px 0 0 0;
+}
+.menu {
+	margin: 0 auto;
+	width:  100%;
+	height: 55px;
+	display: block;
+	min-width: 973px;
+	max-width: 973px;
+}
+
+.menu ul {
+	margin: 1px 0 0 0;
+	padding: 0;
+	background:url(../images/line_menu.jpg) no-repeat right center;
+	width: 100%;
+    display: inline-block;
+    height: 53px;
+}
+.menu ul li {
+	float: left;
+	width: 133px;
+	height: 53px;
+	background:url(../images/line_menu.jpg) no-repeat left center;
+	padding: 0 3px;
+}
+.menu ul li a {
+	width: 100%;
+	height: 53px;
+	text-align: center;
+	display: block;
+	position: relative;
+}
+.menu ul li a.menu-1:hover img,
+.menu ul li.menu-1 a.active img,
+.menu ul li a.menu-2:hover img,
+.menu ul li.menu-2 a.active img,
+.menu ul li a.menu-3:hover img,
+.menu ul li.menu-3 a.active img,
+.menu ul li a.menu-4:hover img,
+.menu ul li.menu-4 a.active img,
+.menu ul li a.menu-5:hover img,
+.menu ul li.menu-5 a.active img,
+.menu ul li a.menu-6:hover img,
+.menu ul li.menu-6 a.active img,
+.menu ul li a.menu-7:hover img,
+.menu ul li.menu-7 a.active img {
+	display:none;
+}
+
+.menu ul li a.menu-1:hover,
+.menu ul li.menu-1 a.active {
+	background:url(../images/menu_1_hover.jpg) no-repeat center center;
+}
+.menu ul li a.menu-2:hover,
+.menu ul li a.menu-2 a.active {
+	background:url(../images/menu_2_hover.jpg) no-repeat center center;
+}
+.menu ul li a.menu-3:hover,
+.menu ul li a.menu-3 a.active {
+	background:url(../images/menu_3_hover.jpg) no-repeat center center;
+}
+.menu ul li a.menu-4:hover,
+.menu ul li a.menu-4 a.active {
+	background:url(../images/menu_4_hover.jpg) no-repeat center center;
+}
+.menu ul li a.menu-5:hover,
+.menu ul li a.menu-5 a.active {
+	background:url(../images/menu_5_hover.jpg) no-repeat center center;
+}
+.menu ul li a.menu-6:hover,
+.menu ul li a.menu-6 a.active {
+	background:url(../images/menu_6_hover.jpg) no-repeat center center;
+}
+.menu ul li a.menu-7:hover,
+.menu ul li a.menu-7 a.active {
+	background:url(../images/menu_7_hover.jpg) no-repeat center center;
+}
+/*sub-menu*/
+div.menu ul li.menu-3 ul.sub-nav,
+div.menu ul li.menu-4 ul.sub-nav { 
+	display: none;
+}
+div.menu ul li.menu-3:hover ul.sub-nav,
+div.menu ul li.menu-4:hover ul.sub-nav {
+	background: none repeat scroll 0 0 #ffc472;
+	display: block;
+	height: auto;
+	margin-left: -3px;
+	position: absolute;
+	top: 53px;
+	width: 141px;
+}
+
+div.menu ul li ul.sub-nav li.sub-nav {
+    height: auto !important;
+    margin: 0 !important;
+    padding: 10px 0 9px 0;
+    text-align: center;
+    width: 100%;
+	border:none;
+	border-bottom:1px solid #d19c5d;
+	background:none;
+}
+
+div.menu ul li ul.sub-nav li.sub-nav-no-b {
+	border-bottom:none;
+}
+div.menu ul li ul.sub-nav li.sub-nav:hover {
+    background: url(../images/bg_menu_sub.jpg) no-repeat center center;
+}
+div.menu ul li ul.sub-nav li.sub-nav a.sub-nav {
+    color: #66402b;
+    float: none !important;
+    font-size: 14px;
+    height: auto !important;
+    text-align: center;
+	z-index:999999999 !important;
+}	
+div.menu ul li ul.sub-nav li.sub-nav a.sub-nav:hover {
+    color: #ffffff;
+}

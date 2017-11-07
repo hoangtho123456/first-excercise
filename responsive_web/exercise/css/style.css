@@ -18,6 +18,13 @@ a {
 }
 a img {border: 0;}
 p{ line-height:1.6; }
+
+div.box-1 a img:hover,
+a.img-button-2 img:hover,.btSli7 a:hover
+{
+    opacity:0.6;
+	filter:alpha(opacity=60); 
+}
 body {
 	color: #73523f;
 	font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
@@ -243,5 +250,71 @@ img.banner {
 	position: relative;
 }         
 
+/*content*/
+div.title-1 {
+	background: url(../images/line_title.jpg) no-repeat left bottom;
+	width: 100%;
+	height: 7px;
+	display: inline-block;
+	text-align: left;
+	padding-bottom: 22px;
+	margin: 20px 0 15px 0;
+}
+div.title-1 img {margin-left: 10px;}
+img.img-1 {float: left;}
+div.content-1 {
+	float: right;
+	text-align: left;
+	max-width: 418px;
+	width: 100%;
+	margin-top: -3px;
+	margin-bottom: 20px;
+}
+div.content-1 p {
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 24px;
+}
 
+/*box in content*/
+div.box-1 {
+	width: 220px;
+	height: auto;
+	display: inline-block;
+	text-align: left;
+	border: 1px solid #d9d9d9;
+	vertical-align: top;
+}
+div.box-1 p {
+	margin: 5px 10px 5px 10px;
+	height: 115px;
+	display: inline-block;
+}
+div.box-1 a {
+	margin: 0 0 0 10px;
+	display: inline-block;
+}
+div.box-2 {
+	margin: 0 18px;
+}
 
+/*box date*/
+dl.date-index {
+	display: inline-block;
+	height: auto;
+	text-align: left;
+	width: 100%;
+}
+dl.date-index dt {
+	background: url(../images/bullet_1.jpg) no-repeat left 5px;
+	float: left;
+	margin-left: 7px;
+	padding-left: 15px;
+	text-align: left;
+}
+dl.date-index dd {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	padding-left: 128px;
+	background: url(../images/bg_index_dl.jpg) repeat-x left bottom;
+}

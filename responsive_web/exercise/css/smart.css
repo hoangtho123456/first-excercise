@@ -48,7 +48,19 @@
 	div.aside {
 		float: none;
 		margin: 25px auto;
-	} 
+	}
+	
+	/*date text*/
+	dl.date-index dt {
+		float: none;
+		margin-bottom: 5px;
+		background:url(../images/bullet_1.jpg) no-repeat scroll left 4px;
+	}
+	dl.date-index dd {
+		display: block;
+		padding-left: 23px;
+		width: auto;
+	}
 	/*unknown*/
 	div.aside-box {
 		margin: 6px auto;
@@ -70,8 +82,40 @@
 		max-width: 288px;
 		padding: 20px 0 16px 20px;
 	}
-	div.menu-footer-2{
+	div.menu-footer-2 {
 	  display:block;
 	}
+	div.f-l,
+	div.menu-footer {
+	  float:none;
+	}
+	div.f-l{
+	  margin-top: 30px;
+	}
+	div.menu-footer-1 ul{
+	  max-width: 144px;
+	}
+	div.copyright {
+    line-height: 13px;
+    padding: 10px 0 70px;
+    }	
+    /*page*/
+    h4 {padding-left: 22px;}
 
+    /*introduction*/
+    .p_padding_bottom_slim {
+	  padding-bottom: 20px;
+    }
+    img.img-1-introduction,
+    img.img-2-introduction,
+    img.img-3-introduction
+     {
+    	float: none;
+    	height: auto;
+    	padding-bottom: 10px;
+    }
+    ul.list-introduction {
+	  padding-left: 30px;
+    }
+    ul.ul-introduction {text-align: center;}
 }	

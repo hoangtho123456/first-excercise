@@ -4,7 +4,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-family: inherit;
 	font-size: 100%;
 	font-style: inherit;
-	/*font-weight: inherit;*/
+	font-weight: inherit;
 	margin: 0;
 	outline: 0;
 	padding: 0;
@@ -22,6 +22,7 @@ p{ line-height:1.6; }
 div.box-1 a img:hover,
 img.aside-img-2:hover,
 a.img-button-2 img:hover,
+img.button1-slim:hover,
 img.aside-img-3:hover,
 img.aside-button:hover,
 .btSli7 a:hover
@@ -669,4 +670,40 @@ ul.ul-introduction li {
 	display: inline-block;
 	padding: 5px;
 	*float: left;
+}
+
+/*slim*/
+div.align {
+    text-align: left;
+    padding: 0 15% 0 12%;
+}
+p.p-slim {
+	text-align: justify;
+	margin-bottom: 12px;
+	margin-left: 12px;
+	letter-spacing: 0.15em;
+}
+.button1-slim {
+	width: 100%;
+	max-width: 250px;
+	height: 42px;
+	font-size: 15px;
+	margin: 20px auto;
+}
+
+img.img1-slim {
+	float: left;
+	width: 349px;
+	height: 260px;
+}
+div.group-slim-text {
+	float: right;
+	width: 49%;
+	text-align: left;
+	font-size: 14px;
+}
+.price {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
 }

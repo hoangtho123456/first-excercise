@@ -152,4 +152,25 @@
     	text-align: center;
     	padding: 0;
     }
+    button.btn-access-content-1 {
+	  float: none;
+	  margin: 0 auto; 
+   }	
+
+   /*qa*/
+   div.group-qa {
+   	max-width: 100%;
+   	width: 100%;
+   	margin: 0 0 10% 0;
+   	height: auto;
+   }
+   div.group-qa p {
+   	width: 85%;
+   	padding-top: 2px;
+   }
+   div.ques, div.ans {
+   	max-width: 100%;
+    padding: 1% 1% 2%;
+   }
+   div.ans {margin-top: 5px;}
 } 	

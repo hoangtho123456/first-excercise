@@ -23,6 +23,7 @@ div.box-1 a img:hover,
 img.aside-img-2:hover,
 a.img-button-2 img:hover,
 img.button1-slim:hover,
+img.button1-qa:hover,
 img.aside-img-3:hover,
 img.aside-button:hover,
 .btSli7 a:hover
@@ -722,4 +723,37 @@ ul.ul-access li {
 	display: inline-block;
 	padding: 5px;
 	vertical-align: top;
+}
+button.btn-access-content-1 {
+	float: right;
+	margin-top: 2%; 
+}
+
+div.group-qa {
+	margin: 0 0 2% 4%; 
+	width: 96%;
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	text-align: left;
+}
+div.ques {
+	background: whitesmoke;
+	padding: 1% 1% 0 1%;
+}
+div.ques p {
+	display: inline-block;
+	height: auto;
+	float: right;
+	width: 92%;
+	font-size: 16px;
+	font-weight: bold;
+}
+div.ans {
+	padding: 1% 1% 0 1%;
+}
+div.ans p {
+	float: right;
+	width: 92%;
+	font-size: 14px;
 }

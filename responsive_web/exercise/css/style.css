@@ -641,9 +641,7 @@ ul.list-introduction {
 	padding-bottom: 20px;
 	text-align: justify;
 }
-.txt-left-slim {
-	text-align: left;
-}
+.txt-left-slim {text-align: left;}
 img.img-2-introduction {
 	width: 100%;
 	max-width: 240px;

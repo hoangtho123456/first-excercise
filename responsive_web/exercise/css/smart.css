@@ -130,4 +130,26 @@
     	float: none;
     	display: block;
     }
+    
+    /*access*/
+    img.img-map {
+    	width: 100%;
+    	float: none;
+    	display: block;
+    	padding-bottom: 5px;
+    }
+    ul.ul-access li{
+    	width: 100%;
+    	display: block;
+    	padding: 0 0 5px 0;
+    }
+    ul.ul-access li img {
+    	width: 100%;
+    	display: block;
+    	margin: 0 auto;
+    }
+    .align-text {
+    	text-align: center;
+    	padding: 0;
+    }
 } 	

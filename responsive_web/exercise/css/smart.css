@@ -121,6 +121,7 @@
 
     /*slim*/
     img.img1-slim {
+    	max-width: 100%;
     	float: none;
     	height: auto;
     	padding-bottom: 10px;	
@@ -173,4 +174,25 @@
     padding: 1% 1% 2%;
    }
    div.ans {margin-top: 5px;}
+
+   /*case*/
+   ul.ul-case {
+	display: block;
+	max-width: 100%;
+	text-align: center;
+	margin: 0;
+  }
+  ul.ul-case li {
+	max-width: 100%;
+	width: 100%;
+	display: block;
+	padding: 2px;
+  }
+
+  /*facial*/
+  div.group-facial-text {
+    width: 100%;
+    float: none;
+    display: block;
+  }
 } 	

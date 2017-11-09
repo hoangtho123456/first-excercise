@@ -601,7 +601,7 @@ h3 {
     width: 96%;   
 }
 h4{
-    background:url(../images/h4.png) no-repeat left 2px;
+    background:url(../images/h4.png) no-repeat left 0px;
     clear: both;
     font-size: 120%;
     font-weight: bold;
@@ -708,6 +708,7 @@ div.group-slim-text {
 }
 .price {
     width: 100%;
+    margin: 10px 0;
     text-align: center;
     font-size: 18px;
 }
@@ -756,4 +757,32 @@ div.ans p {
 	float: right;
 	width: 92%;
 	font-size: 14px;
+}
+
+/*pa*/
+.p-pa-content-1 {
+  text-align: left;
+  padding-left: 4%;
+  padding-bottom: 2%;
+}
+ul.ul-case {
+	display: block;
+	width: 100%;
+	text-align: left;
+	margin: 0 0 0 4%;
+}
+ul.ul-case li {
+	width: 46%;
+	max-width: 100%;
+	display: inline-block;
+	padding: 2px;
+	vertical-align: top;
+}
+
+
+div.group-facial-text {
+    float: right;
+    width: 49%;
+    text-align: left;
+    font-size: 14px;
 }

@@ -786,3 +786,9 @@ div.group-facial-text {
     text-align: left;
     font-size: 14px;
 }
+
+/*hair_growth*/
+a.align-button {
+	display: inherit;
+	text-align: center;
+} 

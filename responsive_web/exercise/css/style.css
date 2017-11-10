@@ -792,3 +792,39 @@ a.align-button {
 	display: inherit;
 	text-align: center;
 } 
+
+/*recruit*/
+.p-recruit-content-1 {
+	text-align: left;
+	font-size: 120%;
+	margin: 1px 3%;
+	letter-spacing: 0.15em;
+}
+.p-recruit-content-2 {
+	max-width: 100%;
+	width: 97%;
+	margin: 1px 3%;
+	font-size: 110%;
+}
+.red { color: red;}
+.inline-block {
+	display: inline-block; 
+	margin-bottom: 3%;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+}
+ul.ul-recruit {
+	display: block;
+	text-align: left;
+	margin: 0 auto;
+}
+ul.ul-recruit li {
+	display: inline-block;
+	padding: 10px;
+	*float: left;
+	font-size: 110%;
+}
+.float-left {float: left;}
+.float-right {float: right;}
+img.img-recruit-2 {	margin: 0 8px;}
+img.img-recruit-table { max-width: 100%;}

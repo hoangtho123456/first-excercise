@@ -9,9 +9,9 @@ var containCanvas = $("#contain_canvas_game")[0].getContext("2d");
 const FPS =60;
 const TICKS = 1000 / FPS;
 
-//cross-browser support requestAnimationGame
+//cross-browser support requestAnimationFrame
 var supportAnimate = window;
-requestAnimationGame = supportAnimate.requestAnimationGame || supportAnimate.webkitRequestAnimationGame
+requestAnimationFrame = supportAnimate.requestAnimationFrame || supportAnimate.webkitRequestAnimationFrame
                       || supportAnimate.msRequestAnimationFrame || supportAnimate.mozRequestAnimationFrame;
 var lastUpdateTime = Date.now();
 
@@ -31,6 +31,7 @@ var LIMIT_LEFT = 10;
 var LIMIT_RIGHT = 670;
 var HIGHSCORE = 0;
 var MONSTER_SIZE = 100;
+
 //Init high score session storage
 if (sessionStorage.getItem("hightScore") === null) {
   sessionStorage.setItem("hightScore", 0);
@@ -49,13 +50,17 @@ var IMG_RESTART = new Image();
 IMG_RESTART.src = "img/restart.jpg";
 var IMG_ICON_PAUSE = new Image();
 IMG_ICON_PAUSE.src = "img/iconpause.jpg";
+
+var explosionReady = false;
 var IMG_BOOM = new Image();
 IMG_BOOM.src = "img/boom.jpg";
 var IMG_GAMEOVER = new Image();
 IMG_GAMEOVER.src = "img/gameover.jpg";
 
+var IMG_MONSTER = new Image();
 var IMG_MONSTER1 = new Image();
 IMG_MONSTER1.src = "img/monster1.jpg";
+var IMG_MONSTER = IMG_MONSTER1;
 var IMG_MONSTER2 = new Image();
 IMG_MONSTER2.src = "img/monster2.jpg";
 var IMG_MONSTER3 = new Image();
@@ -114,15 +119,16 @@ Monster.prototype.move = function() {
    this.toX = this.initX;
    this.toY = this.initY;
   }
+
   if (this.x < this.toX) {
-    this.x = this.x + SPEED;
+    this.x += SPEED;
   } else if(this.x > this.toX) {
-    this.x = this.x - SPEED;
+    this.x -= SPEED;
   }
   if (this.y < this.toY) {
-    this.y = this.y + SPEED;
+    this.y += SPEED;
   } else if(this.y > this.toY) {
-    this.y = this.y - SPEED;
+    this.y -= SPEED;
   }
   //disable monster
   if (this.x === this.initX && this.y === this.initY) {
@@ -132,7 +138,7 @@ Monster.prototype.move = function() {
     this.toX = this.initToX;
     this.toY = this.initToY;
     SCORE = -10;
-    randomMonster();
+    //randomMonster();
   }
 };
 
@@ -140,8 +146,8 @@ Monster.prototype.move = function() {
 ============Monster==============================
 *Monster(initX, initY, x, y, toX, toY, initToX, initToY, die, dieX, dieY, visible)
 */
-var monster1 = new Monster(0, 0, 0, 0, 340, 200, 340, 200, false, 0, 0, true); //top left
-var monster2 = new Monster(350, 0, 350, 350, 200, 350, 200, false, 0, 0, false); //top center
+var monster1 = new Monster(0, 0, 0, 0, 250, 150, 250, 150, false, 0, 0, true); //top left
+var monster2 = new Monster(350, 0, 350, 0, 350, 200, 350, 200, false, 0, 0, false); //top center
 var monster3 = new Monster(650, 0, 650, 0, 340, 190, 340, 190, false, 0, 0, false); //top right
 var monster4 = new Monster(0, 190, 0, 190, 340, 190, 340, 190, false, 0 ,0, false ); //center left
 var monster5 = new Monster(630, 190, 630, 190, 340, 190, 340, 190, false, 0, 0, false); //center right
@@ -154,3 +160,102 @@ var MONSTER = [monster1, monster2, monster3, monster4, monster5, monster6, monst
 /*
 *Event click container
 */
+var offsetContain = $("#contain_canvas_game").offset();
+/*containCanvas.addEventListener("click", function(e) {
+  var xPosition = e.pageX - offsetContain.left;
+  var yPosition = e.pageY - offsetContain.top;
+  SCORE -= 10;
+
+  //if click at target success, call click smonter
+  for (var i = 0; i < 8; i++) {
+    if (MONSTER[i].visible) {
+      //clickMonster(xPosition, yPosition, MONSTER[i]);
+    }
+  }
+});
+*/
+
+/*
+*Render
+*Action: draw background of game 
+*/
+function render() {
+  /*-------Contain canvas------------*/
+  //background
+  containCanvas.drawImage(IMG_BG, 0, 0, 700, 400);
+  //BOOM
+  if (explosionReady) {
+    containCanvas.drawImage(IMG_BOOM, 200, 200, 300 ,300);
+  }
+
+  //monster
+  for (var i = 0; i < 8; i++) {
+    if (MONSTER[i].visible) {
+      containCanvas.drawImage(IMG_MONSTER, MONSTER[i].x, MONSTER[i].y, MONSTER_SIZE, MONSTER_SIZE);
+    }
+  }
+  /*------Menu canvas----------------*/
+  menuCanvas.drawImage(IMG_BG_MENU, 0, 0, 700, 100);
+  //Boom
+  menuCanvas.drawImage(IMG_BOOM, 430, 25, 55, 55);
+  //pause
+  menuCanvas.drawImage(IMG_PAUSE, 350, 35, 45, 45);
+  //Restart
+  menuCanvas.drawImage(IMG_RESTART, 250, 35, 45, 45);
+
+  menuCanvas.fillStyle = "white";
+  menuCanvas.font = "13.5pt Arial";
+  menuCanvas.fillText(BOOM, 480, 35);
+  menuCanvas.fillStyle = "white";
+  menuCanvas.fillText("SCORE: " + SCORE, 20, 25);
+  menuCanvas.fillText("HEART: " + HEART, 20, 55);
+  menuCanvas.fillText("LEVEL: " + LEVEL, 20, 85);
+}
+/*
+*Update game
+*/
+function update() {
+  for (var i = 0; i < 8; i++) {
+    if (MONSTER[i].visible) {
+      MONSTER[i].move();
+    }
+  };
+}
+/*Main function*/
+function main() {
+  if (HEART < 0) {
+    //overGame();
+  }
+  var now = Date.now();
+  var differentTime = now -lastUpdateTime;
+  if(differentTime >= TICKS) {
+    update();
+    render();
+    lastUpdateTime= now;
+  }
+  if(RUNNING) {
+    requestAnimationFrame(main);  
+  } else if (!RUNNING && !END) {
+    containCanvas.fillStyle = "#f1f1f1";
+    containCanvas.font = "30px Arial";
+    containCanvas.fillText("pause", 330, 380);
+  } else if (!RUNNING && END) {
+    if (SCORE > HIGHSCORE) {
+      HIGHSCORE = SCORE;
+      sessionStorage.setItem("hightScore", HIGHSCORE);
+
+      containCanvas.fillStyle = "#F1F1F1";
+      containCanvas.font = "30px Arial bold";
+      containCanvas.fillText("NEW HIGHSCORE: " + HIGHSCORE, 200, 390);
+    } else {
+      containCanvas.fillStyle = "#F1F1F1";
+      containCanvas.font = "35px Arial bold";
+      containCanvas.fillText("SCORE: " + SCORE, 150, 290);
+    }
+    containCanvas.fillStyle = "#ff0000";
+    containCanvas.font = "50px Arial bold";
+    containCanvas.fillText("GAME OVER", 120, 250);
+  }
+}
+
+main();

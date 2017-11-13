@@ -100,7 +100,7 @@
     padding: 10px 0 70px;
     }	
     /*page*/
-    h4 {padding-left: 22px;}
+    h4 {padding-left: 13px;}
 
     /*introduction*/
     .p_padding_bottom_slim {
@@ -215,5 +215,12 @@
 	margin-bottom: 3%;
 	margin-left: 0;
 	margin-right: 0;
-}
+  }
+
+  /*bihda*/
+  img.img-bihda-next { display: none; }
+  img.img-bihda-down { 
+  	display: block;
+  	margin: auto; 
+  }
 } 	

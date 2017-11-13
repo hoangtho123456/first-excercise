@@ -532,7 +532,7 @@ div.menu-footer-2 ul li.menu-1 a {
 	font-size: 16px;
 	padding-left: 17px;
 }
-
+.center {text-align: center;}
 div.copyright {
 	background: #f88e01;
 	text-align: center;
@@ -549,7 +549,10 @@ div.copyright {
 .no-margin-top{
 	margin-top:0;
 }
-
+.title {
+	font-weight: bold;
+	font-size: 16px;
+}
 #page-top {
 	bottom: 20px;
 	font-size: 12px;
@@ -669,6 +672,8 @@ ul.ul-introduction li {
 	display: inline-block;
 	padding: 5px;
 	*float: left;
+	letter-spacing: 0.15em;
+	line-height: 1.6;
 }
 
 /*slim*/
@@ -806,7 +811,10 @@ a.align-button {
 	margin: 1px 3%;
 	font-size: 110%;
 }
-.red { color: red;}
+.red { 
+	color: red;
+	font-weight: bold;
+}
 .inline-block {
 	display: inline-block; 
 	margin-bottom: 3%;
@@ -828,3 +836,17 @@ ul.ul-recruit li {
 .float-right {float: right;}
 img.img-recruit-2 {	margin: 0 8px;}
 img.img-recruit-table { max-width: 100%;}
+
+/*bihda*/
+p.p-bihda-text-content-1 {
+	text-align: left;
+	font-weight: bold;
+	font-size: 110%;
+	padding: 2px 3px;
+}
+div.img-bihda-action {
+	display: inline-block;
+	text-align: left;
+}
+img.img-bihda-next {margin-bottom: 10%;}
+img.img-bihda-down {display: none;}

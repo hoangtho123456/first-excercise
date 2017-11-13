@@ -195,4 +195,25 @@
     float: none;
     display: block;
   }
+
+  /*recruit*/
+  img.img-recruit-2 {
+  	display: block;
+  	max-width: 100%;
+  	margin: 3px auto;
+  	float: none;
+  }
+  img.img-recruit-content-1 {max-width: 90%;}
+  .p-recruit-content-1, .p-recruit-content-2 {
+	max-width: 100%;
+	width: 100%;
+	margin: 0;
+	font-size: 110%;
+  }
+  .inline-block {
+    display: block; 
+	margin-bottom: 3%;
+	margin-left: 0;
+	margin-right: 0;
+}
 } 	

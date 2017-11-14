@@ -850,3 +850,31 @@ div.img-bihda-action {
 }
 img.img-bihda-next {margin-bottom: 10%;}
 img.img-bihda-down {display: none;}
+
+/*acty*/
+.group-acty-text {
+	float: left;
+	width: 61%;
+	text-align: left;
+	padding-left: 3%;
+	font-size: 14px;
+}
+img.img-acty-1 {
+	float: right;
+	padding-top: 3%;
+}
+.float {float: none;}
+.group-acty-text-2 {
+	text-align: left;
+	padding-left: 3%;
+	font-size: 14px;
+}
+img.img-acty-2 {
+	max-width: 100%;
+	width: 100%;
+}
+img.img-acty-3 {
+  	width: 95%;
+  	max-width: 100%;
+  	margin-bottom: 2%;
+}

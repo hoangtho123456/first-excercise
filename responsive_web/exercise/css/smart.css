@@ -223,4 +223,22 @@
   	display: block;
   	margin: auto; 
   }
+  .group-acty-text {
+	float: none;
+	width: 100%;
+	max-width: 100%;
+	display: block;
+	text-align: left;
+	padding-left: 0;
+	font-size: 14px;
+  }
+  img.img-acty-1 {
+	float: none;
+	max-width: 100%;
+	padding-top: 0;
+  }
+  img.img-acty-3 {
+  	width: 100%;
+  	max-width: 100%;
+  }
 } 	

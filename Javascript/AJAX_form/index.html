@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/ajaxform.css">
+	<title>FROM_AJAX_EXCERCISE</title>
+</head>
+<body>
+
+<h2 style="text-align: center;">FROM_AJAX_EXCERCISE</h2>
+<div class="container">
+	<form method="POST">
+		<div class="form-group">
+			<label class="sr-only">Username:</label>
+			<input type="text" class="input-text" id="username" name="username" onchange="checkUsername();">
+			<span class="validate" id="validate_user"></span>
+		</div>
+		<div class="form-group">
+			<label class="sr-only">Password:</label>
+			<input type="password" class="input-text" id="password" name="password" value="" onchange="checkPassword();">
+			<span class="validate" id="validate_pass"></span>			
+		</div>
+		<div class="form-group">
+			<label class="sr-only">Email:</label>
+			<input type="email" class="input-text" id="email" name="email" value="" onchange="checkEmail();">
+			<span class="validate" id="validate_email"></span>			
+		</div>
+
+		<div class="form-group" id="calen-title">
+			<label class="sr-only">Birthday:</label>
+			<input type="text" class="input-text" id="picked_day" name="calen" value="" placeholder="--/--/----" onchange="checkBirthDay();">
+			<span class="" id="validate_day"></span>
+			<div class="calendar">
+				<div class="calen-show">
+				<table>
+					<tbody>
+						<tr class="calen-button">
+							<td onclick="chooseYear(-1)">&#10094;&#10094;</td>
+							<td onclick="chooseMonth(-1)">&#10094;</td>
+							<td colspan="2">
+								<select class="calen-select" id="calen_select_months" onchange="chooseFastMonth();">
+									<option value="0">January</option>
+									<option value="1">February</option>
+									<option value="2">March</option>
+									<option value="3">April</option>
+									<option value="4">May</option>
+									<option value="5">June</option>
+									<option value="6">July</option>
+									<option value="7">August</option>
+									<option value="8">September</option>
+									<option value="9">October</option>
+									<option value="10">November</option>
+									<option value="11">December</option>
+								</select>
+							</td>
+							<td>
+								<select class="calen-select" id="calen_select_years" onchange="chooseFastYear();">
+								</select><!--Combobox choose year-->
+							</td>
+							<td onclick="chooseMonth(1);">&#10095;</td>
+							<td onclick="chooseYear(1);">&#10095;&#10095;</td>
+						</tr>
+						<tr class="calen-days">
+							<td>Sun</td>
+							<td>Mon</td>
+							<td>Tue</td>
+							<td>Web</td>
+							<td>Thu</td>
+							<td>Fri</td>
+							<td>Sat</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>		
+		</div>	
+		<input type="button" class="btn-submit btn-primary" name="submit" onclick="clickSubmit();" value="Submit">
+		<input type="button" class="btn-primary" name="reset" value="Reset" onclick="refresh();">
+	</form>	
+	<div id="txtHint" class="show-notification"></div>
+</div>
+<script type="text/javascript" src="./js/checkvalidate.js"></script>
+<script type="text/javascript" src="./js/calender.js"></script>
+</body>
+</html>

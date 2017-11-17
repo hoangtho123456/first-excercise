@@ -120,9 +120,8 @@ var chart = (function () {
     	var detailHTML = "";
     	var categ;
     	for (categ in options.data) {
-          detailHTML += "<div style='margin-bottom: 5px; font-size: 19px;'>
-                    <span style='display:inline-block;width:20px;background-color:" 
-                    + colors[color_index++] + ";'>&nbsp;</span> " + categ + "</div>";
+          detailHTML += "<div style='margin-bottom: 5px; font-size: 19px;'><span style='display:inline-block;width:20px;background-color:" 
+                       + colors[color_index++] + ";'>&nbsp;</span> " + categ + "</div>";
     	}
     	options.detail.innerHTML = detailHTML;
     }

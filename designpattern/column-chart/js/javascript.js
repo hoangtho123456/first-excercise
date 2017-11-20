@@ -89,7 +89,7 @@ var ColumnChart = (function () {
     privateDescription = function () {
         var color_index = 0;
         var descriptHTML = "";
-        descriptHTML = "<div><span style='border: 1px solid black;display: inline-block;"
+        descriptHTML = "<div><span style='border: 1px solid black;display: block;"
                        +"width: 60px;height:40px;margin-right:10px;background-color:" 
                        + color + "'>&nbsp;</span>LEVEL OF POSITION</div>";
         descript.innerHTML = descriptHTML;

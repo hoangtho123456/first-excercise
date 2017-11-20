@@ -6,11 +6,11 @@
 *@author: danghoangtho1132@gmail.com
 */
 var slider = (function () {
-	var index = 0; //value index img in slider
-	var time = 4000; //time to go to next slide
-	var reTimeout; //set timeout every second
-	var privateImgWin = $(".sl-main-image-js img"); //list img on slider
-	var privateImgMenu = $(".sl-row-padding img"); //list img on menu slider
+    var index = 0; //value index img in slider
+    var time = 4000; //time to go to next slide
+    var reTimeout; //set timeout every second
+    var privateImgWin = $(".sl-main-image-js img"); //list img on slider
+    var privateImgMenu = $(".sl-row-padding img"); //list img on menu slider
 	/*---------Private function-------------*/
 	//function auto slide
 	function showImage() {

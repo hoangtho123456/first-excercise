@@ -1,113 +1,109 @@
 /*
-*rank char
+*Column char
 *design pattern: Module design pattern
-*Idea: draw rank char in canvas
+*Idea: draw Column char in canvas
 *@author: danghoangtho1132@gmail.com
 */
 
-var options = {
-	canvas : canvas_chart,
-	data : [1.5, 3.5, 1.5, 3.5, 2.5, 3.5], //data use for draw curves line
-    oyValue: [0, 1, 2, 3, 4], //data default in Oy.
-    colorLine: "#00AEEF",
-    colorOyValue: "black",
-    fontOyValue: "20px Arial" //set font for value on Oy
-};
+//input column data
+var ColumnData = {
+    data: [2, 0.05, 3, 4, 4]
+}
+var option = {
+    canvas : canvas_chart,
+    data : ColumnData.data,
+    description : description,
+    maxValue : 5,
+    color : ["#2a71d4"],
+    columnName : ["A", "B", "C", "D", "E", "F"]
+}
 
-var chart = (function () {
-    var canvas = options.canvas;
-    canvas.width = 700;
+//class column chart
+var ColumnChart = (function () {
+    var canvas = option.canvas;
+    canvas.width = 600;
     canvas.height = 400;
     var ctx = canvas.getContext("2d");
-    var maxValue = options.oyValue.length;
-    var y;
-    var stepSize = 1;
-    var columnSpace = 70; //top to Oy
-    var rowSpace = 30; //space between each data on Ox
-    var space = 10; //distance between Oy and value on Oy
-    var xScale; //scale following Ox
-    var yScale; //Scale following Oy
+    ctx.fillStle = "#ff9800";
+    ctx.font = "18px Arial";
+   
+    var data = option.data;
+    var descript = option.description;
+    var color = option.color;
+    var columnName = option.columnName;
+    var colPosition = 50; //the first position at Ox-acis of column
+    var stepSizeY = 1;
+    var maxValue = option.maxValue;
+    var margin =10; //Distance of write letters
+    var xScale = (canvas.width - colPosition) / data.length; //width x of column
+    var yScale = (canvas.height - colPosition - margin) / maxValue;  //distance between each honrizontal line
+
     var flag = true;
-    
-    for (var i in options.data) {
-      if (options.data[i] <= 0) {
-      	flag = false;
-      }
-    }
-
-    /*-------------private function-----------*/
-    privateDrawChart = function() {
-        /*calculate xCale and yScale*/
-        xScale = (canvas.width - rowSpace) / (options.data.length);
-        yScale = (canvas.height - columnSpace - space) / (maxValue);
-
-        /*Draw value on Oy*/
-        ctx.beginPath();
-        ctx.fillStyle = options.colorOyValue;
-        ctx.font = options.fontOyValue;
-        var count = 0;
-        var scale = 0;
-        
-        for (scale = maxValue; scale >= 1; scale = scale - stepSize) {
-            y = columnSpace / 2 + (yScale * count * stepSize);
-            ctx.fillText(scale, space, y + space - 5);
-            count++;
-        };
-        
-        //Draw line Oy
-        ctx.beginPath();
-        var locationOy; //exactly location of Oy
-        locationOy = y = columnSpace / 2 + (yScale * count * stepSize);
-        ctx.moveTo(rowSpace, y);
-        ctx.lineTo(rowSpace, columnSpace / 4);
-        ctx.strokeStyle = "black";
-        ctx.stroke();
-
-        //Draw line Ox
-        ctx.beginPath();
-        y = columnSpace / 2 + (yScale * count * stepSize);
-        ctx.fillText(scale, space, y + space -5);
-        ctx.moveTo(rowSpace, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.strokeStyle = "black";
-        ctx.stroke();
-
-        /*Draw Chart follow sin cos line*/
-        ctx.beginPath();
-        ctx.lineWidth = 5;
-        ctx.strokeStyle = options.colorLine; //color of curves
-        ctx.moveTo(xScale * (0.7), locationOy -(yScale * options.data[0] * stepSize));
-        var i;
-        for (i = 0; i < options.data.length; i++) {
-            //control curvature of curve
-            var maskX = Math.abs(options.data[i] - options.data[i + 1]) / 5;  
-            var maskY = Math.abs(options.data[i] - options.data[i + 1]) / 50;
-
-        	if(options.data[i] < options.data[i + 1]) {
-        		ctx.bezierCurveTo (xScale * (i + 0.7 + maskX), locationOy - (yScale * (options.data[i] + maskY)),
-        			              xScale * (i + 1 + 0.7 - maskX), locationOy - (yScale * (options.data[i + 1]) - maskY),
-                                  xScale * (i + 1 + 0.7), locationOy - (yScale * options.data[i + 1] * stepSize));
-        	}
-        	else {
-				ctx.bezierCurveTo (xScale * (i + 0.7 + maskX) ,locationOy - (yScale * (options.data[i] - maskY )),
-				                   xScale * (i + 1 + 0.7 - maskX), locationOy - (yScale * (options.data[i + 1] + maskY )),
-                                   xScale * (i + 1 + 0.7), locationOy - (yScale * options.data[i + 1] * stepSize));	   
-        	}
+    for (var categ in data) {
+        if(data[categ] <= 0) {
+            flag = false;
         }
+    }
+    
+    /*----------------public function-------------*/
+    
+    //Draw column chart
+    privateDrawColumnChart = function () {
+        ctx.beginPath();
+        var scale,
+            i,
+            temp = 1;
+        ctx.fillStyle = "#000";
+
+        //Write numbers and line on 0y
+        for (scale = 0; scale <= maxValue ;scale += stepSizeY) {
+            var distance = yScale * temp * stepSizeY;
+            var y = canvas.height - distance; //position y will draw next
+            ctx.fillText(scale, margin, y);
+            ctx.moveTo(colPosition, y);
+            ctx.lineTo(canvas.width, y);
+            temp++;
+        }
+        
+        //write letters on Ox
+        for (i = 0; i < data.length ;i++) {
+            var x = (i + 0.6) * xScale; //position x will draw next
+            ctx.fillText(columnName[i % columnName.length], x, canvas.height - colPosition + margin);
+        }
+
+        ctx.fillStyle = "#000";
         ctx.stroke();
+
+        //draw column chart
+        //translate column because y scale with yScale
+        ctx.translate(colPosition, canvas.height - (yScale * stepSizeY )); //draw first column is started from this coordinate
+        ctx.scale(xScale, -yScale); //Invert the column which following y-axis, because y-axis is a top line of screen
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        for (i = 0; i < data.length; i++) {
+            ctx.fillRect(i, 0, 0.4, data[i]);
+        } 
     }
 
-    /*-------------public function---------------*/
-    publicDrawChart = function() {
-    	if(flag) {
-            privateDrawChart();
-    	} else {
-            alert("input data is empty or data <= 0");
-    	}
+    //draw description
+    privateDescription = function () {
+        var color_index = 0;
+        var descriptHTML = "";
+        descriptHTML = "<div><span style='border: 1px solid black;display: inline-block;"
+                       +"width: 60px;height:40px;margin-right:10px;background-color:" 
+                       + color + "'>&nbsp;</span>LEVEL OF POSITION</div>";
+        descript.innerHTML = descriptHTML;
     }
+
+    /*----------------public function-------------*/
+    publicDrawColumnChart = function () {
+        privateDrawColumnChart();
+        privateDescription();
+    }
+
     return {
-        drawChart : publicDrawChart
+        drawChart : publicDrawColumnChart
     }
 })();
 
-chart.drawChart();
+ColumnChart.drawChart();

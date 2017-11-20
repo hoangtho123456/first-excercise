@@ -51,15 +51,15 @@ var chart = (function () {
     var color_index = 0;
     var categ;
     for(categ in options.data) {
-    	val = options.data[categ];
-    	total += val;
+    	  val = options.data[categ];
+    	  total += val;
     }
     var start_angle = 1.5 * Math.PI;
 
     for (categ in options.data) {
       val = options.data[categ];
       var sliceAngle = 2 * Math.PI * val/total;
-
+      //
       drawPieSlice(
       	canvas,
       	optionCanvas.width/2,
@@ -106,7 +106,7 @@ var chart = (function () {
        labelY = optionCanvas.height / 2 + (offset + pieRadius / 2) * Math.sin(start_angle + sliceAngle / 2);
      }
 
-     var labelText = Math.round(100 * val/total);
+     var labelText = Math.round(100 * val / total);
      canvas.fillStyle = "white";
      canvas.font = "bold 20px Arial";
      canvas.fillText(labelText + "%", labelX, labelY);

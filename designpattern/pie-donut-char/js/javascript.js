@@ -5,27 +5,33 @@
 *@author: danghoangtho1132@gmail.com
 */
 var charData = {
-  "Xuất sắc" : 10,
-  "Tốt" : 20,
-  "Trung bình" : 10,
-  "Kém" : 60
+    "Xuất sắc" : 10,
+    "Tốt" : 20,
+    "Trung bình" : 10,
+    "Kém" : 60
 };
 
 var options = {
-  canvas : canvas_char,
-  data : charData,
-  colors : ["blue", "red", "orange", "green"],
-  donutHoleSize : 0.5,
-  detail: description
+    canvas : canvas_char,
+    data : charData,
+    colors : ["blue", "red", "orange", "green"],
+    donutHoleSize : 0.5,
+    detail: description
 };
 
 var chart = (function () {
-  var optionCanvas = options.canvas;
-  optionCanvas.width = 400;
-  optionCanvas.height = 400;
-  var canvas = optionCanvas.getContext("2d");
-  var colors = options.colors;
-  var val;
+    var optionCanvas = options.canvas;
+    optionCanvas.width = 400;
+    optionCanvas.height = 400;
+    var canvas = optionCanvas.getContext("2d");
+    var colors = options.colors;
+    var val;
+    var flag = true;
+    for (categ in options.data) {
+        if (options.data[categ] <= 0 || options.data[categ] >= 100) {
+            flag = false;
+        }  
+    }
 
   /*----------private function--------*/
   /*
@@ -129,8 +135,12 @@ var chart = (function () {
 
   /*----------public function--------*/
   var publicDrawChart =function () {
-  	privateDrawChart();
-  	privateDrawDetail();
+  	if (flag) {
+        privateDrawChart();
+        privateDrawDetail();
+    } else {
+        alert("value input not true");
+    }
   }
   return {
     drawChart : publicDrawChart

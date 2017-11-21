@@ -13,7 +13,6 @@ var option = {
     canvas : canvas_chart,
     data : ColumnData.data,
     description : description,
-    maxValue : 5,
     color : ["#2a71d4"],
     columnName : ["A", "B", "C", "D", "E", "F"]
 }
@@ -33,8 +32,14 @@ var ColumnChart = (function () {
     var columnName = option.columnName;
     var colPosition = 50; //the first position at Ox-acis of column
     var stepSizeY = 1;
-    var maxValue = option.maxValue;
-    var margin =10; //Distance of write letters
+    var maxValue = 0;
+
+    for (categ in data) {
+        if(data[categ] > maxValue) {
+            maxValue = data[categ] + 1;
+        }
+    }
+    var margin = 10; //Distance of write letters
     var xScale = (canvas.width - colPosition) / data.length; //width x of column
     var yScale = (canvas.height - colPosition - margin) / maxValue;  //distance between each honrizontal line
 
@@ -56,7 +61,7 @@ var ColumnChart = (function () {
         ctx.fillStyle = "#000";
 
         //Write numbers and line on 0y
-        for (scale = 0; scale <= maxValue ;scale += stepSizeY) {
+        for (scale = 0; scale < maxValue ;scale += stepSizeY) {
             var distance = yScale * temp * stepSizeY;
             var y = canvas.height - distance; //position y will draw next
             ctx.fillText(scale, margin, y);
@@ -76,7 +81,7 @@ var ColumnChart = (function () {
 
         //draw column chart
         //translate column because y scale with yScale
-        ctx.translate(colPosition, canvas.height - (yScale * stepSizeY )); //draw first column is started from this coordinate
+        ctx.translate(colPosition, canvas.height - (yScale * stepSizeY)); //draw first column is started from this coordinate
         ctx.scale(xScale, -yScale); //Invert the column which following y-axis, because y-axis is a top line of screen
         ctx.beginPath();
         ctx.fillStyle = color;

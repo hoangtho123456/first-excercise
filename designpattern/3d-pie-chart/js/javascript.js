@@ -95,7 +95,7 @@ var chart = (function () {
 
         width = percent < 0.5 ? 110 : -110; //if percent < 0.5, line and text will lay on the right oh screen, or reverse
         var curX = canvas.width / 3 + (radius / 2) * Math.cos(start_angle + end_angle / 2) + 100;
-        var curY = canvas.width / 3 + (radius / 2) * Math.sin(start_angle + end_angle / 2) * yScale;
+        var curY = canvas.width / 3 + (radius / 2) * Math.sin(start_angle + end_angle / 2) * yScale - 10;
         privateDrawLine(curX, curY, curX + width, curY - 70, width, "brown");
         ctx.fillStyle = "#000";
         ctx.font = "17px Arial";

@@ -65,7 +65,6 @@ var chart = (function () {
     for (categ in options.data) {
       val = options.data[categ];
       var sliceAngle = 2 * Math.PI * val/total;
-      //
       drawPieSlice(
       	canvas,
       	optionCanvas.width/2,
@@ -73,7 +72,7 @@ var chart = (function () {
       	Math.min(optionCanvas.width/2, optionCanvas.height/2),
       	start_angle,
       	start_angle + sliceAngle,
-      	colors[color_index%colors.length]
+      	colors[color_index % colors.length]
       	);
       
       start_angle += sliceAngle;

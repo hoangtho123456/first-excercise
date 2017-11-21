@@ -17,7 +17,7 @@ var options = {
 
 var chart = (function () {
     var canvas = options.canvas;
-    canvas.width = 600;
+    canvas.width = 650;
     canvas.height = 400;
     var ctx = canvas.getContext("2d");
     var data = options.data;

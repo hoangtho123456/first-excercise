@@ -4,6 +4,7 @@ body {
 	padding: 0;
 }
 canvas#canvas_char {
+	display: block;
 	margin: 0 auto;
 	text-align: center;
 }

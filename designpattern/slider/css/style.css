@@ -66,3 +66,5 @@
 	50% {opacity: 1} 
 	100%{opacity: 0} 
 }
+
+div.sl-content img {width: 100%;}

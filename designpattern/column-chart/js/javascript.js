@@ -7,7 +7,7 @@
 
 //input column data
 var ColumnData = {
-    data: [2, 0.05, 3, 4, 4]
+    data: [2, 0.05, 3, 4, 4, 3]
 }
 var option = {
     canvas : canvas_chart,
@@ -45,7 +45,7 @@ var ColumnChart = (function () {
 
     var flag = true;
     for (var categ in data) {
-        if(data[categ] <= 0) {
+        if(data[categ] < 0 || data[categ] > 4) {
             flag = false;
         }
     }
@@ -72,7 +72,7 @@ var ColumnChart = (function () {
         
         //write letters on Ox
         for (i = 0; i < data.length ;i++) {
-            var x = (i + 0.6) * xScale; //position x will draw next
+            var x = (i + 0.7) * xScale; //position x will draw next
             ctx.fillText(columnName[i % columnName.length], x, canvas.height - colPosition + margin);
         }
 
@@ -86,7 +86,7 @@ var ColumnChart = (function () {
         ctx.beginPath();
         ctx.fillStyle = color;
         for (i = 0; i < data.length; i++) {
-            ctx.fillRect(i, 0, 0.4, data[i]);
+            ctx.fillRect(i, 0, 0.5, data[i]);
         } 
     }
 
@@ -102,8 +102,10 @@ var ColumnChart = (function () {
 
     /*----------------public function-------------*/
     publicDrawColumnChart = function () {
-        privateDrawColumnChart();
-        privateDescription();
+        if(flag) {
+            privateDrawColumnChart();
+            privateDescription();
+        } else alert("input value is not true");
     }
 
     return {

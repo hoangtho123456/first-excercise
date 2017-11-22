@@ -30,7 +30,7 @@ var chart = (function () {
     var flag = true;
     
     for (var i in options.data) {
-      if (options.data[i] <= 0) {
+      if (options.data[i] < 0 || options.data[i] > 4) {
       	flag = false;
       }
     }
@@ -72,37 +72,40 @@ var chart = (function () {
         ctx.strokeStyle = "black";
         ctx.stroke();
 
+        privateDrawCurve(xScale, yScale, locationOy);
+    }
+    var privateDrawCurve = function (xScale, yScale, locationOy) {
         /*Draw Chart follow sin cos line*/
         ctx.beginPath();
         ctx.lineWidth = 5;
         ctx.strokeStyle = options.colorLine; //color of curves
         ctx.moveTo(xScale * (0.7), locationOy -(yScale * options.data[0] * stepSize));
         var i;
-        for (i = 0; i < options.data.length; i++) {
+        for (i = 0; i < options.data.length - 1; i++) {
             //control curvature of curve
             var maskX = Math.abs(options.data[i] - options.data[i + 1]) / 5;  
             var maskY = Math.abs(options.data[i] - options.data[i + 1]) / 50;
 
-        	if(options.data[i] < options.data[i + 1]) {
-        		ctx.bezierCurveTo (xScale * (i + 0.7 + maskX), locationOy - (yScale * (options.data[i] + maskY)),
-        			              xScale * (i + 1 + 0.7 - maskX), locationOy - (yScale * (options.data[i + 1]) - maskY),
+            if(options.data[i] < options.data[i + 1]) {
+                ctx.bezierCurveTo (xScale * (i + 0.7 + maskX), locationOy - (yScale * (options.data[i] + maskY)),
+                                  xScale * (i + 1 + 0.7 - maskX), locationOy - (yScale * (options.data[i + 1]) - maskY),
                                   xScale * (i + 1 + 0.7), locationOy - (yScale * options.data[i + 1] * stepSize));
-        	}
-        	else {
-				ctx.bezierCurveTo (xScale * (i + 0.7 + maskX) ,locationOy - (yScale * (options.data[i] - maskY )),
-				                   xScale * (i + 1 + 0.7 - maskX), locationOy - (yScale * (options.data[i + 1] + maskY )),
-                                   xScale * (i + 1 + 0.7), locationOy - (yScale * options.data[i + 1] * stepSize));	   
-        	}
+            }
+            else {
+                ctx.bezierCurveTo (xScale * (i + 0.7 + maskX) ,locationOy - (yScale * (options.data[i] - maskY )),
+                                   xScale * (i + 1 + 0.7 - maskX), locationOy - (yScale * (options.data[i + 1] + maskY )),
+                                   xScale * (i + 1 + 0.7), locationOy - (yScale * options.data[i + 1] * stepSize));    
+            }
         }
         ctx.stroke();
-    }
+    } 
 
     /*-------------public function---------------*/
     publicDrawChart = function() {
     	if(flag) {
             privateDrawChart();
     	} else {
-            alert("input data is empty or data <= 0");
+            alert("input data is empty or data < 0");
     	}
     }
     return {

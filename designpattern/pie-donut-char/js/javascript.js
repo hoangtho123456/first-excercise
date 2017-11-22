@@ -28,9 +28,17 @@ var chart = (function () {
     var val;
     var flag = true;
     for (categ in options.data) {
-        if (options.data[categ] <= 0 || options.data[categ] >= 100) {
+        if (options.data[categ] < 0 || options.data[categ] > 100) {
             flag = false;
-        }  
+        }
+        var categ, total = 0;
+        for(categ in options.data) {
+          val = options.data[categ];
+          total += val;
+        }
+        if(total !== 100) {
+            flag = false; 
+        }
     }
 
   /*----------private function--------*/
@@ -60,6 +68,7 @@ var chart = (function () {
     	  val = options.data[categ];
     	  total += val;
     }
+
     var start_angle = 1.5 * Math.PI;
 
     for (categ in options.data) {
@@ -92,32 +101,34 @@ var chart = (function () {
   	   "#fff"
   	 );
    }
-
-   //draw label for each slice
-   start_angle = 1.5 * Math.PI;
-   
-   for (categ in options.data) {
-     val = options.data[categ];
-     sliceAngle = 2 * Math.PI * val / total;
-     var pieRadius = Math.min(optionCanvas.width / 2, optionCanvas.height / 2);
-     var labelX = optionCanvas.width / 2 + (pieRadius / 2) * Math.cos(start_angle + sliceAngle / 2);
-     var labelY = optionCanvas.height / 2 + (pieRadius / 2) * Math.sin(start_angle + sliceAngle / 2);
-
-     if (options.donutHoleSize) {
-       var offset = (pieRadius * options.donutHoleSize) / 2;
-       //determine position of label lay at center position in a slice
-       //x = R * cos(angle), y = R * sin(angle)
-       labelX = optionCanvas.width / 2 + (offset + pieRadius / 2) * Math.cos(start_angle + sliceAngle / 2);
-       labelY = optionCanvas.height / 2 + (offset + pieRadius / 2) * Math.sin(start_angle + sliceAngle / 2);
-     }
-
-     var labelText = Math.round(100 * val / total);
-     canvas.fillStyle = "white";
-     canvas.font = "bold 20px Arial";
-     canvas.fillText(labelText + "%", labelX, labelY);
-     start_angle += sliceAngle;   	 
-   }
   };
+  
+  var privateWriteLabel = function () {
+    //draw label for each slice
+    start_angle = 1.5 * Math.PI;
+   
+    for (categ in options.data) {
+      val = options.data[categ];
+      sliceAngle = 2 * Math.PI * val / total;
+      var pieRadius = Math.min(optionCanvas.width / 2, optionCanvas.height / 2);
+      var labelX = optionCanvas.width / 2 + (pieRadius / 2) * Math.cos(start_angle + sliceAngle / 2);
+      var labelY = optionCanvas.height / 2 + (pieRadius / 2) * Math.sin(start_angle + sliceAngle / 2);
+
+      if (options.donutHoleSize) {
+        var offset = (pieRadius * options.donutHoleSize) / 2;
+        //determine position of label lay at center position in a slice
+        //x = R * cos(angle), y = R * sin(angle)
+        labelX = optionCanvas.width / 2 + (offset + pieRadius / 2) * Math.cos(start_angle + sliceAngle / 2);
+        labelY = optionCanvas.height / 2 + (offset + pieRadius / 2) * Math.sin(start_angle + sliceAngle / 2);
+      }
+
+      var labelText = Math.round(100 * val / total);
+      canvas.fillStyle = "white";
+      canvas.font = "bold 20px Arial";
+      canvas.fillText(labelText + "%", labelX, labelY);
+      start_angle += sliceAngle;      
+    }
+  }
 
   var privateDrawDetail = function () {
     if (options.detail) {
@@ -136,6 +147,7 @@ var chart = (function () {
   var publicDrawChart =function () {
   	if (flag) {
         privateDrawChart();
+        privateWriteLabel();
         privateDrawDetail();
     } else {
         alert("value input not true");

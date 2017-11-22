@@ -35,8 +35,16 @@ var chart = (function () {
 
     //check value input
     for (var i in data) {
-        if (data[i] <= 0 || data[i] > 100) {
+        if (data[i] < 0 || data[i] > 100) {
             flag = false;
+        }
+        var categ, checkTotal = 0;
+        for(categ in options.data) {
+          val = options.data[categ];
+          checkTotal += val;
+        }
+        if(checkTotal !== 100) {
+            flag = false; 
         }
     }
 
@@ -66,9 +74,19 @@ var chart = (function () {
             total += data[categ];
         }
         successAngle = 2 * Math.PI * data[0] / total;
-        for (i = 100; i > 0; i--) {
-            privateDrawChart2D(0, 0, 0, successAngle, i);
-            privateDrawChart2D(space, 2, successAngle, -0.01, i);
+        if(data[0] !== 100 && data[1] !== 100) {
+            for (i = 100; i > 0; i--) {
+                privateDrawChart2D(0, 0, 0, successAngle, i);
+                privateDrawChart2D(space, 2, successAngle, -0.01, i);
+            }
+        } else if(data[0] === 100){
+            for (i = 100; i > 0; i--) {
+                privateDrawChart2D(0, 0, 0, successAngle, i);
+             }
+        } else if (data[1] === 100) {
+            for (i = 100; i > 0; i--) {
+                privateDrawChart2D(0, 2, successAngle, 2 * Math.PI, i);
+            }
         }
     };
 
@@ -93,13 +111,13 @@ var chart = (function () {
         var percent = val / total;
         var end_angle = 2 * Math.PI * percent;
 
-        width = percent < 0.5 ? 120 : -110; //if percent < 0.5, line and text will lay on the right oh screen, or reverse
+        width = percent < 0.5 ? 110 : -110; //if percent < 0.5, line and text will lay on the right oh screen, or reverse
         var curX = canvas.width / 3 + (radius / 2) * Math.cos(start_angle + end_angle / 2) + 100;
         var curY = canvas.width / 3 + (radius / 2) * Math.sin(start_angle + end_angle / 2) * yScale - 10;
         privateDrawLine(curX, curY, curX + width, curY - 70, width, "brown");
         ctx.fillStyle = "#000";
         ctx.font = "17px Arial";
-        width = percent < 0.5 ? 55 : -105;
+        width = percent < 0.5 ? 56 : -105;
         //curX + width * 2 use for move text to the edge of line 
         ctx.fillText(Math.round(percent * 100) + "% " + dataTitle[categ], curX + width * 2, curY - 75);
         start_angle += end_angle;

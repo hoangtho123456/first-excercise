@@ -1,7 +1,6 @@
-@media screen and (max-width: 644px) {
-	header{
-		float:none;
-		}	
+@media screen and (max-width: 800px) {
+	header{float:none;}
+	h1 { text-align: center; }	
 	div.inner {
 		height: auto;
 		margin: 0 auto;
@@ -10,12 +9,8 @@
 		width: 98%;
 		min-width:50%;
 	}
-	.phone-pc {
-		display:none !important;
-	}	
-	.phone-sp {
-		display:inline-block !important;
-		}	
+	.phone-pc {display:none !important;}	
+	.phone-sp {display:inline-block !important;}	
 	div.float,
 	img.float,
 	a.float,
@@ -25,9 +20,7 @@
 		margin: 7px auto;
 		display: inline-block;
 	}
-	img.header-logo {
-		height: auto;
-	}
+	img.header-logo {height: auto;}
 
 	div.banner { display: none; }
 	div.content-1{

@@ -1,7 +1,8 @@
 /*
 *Column char
 *design pattern: Module design pattern
-*Idea: draw Column char in canvas
+*Idea: draw Column Ox(top line of the screen), 
+*then move down bottom line by method stranlate, and invert it by scale
 *@author: danghoangtho1132@gmail.com
 */
 

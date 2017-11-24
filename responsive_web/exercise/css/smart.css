@@ -17,7 +17,7 @@
 	.float {
 		float: none;
 		text-align: center;
-		margin: 7px auto;
+		margin: 7px 2px;
 		display: inline-block;
 	}
 	img.header-logo {height: auto;}

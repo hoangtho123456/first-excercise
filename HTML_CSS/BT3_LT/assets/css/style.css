@@ -1,0 +1,120 @@
+/*use for all elements*/
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: arial;
+	color: #595959;
+	font-size: 0.6875em;
+}
+
+.container {
+	max-width: 900px;
+	min-height: 630px;
+	margin: auto;
+	padding-top: 5px;
+	background-color: #121214;
+}
+
+/*title, link-more for each box*/
+.title-content {
+	color: #fff;
+	margin-bottom: 15px;
+} 
+.link-more {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 15px 0;
+}
+.link-more::before {
+	content: url("../../img/arr_1.gif");
+	margin-right: 5px;
+	float: left;
+}
+
+/*content box include content-1 and content-2*/
+.content-left {
+	width: 520px;
+	float: left;
+	margin-top: 0;
+}
+/*content-box use for content-1 and content-2*/
+.content-box {
+	letter-spacing: 0;
+	line-height: 18px;
+	border-bottom: 1px dotted #595959;
+	padding: 4px 0 15px;
+}
+.content-box::after {
+	content: "";
+	clear: both;
+	height: 0;
+	display: block;
+	visibility: hidden;
+}
+
+/*content-1 is the first content at the left of the page*/
+.content-1 {
+	margin: 30px 0px 20px 64px;
+	padding: 10px 0 0 0;
+}
+#title { padding: 0 0 25px 0; }
+.content-1 img {
+	float: left;
+	margin: 7px 20px 20px 0;
+	padding-bottom: 0;
+	height: 90px;
+}
+
+/*content-2 is the second content at the left of the page*/
+.content-2 { margin: 70px 5px 20px 70px; }
+#content-2-text p:first-child { 
+	color: #ffffff;
+ 	line-height: 10px;
+}
+.content-list {
+	float: left;
+	width: 50%;
+	margin-top: 20px; 
+}
+.content-list ul li {
+	list-style-type: none;
+	margin-bottom: 5px; 
+}
+.content-list ul li a { color: #595959; }
+.content-list ul li::before {
+	content: url(../../img/arr.gif);
+	margin-right: 10px; 
+}
+
+/*content-right is the content at the right of the page*/
+.content-right {
+	float: left;
+	height: 400px;
+	margin: 20px 30px; 
+	background-color: #232326;
+}
+.content-e {
+	margin: 70px 30px; 
+	padding: 20px 10px;
+	border-top: 1px solid #353439; 
+}
+.white {
+	margin-bottom: 10px;
+	color: #ffffff;
+}
+.content-e-text {
+	margin: 0 0 20px 8px; 
+	padding-top: 20px;
+}
+.content-e-text p:last-child { padding-top: 10px; }
+.content-e img {
+	border-radius: 15px;
+	padding: 5px;
+}
+.content-bigcap {
+	font-size: 12.5px;
+}
+.content-e a { padding: 0 0 0 5px; }

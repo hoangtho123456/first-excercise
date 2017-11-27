@@ -1,0 +1,110 @@
+html, dl, body, body ol, body ul, body h1, body h2, header {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  outline: 0; }
+
+body {
+  font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
+  font-size: 12px;
+  background: url(../images/bg.png) no-repeat center top; }
+  body ol, body ul {
+    list-style: none; }
+  body h1 {
+    color: #ffb401;
+    margin-top: 6px;
+    font-size: 11px;
+    float: right;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px; }
+  body h2 {
+    margin-bottom: 20px;
+    background: url(../images/bg_h2.jpg) no-repeat bottom left;
+    height: 250px;
+    font-size: 25px;
+    color: #fff;
+    position: relative;
+    text-align: left; }
+    body h2 span {
+      display: block;
+      width: 99%;
+      vertical-align: bottom;
+      position: absolute;
+      bottom: 0;
+      background: url(../images/bg_span_h2.png) repeat top left;
+      padding-left: 1%; }
+
+header {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  float: left;
+  z-index: 999;
+  position: relative; }
+
+div.inner {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  display: block;
+  min-width: 960px;
+  max-width: 960px;
+  position: relative;
+  clear: both; }
+
+div.logo {
+  max-width: 294px;
+  width: 100%;
+  height: auto;
+  float: left;
+  position: absolute;
+  left: -72px; }
+  div.logo a.logo-top {
+    width: 100%;
+    height: auto;
+    display: inline-block; }
+
+div.header-right {
+  float: right;
+  width: 221px;
+  margin-bottom: 17px; }
+  div.header-right img {
+    vertical-align: top; }
+  div.header-right img.img-header {
+    display: block;
+    margin: 10px auto; }
+
+div.content {
+  width: 100%;
+  max-width: 738px;
+  height: auto;
+  float: right; }
+  div.content div.article_index {
+    width: 100%;
+    height: auto; }
+
+/*set display: none when show in Desk*/
+.phone-mobie {
+  display: none; }
+
+/*concept*/
+#content_concept {
+  color: #ffffff; }
+
+.h2_concept {
+  background: url(../images/concept/img1.jpg) no-repeat scroll center top; }
+
+ul.list_img_concept {
+  display: block; }
+  ul.list_img_concept li {
+    display: inline-block;
+    padding: 5px 15px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-html, dl, div, p, body, body ol, body ul, body h1, body h2, body h3, header {
+html, dl, div, p blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dt, dd, ol, ul, li, fieldset, iframe, form, label, legend, caption, tbody, tfoot, thead, body, body ol, body ul, body h1, body h2, body h3, header {
   border: 0;
   font-family: inherit;
   font-size: 100%;
@@ -13,6 +13,8 @@ body {
   font-size: 12px;
   background: url(../images/bg.png) repeat center top;
   color: #703200; }
+  body a {
+    text-decoration: none; }
   body ol, body ul {
     list-style: none; }
   body h1 {
@@ -120,6 +122,102 @@ div.aside {
     position: relative;
     z-index: 100;
     margin-top: 25px; }
+  div.aside ul li a {
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    display: block;
+    float: left;
+    position: relative; }
+
+div.menu {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-width: 176px;
+  max-width: 176px; }
+  div.menu ul {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    text-align: left;
+    padding-left: 1px; }
+    div.menu ul li {
+      float: left;
+      width: 176px;
+      height: 40px;
+      padding-left: 1px; }
+      div.menu ul li ul.subNav li {
+        background: url(../images/bg_nav.png) repeat top left;
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        padding: 4px 0; }
+      div.menu ul li ul.subNav li.subNav a.subNav {
+        color: #fff;
+        float: none !important;
+        height: auto !important;
+        width: auto;
+        text-align: center;
+        font-size: 14px; }
+      div.menu ul li ul.subNav li.subNav a.subNav:hover {
+        color: #9ec914; }
+    div.menu ul a {
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      display: block;
+      float: left;
+      position: relative; }
+    div.menu ul li.menu_1 a.menu_1:hover img, div.menu ul li.menu_1 a.menu_1:hover img.menu_hide,
+    div.menu ul li.menu_1 a.menu_1.active img,
+    div.menu ul li.menu_1 a.menu_1.active img.menu_hide {
+      display: none; }
+    div.menu ul li.menu_1 a.menu_1:hover, div.menu ul li.menu_1 a.menu_1.active {
+      background: url(../images/menu_1_hover.png) no-repeat left center; }
+    div.menu ul li.menu_2 a.menu_2:hover img, div.menu ul li.menu_2 a.menu_2:hover img.menu_hide,
+    div.menu ul li.menu_2 a.menu_2.active img,
+    div.menu ul li.menu_2 a.menu_2.active img.menu_hide {
+      display: none; }
+    div.menu ul li.menu_2 a.menu_2:hover, div.menu ul li.menu_2 a.menu_2.active {
+      background: url(../images/menu_2_hover.png) no-repeat left center; }
+    div.menu ul li.menu_3 a.menu_3:hover img, div.menu ul li.menu_3 a.menu_3:hover img.menu_hide,
+    div.menu ul li.menu_3 a.menu_3.active img,
+    div.menu ul li.menu_3 a.menu_3.active img.menu_hide {
+      display: none; }
+    div.menu ul li.menu_3 a.menu_3:hover, div.menu ul li.menu_3 a.menu_3.active {
+      background: url(../images/menu_3_hover.png) no-repeat left center; }
+    div.menu ul li.menu_4 a.menu_4:hover img, div.menu ul li.menu_4 a.menu_4:hover img.menu_hide,
+    div.menu ul li.menu_4 a.menu_4.active img,
+    div.menu ul li.menu_4 a.menu_4.active img.menu_hide {
+      display: none; }
+    div.menu ul li.menu_4 a.menu_4:hover, div.menu ul li.menu_4 a.menu_4.active {
+      background: url(../images/menu_4_hover.png) no-repeat left center; }
+    div.menu ul li.menu_4 ul.subNav, div.menu ul li.menu_3 ul.subNav {
+      display: none; }
+    div.menu ul li.menu_4:hover ul.subNav, div.menu ul li.menu_3:hover ul.subNav {
+      display: block;
+      height: auto;
+      position: absolute;
+      left: 115px;
+      width: 104px;
+      z-index: 400; }
+    div.menu ul li.menu_5 a:hover {
+      background: url(../images/menu_5_hover.png) no-repeat left center; }
+    div.menu ul li.menu_5 a.active {
+      background: url(../images/menu_5_hover.png) no-repeat left center; }
+    div.menu ul li.menu_6 a:hover {
+      background: url(../images/menu_6_hover.png) no-repeat left center; }
+    div.menu ul li.menu_6 a.active {
+      background: url(../images/menu_6_hover.png) no-repeat left center; }
+    div.menu ul li.menu_7 a:hover {
+      background: url(../images/menu_7_hover.png) no-repeat left center; }
+    div.menu ul li.menu_7 a.active {
+      background: url(../images/menu_7_hover.png) no-repeat left center; }
+    div.menu ul li.menu_8 a:hover {
+      background: url(../images/menu_8_hover.png) no-repeat left center; }
+    div.menu ul li.menu_8 a.active {
+      background: url(../images/menu_8_hover.png) no-repeat left center; }
 
 /*concept*/
 #content_concept {

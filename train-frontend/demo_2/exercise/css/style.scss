@@ -1,3 +1,5 @@
+$text-left : left;
+$brown : #703200;
 @mixin phone-display($display) {
 	display: $display;
 }
@@ -19,6 +21,7 @@ html {
 	outline: 0;
 }
 dl { @extend html;}
+div, p { @extend html;}
 //div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, //kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead 
 body {
     @extend html;
@@ -26,7 +29,8 @@ body {
 	    family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
 	    size: 12px;
 	}
-	background: url(../images/bg.png) no-repeat center top;
+	background: url(../images/bg.png) repeat center top;
+    color : $brown;
 
     ol, ul {
         @extend html;
@@ -61,6 +65,25 @@ body {
             background: url(../images/bg_span_h2.png) repeat top left;
             padding-left: 1%;
         }
+	}
+
+	h3 {
+	   @extend html;
+	   @include background(url(../images/bg_h3.png) repeat-y top left);
+	   font: {
+	       size: 18px;
+	       weight: bold;
+	   }
+	   padding: 8px 0;
+	   margin: 20px 0;
+	   text-align: left;
+	   color: $brown;
+
+	   span {
+	       display: block;
+	       @include background(url(../images/bg_span_h3.png) no-repeat left center);
+	       padding-left: 32px;
+	   }
 	} 
 }
 
@@ -133,6 +156,23 @@ div.content {
 	@include phone-display(none);
 }
 
+/*menu*/
+div.aside {
+	float: left;
+	width: 176px;
+	height: auto;
+	text-align: center;
+
+	div.nav {
+	    width: 100%;
+	    float: left;
+	    display: inline-block;
+	    position: relative;
+	    z-index: 100;
+	    margin-top: 25px;
+	}
+}
+
 /*concept*/
 #content_concept {color: #ffffff;}
 
@@ -141,8 +181,65 @@ div.content {
 }
 ul.list_img_concept {
     display: block;
-        li {
-            display: inline-block;
-            padding: 5px 15px;
-        }
+    li {
+        display: inline-block;
+        padding: 5px 15px;
     }
+}
+.text_left_concept {
+	text-align: $text-left;
+}
+.group_concept_1 {
+	display: inline-block;
+	text-align: left;
+
+	img.img_group_concept_1 {
+	    float: left;
+	    width: 100%;
+	    max-width: 210px;
+	    height: 150px;
+	    padding-right: 10px;
+	}
+	.group_text_concept {
+	    float: left;
+	    max-width: 500px;
+	    width: 100%;
+	    height: auto;
+	    text-align: $text-left;
+	    color: white;
+
+	    p {
+	        padding-bottom: 10px;
+	        text-align: $text-left;
+	    }
+	}
+}
+.group_concept_2 {
+	padding-bottom: 15px;
+	text-align: left;
+
+	.title_group_concept_2 {
+	    padding-bottom: 10px;
+	    font-size: 16px;
+	}
+
+	.content_group_concept_2 {
+	    width: 95%;
+	    display: inline-block;
+        margin: 0 auto;
+        padding-left: 20px;
+	}
+
+	ul.list_content_group_concept_2 {
+	    list-style-type: circle;
+	    padding-left: 15px;
+	}
+
+	img.img_group_concept_2 {
+	    float: right;
+	    width: 100%;
+	    max-width: 176px;
+	    height: 104px;
+	    margin-top: -73px;
+	}
+}

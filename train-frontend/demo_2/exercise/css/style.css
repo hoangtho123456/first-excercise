@@ -1,4 +1,4 @@
-html, dl, body, body ol, body ul, body h1, body h2, header {
+html, dl, div, p, body, body ol, body ul, body h1, body h2, body h3, header {
   border: 0;
   font-family: inherit;
   font-size: 100%;
@@ -11,7 +11,8 @@ html, dl, body, body ol, body ul, body h1, body h2, header {
 body {
   font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
   font-size: 12px;
-  background: url(../images/bg.png) no-repeat center top; }
+  background: url(../images/bg.png) repeat center top;
+  color: #703200; }
   body ol, body ul {
     list-style: none; }
   body h1 {
@@ -38,6 +39,18 @@ body {
       bottom: 0;
       background: url(../images/bg_span_h2.png) repeat top left;
       padding-left: 1%; }
+  body h3 {
+    background: url(../images/bg_h3.png) repeat-y top left;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 0;
+    margin: 20px 0;
+    text-align: left;
+    color: #703200; }
+    body h3 span {
+      display: block;
+      background: url(../images/bg_span_h3.png) no-repeat left center;
+      padding-left: 32px; }
 
 header {
   margin: 0 auto;
@@ -94,6 +107,20 @@ div.content {
 .phone-mobie {
   display: none; }
 
+/*menu*/
+div.aside {
+  float: left;
+  width: 176px;
+  height: auto;
+  text-align: center; }
+  div.aside div.nav {
+    width: 100%;
+    float: left;
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    margin-top: 25px; }
+
 /*concept*/
 #content_concept {
   color: #ffffff; }
@@ -106,5 +133,49 @@ ul.list_img_concept {
   ul.list_img_concept li {
     display: inline-block;
     padding: 5px 15px; }
+
+.text_left_concept {
+  text-align: left; }
+
+.group_concept_1 {
+  display: inline-block;
+  text-align: left; }
+  .group_concept_1 img.img_group_concept_1 {
+    float: left;
+    width: 100%;
+    max-width: 210px;
+    height: 150px;
+    padding-right: 10px; }
+  .group_concept_1 .group_text_concept {
+    float: left;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    color: white; }
+    .group_concept_1 .group_text_concept p {
+      padding-bottom: 10px;
+      text-align: left; }
+
+.group_concept_2 {
+  padding-bottom: 15px;
+  text-align: left; }
+  .group_concept_2 .title_group_concept_2 {
+    padding-bottom: 10px;
+    font-size: 16px; }
+  .group_concept_2 .content_group_concept_2 {
+    width: 95%;
+    display: inline-block;
+    margin: 0 auto;
+    padding-left: 20px; }
+  .group_concept_2 ul.list_content_group_concept_2 {
+    list-style-type: circle;
+    padding-left: 15px; }
+  .group_concept_2 img.img_group_concept_2 {
+    float: right;
+    width: 100%;
+    max-width: 176px;
+    height: 104px;
+    margin-top: -73px; }
 
 /*# sourceMappingURL=style.css.map */

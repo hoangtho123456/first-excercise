@@ -259,8 +259,9 @@ div.menu {
 			    width:auto;
 			    text-align: center;
 				font-size:14px;
+				&:hover {color:#9ec914;}
 			}		
-			ul.subNav li.subNav a.subNav:hover {color:#9ec914;}
+			//ul.subNav li.subNav a.subNav:hover {color:#9ec914;}
 	    }
 	    a {
 	        width: 100%;
@@ -405,7 +406,9 @@ div.menu {
 /*footer*/
 footer {
 	@include background(url(../images/ft_bg2.png) repeat left top);
-	margin: 0 auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 120px;
 	width: 100%;
 	float: left;
 	display: block;

@@ -72,7 +72,7 @@ header {
     font-size: 12px;
     div.header_left {
         width: 100%;
-        min-width: 730px;
+        display: inline-block;
         max-width: 730px;
         height: auto;
         float: left;
@@ -250,7 +250,6 @@ div.content {
     float: left;
 	width: 100%;
 	max-width: 670px;
-	min-width: 670px;
 	height: auto;
 	margin-top: 30px;
 	position: relative;

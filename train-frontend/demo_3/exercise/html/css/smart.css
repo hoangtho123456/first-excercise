@@ -78,7 +78,12 @@
         display: block;
         max-width: 100%;
    }
-  
+    div.content .content_left p {
+        width: 70%;
+        margin: auto;
+        padding-right: 0;
+        text-align: left;
+   }
    /*aside*/
    div.aside {
    	   display: block;

@@ -72,6 +72,7 @@
     div.content div.box_ad a.btn_ad img{
         display: block;
         max-width: 100%;
+        margin: 0 auto;
     }
     div.content div.btn_add a:first-child, div.content div.btn_add a:first-child img {
         margin: 0 0 20px 0;

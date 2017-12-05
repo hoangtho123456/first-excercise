@@ -105,6 +105,7 @@
    
    footer {
         width: 100%;
+        min-width: auto;
         height: auto;
         display: block;
         float: none;
@@ -123,4 +124,5 @@
     }
     footer .footer_right img {width: 70%; margin: auto;}
     footer .footer_right img.img_ft_2 {margin-left: 0;}
+    #copyright{min-width: auto;}
 }

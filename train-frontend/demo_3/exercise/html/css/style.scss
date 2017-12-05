@@ -443,6 +443,7 @@ div.aside {
 /*footer*/
 footer {
 	width: 100%;
+	min-width: 1000px;
 	height: 250px;
 	display: block;
 	float: left;
@@ -501,6 +502,7 @@ footer {
 }
 #copyright {
 	background: url(../images/bg_copyright.jpg) repeat left top;
+    min-width: 1000px;
     margin: 0;
     padding: 0;
     text-align: center;

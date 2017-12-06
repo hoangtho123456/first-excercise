@@ -1,0 +1,118 @@
+@media screen and (max-width: 644px) {
+/*header*/
+
+.show_pc{
+	display:none !important;
+}	
+.show_sp{
+	display:inline-block !important;
+}
+
+div.header {
+	height:auto;
+	background:url(../images/bg_top.jpg) repeat left top;
+}
+
+div.inner {
+	height: auto;
+	margin: 0 auto;
+	padding: 0 0.5%;
+	text-align: center;
+	width: 99%;
+	min-width:50%;
+}
+
+.MenuTop_Trivt{
+	display: inline-block;
+}
+
+.Text_Logo_Banner_Trivt{
+	float: none;
+}
+.HeaderText_Trivt{
+	text-align: center;
+}
+.Nav_Main_Top_Trivt li{
+	margin: 0;
+}
+
+.Nav_Main_Top_Trivt li ul li a{
+    color: #000;
+    height: 30px !important;
+    line-height: 25px;
+}
+
+
+.mean-container .mean-nav ul li a{
+	text-align: left !important;
+}
+/*end header*/
+
+/*content*/
+.Image_Item_Index_Trivt{
+	margin: 5px 0 0 0;
+}
+
+div.article_index{
+	text-align: center;
+}
+
+div.aside{
+	text-align: center;
+	display: inline-block;
+	float: none;
+}
+.Bg_Consutant_Trivt{
+	padding: 60px 0 0 0;
+}
+.Image_Aside_Left_Trivt{
+	width: 100%;
+}
+
+/*end content*/
+
+/*aside*/
+
+
+/*end aside*/
+
+
+/*News Bottom*/
+	.Hot_News_Bg_Square_Trivt img{
+		float: none;
+		margin: 5px 0;
+	}
+
+	.Bottom_News_Title{
+		width: auto;
+		height: auto;
+		float: none;
+	}
+
+	ul.Bottom_News_Title li{
+		line-height: 25px;
+	}
+
+	div.Hot_News_Bg_Circle_Trivt{
+	    display: inline-block;
+	    float: none;
+	    margin: 10px 0;
+	}
+
+/*End News Bottom*/
+
+/*footer*/
+div.footer{
+	margin: 20px 0 0 0;
+}
+ul.Nav_Bottom_Trivt{
+	width: 100%;
+	display: inline-block;
+}
+
+	ul.Logo_Bottom_Nav_Trivt li{
+		float: none;
+		margin: 0;
+	}
+/*end footer*/
+}

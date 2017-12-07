@@ -116,7 +116,9 @@ div.inner {
   height: auto;
   position: absolute;
   left: 105px;
-  top: 100px; }
+  top: 150px; }
+  .text_slider img {
+    max-width: 700px; }
 
 /*aside*/
 div.aside {
@@ -124,6 +126,10 @@ div.aside {
   width: 100%;
   height: auto;
   max-width: 333px; }
+  div.aside img {
+    width: 100%;
+    max-width: 100%;
+    display: block; }
   div.aside div.schedule_aside {
     height: auto;
     display: block;
@@ -158,7 +164,7 @@ div.aside {
     height: auto; }
     div.aside div.map_aside p.note_map_aside {
       text-align: left;
-      background: url(../images/aside_img_3.jpg) no-repeat right 8px;
+      background: url(../images/aside_img_3.jpg) no-repeat right 2px;
       margin: 10px 0 0;
       padding: 0 74px 0 0; }
 
@@ -211,11 +217,9 @@ div.bottom_info {
 footer {
   display: inline-block;
   width: 100%;
-  max-width: 1024px;
   min-width: 1020px;
   float: left;
   margin-top: 80px;
-  padding: 25px 120px;
   position: relative;
   background-color: #f8f8f8; }
   footer .footer_box {
@@ -224,7 +228,8 @@ footer {
     min-width: 504px;
     max-width: 504px;
     height: auto;
-    margin: 30px 0; }
+    margin: 30px 0;
+    text-align: left; }
     footer .footer_box ul.ul_list_1 {
       display: inline-block;
       text-align: left; }
@@ -253,6 +258,7 @@ footer {
 
 #pageTop {
   display: block;
+  margin: 30px 0 0 0;
   padding: 5px 0;
   font-size: 14px;
   background: #fff; }

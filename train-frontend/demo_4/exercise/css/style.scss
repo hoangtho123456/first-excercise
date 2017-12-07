@@ -3,6 +3,7 @@
 	font-family: Arial, sans-serif;
 }
 $none : none;
+.clear {clear: both;}
 html {
 	border: 0;
 	color: #000000;
@@ -90,6 +91,19 @@ header {
                     border: none;
 	            }
 
+	            /*li.menu_1 {
+		            a.menu_1:hover,
+		            a.menu_1.active {
+		                img {
+		                    display: none;
+		                }
+		            }
+		            a.menu_1:hover, 
+		            a.menu_1.active {
+		               background: (url(../images/menu_1_smart.jpg) no-repeat center center);
+		            }
+	            }*/
+
 	            li.menu_2 {
 	                ul.subNav {display: none;}
 	            }
@@ -133,7 +147,8 @@ div.inner {
     height: auto;
     position: absolute;
     left: 105px;
-    top: 100px;
+    top: 150px;
+    img {max-width: 700px;}
 }
 
 /*aside*/
@@ -142,17 +157,21 @@ div.aside {
     width: 100%;
     height: auto;
     max-width: 333px;
-
+    img {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
     div.schedule_aside {
-        float: left;
-    	width: 100%;
-	    height: auto;
+        height: auto;
 	    display: block;
 	    padding: 60px 10px 0;
 	    position: relative;
 	    background: url(../images/aside_img_1.jpg) no-repeat left top;
 	    h2 {
 	        left: 10px;
+	        top: 10px;
+	        height: 40px;
 	        color: #372825;
 	        font-size: 20px;
 	        text-align: left;
@@ -165,9 +184,80 @@ div.aside {
 			    font-size: 20px;
 	        }
 	    }
+	    img {
+	        margin: 0;
+	        padding: 0;
+	    }
+	    .note_schedule {
+	        margin-top: 5px;
+	        padding-left: 10px;
+	        text-align: left;
+	    }
     }
+
     div.map_aside {
-        @extend div.schedule_aside;
+        background: #f8f8f8;
+        padding: 10px;
+        margin: 12px 0;
+	    height: auto;
+	    p.note_map_aside {
+	        text-align: left;
+	        background: url(../images/aside_img_3.jpg) no-repeat right 2px;
+		    margin: 10px 0 0;
+		    padding: 0 74px 0 0;
+		}
+    }
+}
+/*content*/
+div.article_index {
+	width: 100%;
+    max-width: 675px;
+    height: auto;
+    float: right;
+
+    img.img_top_article {
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    img.img_item_article {
+        margin: 10px 0 5px 15px;
+	    width: 100%;
+	    max-width: 320px;
+    }
+}
+/*boottom info*/
+div.bottom_info {
+	float: left;
+    margin: 10px 0 0;
+    width: 100%;
+    img {
+        float: left;
+        width: 172px;
+        heiht: 180px;
+    }
+    .list_bottom_info {
+        float: left;
+        width: 100%;
+        max-width: 620px;
+	    height: 156px;
+	    padding: 10px;
+	    text-align: left;
+	    background: #f8f8f8;
+
+	    li {
+	        background: url(../images/index_img_bullet.jpg) no-repeat left 7px;
+		    padding: 0 0 0 20px;
+		    margin: 5px 0;
+		    border-bottom: dotted 1px #000;
+		    line-height: 30px;
+		    a { padding-left: 10px;}
+	    }
+    }
+    img.img_info_1 {
+        float: left;
+        margin-left: 20px;
     }
 }
 
@@ -175,11 +265,9 @@ div.aside {
 footer {
     display: inline-block;
 	width: 100%;
-	max-width: 1020px;
 	min-width: 1020px;
 	float: left;
 	margin-top: 80px;
-	padding: 25px 120px;
 	position: relative;
 	background-color: #f8f8f8;
 
@@ -190,6 +278,7 @@ footer {
 	    max-width: 504px;
 	    height: auto;
 	    margin: 30px 0;
+        text-align: left;
 
 	    ul.ul_list_1 {
             display: inline-block;
@@ -227,6 +316,7 @@ footer {
 }
 #pageTop {
 	display: block;
+	margin: 30px 0 0 0;
 	padding: 5px 0;
 	font-size: 14px;
 	background: #fff;

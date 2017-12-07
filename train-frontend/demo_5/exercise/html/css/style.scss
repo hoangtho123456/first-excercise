@@ -1,0 +1,194 @@
+@mixin list() {
+	list-style-type: none;
+	font-family: Arial, sans-serif;
+}
+@mixin background($url,$repeat,$po1,$po2) {
+	background: $url $repeat $po1 $po2;
+}
+$none : none;
+.clear {clear: both;}
+html {
+	border: 0;
+	color: #000000;
+	font-family: inherit;
+	font-size: 100%;
+	font-weight: inherit;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead,header, footer { @extend html; }
+:focus {outline: 0;}
+ol, ul {@include list();}
+a {text-decoration: $none;}
+.space_top {margin-top: 40px!important;}
+body {
+	font-family: Arial,sans-serif,Meiryo;
+	font-size: 12px;
+	background: #ffffff;
+}
+.show_sp {
+	display: none;
+}
+
+footer a:hover,
+.bxslider a:hover,
+.info_header a:hover {
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+/*header*/
+header {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	float: left;
+	margin: 0 auto;
+	padding-top: 20px;
+	z-index: 999;
+	position: relative;
+	@include background(url(../images/header_top.jpg),repeat-x, left, top);
+	div.info_header {
+	    float: right;
+	    width: 100%;
+	    max-width: 492px;
+	    height: auto;
+	    margin-top: 10px;
+	    display: inline-block;
+	}
+	.phone_header_1 {float: left;}
+    .phone_header_2, .email_header {@extend .phone_header_1;}
+}
+
+/*inner*/
+div.inner {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	max-width: 976px;
+	min-width: 976px;
+	position: relative;
+	clear: both;
+}
+
+/*banner*/
+div.banner {
+	display: inline-block;
+	width: 100%;
+	height: 318px;
+	float: left;
+	margin: 1px auto 2px auto;
+    position:relative;
+    z-index: 999;
+    text-align: center;
+    @include background(url(../images/bg_banner.png), repeat-x, left, top);
+
+    .slider {
+        @extend div.inner;
+        height: 318px;
+        .b_1 {
+            width: 116px;
+            height: 23px;
+            bottom: 12%;
+            left: 33%;
+            position: absolute;
+        }
+        .b_2 {
+            width: 116px;
+            height: 23px;
+            bottom: 12%;
+            right: 1.6%;
+            position: absolute;
+        }
+    }
+}
+
+/*nav*/
+div.nav {
+    float: left;
+	width: 100%;
+	height: 73px;
+	display: inline-block;
+	z-index: 999;
+	position: relative;
+	@include background(url(../images/bg_menu.jpg), repeat-x, left, top);
+	div.menu {
+	    width: 100%;
+	    max-width: 986px;
+	    min-width: 986px;
+	    height:auto;
+	    display: block;
+	    margin: 0 auto;
+	    ul li {
+	        float: left;
+	        width: 162px;
+	        height: 65px;
+	        border-left:2px solid #ffffff;
+	        a {
+	            width: 100%;
+	            height: 64px;
+	            display: block;
+	            position: relative;
+	            text-align: center;
+	        }
+	        .menu_6 {border-right: 2px solid #ffffff;}
+	        ul.subNav li.subNav {
+	            width: 100%;
+	            height: auto !important;
+	            margin: 0!important;
+	            padding: 7px 0;
+	            border: none;
+	            border-bottom: 1px solid #fff;
+	            
+	            //subNav link
+	            a.subNav {
+                    float: none!important;
+                    height: auto!important;
+                    z-index: 999 !important;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: #595959;
+	            }
+	        }
+	        ul.subNav li.subNav:hover {background: #fcdb81;}
+	    }
+	    li.menu_1.active, li.menu_1:hover, 
+	    li.menu_2.active, li.menu_2:hover,
+	    li.menu_3.active, li.menu_3:hover,
+	    li.menu_4.active, li.menu_4:hover,
+	    li.menu_5.active, li.menu_5:hover,
+	    li.menu_6.active, li.menu_6:hover {
+	        @include background(url(../images/bg_menu_hover.png),no-repeat, center, top);
+	    }
+	    //menu4:subnav
+	    li.menu_4 ul.subNav {display: none;}
+	    li.menu_4:hover ul.subNav {
+	        display: block;
+	        width: 162px;
+	        height: auto;
+	        //top: 57px;
+	        position: absolute;
+	        background:#fde59e;
+	    }
+	}
+}
+
+/*footer*/
+footer {
+    width:100%;
+    min-width: 986px;
+    height: auto;
+    float: left;
+    display: block;
+    margin: 60px auto 30px auto;
+    z-index: 999;
+    position: relative;
+    @include background(url(../images/footer_line_top.jpg),repeat-x,top, left);	
+}
+#pageTop {
+	position: absolute;
+	right: 0;
+	top: -34px;
+}

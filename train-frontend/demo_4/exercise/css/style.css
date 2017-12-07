@@ -65,7 +65,19 @@ header {
         width: 100%;
         height: auto;
         margin: 0;
-        padding: 0; }
+        padding: 0;
+            /*li.menu_1 {
+	            a.menu_1:hover,
+	            a.menu_1.active {
+	                img {
+	                    display: none;
+	                }
+	            }
+	            a.menu_1:hover, 
+	            a.menu_1.active {
+	               background: (url(../images/menu_1_smart.jpg) no-repeat center center);
+	            }
+            }*/ }
         header div.nav div.menu ul li {
           width: 110px;
           height: auto;

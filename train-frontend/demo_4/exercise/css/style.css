@@ -1,3 +1,6 @@
+.clear {
+  clear: both; }
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, header, footer {
   border: 0;
   color: #000000;
@@ -121,32 +124,94 @@ div.aside {
   width: 100%;
   height: auto;
   max-width: 333px; }
-  div.aside div.schedule_aside, div.aside div.map_aside {
-    float: left;
-    width: 100%;
+  div.aside div.schedule_aside {
     height: auto;
     display: block;
     padding: 60px 10px 0;
     position: relative;
     background: url(../images/aside_img_1.jpg) no-repeat left top; }
-    div.aside div.schedule_aside h2, div.aside div.map_aside h2 {
+    div.aside div.schedule_aside h2 {
       left: 10px;
+      top: 10px;
+      height: 40px;
       color: #372825;
       font-size: 20px;
       text-align: left;
       border-left: 1px solid #000;
       position: absolute; }
-      div.aside div.schedule_aside h2 a, div.aside div.map_aside h2 a {
+      div.aside div.schedule_aside h2 a {
         margin: 17px 0 0 10px;
         float: left;
         color: #372825;
         font-size: 20px; }
+    div.aside div.schedule_aside img {
+      margin: 0;
+      padding: 0; }
+    div.aside div.schedule_aside .note_schedule {
+      margin-top: 5px;
+      padding-left: 10px;
+      text-align: left; }
+  div.aside div.map_aside {
+    background: #f8f8f8;
+    padding: 10px;
+    margin: 12px 0;
+    height: auto; }
+    div.aside div.map_aside p.note_map_aside {
+      text-align: left;
+      background: url(../images/aside_img_3.jpg) no-repeat right 8px;
+      margin: 10px 0 0;
+      padding: 0 74px 0 0; }
+
+/*content*/
+div.article_index {
+  width: 100%;
+  max-width: 675px;
+  height: auto;
+  float: right; }
+  div.article_index img.img_top_article {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0; }
+  div.article_index img.img_item_article {
+    margin: 10px 0 5px 15px;
+    width: 100%;
+    max-width: 320px; }
+
+/*boottom info*/
+div.bottom_info {
+  float: left;
+  margin: 10px 0 0;
+  width: 100%; }
+  div.bottom_info img {
+    float: left;
+    width: 172px;
+    heiht: 180px; }
+  div.bottom_info .list_bottom_info {
+    float: left;
+    width: 100%;
+    max-width: 620px;
+    height: 156px;
+    padding: 10px;
+    text-align: left;
+    background: #f8f8f8; }
+    div.bottom_info .list_bottom_info li {
+      background: url(../images/index_img_bullet.jpg) no-repeat left 7px;
+      padding: 0 0 0 20px;
+      margin: 5px 0;
+      border-bottom: dotted 1px #000;
+      line-height: 30px; }
+      div.bottom_info .list_bottom_info li a {
+        padding-left: 10px; }
+  div.bottom_info img.img_info_1 {
+    float: left;
+    margin-left: 20px; }
 
 /*footer*/
 footer {
   display: inline-block;
   width: 100%;
-  max-width: 1020px;
+  max-width: 1024px;
   min-width: 1020px;
   float: left;
   margin-top: 80px;

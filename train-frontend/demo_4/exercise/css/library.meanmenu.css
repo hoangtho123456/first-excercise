@@ -93,7 +93,7 @@ img.img_menu_bg,
 span.img_menu_line_right{
 	display:none;
 	}	
-.mean-container .mean-nav ul li a.menu_1{
+/*.mean-container .mean-nav ul li a.menu_1{
 	background:url(../images/menu_1_smart.jpg) no-repeat center center;
 	}
 .mean-container .mean-nav ul li a.menu_2{
@@ -107,7 +107,7 @@ span.img_menu_line_right{
 	}
 .mean-container .mean-nav ul li a.menu_5{
 	background:url(../images/menu_5_smart.jpg) no-repeat center center;
-	}
+	}*/
 .mean-container .mean-nav ul li a.menu_1:hover,
 .mean-container .mean-nav ul li.menu_1 a.active,
 .mean-container .mean-nav ul li a.menu_2:hover,

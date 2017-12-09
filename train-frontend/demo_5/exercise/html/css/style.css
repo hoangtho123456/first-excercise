@@ -25,18 +25,40 @@ a {
   margin-top: 40px !important; }
 
 body {
-  font-family: Arial,sans-serif,Meiryo;
+  font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
   font-size: 12px;
-  background: #ffffff; }
+  background: #ffffff;
+  color: #a7a7a7; }
+  body h2 {
+    width: 100%;
+    height: 31px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: left;
+    background: url(../images/bg_title.jpg) no-repeat right top; }
+    body h2 img.img_title {
+      margin: 10px auto auto 10px; }
+    body h2 img.img_href {
+      float: right;
+      margin: 10px 10px auto auto; }
+
+h2.h2_mar_top {
+  margin-top: 25px;
+  margin-bottom: 10px; }
 
 .show_sp {
   display: none; }
 
-footer a:hover,
+.aside a:hover,
+h2 a img.img_href:hover,
+footer .btn_info_f a:hover,
 .bxslider a:hover,
 .info_header a:hover {
   opacity: 0.6;
   filter: alpha(opacity=60); }
+
+footer div.menu_f li a:hover {
+  text-decoration: underline; }
 
 /*header*/
 header {
@@ -58,9 +80,14 @@ header {
     display: inline-block; }
   header .phone_header_1, header .phone_header_2, header .email_header {
     float: left; }
+  header .header_logo {
+    float: left;
+    width: 100%;
+    max-width: 352px;
+    height: auto; }
 
 /*inner*/
-div.inner, div.banner .slider {
+div.inner, div.banner div.slider {
   display: block;
   width: 100%;
   height: auto;
@@ -158,6 +185,41 @@ div.nav {
       position: absolute;
       background: #fde59e; }
 
+/*aside*/
+div.aside {
+  float: right;
+  width: 314px;
+  margin-top: 10px;
+  height: auto;
+  text-align: center;
+  font-size: 14px;
+  color: #a7a7a7; }
+  div.aside iframe.map_aside {
+    width: 270px;
+    height: 180px;
+    margin: 0 auto 4px auto; }
+  div.aside .box_aside_1 {
+    width: 100%;
+    display: inline-block; }
+    div.aside .box_aside_1 p {
+      float: left;
+      width: 150px;
+      text-align: left;
+      opacity: 0.6; }
+    div.aside .box_aside_1 img {
+      float: right;
+      margin-top: 20px; }
+  div.aside .box_aside_2 {
+    width: 275px;
+    height: 60px;
+    display: inline-block;
+    margin-bottom: 32px;
+    padding: 14px 20px;
+    text-align: left;
+    background: url(../images/aside_bg_y.jpg) no-repeat left top; }
+  div.aside .text_grey {
+    color: #a7a7a7; }
+
 /*footer*/
 footer {
   width: 100%;
@@ -167,12 +229,80 @@ footer {
   display: block;
   margin: 60px auto 30px auto;
   z-index: 999;
+  color: #a7a7a7;
   position: relative;
   background: url(../images/footer_line_top.jpg) repeat-x top left; }
+  footer div.info_l_f {
+    float: left;
+    width: 100%;
+    max-width: 316px;
+    height: auto;
+    display: inline-block;
+    margin-top: 70px;
+    text-align: left;
+    font-size: 14px; }
+    footer div.info_l_f img.footer_logo {
+      width: 100%;
+      display: inline-block; }
+    footer div.info_l_f p {
+      width: 100%;
+      display: inline-block; }
+    footer div.info_l_f .text_f {
+      color: #a7a7a7; }
+    footer div.info_l_f .btn_info_f {
+      text-align: right;
+      margin-top: 10px;
+      margin-bottom: 20px; }
+    footer div.info_l_f span.phone_f {
+      font-size: 18px; }
+  footer div.menu_f {
+    float: left;
+    width: 100%;
+    height: auto;
+    max-width: 577px;
+    margin-top: 55px;
+    margin-left: 40px;
+    padding-top: 55px;
+    padding-left: 40px;
+    border-left: 2px solid #f2f2f2;
+    text-align: left; }
+    footer div.menu_f ul {
+      float: left;
+      width: 174px; }
+      footer div.menu_f ul li {
+        width: 100%;
+        display: inline-block;
+        margin: 3px 0;
+        text-align: left; }
+        footer div.menu_f ul li a {
+          display: inline-block;
+          padding-left: 20px;
+          text-align: left;
+          color: black;
+          background: url(../images/footer_bullet.jpg) no-repeat left center; }
+      footer div.menu_f ul li.menu_sub {
+        margin-left: 35px; }
+        footer div.menu_f ul li.menu_sub a {
+          text-align: left;
+          padding-left: 15px;
+          background: url(../images/footer_bullet_2.jpg) no-repeat left center; }
 
 #pageTop {
   position: absolute;
   right: 0;
   top: -34px; }
+
+#copyright {
+  float: left;
+  width: 100%;
+  min-width: 976px;
+  height: 20px;
+  padding: 10px 0 5px 0;
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  background: url(../images/bg_copyright.jpg) repeat-x left top; }
 
 /*# sourceMappingURL=style.css.map */

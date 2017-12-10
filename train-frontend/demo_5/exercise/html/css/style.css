@@ -49,6 +49,8 @@ h2.h2_mar_top {
 .show_sp {
   display: none; }
 
+#pageTop:hover,
+div.content a:hover,
 .aside a:hover,
 h2 a img.img_href:hover,
 footer .btn_info_f a:hover,
@@ -189,7 +191,7 @@ div.nav {
 div.aside {
   float: right;
   width: 314px;
-  margin-top: 10px;
+  margin-top: 30px;
   height: auto;
   text-align: center;
   font-size: 14px;
@@ -219,6 +221,100 @@ div.aside {
     background: url(../images/aside_bg_y.jpg) no-repeat left top; }
   div.aside .text_grey {
     color: #a7a7a7; }
+
+/*content*/
+div.content {
+  float: left;
+  width: 100%;
+  max-width: 645px;
+  height: auto;
+  margin-top: 30px; }
+  div.content div.article_index {
+    width: 100%;
+    height: auto;
+    text-align: center; }
+    div.content div.article_index div.box1_article {
+      float: left;
+      width: 314px;
+      height: auto;
+      text-align: left; }
+      div.content div.article_index div.box1_article img.img_box1_ar {
+        float: left; }
+      div.content div.article_index div.box1_article p {
+        float: left;
+        width: 164px;
+        height: auto;
+        margin-left: 10px;
+        text-align: left;
+        font-size: 12px;
+        line-height: 18px;
+        opacity: 0.8; }
+        div.content div.article_index div.box1_article p a {
+          float: right; }
+      div.content div.article_index div.box1_article h2.h2_top_box1 {
+        margin-top: 20px; }
+    div.content div.article_index div.box2_article {
+      float: right;
+      width: 314px;
+      height: auto;
+      text-align: left; }
+      div.content div.article_index div.box2_article dl.dl_info {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        font-size: 14px;
+        opacity: 0.6; }
+        div.content div.article_index div.box2_article dl.dl_info dt {
+          float: left;
+          margin-left: 7px;
+          padding-left: 15px;
+          text-align: left;
+          background: url(../images/bullet_1.jpg) no-repeat left 6px; }
+        div.content div.article_index div.box2_article dl.dl_info dd {
+          margin: auto auto 5px auto;
+          padding-bottom: 5px;
+          padding-left: 117px;
+          border-bottom: 1px dotted #b2b2b2; }
+      div.content div.article_index div.box2_article img.img_box2 {
+        width: 100%;
+        margin-top: 10px;
+        display: inline-block; }
+    div.content div.article_index div.box3_bg_article {
+      width: 598px;
+      height: 591px;
+      display: inline-block;
+      text-align: center;
+      margin-top: 10px;
+      padding: 65px 22px 16px 22px;
+      background: url(../images/bg_border.jpg) no-repeat left top;
+      position: relative; }
+      div.content div.article_index div.box3_bg_article img.img_k_box3 {
+        position: absolute;
+        right: 25px;
+        top: -5px; }
+      div.content div.article_index div.box3_bg_article img.title_5_box3 {
+        width: 100%;
+        max-width: 599px;
+        height: 35px;
+        margin-bottom: 5px; }
+      div.content div.article_index div.box3_bg_article img.img_8_box3 {
+        width: 100%;
+        max-width: 591px;
+        height: 112px;
+        margin-bottom: 10px; }
+      div.content div.article_index div.box3_bg_article img.img_9_box3 {
+        float: right;
+        width: 100%;
+        max-width: 211px;
+        height: 238px; }
+      div.content div.article_index div.box3_bg_article p.p_margin {
+        float: left;
+        width: 377px;
+        height: auto;
+        text-align: left;
+        font-size: 14px;
+        margin: 0 0 20px 3px; }
 
 /*footer*/
 footer {

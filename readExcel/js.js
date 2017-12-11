@@ -58,45 +58,50 @@ oReq.onload = function(e) {
   //show List nation
   for (var i = 0; i < list_obj.length; i++) {
       var select = document.getElementsByTagName("select");
+      var selectDemo = $("select.nations");
       var con = $("select option").eq(0);
       if (con.val() === XLSX.utils.sheet_to_json(worksheet)[i].continents) {
-          select[1].innerHTML += "<option value='" + XLSX.utils.sheet_to_json(worksheet)[i].nation + "'>" + XLSX.utils.sheet_to_json(worksheet)[i].nation + "</option>";
+          selectDemo.append ("<option value='" + XLSX.utils.sheet_to_json(worksheet)[i].nation 
+          	+ "'>" + XLSX.utils.sheet_to_json(worksheet)[i].nation + "</option>");
       }
   }
 
   //click pick any continents will show corresponding data nation  
   $("select.continents option").click(function () {
-      var list_obj_2 = XLSX.utils.sheet_to_json(worksheet);
-      var select = document.getElementsByTagName("select");
+    var list_obj_2 = XLSX.utils.sheet_to_json(worksheet);
+    var select = document.getElementsByTagName("select");
+    var selectDemo = $("select.nations");
 
-    select[1].innerHTML = "";
+    selectDemo.children("option").remove();
     for (var i = 0; i < list_obj_2.length; i++) {
         var con = $(this).val();
         if (con === XLSX.utils.sheet_to_json(worksheet)[i].continents) {
-            select[1].innerHTML += "<option value='" + XLSX.utils.sheet_to_json(worksheet)[i].nation + "'>" + XLSX.utils.sheet_to_json(worksheet)[i].nation + "</option>";
+            selectDemo.append("<option value='" + XLSX.utils.sheet_to_json(worksheet)[i].nation 
+            	+ "'>" + XLSX.utils.sheet_to_json(worksheet)[i].nation + "</option>");
         }
     }
-  });
-  var index;
-  var click = $("select.nations option").eq(0).val();
-  $("select.nations option").click(function () {
-      click = $(this).val();
-      index = $(this).index();
-      console.log(click);
   });         
   $("#search").click(function () {
       var list_obj_2 = XLSX.utils.sheet_to_json(worksheet);
+      console.log($("select.nations option").val());
       for (var i = 0; i < list_obj_2.length; i++) {
-        if (click === list_obj_2[i].nation) {
+        if ($("select.nations").val() === list_obj_2[i].nation) {
             var url = XLSX.utils.sheet_to_json(worksheet)[i].link;
             console.log(url);
             window.open(url,'_blank');
-        }
+        } else console.log("sad");
       }
      }); 
 }
 oReq.send();
 
+/*var index = $("select.nations").children("option").eq(0).index();
+  var click = $("select.nations").children("option").eq(0).val();
+  $("select.nations").blur(function () {
+      click = $(this).val();
+      index = $(this).index();
+      console.log(click);
+  });*/
       /*
       //array continents
       var arrContinent = [];

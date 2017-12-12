@@ -17,8 +17,12 @@ html {
 	padding: 0;
 	outline: 0;
 }
-body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead,header, footer { @extend html; }
+body, div, span, applet,
+object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, 
+tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead,header, footer { @extend html; }
 :focus {outline: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display: block;}
 ol, ul {@include list();}
 a {text-decoration: $none;}
 .space_top {margin-top: 40px!important;}
@@ -80,7 +84,7 @@ header {
 	div.info_header {
 	    float: right;
 	    width: 100%;
-	    max-width: 492px;
+	    max-width: 430px;
 	    height: auto;
 	    margin-top: 10px;
 	    display: inline-block;
@@ -350,6 +354,10 @@ div.content {
 				text-align: left;
 				font-size: 14px;
 				margin: 0 0 20px 3px;  
+			}
+			a.button_4 {
+				float: right;
+				margin-top: 25px;
 			}
 		}
 	}

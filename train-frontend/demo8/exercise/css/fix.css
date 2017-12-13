@@ -1,0 +1,5 @@
+@charset "utf-8";
+.menu_box1{
+behavior: url(css/border-radius.htc);	
+
+}

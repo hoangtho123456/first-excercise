@@ -22,6 +22,9 @@
         ]);
 
         var options = {
+          displayMode: 'regions',
+          legend: false, 
+          enableRegionInteractivity: true,
           colorAxis: {colors: ['grey', 'black', '#e31b23','yellow','blue','green']},
           backgroundColor: '#81d4fa',
           datalessRegionColor: '#f8bbd0',
@@ -30,6 +33,14 @@
 
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
+        google.visualization.events.addListener(chart, "select", function () {
+		        var countryISO2 = chart.getSelection()[0];
+		        if(countryISO2) {
+                var country = data.getValue(countryISO2.row, 0); 
+                alert(country);
+                console.log(country);
+            }
+		    });
         chart.draw(data, options);
       }
     </script>

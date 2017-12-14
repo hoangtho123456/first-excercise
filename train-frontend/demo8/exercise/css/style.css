@@ -6,7 +6,6 @@ object, iframe, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
 tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, header, footer {
   border: 0;
-  color: #000000;
   font-family: inherit;
   font-size: 100%;
   font-weight: inherit;
@@ -34,7 +33,7 @@ body {
   font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
   font-size: 12px;
   background: #ffffff;
-  color: #a7a7a7; }
+  color: #703200 !important; }
 
 header {
   width: 100%;
@@ -107,7 +106,8 @@ div.content {
   position: relative; }
   div.content div.article_index {
     width: 100%;
-    height: auto; }
+    height: auto;
+    /*info*/ }
     div.content div.article_index img.ctn_img1 {
       width: 100%;
       max-width: 754px;
@@ -131,5 +131,36 @@ div.content {
       text-align: left;
       margin: 0 auto;
       padding: 10px 1%; }
+    div.content div.article_index p.text1_ar {
+      margin: 20px 0;
+      text-align: left; }
+    div.content div.article_index div.main_info {
+      display: inline-block;
+      float: right;
+      width: 70%;
+      height: auto; }
+      div.content div.article_index div.main_info div.box {
+        border: 2px solid #e5e5e5;
+        width: 98%;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px; }
+        div.content div.article_index div.main_info div.box div.title_green {
+          width: 98%;
+          height: auto;
+          padding: 1%;
+          display: inline-block;
+          background: #91bd1a;
+          border-radius: 4px;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -o-border-radius: 4px; }
+          div.content div.article_index div.main_info div.box div.title_green img.title_blue {
+            width: 100%;
+            max-width: 527px;
+            height: auto;
+            float: left;
+            margin: 10px 0 20px 10px; }
 
 /*# sourceMappingURL=style.css.map */

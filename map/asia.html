@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'latitude'],
+          ['Vietnam', 36], ['China', -8], ['Laos', 6], ['Cambudia', -24],
+          ['Thailand', 12], ['philippin', -3], ['North Korean', 3],
+          ['Malaysia', 28], ['Afganistan', 15],
+          ['South Korean', 7], ['Armenia', 35], ['Azerbaijan', 12],
+          ['Bahrain', -12], ['Bangladesh', 6],
+          ['Bhutan', -3], ['Brunei', 12],
+          ['Cyprus', 26], ['Georgia', 3], ['India', 15],
+          ['Indonesia', 9], ['Iran', 0], ['Iraq', 13], ['Israel', 5],
+          ['Japan', 10], ['Jordan', 12], ['Kazakhstan', -1],
+          ['Kuwait', -29], ['Lebanon', 6], ['Mongolia', 32], ['Maldives', 40],
+          ['Myanmar (Burma)', 33], ['Nepal', -14], ['Oman', 12], ['Pakistan', 18],
+          ['Palestine', -20], ['Qatar', -13], ['Russia', 35],
+          ['Saudi Arabia', 32], ['Singapore', -25], ['Sri Lanka', -22],
+          ['Syria', 14], ['Taiwan', 8], ['Tajikistan', -1],
+          ['Timor-Leste', -21], ['Turkey', -2], ['Turkmenistan', -16],
+          ['kyrgyzstan', 0], ['Uzbekistan', 15],
+          ['Yemen', -5], ['Sierra Leone', 8], ['Somalia', 2],
+          ['Sudan', 15], ['South Africa', -30], ['South Sudan', 5],
+          ['Swaziland', -26], ['Tanzania', -6], ['Togo', 6], ['Tunisia', 34],
+          ['Uganda', 1], ['Western Sahara', 25], ['Zambia', -15],
+          ['Zimbabwe', -18]
+        ]);
+
+        var options = {
+          region: '142',
+          legend: false, 
+          enableRegionInteractivity: true,
+          showInfoWindow: true,
+          magnifyingGlass: {enable: true, zoomFactor: 7.5}, 
+          colorAxis: {colors: ['grey', 'black', '#e31b23','yellow','blue','green']},
+          backgroundColor: '#81d4fa',
+          datalessRegionColor: '#f8bbd0',
+          defaultColor: '#f5f5f5',
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        google.visualization.events.addListener(chart, "select", function () {
+            var countryISO2 = chart.getSelection()[0];
+            if(countryISO2) {
+                var country = data.getValue(countryISO2.row, 0); 
+                alert(country);
+                console.log(country);
+            }
+        });
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

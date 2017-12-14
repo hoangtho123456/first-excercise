@@ -7,14 +7,14 @@
     <link rel="stylesheet" type="text/css" href="cssmap-continents/cssmap-continents.css" media="screen" />
   </head>
   <body>
-      <div id="mapp-continents">
+      <div id="map-world">
          <ul class="continents">
-          <li class="c1"><a href="africa.html" target="blank">Africa</a></li>
-          <li class="c2"><a href="asia.html">Asia</a></li>
-          <li class="c3"><a href="#australia">Australia</a></li>
-          <li class="c4"><a href="./europe/demo.html">Europe</a></li>
-          <li class="c5"><a href="north-america.html">North America</a></li>
-          <li class="c6"><a href="#south-america">South America</a></li>
+          <li class="c1"><a href="africa.html" target="_blank">Africa</a></li>
+          <li class="c2"><a href="asia.html" target="_blank">Asia</a></li>
+          <li class="c3"><a href="australia.html" target="_blank">Australia</a></li>
+          <li class="c4"><a href="europe.html" target="_blank">Europe</a></li>
+          <li class="c5"><a href="north-america.html" target="_blank">North America</a></li>
+          <li class="c6"><a href="south-america.html" target="_blank">South America</a></li>
          </ul>
        </div>
 
@@ -23,7 +23,7 @@
        <script type="text/javascript">
           $(document).ready(function(){
           // CSSMap;
-          $("#mapp-continents").CSSMap({
+          $("#map-world").CSSMap({
             "size": 1450,
             'cities': true
           });

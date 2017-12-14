@@ -1,7 +1,6 @@
 <html>
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {
         'packages':['geochart'],
@@ -14,19 +13,19 @@
       function drawRegionsMap() {
         var data = google.visualization.arrayToDataTable([
           ['Country', 'latitude'],
-          ['Argentina', 36], ['Ecuador', -8], ['Bolivia', 6], ['Brazil', -24],
-          ['Chile', 12], ['Colombia', -3], ['Guyana', 3],
-          ['Paraguay', 28], ['Peru', 15],
-          ['Suriname', 7], ['Uruguay', 35], ['Venezuela', 14],
-          ['Falkland Islands', -12]
+          ['Australia', 28], ['Fiji', -8], ['Kiribati', 9], ['Marshall Islands', -24],
+          ['Micronesia', 12], ['Nauru', -3], ['New Zealand', 3],
+          ['Palau', 28], ['Papua New Guinea', 15],
+          ['Samoa', 4], ['Solomon Islands', 35], ['Tonga', 12],
+          ['Tuvalu', -12], ['Vanuatu', 6]
         ]);
 
         var options = {
-          region: '019',
+          region: '009',
           legend: false, 
           enableRegionInteractivity: true,
           showInfoWindow: true,
-          magnifyingGlass: {enable: true, zoomFactor: 7.5}, 
+          magnifyingGlass: {enable: true, zoomFactor: 7.5},	
           colorAxis: {colors: ['grey', 'black', '#e31b23','yellow','blue','green']},
           backgroundColor: '#81d4fa',
           datalessRegionColor: '#f8bbd0',
@@ -36,21 +35,15 @@
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
         google.visualization.events.addListener(chart, "select", function () {
-            var countryISO2 = chart.getSelection()[0];
-            if(countryISO2) {
+		        var countryISO2 = chart.getSelection()[0];
+		        if(countryISO2) {
                 var country = data.getValue(countryISO2.row, 0); 
                 alert(country);
                 console.log(country);
             }
-        });
-        $("#refions_div").css("zoom",1);
-
-        // [... google chart code generation ...]
-
-        google.visualization.events.addListener(chart, 'ready', function() { $("#regions_div").css("zoom",1); });
+		    });
         chart.draw(data, options);
       }
-
     </script>
   </head>
   <body>

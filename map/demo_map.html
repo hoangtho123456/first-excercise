@@ -9,11 +9,11 @@
   <body>
       <div id="mapp-continents">
          <ul class="continents">
-          <li class="c1"><a href="#africa">Africa</a></li>
-          <li class="c2"><a href="#asia">Asia</a></li>
+          <li class="c1"><a href="africa.html" target="blank">Africa</a></li>
+          <li class="c2"><a href="asia.html">Asia</a></li>
           <li class="c3"><a href="#australia">Australia</a></li>
           <li class="c4"><a href="./europe/demo.html">Europe</a></li>
-          <li class="c5"><a href="#north-america">North America</a></li>
+          <li class="c5"><a href="north-america.html">North America</a></li>
           <li class="c6"><a href="#south-america">South America</a></li>
          </ul>
        </div>
@@ -22,13 +22,11 @@
         <script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
        <script type="text/javascript">
           $(document).ready(function(){
-
           // CSSMap;
           $("#mapp-continents").CSSMap({
             "size": 1450,
             'cities': true
           });
-
           // END OF THE CSSMap;
 
           });

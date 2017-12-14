@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'latitude'],
+          ['Germany', 1],
+          ['United States', 2],
+          ['Canada', 3],
+          ['France', 4],
+          ['Rusia', 5],
+          ['latvia', 6],
+          ['FinLand', 7],
+          ['Ukraine', 8],
+          ['Spain', 9],
+          ['Georgia', 10],
+        ]);
+
+        var options = {
+          region: '150',
+          legend: false, 
+          enableRegionInteractivity: true,
+          showInfoWindow: true,
+          magnifyingGlass: {enable: true, zoomFactor: 7.5},	
+          colorAxis: {colors: ['grey', 'black', '#e31b23','yellow','blue','green']},
+          backgroundColor: '#81d4fa',
+          datalessRegionColor: '#f8bbd0',
+          defaultColor: '#f5f5f5',
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        google.visualization.events.addListener(chart, "select", function () {
+		        var countryISO2 = chart.getSelection()[0];
+		        if(countryISO2) {
+                var country = data.getValue(countryISO2.row, 0); 
+                alert(country);
+                console.log(country);
+            }
+		    });
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

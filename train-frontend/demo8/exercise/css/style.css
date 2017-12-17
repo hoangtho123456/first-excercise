@@ -36,9 +36,10 @@ body {
   color: #703200 !important; }
 
 header {
+  float: left;
   width: 100%;
   height: auto;
-  background: url("../images/bg_header.jpg") repeat-x; }
+  background: url("../images/bg_header.jpg") repeat; }
   header div.l_header {
     float: left;
     max-width: 327px;
@@ -107,7 +108,8 @@ div.content {
   div.content div.article_index {
     width: 100%;
     height: auto;
-    /*info*/ }
+    /*info*/
+    /*aside*/ }
     div.content div.article_index img.ctn_img1 {
       width: 100%;
       max-width: 754px;
@@ -172,5 +174,130 @@ div.content {
             position: absolute;
             left: 5px;
             top: 8px; }
+      div.content div.article_index div.main_info dl {
+        display: block;
+        margin: 10px 0 20px 0; }
+        div.content div.article_index div.main_info dl dt {
+          float: left;
+          padding-left: 10px; }
+          div.content div.article_index div.main_info dl dt img.btn_box {
+            vertical-align: middle;
+            padding: 0 0 0 5px; }
+        div.content div.article_index div.main_info dl dd {
+          height: auto;
+          padding-left: 220px;
+          text-align: left; }
+      div.content div.article_index div.main_info div.group1_img {
+        width: 100%;
+        height: 104px;
+        background: url(../images/img9.jpg) no-repeat 175px top; }
+        div.content div.article_index div.main_info div.group1_img img.txt_group_blue {
+          margin-top: 15px;
+          margin-left: 10px;
+          text-align: left; }
+    div.content div.article_index div.aside {
+      float: left;
+      height: auto;
+      display: inline-block; }
+      div.content div.article_index div.aside ul li {
+        padding: 5px 0; }
+
+/*footer*/
+footer {
+  width: 100%;
+  height: auto;
+  min-width: 960px;
+  margin-top: 30px;
+  float: left;
+  display: block;
+  z-index: 99;
+  position: relative;
+  clear: both; }
+  footer p.btn_f_top {
+    width: 100%;
+    height: auto;
+    text-align: right; }
+  footer div.group_green {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    float: left;
+    padding: 1% 0;
+    text-align: left;
+    background: url(../images/footer1.jpg) repeat left top; }
+    footer div.group_green img.circle_big {
+      width: 100%;
+      max-width: 135px;
+      height: 135px;
+      float: left; }
+    footer div.group_green table.schedule {
+      float: left;
+      width: 40%;
+      height: auto;
+      margin: 10px 85px;
+      text-align: center;
+      border-top: 1px solid #c7c7c7;
+      border-right: 1px solid #c7c7c7;
+      border-left: 1px solid #c7c7c7;
+      background-color: white;
+      border-collapse: collapse; }
+      footer div.group_green table.schedule th {
+        width: 10px;
+        height: auto;
+        text-align: center;
+        background-color: #d4ea98;
+        border-right: 1px solid #c7c7c7;
+        border-left: 1px solid #c7c7c7; }
+      footer div.group_green table.schedule th:first-child {
+        width: 70px; }
+      footer div.group_green table.schedule th:last-child {
+        width: 40px; }
+      footer div.group_green table.schedule td {
+        width: 10px;
+        height: auto;
+        text-align: center;
+        border-right: 1px solid #c7c7c7;
+        border-left: 1px solid #c7c7c7;
+        border-bottom: 1px solid #c7c7c7; }
+      footer div.group_green table.schedule .icon_f {
+        vertical-align: middle; }
+  footer div.group_grey {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    float: left;
+    padding: 1% 0;
+    text-align: left;
+    background: url(../images/footer3.jpg) repeat left top; }
+    footer div.group_grey img {
+      padding: 10px 0; }
+    footer div.group_grey div.left_group_grey {
+      width: 30%;
+      float: left;
+      height: auto;
+      padding: 5px 0; }
+    footer div.group_grey div.right_group_grey {
+      float: left;
+      width: 65%;
+      height: auto; }
+      footer div.group_grey div.right_group_grey ul {
+        padding-left: 15px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 40px; }
+        footer div.group_grey div.right_group_grey ul li {
+          margin-bottom: 2px;
+          padding-left: 15px;
+          text-align: left;
+          background: url(../images/circle_blue.png) no-repeat left top; }
+          footer div.group_grey div.right_group_grey ul li a {
+            color: #000000; }
+  footer #copyright {
+    width: 100%;
+    height: auto;
+    float: left;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #91bd1a; }
 
 /*# sourceMappingURL=style.css.map */

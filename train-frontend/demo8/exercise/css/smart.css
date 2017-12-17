@@ -1,6 +1,6 @@
 @media screen and (max-width: 644px) {
 
-div.header{
+header{
 	float:none;
 	padding-bottom:5px;
 	margin-bottom:20px;
@@ -22,144 +22,91 @@ div.header {
     background: url(../images/bg_header.jpg) repeat;
     margin: 0 auto;
 }
-div.img_header {
+header div.l_header {
     float: none;
-    margin: 0 auto;
-    width: 100%;
-    background: none;
     height: auto;
-    padding: 0px;
+    background: none;
 }
-img.logo_header {
+header div.l_header img.logo_header {margin: 0 auto;}
+header div.nav img.mail_box {
+    float: none;
+    display: block;
     margin: 0 auto;
+}
+header div.nav {
+    width: 100%;
+    height: auto;
     display: block;
 }
-div.nav{
-    float: none;
-    width:100%;   
-}
-img.mail_box {
-    float: none;
-    margin: 10px auto;
-    
-}
-/* Header end */
-
-/* Banner */
-div.banner {
-    float: none;
-}
-div.banner ul.bxslider{
+/*image banner*/
+div.banner img.fix_banner {
+    width: 50%;
     height: auto;
-	max-width:0;
 }
-img.fix_banner {
+
+/*content*/
+div.content div.article_index img.ctn_img1 {
     max-width: 100%;
     height: auto;
-    width: 50%;
-    
 }
-/* Banner end */
-
-/* Content */
-img.ctn_img1, ul.list_img li img  {height: auto;}
-
-p.title_img img {
-    height:  auto;
-}
-ul.list_img_ctn li {
-    padding: 5px 0px;  
-}
-ul.list_img_ctn li.li_2 {
-    padding: 0 0px;    
-}
-ul.list_img_ctn li img {height: auto;}
-/* Content end */
-
-/* Content bottom */
-div.aside {
-    float: none;
-    margin: 0px auto;
-    width: 100%;
-}
-
-div.ctn_main {
+div.content div.article_index ul.list_box {display: block;}
+div.content div.article_index ul.list_box img.img2 {padding: 0 ;}
+div.content div.article_index div.main_info {
+    display: block;
     float: none;
     width: 100%;
-    margin: 10px auto;
 }
-
-div.aside ul li {
-    padding: 5px 0;
-}
-div.box { 
-    margin: 0 auto;
-    }
-img.title_blue {
-    height:  auto;
-    margin: 25px auto 5px auto;
-   float: none;
-}
-img.link1 {
-   height:  auto;
-   margin: 16px 10px 10px 0px;
-   float: right;
-}
-div.box dl {
+div.content div.article_index div.main_info dl dt {
+    float: none;
+    padding-left: 0;
     text-align: left;
 }
-div.box dl dt {
-    float: none;
-    width: 100%;
-    padding-left: 3px;
-    padding-bottom: 5px;
-    }
-div.box dl dd {
-    padding-left: 3px;
-}
-div.group1 {display: none;}
-/* Content bottom end */
+/*box*/
+div.content div.article_index div.main_info div.box {margin: 0 auto;}
 
-/* Footer */
-
-div.bg_blue {
-    background: url(../images/footer1.jpg) repeat;
-}
-img.circle_big {
-    height:  auto;
+/*article*/
+div.content div.article_index div.main_info dl dd {padding-left: 0;}
+div.content div.article_index div.main_info div.group1_img {display: none;}
+/*aside*/
+div.content div.article_index div.aside {
     float: none;
-    margin: 5px auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
-table.schedule {
+div.content div.article_index div.main_info div.box div.title_green img.title_blue { margin: 25px 0 5px 0;}
+/*footer*/
+footer {
+    min-width: 100%;
+    margin-top: 10px;
+}
+footer div.group_green {
     float: none;
-    margin: 5px auto;
-    width: 100%;
-    }
-img.map {
+}
+footer div.group_green img.circle_big {
     float: none;
-    margin: 5px auto;
-    padding-bottom: 20px;
+    margin-top: 2px;
 }
-div.group2{
-    background: url(../images/footer3.jpg) repeat;
-    }
-div.left_footer {
-    float: none;
-    width: 100%;
-}
-div.left_footer img {
-    margin: 0px auto;
-    display:block;
-}
-div.right_footer {
+/*table*/
+footer div.group_green table.schedule {
     float: none;
     width: 100%;
+    margin: 0 auto;
 }
-
-div.right_footer ul {
-    width: 33%;
-    margin: 0px 0 10px 0;
-    padding-left: 10px;
-    
+.map {
+    margin-top: 10px; 
 }
-/* Footer end */
+footer div.group_grey div.left_group_grey {
+    width: 100%;
+    float: none;
+}
+footer div.group_grey div.right_group_grey {
+    float: none;
+    width: 100%;
+}
+footer div.group_grey div.right_group_grey ul {
+    padding-left: 15px;
+    width: 32%;
+    margin-top: 30px;
+    margin-bottom: 10px; 
+}

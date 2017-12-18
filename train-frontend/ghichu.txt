@@ -1,0 +1,91 @@
+//man hinh pc:
+
+    //tat ca cac the img: deu di kem 3 thuoc luc nay:
+	
+	max-width:592px; kich thuoc that cua img
+	height:..; fix cung kich thuoc that cua img; //dung de fix height: ie8
+	width:100%;
+	*width:592px: //dung de fix img ie7
+
+	//cac the div, p, neu co dung neu co dung width thi cung kem cac thuoc tinh sau:
+	max-width:...; cho width phu hop voi man hinh
+	height:auto;
+	width:100%;
+	
+	//co 1 so the chi hien thi ben man hinh pc, trong sp k co.
+	
+//man hinh sp:
+	//
+	bo cac thuoc tinh float: left va right => none;
+	
+	//img cho ra giua (tuy theo cac sap xep cua man hinh sp, thuong la cho ra giua):
+	margin: 0 auto;
+	text-align:center;
+	hegit:auto;	
+
+	//cac the div, p, neu co dung neu co dung width thi cung kem cac thuoc tinh sau, cho text nam ben trai va full width:
+	max-width:100%;
+	text-align:left; 
+	
+	
+	
+//css o chung da viet thi k dc chinh sua , chi viet css page cua tung ng va dat kem theo ten page, de khoi trung.
+ex: .abc_tenpage{
+
+}
+// cac khoi, thi ul > li	
+// list view thi dung ul > li ( khoi hoac img)
+// han che dung float
+// cac list view co thu tu thi dung: ol > li
+// cac doan text dat trong the page
+// han che dung nhieu div long` nhau
+// trong the p, neu co text in dam thi dung strong de in dam
+// trong p co the dung span
+// nhieu doan text cach nhau 1 khoan cach thi dung the p cho moi dong
+// k dung 2 the br lien tuc
+// cac list view co phan cap dung:dl> dt, dl > dd (ex:http://hocwebchuan.com/tutorial/tut_html_dl.php)
+// nhung thuoc tinh css da viet o file style, vao css smart k can viet lai, chi viet nhung thuoc tinh can thay doi.
+// cac the img, neu kich thuoc nho hon < 320px thi k can di kem cac thuoc tinh tren
+// neu cac khoi co dung cac hieu ung html5+ css3, thi cac thuoc tinh nay chi viec ben sp, vi ben ie <8 k hieu.
+// k dung the <b> trong the <p>. neu muon in dam thi dung strong va them class vao, con bt thi dung the <span> trong <p>
+
+//cac fix ie7:
+   them dau * dau the can fix.
+   ex: *text-align:left; 
+//ie8:
+   ex: text-align:left \9; 
+   
+ /**********************************************Cai dat phan mem ho tro viet html*******************************************************/
+1/ download http://www.sublimetext.com/3 
+2/ vào link này https://sublime.wbond.net/installation
+3/ copy cai dong code cai dat , chon dung vesion cua sublime text 
+4/ vao sublime nhan ctrl + `
+5/ paste vao > enter
+6/ vao menu>prefernces thấy có phần package control là cài thành công
+7/ vào menu>prefernces>packet control>install package ( hoặc nhấn Crtl + Shift + P > gõ packet control> chọn install package)
+Một số plugin cần thết:
+•	HTML5: tạo cấu trúc ban đầu cho 1 trang html5 ( gõ html5 > crtl + space > chọn html 5)
+•	Emmet: là một bộ công cụ phát triển web với nhiều cải thiện quy trình làm việc với HTML/CSS.
+•   1 Plugin hay nữa là HTMLBeautify : sắp xếp lại các dòng của html lại theo thứ tự dễ nhìn (mở trang html > nhấn Control-Alt-Shift-F )
+Link tim hieu: http://www.ngoctu.net/viet-code-nhanh-hon-voi-emmet-plugin/
+ https://sublime.wbond.net/
+ http://www.ngoctu.net/viet-code-nhanh-hon-voi-emmet-plugin-2/
+ 
+/**************************************Cach dat ten class**********************************************/
+Ve cach dat ten class cho hop ly.
+Neu moi ng k biet dat ten gi, thi copy cai title tieng nhat, dich ra tieng anh, roi lay lam class.
+Vi khi lam class se rat nhieu, nhieu luc se k biet dung cai gi de lam class cho hop ly. 
+Va chu y la k dc dat class lung tung, phai co logic.
+Dat kem theo ten cua page minh lam, de tranh trung` lap, va k dat ten cua minh` vao class nhe.
+ALt cua images: chi copy cai title bo vao, cai title gan voi no nhat.
+Neu k biet thi de trong, chu k dc copy lung tung vao, google no k sale dc.
+Moi ng nho doc cai nay nhe, k thi KH no danh gia' la dat the lung tung va khong biet dung class do'.
+Con nua, html hien thi tren android va Iphone va moi browse se co nhieu the bi lech nhau 1 chut, nen moi ng nho test ki nhe. Va khi lam nho han che hoi nhung cai da tung` hoi?
+
+div.page>(div.content>div.left+div.right)+div.footer
+div.header>(div.inner.head)+div.banner+div.menu.inner
+ul.menu_head>li>a>img
+==>suy ra div.header>(div.inner.head)+div.banner+div.menu.inner>ul.menu_head>(li>a>img)*6
+body>(content>)+(sidebar>ul>li.MenuRight*5>a[href=#]{TenMenu})
+(div.header>((a.logo>img)+div.info>(p.left_p.riight)))+(div.nav>div.menu>ul>li*8>a>img)+div.content+div.aside+(div.footer>(div.menu>ul>li*8>a)+div.copyright) 
+(div.header>((a.logo>img)+div.info>(p.left_p.riight)))+(div.nav>div.menu>ul>li*8>a>img)+div.content+div.aside+(div.footer>(div.menu>ul>li*8>a)+div.copyright)

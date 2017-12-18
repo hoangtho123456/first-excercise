@@ -1,0 +1,112 @@
+@media screen and (max-width: 644px) {
+
+header{
+	float:none;
+	padding-bottom:5px;
+	margin-bottom:20px;
+    height: auto;
+	}	
+div.inner {
+	height: auto;
+	margin: 0 auto;
+	padding: 0 1%;
+	text-align: center;
+	width: 98%;
+	min-width:50%;
+	}
+
+}
+img {height: auto;}
+/* Header */
+div.header {
+    background: url(../images/bg_header.jpg) repeat;
+    margin: 0 auto;
+}
+header div.l_header {
+    float: none;
+    height: auto;
+    background: none;
+}
+header div.l_header img.logo_header {margin: 0 auto;}
+header div.nav img.mail_box {
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
+header div.nav {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/*image banner*/
+div.banner img.fix_banner {
+    width: 50%;
+    height: auto;
+}
+
+/*content*/
+div.content div.article_index img.ctn_img1 {
+    max-width: 100%;
+    height: auto;
+}
+div.content div.article_index ul.list_box {display: block;}
+div.content div.article_index ul.list_box img.img2 {padding: 0 ;}
+div.content div.article_index div.main_info {
+    display: block;
+    float: none;
+    width: 100%;
+}
+div.content div.article_index div.main_info dl dt {
+    float: none;
+    padding-left: 0;
+    text-align: left;
+}
+/*box*/
+div.content div.article_index div.main_info div.box {margin: 0 auto;}
+
+/*article*/
+div.content div.article_index div.main_info dl dd {padding-left: 0;}
+div.content div.article_index div.main_info div.group1_img {display: none;}
+/*aside*/
+div.content div.article_index div.aside {
+    float: none;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+div.content div.article_index div.main_info div.box div.title_green img.title_blue { margin: 25px 0 5px 0;}
+/*footer*/
+footer {
+    min-width: 100%;
+    margin-top: 10px;
+}
+footer div.group_green {
+    float: none;
+}
+footer div.group_green img.circle_big {
+    float: none;
+    margin-top: 2px;
+}
+/*table*/
+footer div.group_green table.schedule {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+}
+.map {
+    margin-top: 10px; 
+}
+footer div.group_grey div.left_group_grey {
+    width: 100%;
+    float: none;
+}
+footer div.group_grey div.right_group_grey {
+    float: none;
+    width: 100%;
+}
+footer div.group_grey div.right_group_grey ul {
+    padding-left: 15px;
+    width: 32%;
+    margin-top: 30px;
+    margin-bottom: 10px; 
+}

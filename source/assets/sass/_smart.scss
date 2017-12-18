@@ -1,0 +1,19 @@
+/**
+*Smart phone
+*/
+@media screen and (max-width: 644px) {
+header{
+	float:none;
+	padding-bottom:5px;
+	margin-bottom:20px;
+    height: auto;
+	}	
+div.inner {
+	height: auto;
+	margin: 0 auto;
+	padding: 0 1%;
+	text-align: center;
+	width: 98%;
+	min-width:50%;
+	}
+}

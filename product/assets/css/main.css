@@ -492,8 +492,7 @@ body {
 
 .inner {
   width: 100%;
-  max-width: 960px;
-  min-width: 960px;
+  max-width: 640px;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -502,9 +501,6 @@ body {
 }
 
 header {
-  width: 100%;
-  min-width: 960px;
-  float: left;
   padding-bottom: 5px;
   margin-bottom: 8px;
   height: auto;
@@ -513,32 +509,21 @@ header {
 header h1 {
   padding: 5px 0;
   text-align: center;
+  font-size: 16px;
   color: #ffffff;
   background-color: #0066ff;
 }
 
-/*wrap for content*/
-div.wrap {
-  width: 100% !important;
-  max-width: 99% !important;
-  display: block !important;
-  height: auto;
-  margin: 0 auto;
-}
-
-/**
-*Smart phone
-*/
-
-div.wrap {
-  width: 97%;
+.wrap {
+  width: 100%;
   display: inline-block;
-  max-width: 97%;
+  max-width: 100%;
   height: auto;
 }
 
-div.wrap .btn_sub {
+.wrap .btn_sub {
   float: right;
+  height: 30px;
   margin-top: 10px;
   padding: 5px 10px;
   text-align: center;
@@ -549,29 +534,31 @@ div.wrap .btn_sub {
   border: none;
 }
 
-table {
+.tb_login {
   width: 100%;
+  font-size: 14px;
   border: 2.5px solid #D9ECFF;
   border-collapse: collapse;
 }
 
-table tr {
+.tb_login tr {
   border: 1.4px solid #D9ECFF;
 }
 
-table td {
+.tb_login td {
   border: 1px solid #D9ECFF;
 }
 
-table td.title {
+.tb_login .tb_name {
   width: 30%;
   text-align: center;
   color: #ffffff;
   background-color: #00B0F0;
 }
 
-table input.login {
+.tb_login .text_login {
   width: 70%;
+  height: 18px;
   margin: 2px 20% 2px 5px;
   text-align: left;
   color: #000000;
@@ -582,44 +569,98 @@ table input.login {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 644px) {
-  header {
-    float: none;
-    min-width: 100%;
-  }
-  header h1 {
+/**
+*Smart phone
+*/
+/*@media screen and (max-width: 644px) {
+header{
+  float:none;
+  min-width: 100%;
+  h1 {
     padding: 5px 0;
     text-align: center;
-    color: #ffffff;
+    color: $colorWhite;
     background-color: #0066ff;
   }
-  div.inner {
-    height: auto;
-    margin: 0 auto;
-    padding: 0 1%;
-    text-align: center;
-    width: 98%;
-    min-width: 50%;
+}
+
+div.inner {
+  height: auto;
+  margin: 0 auto;
+  padding: 0 1%;
+  text-align: center;
+  width: 98%;
+  min-width:50%;
   }
+}
+div.wrap {
+  width: 97%;
+  display: inline-block;
+  max-width: 97%;
+  height: auto;
+  .btn_sub {
+    float: right;
+	margin-top: 10px;
+	padding: 5px 10px;
+	text-align: center;
+	font: {
+	  size: 12px;
+	  weight: bold;
+	}
+	color: $colorWhite;
+	background-color: $colorGreen;
+	border: none;
+	}
+}
+table {
+  width: 100%;
+  border: 2.5px solid #D9ECFF;
+  border-collapse: collapse;
+  tr {border: 1.4px solid #D9ECFF;}
+  td {border: 1px solid #D9ECFF;}
+  td.title {
+    width: 30%;
+    text-align: center;
+    color: $colorWhite;
+    background-color: $colorBlue;
+  }
+  input.login {
+    width: 70%;
+	margin: 2px 20% 2px 5px;
+    text-align: left;
+	color: $colorBlack;
+	border: 1.4px solid $colorGrey;
+	border-radius: 3px;
+	background-color: $colorWhite;
+	}
 }
 
 @media screen and (min-width: 645px) and (max-width: 960px) {
-  header {
-    float: none;
-    min-width: 100%;
+  header{
+    float:none;
+    width: 70%;
+    min-width: 70%;
+    margin: auto; 
   }
   .inner {
     width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+    max-width: 70%;
+    min-width: 70%;
   }
-}
 
-@media screen and (min-width: 1024px) {
-  .inner {
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+  div.wrap {
+    width: 100% !important;
+    max-width: 99% !important;
+    height: auto;
+    margin: 0 auto;
+  }
+} 
+*/
+@media only screen and (max-width: 644px) {
+  .wrap {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
   }
 }
 

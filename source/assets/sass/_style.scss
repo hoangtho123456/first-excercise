@@ -28,8 +28,7 @@ body {
 }
 .inner {
   width: 100%;
-  max-width: $innerwidth;
-  min-width: $innerwidth;
+  max-width: 640px;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -37,25 +36,64 @@ body {
   height: auto;
 }
 header{
-  width: 100%;
-  min-width: $innerwidth;
-  float:left;
   padding-bottom:5px;
   margin-bottom:8px;
   height: auto;
     h1 {
       padding: 5px 0;
       text-align: center;
+      font-size: 16px;
       color: $colorWhite;
       background-color: #0066ff;
     }
 }
 
-/*wrap for content*/
-div.wrap {
-  width: 100% !important;
-  max-width: 99% !important;
-  display: block !important;
+.wrap {
+  width: 100%;
+  display: inline-block;
+  max-width: 100%;
   height: auto;
-  margin: 0 auto;
+  .btn_sub {
+    float: right;
+    height: 30px;
+	margin-top: 10px;
+	padding: 5px 10px;
+	text-align: center;
+	font: {
+	  size: 12px;
+	  weight: bold;
+	}
+	color: $colorWhite;
+	background-color: $colorGreen;
+	border: none;
+  }
+  @include respond-to(644) {
+  		width: 90%;
+  		margin: 0 auto;
+  		display: block;
+  }
+}
+.tb_login {
+  width: 100%;
+  font-size: 14px;
+  border: 2.5px solid #D9ECFF;
+  border-collapse: collapse;
+  tr {border: 1.4px solid #D9ECFF;}
+  td {border: 1px solid #D9ECFF;}
+  .tb_name {
+    width: 30%;
+    text-align: center;
+    color: $colorWhite;
+    background-color: $colorBlue;
+  }
+  .text_login {
+    width: 70%;
+    height: 18px;
+	margin: 2px 20% 2px 5px;
+    text-align: left;
+	color: $colorBlack;
+	border: 1.4px solid $colorGrey;
+	border-radius: 3px;
+	background-color: $colorWhite;
+  }
 }

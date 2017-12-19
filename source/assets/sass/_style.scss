@@ -82,8 +82,8 @@ header{
     background-color: $colorBlue;
   }
   &-text {
-    width: 100%;
-    max-width: 70%;
+    width: 70%;
+    max-width: 250px;
 	margin: 2px 20% 2px 5px;
     text-align: left;
 	color: $colorBlack;

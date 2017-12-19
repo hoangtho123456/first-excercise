@@ -73,21 +73,22 @@ header{
   		display: block;
   }
 }
-.tb_login {
+.tb-login {
   width: 100%;
   font-size: 14px;
   border: 2.5px solid #D9ECFF;
   border-collapse: collapse;
   tr {border: 1.4px solid #D9ECFF;}
   td {border: 1px solid #D9ECFF;}
-  .tb_name {
+  .login-tb-name {
     width: 30%;
     text-align: center;
     color: $colorWhite;
     background-color: $colorBlue;
   }
-  .text_login {
-    width: 70%;
+  .text-login {
+    width: 100%;
+    max-width: 70%;
     height: 18px;
 	margin: 2px 20% 2px 5px;
     text-align: left;

@@ -73,7 +73,10 @@ header{
   border: 2.5px solid #D9ECFF;
   border-collapse: collapse;
   tr {border: 1.4px solid #D9ECFF;}
-  td {border: 1px solid #D9ECFF;}
+  td {
+    padding: 2px 5px;
+  	border: 1px solid #D9ECFF;
+  }
   &-name {
     width: 30%;
     font-size: 12px;
@@ -84,7 +87,6 @@ header{
   &-text {
     width: 70%;
     max-width: 250px;
-	margin: 2px 20% 2px 5px;
     text-align: left;
 	color: $colorBlack;
 	border: 1.4px solid $colorGrey;

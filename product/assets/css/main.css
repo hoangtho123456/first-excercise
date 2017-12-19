@@ -545,6 +545,7 @@ header h1 {
 }
 
 .tb-login td {
+  padding: 2px 5px;
   border: 1px solid #D9ECFF;
 }
 
@@ -559,7 +560,6 @@ header h1 {
 .tb-login-text {
   width: 70%;
   max-width: 250px;
-  margin: 2px 20% 2px 5px;
   text-align: left;
   color: #000000;
   border: 1.4px solid #7e7e7e;

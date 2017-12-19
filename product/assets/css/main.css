@@ -6,7 +6,9 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-html, body, div, span,
+html, body,
+div,
+span,
 object,
 iframe, h1, h2, h3, h4, h5, h6,
 p, blockquote,
@@ -276,7 +278,9 @@ select {
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-html [type="button"], body [type="button"], div [type="button"], span [type="button"],
+html [type="button"], body [type="button"],
+div [type="button"],
+span [type="button"],
 object [type="button"],
 iframe [type="button"], h1 [type="button"], h2 [type="button"], h3 [type="button"], h4 [type="button"], h5 [type="button"], h6 [type="button"],
 p [type="button"], blockquote [type="button"],
@@ -454,7 +458,12 @@ template {
   display: none;
 }
 
-html, body, div, span,
+/**
+*file style.scss
+*/
+html, body,
+div,
+span,
 object,
 iframe, h1, h2, h3, h4, h5, h6,
 p, blockquote,
@@ -577,9 +586,6 @@ table input.login {
   header {
     float: none;
     min-width: 100%;
-    padding-bottom: 5px;
-    margin-bottom: 8px;
-    height: auto;
   }
   header h1 {
     padding: 5px 0;
@@ -614,11 +620,6 @@ table input.login {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-    clear: both;
-    height: auto;
   }
 }
 

@@ -7,15 +7,19 @@ html {
 	padding: 0;
 	outline: 0;
 }
-body, div, span, applet,
-object, iframe, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, 
-tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead,header, footer { @extend html; }
+body, div, span,
+object, 
+iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, 
+q, strong, 
+tt, var, dl, dt, dd, ol, ul, li, form, label, legend, 
+caption, tbody, tfoot, thead,header, footer { @extend html; }
 :focus {outline: 0;}
 body {
 	font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
-	font-size: 12px;
 	background: $colorWhite;
+	font-size: 14px;
 }
 .inner {
 	width: 100%;
@@ -26,4 +30,27 @@ body {
 	position: relative;
 	clear: both;
 	height: auto;
+}
+header{
+	width: 100%;
+	min-width: $innerwidth;
+	float:left;
+	padding-bottom:5px;
+	margin-bottom:8px;
+    height: auto;
+    h1 {
+    	padding: 5px 0;
+    	text-align: center;
+    	color: $colorWhite;
+    	background-color: #0066ff;
+    }
+}
+
+/*wrap for content*/
+div.wrap {
+	width: 100% !important;
+	max-width: 99% !important;
+	display: block !important;
+	height: auto;
+	margin: 0 auto;
 }

@@ -6,10 +6,14 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-html, body, div, span, applet,
-object, iframe, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
-tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, header, footer {
+html, body, div, span,
+object,
+iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code,
+q, strong,
+tt, var, dl, dt, dd, ol, ul, li, form, label, legend,
+caption, tbody, tfoot, thead, header, footer {
   line-height: 1.15;
   /* 1 */
   -ms-text-size-adjust: 100%;
@@ -272,10 +276,14 @@ select {
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-html [type="button"], body [type="button"], div [type="button"], span [type="button"], applet [type="button"],
-object [type="button"], iframe [type="button"], h1 [type="button"], h2 [type="button"], h3 [type="button"], h4 [type="button"], h5 [type="button"], h6 [type="button"],
-p [type="button"], blockquote [type="button"], pre [type="button"], a [type="button"], abbr [type="button"], acronym [type="button"], address [type="button"], big [type="button"], cite [type="button"], code [type="button"], del [type="button"], dfn [type="button"], em [type="button"], font [type="button"], ins [type="button"], kbd [type="button"], q [type="button"], s [type="button"], samp [type="button"], small [type="button"], strike [type="button"], strong [type="button"], sub [type="button"], sup [type="button"],
-tt [type="button"], var [type="button"], dl [type="button"], dt [type="button"], dd [type="button"], ol [type="button"], ul [type="button"], li [type="button"], fieldset [type="button"], form [type="button"], label [type="button"], legend [type="button"], caption [type="button"], tbody [type="button"], tfoot [type="button"], thead [type="button"], header [type="button"], footer [type="button"],
+html [type="button"], body [type="button"], div [type="button"], span [type="button"],
+object [type="button"],
+iframe [type="button"], h1 [type="button"], h2 [type="button"], h3 [type="button"], h4 [type="button"], h5 [type="button"], h6 [type="button"],
+p [type="button"], blockquote [type="button"],
+pre [type="button"], a [type="button"], abbr [type="button"], acronym [type="button"], address [type="button"], big [type="button"], cite [type="button"], code [type="button"],
+q [type="button"], strong [type="button"],
+tt [type="button"], var [type="button"], dl [type="button"], dt [type="button"], dd [type="button"], ol [type="button"], ul [type="button"], li [type="button"], form [type="button"], label [type="button"], legend [type="button"],
+caption [type="button"], tbody [type="button"], tfoot [type="button"], thead [type="button"], header [type="button"], footer [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
@@ -446,10 +454,14 @@ template {
   display: none;
 }
 
-html, body, div, span, applet,
-object, iframe, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
-tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, header, footer {
+html, body, div, span,
+object,
+iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code,
+q, strong,
+tt, var, dl, dt, dd, ol, ul, li, form, label, legend,
+caption, tbody, tfoot, thead, header, footer {
   border: 0;
   font-family: inherit;
   font-size: 100%;
@@ -465,14 +477,14 @@ tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, 
 
 body {
   font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
-  font-size: 12px;
   background: #ffffff;
+  font-size: 14px;
 }
 
 .inner {
   width: 100%;
-  max-width: 960;
-  min-width: 960;
+  max-width: 960px;
+  min-width: 960px;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -480,16 +492,100 @@ body {
   height: auto;
 }
 
+header {
+  width: 100%;
+  min-width: 960px;
+  float: left;
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+  height: auto;
+}
+
+header h1 {
+  padding: 5px 0;
+  text-align: center;
+  color: #ffffff;
+  background-color: #0066ff;
+}
+
+/*wrap for content*/
+div.wrap {
+  width: 100% !important;
+  max-width: 99% !important;
+  display: block !important;
+  height: auto;
+  margin: 0 auto;
+}
+
 /**
 *Smart phone
 */
 
+div.wrap {
+  width: 97%;
+  display: inline-block;
+  max-width: 97%;
+  height: auto;
+}
+
+div.wrap .btn_sub {
+  float: right;
+  margin-top: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #009900;
+  border: none;
+}
+
+table {
+  width: 100%;
+  border: 2.5px solid #D9ECFF;
+  border-collapse: collapse;
+}
+
+table tr {
+  border: 1.4px solid #D9ECFF;
+}
+
+table td {
+  border: 1px solid #D9ECFF;
+}
+
+table td.title {
+  width: 30%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #00B0F0;
+}
+
+table input.login {
+  width: 70%;
+  margin: 2px 20% 2px 5px;
+  text-align: left;
+  color: #000000;
+  border: 1.4px solid #7e7e7e;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  background-color: #ffffff;
+}
+
 @media screen and (max-width: 644px) {
   header {
     float: none;
+    min-width: 100%;
     padding-bottom: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     height: auto;
+  }
+  header h1 {
+    padding: 5px 0;
+    text-align: center;
+    color: #ffffff;
+    background-color: #0066ff;
   }
   div.inner {
     height: auto;
@@ -498,6 +594,31 @@ body {
     text-align: center;
     width: 98%;
     min-width: 50%;
+  }
+}
+
+@media screen and (min-width: 645px) and (max-width: 960px) {
+  header {
+    float: none;
+    min-width: 100%;
+  }
+  .inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    clear: both;
+    height: auto;
   }
 }
 

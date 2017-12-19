@@ -9,26 +9,28 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Smart Phone Program for Visiting Nurse Business software</title>
     <link type="text/css" rel="stylesheet" href="./assets/css/main.css">
-    <script type="text/javascript" src="./assets/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-3.2.1.min.js"></script>
   </head>
   <body>
     <header>
         <h1>訪問看護ステーション業務ソフト</h1>	  
     </header>
     <div class="inner">
-      <table>
-      	<tbody>
-      		<tr>
-      			<td>ログインID</td>
-      			<td><input type="text" name="username" checked="checked"></td>
-      		</tr>
-      		<tr>
-      			<td>パスワード</td>
-      			<td><input type="password" name="password" checked="checked"></td>
-      		</tr>
-      	</tbody>
-      </table>
-      <input type="button" name="submit" value="submit">   
+      <div class="wrap">
+        <table>
+        <tbody>
+          <tr>
+            <td class="title">ログインID</td>
+            <td><input class="login" type="text" name="username" checked="checked"></td>
+          </tr>
+          <tr>
+            <td class="title">パスワード</td>
+            <td><input class="login" type="password" name="password" checked="checked"></td>
+          </tr>
+        </tbody>
+        </table>
+        <button class="btn_sub" type="button">ログイン（開始）</button>
+      </div>   
     </div>
   </body>
 </html>

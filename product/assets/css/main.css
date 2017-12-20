@@ -480,6 +480,10 @@ caption, tbody, tfoot, thead, header, footer {
   outline: 0;
 }
 
+ul, ol {
+  list-style-type: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -496,6 +500,12 @@ body {
   font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
   background: #ffffff;
   font-size: 14px;
+}
+
+.clear-fix {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .inner {
@@ -537,7 +547,7 @@ header .head-login-title2 {
 .btn-sub {
   float: right;
   margin-top: 10px;
-  padding: 5px 10px;
+  padding: 5px 10px 4px 10px;
   text-align: center;
   font-size: 12px;
   font-weight: bold;
@@ -591,13 +601,13 @@ header .head-login-title2 {
 
 .form-group {
   display: inline-block;
-  margin: 0 auto;
   vertical-align: middle;
   text-align: center;
 }
 
 .form-group label {
   max-width: 100%;
+  vertical-align: middle;
   font-weight: 500;
   color: #009900;
 }
@@ -605,13 +615,16 @@ header .head-login-title2 {
 .form-group .form-control {
   display: inline-block;
   width: auto;
-  height: 25px;
   max-width: 120px;
   vertical-align: middle;
   border: 1.4px solid #7e7e7e;
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
+}
+
+.form-group .big-input {
+  height: 25px;
 }
 
 .menu-group-btn {
@@ -644,6 +657,37 @@ header .head-login-title2 {
 /*access.html*/
 .letter-space {
   letter-spacing: 10px;
+}
+
+.label-calen {
+  border: none;
+  vertical-align: middle;
+  background-color: #ffffff;
+}
+
+.btn-white {
+  padding: 5px 15px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+}
+
+.btn-white-access {
+  float: right;
+}
+
+.btn-grey {
+  height: auto;
+  padding: 8px 10px;
+  margin: 0 2px;
+  color: #ffffff;
+  background-color: #7f7f7f;
+  border: none;
+}
+
+.wrap-access {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=maps/main.css.map */

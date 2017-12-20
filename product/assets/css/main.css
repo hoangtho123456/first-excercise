@@ -491,7 +491,7 @@ body {
 }
 
 .inner {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -505,12 +505,17 @@ header {
   height: auto;
 }
 
-header h1 {
+header .head-login-title1, header .head-login-title2 {
   padding: 5px 0;
   text-align: center;
   font-size: 16px;
   color: #ffffff;
   background-color: #0066ff;
+}
+
+header .head-login-title2 {
+  color: #000000;
+  background-color: #d9ecff;
 }
 
 .wrap {
@@ -546,6 +551,7 @@ header h1 {
 
 .tb-login td {
   padding: 2px 5px;
+  line-height: 1.5em;
   border: 1px solid #D9ECFF;
 }
 
@@ -567,6 +573,12 @@ header h1 {
      -moz-border-radius: 3px;
           border-radius: 3px;
   background-color: #ffffff;
+}
+
+/*page main menu*/
+.form-group {
+  margin: 0 auto;
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=maps/main.css.map */

@@ -480,6 +480,14 @@ caption, tbody, tfoot, thead, header, footer {
   outline: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
 :focus {
   outline: 0;
 }
@@ -491,7 +499,7 @@ body {
 }
 
 .inner {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -505,12 +513,17 @@ header {
   height: auto;
 }
 
-header h1 {
+header .head-login-title1, header .head-login-title2 {
   padding: 5px 0;
   text-align: center;
   font-size: 16px;
   color: #ffffff;
   background-color: #0066ff;
+}
+
+header .head-login-title2 {
+  color: #000000;
+  background-color: #d9ecff;
 }
 
 .wrap {
@@ -521,7 +534,7 @@ header h1 {
   height: auto;
 }
 
-.wrap .btn_sub {
+.btn-sub {
   float: right;
   margin-top: 10px;
   padding: 5px 10px;
@@ -546,6 +559,13 @@ header h1 {
 
 .tb-login td {
   padding: 2px 5px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  line-height: 1.5em;
+>>>>>>> feature/nurse
+>>>>>>> develop
   border: 1px solid #D9ECFF;
 }
 
@@ -567,6 +587,63 @@ header h1 {
      -moz-border-radius: 3px;
           border-radius: 3px;
   background-color: #ffffff;
+}
+
+/*page main menu*/
+.center {
+  display: block;
+  text-align: center;
+}
+
+.form-group {
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.form-group label {
+  max-width: 100%;
+  font-weight: 500;
+  color: #009900;
+}
+
+.form-group .form-control {
+  display: inline-block;
+  width: auto;
+  height: 25px;
+  max-width: 120px;
+  vertical-align: middle;
+  border: 1.4px solid #7e7e7e;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.menu-group-btn {
+  width: 80%;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 20px auto 0 auto;
+}
+
+.menu-group-btn .menu-btn {
+  width: 100%;
+  height: 35px;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  border: none;
+  color: #ffffff;
+}
+
+.menu-group-btn .red-btn {
+  margin-bottom: 20px;
+  background-color: #da251c;
+}
+
+.menu-group-btn .blue-btn {
+  background-color: #0033cc;
 }
 
 /*# sourceMappingURL=maps/main.css.map */

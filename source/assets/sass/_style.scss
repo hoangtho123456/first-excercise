@@ -20,6 +20,7 @@ pre, a, abbr, acronym, address, big, cite, code,
 q, strong, 
 tt, var, dl, dt, dd, ol, ul, li, form, label, legend, 
 caption, tbody, tfoot, thead,header, footer { @extend html; }
+ul, ol {list-style-type: none;}
 a {text-decoration: none;}
 a, button {cursor: pointer;}
 :focus {outline: 0;}
@@ -27,6 +28,11 @@ body {
   font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
   background: $colorWhite;
   font-size: 14px;
+}
+.clear-fix {
+  content: "";
+    clear: both;
+    display: table;
 }
 .inner {
   width: 95%;
@@ -62,9 +68,9 @@ header{
   height: auto;
 }
 .btn-sub {
-    float: right;
+  float: right;
 	margin-top: 10px;
-	padding: 5px 10px;
+	padding: 5px 10px 4px 10px;
 	text-align: center;
 	font: {
 	  size: 12px;
@@ -111,23 +117,23 @@ header{
 }
 .form-group {
 	display: inline-block;
-	margin: 0 auto;
 	vertical-align: middle;
 	text-align: center;
 	label {
 		max-width: 100%;
+    vertical-align: middle;
 		font-weight: 500;
 		color: $colorGreen;
 	}
 	.form-control {
 		display: inline-block;
 		width: auto;
-		height: 25px;
 		max-width: 120px;
 		vertical-align: middle;
 		border: 1.4px solid $colorGrey;
     	border-radius: 5px;
 	}
+  .big-input {height: 25px;}
 }
 .menu-group-btn {
 	width: 80%;
@@ -153,3 +159,30 @@ header{
 
 /*access.html*/
 .letter-space {letter-spacing: 10px;}
+.label-calen {
+  border: none;
+  vertical-align: middle;
+  background-color: $colorWhite;
+}
+.btn-white {
+  padding: 5px 15px;
+  color: $colorBlack;
+  background-color: $colorWhite;
+  border: 2px solid $colorBlack;
+  &-access {
+    float: right;
+  }
+}
+.btn-grey {
+  height: auto;
+  padding: 8px 10px;
+  margin: 0 2px;
+  color: $colorWhite;
+  background-color: #7f7f7f;
+  border: none;
+}
+.wrap-access {
+  max-width: 400px;
+  margin: 0 auto;
+}
+//list button

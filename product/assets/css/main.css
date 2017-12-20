@@ -615,7 +615,8 @@ header .head-login-title2 {
 .form-group .form-control {
   display: inline-block;
   width: auto;
-  max-width: 120px;
+  padding-left: 3px;
+  max-width: 115px;
   vertical-align: middle;
   border: 1.4px solid #7e7e7e;
   -webkit-border-radius: 5px;
@@ -662,11 +663,13 @@ header .head-login-title2 {
 .label-calen {
   border: none;
   vertical-align: middle;
+  padding: 0;
   background-color: #ffffff;
 }
 
 .btn-white {
   padding: 5px 15px;
+  font-weight: 600;
   color: #000000;
   background-color: #ffffff;
   border: 2px solid #000000;
@@ -674,20 +677,65 @@ header .head-login-title2 {
 
 .btn-white-access {
   float: right;
+  margin-right: 2px;
 }
 
 .btn-grey {
+  min-width: 40px;
   height: auto;
-  padding: 8px 10px;
-  margin: 0 2px;
+  padding: 8px;
+  margin: 0 1px;
   color: #ffffff;
   background-color: #7f7f7f;
   border: none;
 }
 
+.btn-blue {
+  min-width: 40px;
+  height: auto;
+  padding: 8px 20px;
+  margin: 0 1px;
+  color: #ffffff;
+  background-color: #0033cc;
+  border: none;
+}
+
 .wrap-access {
-  max-width: 400px;
+  max-width: 350px;
   margin: 0 auto;
+}
+
+.access-list-btn {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.access-list-btn li {
+  display: inline-block;
+}
+
+.access-list-btn li:nth-of-type(3) button {
+  padding: 8px 10px;
+}
+
+.left-box {
+  float: left;
+}
+
+.right-box {
+  float: right;
+}
+
+@media only screen and (max-width: 365px) {
+  .form-group .form-control {
+    max-width: 107px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .form-group .form-control {
+    max-width: 69px;
+  }
 }
 
 /*# sourceMappingURL=maps/main.css.map */

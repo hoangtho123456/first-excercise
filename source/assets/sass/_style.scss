@@ -113,6 +113,7 @@ header{
 /*page main menu*/
 .center {
 	display: block;
+  margin-top: 20px;
 	text-align: center;
 }
 .form-group {
@@ -149,7 +150,7 @@ header{
 	width: 80%;
 	min-width: 250px;
 	max-width: 400px;
-	margin: 35px auto 0 auto;
+	margin: 25px auto 0 auto;
 	.menu-btn {
 		width: 100%;
 		padding: 10px 0;

@@ -250,3 +250,24 @@ header{
   color: $colorStrongBlue;
   font-weight: 500; 
 }
+/*popup calendar*/
+.popup{
+  position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+  text-align: center;
+  padding:10% 5%;
+  display: none;
+}
+.popup_content{
+  position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 300px;
+    background: black;
+  text-align: center;
+  padding:10% 5%;
+}

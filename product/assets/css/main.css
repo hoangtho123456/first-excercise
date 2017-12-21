@@ -596,6 +596,7 @@ header .head-login-title2 {
 /*page main menu*/
 .center {
   display: block;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -640,7 +641,7 @@ header .head-login-title2 {
   width: 80%;
   min-width: 250px;
   max-width: 400px;
-  margin: 35px auto 0 auto;
+  margin: 25px auto 0 auto;
 }
 
 .menu-group-btn .menu-btn {

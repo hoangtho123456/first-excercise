@@ -169,3 +169,10 @@ header{
 	}
 	.blue-btn {background-color: $colorStrongBlue;}
 }
+
+.blue-text {
+  font-weight: 500;
+  color: $colorStrongBlue;
+  word-spacing: 5px;
+  &-strong {font-weight: 800;}
+}

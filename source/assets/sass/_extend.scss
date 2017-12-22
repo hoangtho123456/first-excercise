@@ -109,3 +109,37 @@
   line-height: 1.68em; // check psd/(font-size/1.2)
   -webkit-box-orient: vertical;
 }
+%clear:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+//tho
+
+//myht
+%btn-grey {
+  background: #7F7F7F;
+  color: #fff;
+  @extend %tb-flex;
+  @extend %tb-flex-center;
+}
+%btn-blue {
+  background: #0033CC;
+  color: #fff;
+  @extend %tb-flex;
+  @extend %tb-flex-center;
+}
+%btn-white {
+  color: #000;
+  border: 1px solid #000;
+  @extend %tb-flex;
+  @extend %tb-flex-center;
+}
+%btn-green {
+  background: #009900;
+  color: #fff;
+  @extend %tb-flex;
+  @extend %tb-flex-center;
+}

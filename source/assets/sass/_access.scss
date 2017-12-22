@@ -9,10 +9,12 @@
 .btn-white {
   @extend %btn-white;
   background-color: $colorWhite;
-  &-access {
+  &-right {
     float: right;
+    margin-bottom: 5px;
     padding: 5px 20px;
     font-weight: bold;
+    color: $colorBlack;
     border: 2px solid $colorBlack;
   }
 }
@@ -39,9 +41,19 @@ img.img-calendar {
 }
 
 //list button
+.mar-left {margin-left: 10px;}
+.liss{width: calc-percent(165, 293);}
 .access-list-btn {
-  margin: 5px 0;
-  padding-left: 10px;
+  //display: flex;
+  margin: 0 0 5px 0;
+  li {
+    display: inline-block;
+    background-color: $colorGrey;
+    color: $colorWhite;
+    padding: 5px 0;
+    text-align: center;
+    &:last-child {margin-right: 0;}
+  }
 }
 
 .left-box {

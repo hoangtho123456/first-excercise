@@ -1,0 +1,96 @@
+/*access.html*/
+.letter-space {letter-spacing: 10px;}
+.label-calen {
+  border: none;
+  vertical-align: middle;
+  padding: 0;
+  background-color: $colorWhite;
+}
+.btn-white {
+  @extend %btn-white;
+  background-color: $colorWhite;
+  &-access {
+    float: right;
+    padding: 5px 20px;
+    font-weight: bold;
+    border: 2px solid $colorBlack;
+  }
+}
+.btn-grey {
+  //@extend %btn-grey;
+  height: auto;
+  padding: 7px 22px;
+  color: $colorWhite;
+  background-color: $colorGrey;
+  border: none;
+  @include  respond-to(480) {
+    padding: 7px 10px;
+  }
+}
+.btn-blue {
+  padding: 7px 25px;
+  color: $colorWhite;
+  border: none;
+  background-color: $colorStrongBlue; 
+  //@extend %btn-blue; 
+}
+img.img-calendar {
+    width: 90%;
+}
+
+//list button
+.access-list-btn {
+  margin: 5px 0;
+  padding-left: 10px;
+}
+
+.left-box {
+  float: left;
+  padding-left: 10px;
+}
+.right-box {float: right;}
+.dl-info-access {
+  font-size: 14px;
+  border: 1px solid #D9ECFF;
+  dl {padding: 5px 0 0 10px;}
+  dt {
+    width: 25%;
+    display: inline-block;
+  }
+  dd {
+    display: inline-block;
+    width: 35%;
+  }
+  .dd-last {
+    width: 37%;
+    text-align: right;
+  }
+}
+.dl-top {margin-top: 10px;}
+.dl-focus {background-color: #d9ecff;}
+.text-blue {
+  color: $colorStrongBlue;
+  font-weight: 500; 
+}
+
+/*popup calendar*/
+.popup{
+  position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+  text-align: center;
+  padding:10% 5%;
+  display: none;
+}
+.popup_content{
+  position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 300px;
+    background: black;
+  text-align: center;
+  padding:10% 5%;
+}

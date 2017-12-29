@@ -2365,6 +2365,10 @@ img.img-calendar {
   .form-group .form-control {
     max-width: 69px;
   }
+  .detail-list-btn li:first-child .form-control {
+    width: 72.66667%;
+    max-height: 20px;
+  }
 }
 
 @media only screen and (max-width: 376px) {

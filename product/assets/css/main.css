@@ -1543,7 +1543,7 @@ header .head-login-title2 {
   max-height: 30px;
   min-height: 23px;
   margin-left: 25px;
-  display: inherit;
+  display: inline;
   display: -webkit-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -2410,6 +2410,12 @@ img.img-calendar {
   }
   .record-tb1 .check-box {
     width: 34.72222%;
+  }
+}
+
+@media only screen and (max-width: 366px) {
+  .record-tb1 .close {
+    width: 6.1674%;
   }
 }
 

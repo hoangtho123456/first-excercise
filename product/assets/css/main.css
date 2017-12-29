@@ -989,7 +989,6 @@ header .head-login-title2 {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 5px;
 }
 
 .detail-list-btn li:first-child label {
@@ -2234,7 +2233,7 @@ img.img-calendar {
     height: 30px;
   }
   .detail-list-btn li:first-child .form-control {
-    width: 76.77419%;
+    width: 75.48387%;
     max-height: 20px;
     margin-right: 0;
   }
@@ -2372,7 +2371,7 @@ img.img-calendar {
   .detail-list-btn li:first-child label {
     width: auto;
     max-height: 20px;
-    margin-right: 0;
+    margin-right: 3px;
   }
 }
 

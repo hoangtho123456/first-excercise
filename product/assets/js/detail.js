@@ -37,8 +37,9 @@ function SetActive() {
 */
 $(RADIO_BTN).on('click', function () {
   var curRa = $(RADIO_BTN).index(this);
-  if(!RADIO_BTN.eq(curRa).prop('checked')) {
-  	RADIO_BTN.eq(i).parent('li').removeClass("active");
+  
+  for (var i = 0; i < LIST_RADIO.length; i++) {
+    LIST_RADIO.eq(i).removeClass("active");
   }
   RADIO_BTN.eq(curRa).parent('li').addClass("active");
 });

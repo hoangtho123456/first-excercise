@@ -1398,14 +1398,14 @@ header .head-login-title2 {
 }
 
 .record-tb1 tr:nth-of-type(7) td:last-child .radio-form-label {
-  width: 31.62791%;
-  margin-left: 10px;
+  width: 28.37209%;
+  text-align: right;
   font-weight: 500;
   color: #0033cc;
 }
 
 .record-tb1 tr:nth-of-type(7) td:last-child .radio-form-select {
-  width: 72.55814%;
+  width: 68.83721%;
   height: 8.6vw;
   max-height: 30px;
   min-height: 24px;
@@ -2285,9 +2285,10 @@ img.img-calendar {
     width: 45.32164%;
   }
   .record-tb1 tr:nth-of-type(7) td:last-child .radio-form-label {
-    margin-left: 5px;
-    font-size: 14px;
-    text-align: center;
+    width: 26.51163%;
+  }
+  .record-tb1 tr:nth-of-type(7) td:last-child .radio-form-select {
+    width: 71.16279%;
   }
   .record-tb1 .check-box {
     padding: 4px 7px 6px;
@@ -2366,9 +2367,30 @@ img.img-calendar {
   }
 }
 
-@media only screen and (max-width: 398px) {
+@media only screen and (max-width: 439px) {
   .record-tb1 tr:nth-of-type(7) td:last-child .radio-form-label {
-    text-align: left;
+    width: 30.23256%;
+  }
+  .record-tb1 tr:nth-of-type(7) td:last-child .radio-form-select {
+    width: 67.44186%;
+  }
+}
+
+@media only screen and (max-width: 394px) {
+  .record-tb1 tr:nth-of-type(7) td:last-child .radio-form-label {
+    width: 35.81395%;
+  }
+  .record-tb1 tr:nth-of-type(7) td:last-child .radio-form-select {
+    width: 61.39535%;
+  }
+}
+
+@media only screen and (max-width: 353px) {
+  .record-tb1 tr:nth-of-type(7) td:last-child .radio-form-label {
+    width: 41.39535%;
+  }
+  .record-tb1 tr:nth-of-type(7) td:last-child .radio-form-select {
+    width: 56.27907%;
   }
 }
 
@@ -2380,13 +2402,13 @@ img.img-calendar {
     width: 52.74419%;
   }
   .record-tb1 .check-box {
-    width: 33.7963%;
+    width: 34.72222%;
   }
 }
 
 @media only screen and (max-width: 366px) {
   .record-tb1 .close {
-    width: 8.60793%;
+    width: 10.13216%;
   }
 }
 

@@ -2233,7 +2233,7 @@ img.img-calendar {
     height: 30px;
   }
   .detail-list-btn li:first-child .form-control {
-    width: 75.48387%;
+    width: 73.54839%;
     max-height: 20px;
     margin-right: 0;
   }
@@ -2371,7 +2371,6 @@ img.img-calendar {
   .detail-list-btn li:first-child label {
     width: auto;
     max-height: 20px;
-    margin-right: 3px;
   }
 }
 

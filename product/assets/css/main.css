@@ -993,14 +993,14 @@ header .head-login-title2 {
 }
 
 .detail-list-btn li:first-child label {
-  max-width: 100%;
-  vertical-align: middle;
+  width: 16%;
   font-weight: 500;
   color: #009900;
+  text-align: right;
 }
 
 .detail-list-btn li:first-child .form-control {
-  width: 83.33333%;
+  width: 82%;
   min-height: 10px;
   height: 28px;
   max-height: 25px;
@@ -2234,7 +2234,7 @@ img.img-calendar {
     height: 30px;
   }
   .detail-list-btn li:first-child .form-control {
-    width: 77.41935%;
+    width: 78.06452%;
     max-height: 20px;
     margin-right: 0;
   }
@@ -2365,6 +2365,14 @@ img.img-calendar {
 @media only screen and (max-width: 320px) {
   .form-group .form-control {
     max-width: 69px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .detail-list-btn li:first-child label {
+    width: auto;
+    max-height: 20px;
+    margin-right: 0;
   }
 }
 

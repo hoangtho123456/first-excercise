@@ -1543,6 +1543,12 @@ header .head-login-title2 {
   max-height: 30px;
   min-height: 23px;
   margin-left: 25px;
+  display: inherit;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #ffffff;
   background-color: #7e7e7e;
   border: none;
@@ -2408,7 +2414,7 @@ img.img-calendar {
 
 @media only screen and (max-width: 366px) {
   .record-tb1 .close {
-    width: 10.13216%;
+    width: 7.92952%;
   }
 }
 

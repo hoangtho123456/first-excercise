@@ -992,10 +992,14 @@ header .head-login-title2 {
 }
 
 .detail-list-btn li:first-child label {
-  width: 16%;
   font-weight: 500;
   color: #009900;
-  text-align: right;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .detail-list-btn li:first-child .form-control {
@@ -1791,29 +1795,6 @@ img.img-calendar {
   font-weight: 500;
 }
 
-/*popup calendar*/
-.popup {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  text-align: center;
-  padding: 10% 5%;
-  display: none;
-}
-
-.popup_content {
-  position: absolute;
-  left: 30%;
-  top: 10%;
-  width: 300px;
-  background: black;
-  text-align: center;
-  padding: 10% 5%;
-}
-
 /*
 *relatedinfo.html
 */
@@ -2152,6 +2133,205 @@ img.img-calendar {
   height: 130px;
 }
 
+.calendar-container {
+  background-color: #efefef;
+}
+
+.calen-show {
+  width: 98%;
+  margin: 0 auto 20px;
+  display: inline-block;
+}
+
+.calen-show > table {
+  width: 100%;
+  height: auto;
+}
+
+.calen-show tr > td {
+  cursor: pointer;
+  width: 4%;
+  height: 28px;
+  padding-right: 3px;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.group-select {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/*When mouse over any cell, will show border of cell*/
+.calen-button {
+  cursor: pointer;
+  text-align: center;
+  color: #80b5d8;
+  background-color: #a9cce3;
+}
+
+.calen-select {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+tr.calen-days > td {
+  font-size: 18px;
+  text-align: center;
+}
+
+#picked_day {
+  width: 50%;
+  height: 20px;
+  font-size: 18px;
+  text-align: center;
+  -moz-background-size: contain;
+    -o-background-size: contain;
+       background-size: contain;
+  background-color: white;
+}
+
+.calendar-header {
+  width: 98%;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #f3b23e;
+}
+
+.img-calen-btn {
+  vertical-align: middle;
+}
+
+/*list calendar btn*/
+.calen-list-btn {
+  display: inline-block;
+  width: 98%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px 0 5px;
+  font-size: 12px;
+  border-top: 1px solid #e3e3e3;
+  /*button lay on the left*/
+  /*button lay on the right*/
+}
+
+.calen-list-btn .calen-btn1 {
+  position: relative;
+  float: left;
+  width: 58px;
+  height: 36px;
+  color: #ffffff;
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.calen-list-btn .calen-btn1 .lb-grey {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  display: inline-block;
+  width: 101.72414%;
+  padding: 5px 0;
+  background-color: #7e7e7e;
+}
+
+.calen-list-btn .calen-btn2 {
+  float: right;
+}
+
+.calen-list-btn .calen-btn2 button {
+  width: 58px;
+  height: 36px;
+  color: #ffffff;
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.calen-list-btn .calen-btn2 button:first-child {
+  width: 76px;
+  vertical-align: top;
+}
+
+.calen-list-btn .calen-btn2 button:last-child {
+  position: relative;
+  margin-left: 5px;
+}
+
+.calen-list-btn .calen-btn2 button:last-child .lb-white {
+  position: absolute;
+  left: -3px;
+  top: 5px;
+  width: 100%;
+  padding: 5px 0;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.calen-list-btn .calen-btn2 .lb-green {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 0;
+  background-color: #009900;
+}
+
+#prev, #next {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#prev {
+  margin-left: 10px;
+}
+
+#next {
+  margin-right: 10px;
+}
+
+/*popup calendar*/
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  display: none;
+}
+
+.popup_content {
+  position: relative;
+  margin: 120px auto;
+  max-width: 270px;
+  background: black;
+  text-align: center;
+}
+
 .list-hira {
   width: 320px;
   display: block;
@@ -2233,9 +2413,13 @@ img.img-calendar {
     height: 30px;
   }
   .detail-list-btn li:first-child .form-control {
-    width: 66.66667%;
     max-height: 20px;
     margin-right: 0;
+    -webkit-box-flex: 2;
+    -webkit-flex: 2;
+       -moz-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
   }
   .detail-list-btn li .btn-grey1 {
     padding: 5px;

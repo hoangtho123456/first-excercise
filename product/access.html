@@ -22,7 +22,7 @@
         <ul class="access-list-btn">
           <li>
             <label for="manager_1">担当者</label>
-            <input class="form-control" id="manager_1" type="text" name="input">
+            <input class="form-control" id="picked_day" type="text" name="input">
             <button class="label-calen" id="label_calen">
               <img class="img-calendar" src="assets/images/calendar.png" alt="label-calen">
             </button>
@@ -88,10 +88,110 @@
       </div>
       <div id="popup" class="popup">
         <div class="popup_content">
-          <button id="btn_close" type="button">close</button>
+          <div class="calendar-container">
+		    <div class="calendar-header">
+		    	<span id="prev"><img class="img-calen-btn" src="assets/images/img_prev.png"></span>
+			    <div class="group-select">
+				  <select class="calen-select" id="calen_select_years" onchange="chooseFastYear();">
+				  </select><span>年</span>
+				  <select class="calen-select" id="calen_select_months" onchange="chooseFastMonth();">
+				    <option value="0">1</option>
+				    <option value="1">2</option>
+					<option value="2">3</option>
+				    <option value="3">4</option>
+				    <option value="4">5</option>
+				    <option value="5">6</option>
+			        <option value="6">7</option>
+				    <option value="7">8</option>
+				    <option value="8">9</option>
+				    <option value="9">10</option>
+				    <option value="10">11</option>
+				    <option value="11">12</option>
+				   </select><span>月</span>
+			    </div>
+	            <span id="next"><img class="img-calen-btn" src="assets/images/img_next.png"></span>
+		    </div>
+		    <div class="calen-show">
+		      <table id="calen_table">
+		      <tbody>
+		      <tr class="calen-days">
+		        <td>日</td>
+		        <td>日</td>
+		        <td>日</td>
+		        <td>日</td>
+		        <td>日</td>
+		        <td>日</td>
+		        <td>日</td>
+		      </tr>
+		      <tr>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		      </tr>
+		      <tr>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		      </tr>
+		      <tr>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		      </tr>
+		      <tr>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		      </tr>
+		      <tr>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		      </tr>
+		      <tr>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		      </tr>
+		      </tbody>
+		      </table>
+		    </div>
+		    <div class="calen-list-btn">
+		      <button class="calen-btn1"><span class="lb-grey">今 日</span></button>
+		      <div class="calen-btn2">
+		      	<button id="pickDay_btn"><span class="lb-green">設 定</span></button>
+   		        <button id="btn_close" type="button"><a class="lb-white" href="#">戻 る</a></button>
+		      </div>
+		    </div>
+		  </div>
         </div>
       </div>   
     </div>
     <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/calen.js"></script>
   </body>
 </html>

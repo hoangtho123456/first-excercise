@@ -6,7 +6,7 @@
 var LI_CHILD = $('.list-hira li ul li'); //li cover radio-button, use for set bg-color
 var ROW = $('.visiting-list tr'); //row list in layout visiting-list.html
 var LIST_RADIO = $('.list-radio li'); 
-
+var DEL_TEXT = $('.del-text-js');
 /*====variable of checkbox and radio box=====*/
 var CHECKBOX_BG = $('.check-box');
 var RADIO_BTN = $(".list-radio li input[type='radio']");
@@ -70,4 +70,9 @@ $(ROW).on('click', function () {
     setCookie('name',$(this).children('td').eq(2).text(),-1);
     window.open('detail.html#tab1', '_self');
   } else {alert("please start cookie to get data!");}
+});
+
+$(DEL_TEXT).on('click', function () {
+  var index = $(DEL_TEXT).index(this);
+  $(".text-near-x-js").eq(index).val("");
 });

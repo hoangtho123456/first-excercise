@@ -16,10 +16,12 @@
     font-weight: bold;
     color: $colorBlack;
     border: 2px solid $colorBlack;
+    @include  respond-to(480) {
+      padding: 3px 10px;
+    }
   }
 }
 .btn-grey {
-  //@extend %btn-grey;
   height: auto;
   padding: 7px 22px;
   color: $colorWhite;
@@ -34,48 +36,106 @@
   color: $colorWhite;
   border: none;
   background-color: $colorStrongBlue; 
-  //@extend %btn-blue; 
-}
+  }
 img.img-calendar {
-    width: 90%;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 //list button
-.mar-left {margin-left: 10px;}
-.liss{width: calc-percent(165, 293);}
 .access-list-btn {
-  //display: flex;
-  margin: 0 0 5px 0;
+  display: flex;
+  width: 100%;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
   li {
-    display: inline-block;
-    background-color: $colorGrey;
-    color: $colorWhite;
-    padding: 5px 0;
-    text-align: center;
+    &:first-child {
+      width: calc-percent(180, 306);
+      display: flex;
+      @extend %tb-flex-center;
+      align-items: center;
+      padding-left: 5px;
+      label {
+        width: calc-percent(155-110-7.5,155);
+        font-weight: 500;
+        color: $colorGreen;
+        margin-right: 4%;
+        text-align: right;
+        @include  respond-to(340) {width: calc-percent(155-100-7.5,155);}
+      }
+      .form-control {
+        width: calc-percent(110, 155);
+        height: 4.5vw;
+        max-height: 25px;
+        min-height: 20px;
+        vertical-align: middle;
+        text-align: center;
+        margin-right: 3%;
+        border: 1.4px solid $colorGrey;
+        border-radius: 5px;
+        @include  respond-to(480) {width: calc-percent(79, 155);}
+      }
+      .input-bg { background-color: $colorYellow; }
+      button {
+        width: calc-percent(20, 164);
+        @include  respond-to(480) {
+          width: calc-percent(18, 164);
+          min-width: 25px;
+        }
+      }
+    }
+    &:nth-of-type(2), &:nth-of-type(4) {
+      width: calc-percent(32,306);
+    }
+    .btn-grey1 {
+      width: 100%;
+      max-height: 30px;
+      height: 5.4vw;
+      min-height: 25px;
+      color: #ffffff;
+      background-color: #7f7f7f;
+      border: none;
+      @include respond-to(480) {
+        padding: 5px;
+      } 
+    }
+    &:nth-of-type(3) {width: calc-percent(40,306);}
     &:last-child {margin-right: 0;}
   }
 }
 
 .left-box {
   float: left;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 .right-box {float: right;}
 .dl-info-access {
   font-size: 14px;
   border: 1px solid #D9ECFF;
-  dl {padding: 5px 0 0 10px;}
+  dl {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0 0 8px;
+  }
   dt {
-    width: 25%;
-    display: inline-block;
+    width: calc-percent(76, 302);
+    display: flex;
+    justify-content: space-between;
+    &:last-child {padding-bottom: 5px;}
+    @include  respond-to(480) {
+      width: calc-percent(80, 302);
+    }
   }
   dd {
-    display: inline-block;
-    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    width: calc-percent(206, 302);
   }
   .dd-last {
-    width: 37%;
-    text-align: right;
+    width: calc-percent(7, 302);
+    padding-right: 5px;
+    font-weight: 500;
   }
 }
 .dl-top {margin-top: 10px;}
@@ -83,26 +143,4 @@ img.img-calendar {
 .text-blue {
   color: $colorStrongBlue;
   font-weight: 500; 
-}
-
-/*popup calendar*/
-.popup{
-  position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-  text-align: center;
-  padding:10% 5%;
-  display: none;
-}
-.popup_content{
-  position: absolute;
-    left: 30%;
-    top: 10%;
-    width: 300px;
-    background: black;
-  text-align: center;
-  padding:10% 5%;
 }

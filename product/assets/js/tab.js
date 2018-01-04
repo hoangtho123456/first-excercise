@@ -10,7 +10,9 @@ var DIV = $(".tab-js");
 //buttton copy will show corresponding with tab record
 var COPY_BTN = document.getElementById("copy_btn");
 
-/*===========function============*/
+/*
+*set tab record will be showed when page loads, and button green of it will show
+*/
 $(document).ready(function () {
 	var i = 0;
 	COPY_BTN.style.visibility = 'hidden';
@@ -29,11 +31,12 @@ $(document).ready(function () {
 
 TAB.click(function () {
 	var item = TAB.index(this);
-    var i = 0;
+  var i = 0;
 
 	for (i = 0; i < TAB.length; i++) {
         TAB.eq(i).removeClass("active");
         DIV.eq(i).hide();
+        //hide btn green
         COPY_BTN.style.visibility = 'hidden';
 	}
 	TAB.eq(item).addClass("active");

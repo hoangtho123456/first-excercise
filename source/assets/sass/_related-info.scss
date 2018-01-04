@@ -3,20 +3,19 @@
 */
 .related-head {margin-bottom: 0;}
 .relate-list {
-	&-info {
-		font-weight: 500;
-	    padding: 5px 3px 8px 10px;
-	    
-	    border-left: 1px solid $colorBlue;
-	    border-right: 1px solid $colorBlue;
-	    border-bottom: 1px solid $colorBlue;
-	    &:first-child {border-top: 1px solid $colorBlue;}
-	    &:last-child { margin-bottom: 10px;}
-	    &:nth-child(even) {background-color: #D9ECFF;}
-	    @include respond-to(480) {
-	    	width: 97%;
-	    	font-size: 13px;
-	    	padding: 3px 2px 8px 7px;
-        }
-	}
+  &-info {
+    font-weight: 500;
+	padding: 5px 3px 8px 10px;    
+	border-left: 1px solid $colorBlue;
+	border-right: 1px solid $colorBlue;
+	border-bottom: 1px solid $colorBlue;
+	&:first-child {border-top: 1px solid $colorBlue;}
+	&:last-child { margin-bottom: 10px;}
+	&:nth-child(even) {background-color: #D9ECFF;}
+	@include respond-to(480) {
+	  width: 97%;
+	  font-size: 13px;
+	  padding: 3px 2px 8px 7px;
+    }
+  }
 }

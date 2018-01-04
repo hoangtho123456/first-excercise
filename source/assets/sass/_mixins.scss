@@ -7,6 +7,16 @@
     @content;
   }
 }
+
+@mixin label-green () {
+	font-weight: 500;
+	color: $colorGreen;
+}
+@mixin label-blue () {
+	font-weight: 500;
+	color: $colorStrongBlue;
+}
+
 @function get-vw($width, $size) {
   $vw-context: $width * 0.01;
   @return ($size / $vw-context) * 1vw;

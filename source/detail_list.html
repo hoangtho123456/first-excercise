@@ -7,13 +7,27 @@
   <meta content="text/css" http-equiv="Content-Style-Type">
   <meta content="text/javascript" http-equiv="Content-Script-Type">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Smart Phone Program for Visiting Nurse Business software</title>
   <link type="text/css" rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-
+  <header>
+    <h1 class="letter-space visit-head">利 用 者 選 択</h1>    
+  </header>
 <div class="inner">
   <div class="wrap">
+    <a class="btn-white btn-white-right" href="menu.html">戻 る</a>
+    <div class="clear-fix"></div>
+    <ul class="detail-list-btn">
+      <li>
+        <label for="manager">検索</label>
+        <input class="form-control input-bg" id="manager" type="text" name="input">
+      </li>
+      <li><button class="btn-grey1">前</button></li>
+      <li><button class="btn-grey1">今日</button></li>
+      <li><button class="btn-grey1">翌</button></li>
+    </ul>
     <ul class="list-hira">
       <li>
         <ul>
@@ -103,5 +117,6 @@
   </div>
 </div>
 <script src="./assets/js/jquery-3.2.1.min.js"></script>
+<script src="./assets/js/detail.js"></script>
 </body>
 </html>

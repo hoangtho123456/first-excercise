@@ -1,10 +1,11 @@
 /*
 @author danghoangtho1132@gmail.com (Đặng Hoàng Thọ)
 *Product : create the action for calendar popup like:
-*show dates of the month
-*show days of a week
-*choose fast year or fast month
+  *+show dates of the month
+  *+show days of a week
+  *+choose fast year or fast month
 */
+
 /*=========popup=================*/
 var POPUP = $('#popup');
 var LABEL = $('#label_calen');
@@ -17,13 +18,14 @@ CLOSE.click(function () {
 	POPUP.fadeOut();
 });
 
+
 /*==========calendar==============*/
 var NOW = new Date(); 
 var CUR_DAY = NOW.getDate();  //the current day in pc
 var CUR_MON = NOW.getMonth(); //the current month 
 var CUR_YEAR = NOW.getFullYear(); //the current year
 
-//determine table of pupup, if not, will determine the first table of the page, it's not true
+//determine table of popup, if not, will determine the first table of the page, it's not true
 var TABLE = document.getElementById("calen_table");
 var CELL_DAYS = TABLE.getElementsByTagName('td'); //the cells in calendar
 var LISTMONTH = document.getElementById("calen_select_months"); //list month in combobox-month
@@ -32,8 +34,12 @@ var PREV = document.getElementById("prev");
 var NEXT = document.getElementById("next");
 var PICK_BTN = document.getElementById("pickDay_btn");//click this, will print datetime into text-input
 var PICKED_DAY = document.getElementById("picked_day");
-showListYear();  //function use show list years in the combobox-year(1954 -> 2099)
-chooseAnyDay(); //when you choose any day in calender, it will be show the border itself
+
+/*========Event Handler==========*/
+window.onload = function() {
+  showListYear();  //function use show list years in the combobox-year(1954 -> 2099)
+  chooseAnyDay();
+}
 
 PREV.addEventListener('click', function () {
   chooseYear(-1);
@@ -43,22 +49,25 @@ NEXT.addEventListener('click', function () {
   chooseYear(1);
 });
 
+//if day was picked, get data and show on input (id = "picked_day")
 PICK_BTN.addEventListener('click', function () {
   for (var i = 7; i < 49; i++) {
     if(CELL_DAYS[i].style.background === "rgb(255, 241, 166)") {
-      PICKED_DAY.value = CELL_DAYS[i].innerHTML + "/" + (CUR_MON + 1) + "/" + CUR_YEAR;
+      PICKED_DAY.value = CUR_YEAR + "-" + (CUR_MON + 1) + "-" + CELL_DAYS[i].innerHTML;
       POPUP.fadeOut();
     }
   }
 });
 
+/*==========function=============*/
 function drawCalender(year, month) {
   parseInt(year);
   parseInt(month);
-  var firstDay = new Date(year, month, 1).getDay(); //get the first day of month
-  var lastDate = new Date(year, month + 1, 0).getDate(); //get the Last date of month
+  var firstDay = new Date(year, month, 1).getDay(); //get the first day of month(1 == monday)
+  var lastDate = new Date(year, month + 1, 0).getDate(); //get the Last date of month(ex:28 ,29, 30, 31)
   var i = 0, day = 0, d = 0;
-  day = 7 + firstDay; //console.log(firstDay);
+  day = 7 + firstDay; 
+  
   //cells from 7 to 49 is the days of a months
   for (var i = 7; i < 49; i++) {
     CELL_DAYS[i].innerHTML = "";
@@ -98,7 +107,10 @@ function showListYear() {
   }
   drawCalender(CUR_YEAR, CUR_MON);
 }
-// show current date (update from pc) into the combobox-month and combobox-year
+
+/*
+*show current date (update from pc) into the combobox-month and combobox-year
+*/
 function showTimeBox() {
   LISTMONTH.value = CUR_MON;
   LISTYEAR.value = CUR_YEAR;
@@ -122,6 +134,7 @@ function chooseMonth(month) {
   checkTime();
   drawCalender(CUR_YEAR,CUR_MON);
 }
+
 /*
 *check if year overflow out of [1954, 2100]?
 */
@@ -136,7 +149,8 @@ function checkTime() {
 
 /*
 *When you pick a year value, 
-it will be show the current month of the year you just picked*/
+*it will be show the current month of the year you just picked
+*/
 function chooseYear(year) {
   CUR_YEAR = parseInt(CUR_YEAR) + parseInt(year);
   checkTime();
@@ -159,7 +173,9 @@ function chooseFastYear() {
   drawCalender(CUR_YEAR, CUR_MON);
 }
 
-//function choose day by click at the cell of the table
+/*
+*function choose day by click at the cell of the table
+*/
 function chooseAnyDay() {
   var i = 0;
 

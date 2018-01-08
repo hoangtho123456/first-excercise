@@ -1275,7 +1275,7 @@ header .head-login-title2 {
 
 .menu-group-btn .red-btn {
   margin-bottom: 35px;
-  background-color: #da251c;
+  background-color: #CC3300;
 }
 
 .menu-group-btn .blue-btn {
@@ -1708,7 +1708,7 @@ header .head-login-title2 {
 
 .fixed-tb1 td:last-child input {
   padding: 4px 10px;
-  width: 55.39568%;
+  width: 59.35252%;
   height: 5.8vw;
   max-height: 20px;
   min-height: 15px;
@@ -1838,7 +1838,7 @@ header .head-login-title2 {
   padding: 4px 10px;
   text-align: center;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #d9ecff;
 }
 
 .record-tb1 tr:nth-of-type(2) td:last-child input:nth-of-type(1) {
@@ -2293,7 +2293,7 @@ img.img-calendar {
 }
 
 .access-list-btn li:first-child .form-control {
-  width: 70.96774%;
+  width: 63.22581%;
   height: 4.5vw;
   max-height: 25px;
   min-height: 20px;
@@ -2343,6 +2343,25 @@ img.img-calendar {
 
 .right-box {
   float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right-box .btn-blue {
+  margin-left: 5px;
 }
 
 .dl-info-access {

@@ -8,15 +8,8 @@
 
 /*=========popup=================*/
 var POPUP = $('#popup');
-var pop_content = document.getElementsByClassName("calendar-container");
 var LABEL = $('#label_calen');
 var CLOSE = $('#btn_close');
-
-$(window).resize(function() {
-  console.log(pop_content[0].style.height);
-  pop_content[0].style.height = (document.body.clientHeight - 12) * 0.4;
-  //console.log(pop_content[0].style.height);
-});
 
 LABEL.click(function () {
 	POPUP.fadeIn();
@@ -31,7 +24,7 @@ var NOW = new Date();
 var CUR_DAY = NOW.getDate();  //the current day in pc
 var CUR_MON = NOW.getMonth(); //the current month 
 var CUR_YEAR = NOW.getFullYear(); //the current year
-
+var BG_DAY = "";
 //determine table of popup, if not, will determine the first table of the page, it's not true
 var TABLE = document.getElementById("calen_table");
 var CELL_DAYS = TABLE.getElementsByTagName('td'); //the cells in calendar
@@ -64,9 +57,10 @@ NEXT.addEventListener('click', function () {
 //if day was picked, get data and show on input (id = "picked_day")
 PICK_BTN.addEventListener('click', function () {
   for (var i = 7; i < 49; i++) {
-    if(CELL_DAYS[i].style.background === "rgb(255, 241, 166)") {
+    if(CELL_DAYS[i].style.background === "rgb(255, 241, 166)" || CELL_DAYS[i].style.background === BG_DAY) {
       PICKED_DAY.value = CUR_YEAR + "-" + (CUR_MON + 1) + "-" + CELL_DAYS[i].innerHTML;
       POPUP.fadeOut();
+      return true;
     }
   }
 });
@@ -194,7 +188,6 @@ function chooseAnyDay() {
   for (i = 7; i < 49; i++) {
     CELL_DAYS[i].addEventListener("click", function() {
       var dayCheck = this.innerHTML;
-
       for (var j = 7; j < 49; j++) {
         CELL_DAYS[j].style.background = "linear-gradient(white, #efeff0)";
       }
@@ -205,6 +198,7 @@ function chooseAnyDay() {
       }
       if (dayCheck != "") {
         this.style.background = "#fff1a6";
+        BG_DAY = this.style.background;
       }
     });
   }

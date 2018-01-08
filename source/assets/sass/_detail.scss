@@ -368,7 +368,7 @@
         align-items: center;
         input {
           padding: 4px 10px;
-          width: calc-percent(154, 278);
+          width: calc-percent(165, 278);
           height: 5.8vw;
           max-height: 20px;
           min-height: 15px;
@@ -482,7 +482,7 @@
             padding: 4px 10px;
             text-align: center;
             color: $colorBlack;
-            background-color: $colorWhite;
+            background-color: $colorFBlue;
             &:nth-of-type(1) {
               width: calc-percent(81, 227);
               height: 5.8vw;

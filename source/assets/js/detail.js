@@ -12,10 +12,12 @@ var CHECKBOX_BG = $('.check-box');
 var LIST_RADIO = $('.list-radio li');
 var RADIO_BTN = $(".list-radio li input[type='radio']");
 var CHECKBOX = $(".check-box input[type='checkbox']");
+var URL = document.URL;
 
 /*========Event handler============*/
 $(document).ready(function () {
   SetActive();
+  checkURL();
 });
 
 /*
@@ -53,9 +55,11 @@ $(LI_CHILD).bind('click', function() {
 */
 $(ROW).on('click', function () {
   if(navigator.cookieEnabled) {
-    setCookie('name',$(this).children('td').eq(2).text(),-1);
-    window.open('detail.html#tab1', '_self');
-  } else {alert("please start cookie to get data!");}
+    if (getCookie('url').indexOf('detail.html') != -1) {
+      setCookie('name',$(this).children('td').eq(2).text(),-1);
+      window.open('detail.html#tab1', '_self');
+    } else {window.open("user-info.html", '_self');}
+  } else {alert("please start cookie to get data!");} 
 });
 
 $(DEL_TEXT).on('click', function () {
@@ -76,5 +80,16 @@ function SetActive() {
   }
   if(CHECKBOX_BG.hasClass("active")) {
     CHECKBOX_BG.children('input').prop("checked", true);
+  }
+}
+
+/*
+*check url to open corresponding web.
+*/
+function checkURL() {
+  if(document.URL.indexOf('detail.html') != -1 || document.URL.indexOf('menu.html') != -1) {
+    if(navigator.cookieEnabled) {
+      setCookie('url',URL, 1);
+    } else {alert("please start cookie to get data!");}
   }
 }

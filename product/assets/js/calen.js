@@ -8,8 +8,15 @@
 
 /*=========popup=================*/
 var POPUP = $('#popup');
+var pop_content = document.getElementsByClassName("calendar-container");
 var LABEL = $('#label_calen');
 var CLOSE = $('#btn_close');
+
+$(window).resize(function() {
+  console.log(pop_content[0].style.height);
+  pop_content[0].style.height = (document.body.clientHeight - 12) * 0.4;
+  //console.log(pop_content[0].style.height);
+});
 
 LABEL.click(function () {
 	POPUP.fadeIn();
@@ -35,11 +42,16 @@ var NEXT = document.getElementById("next");
 var PICK_BTN = document.getElementById("pickDay_btn");//click this, will print datetime into text-input
 var PICKED_DAY = document.getElementById("picked_day");
 
+showListYear();
+chooseAnyDay();
 /*========Event Handler==========*/
-window.onload = function() {
-  showListYear();  //function use show list years in the combobox-year(1954 -> 2099)
-  chooseAnyDay();
-}
+LISTMONTH.onchange = function(e) {
+  chooseFastMonth();
+};
+
+LISTYEAR.onchange = function(e) {
+  chooseFastYear();
+};
 
 PREV.addEventListener('click', function () {
   chooseYear(-1);

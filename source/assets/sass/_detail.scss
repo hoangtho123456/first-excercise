@@ -627,6 +627,9 @@
               @include respond-to(353) {width: calc-percent(89, 215);}
             }
             &-select {
+              -webkit-appearance: none; 
+              -moz-appearance: none;
+              appearance: none;
               width: calc-percent(148, 215);
               height: 8.6vw;
               max-height: 30px;

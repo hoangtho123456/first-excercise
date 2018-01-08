@@ -1,4 +1,6 @@
-/*Calendar css*/
+/*
+*Calendar css
+*/
 .calendar-container {
   padding-top: 2px;
   background-color: #efefef;
@@ -24,6 +26,7 @@
   font-weight: bold;
   color: $colorWhite;
 }
+
 /*When mouse over any cell, will show border of cell*/
 .calen-button {
   cursor: pointer;

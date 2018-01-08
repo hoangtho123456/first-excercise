@@ -707,107 +707,108 @@
         </ul>
       </div>
     </div>
-    <div id="popup" class="popup">
-      <div class="popup_content">
-        <div class="calendar-container">
-          <div class="calendar-header">
-          <span id="prev"><img class="img-calen-btn" src="\assets\images\img_prev.png"></span>
-          <div class="group-select">
-          <select class="calen-select" id="calen_select_years" onchange="chooseFastYear();">
-          </select><span>年</span>
-          <select class="calen-select" id="calen_select_months" onchange="chooseFastMonth();">
-            <option value="0">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-            <option value="3">4</option>
-            <option value="4">5</option>
-            <option value="5">6</option>
-            <option value="6">7</option>
-            <option value="7">8</option>
-            <option value="8">9</option>
-            <option value="9">10</option>
-            <option value="10">11</option>
-            <option value="11">12</option>
-          </select><span>月</span>
-          </div>
-          <span id="next"><img class="img-calen-btn" src="\assets\images\img_next.png"></span>
-          </div>
-          <div class="calen-show">
-          <table id="calen_table">
-            <tbody>
-            <tr class="calen-days">
-              <td>日</td>
-              <td>月</td>
-              <td>火</td>
-              <td>水</td>
-              <td>木</td>
-              <td>金</td>
-              <td>土</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-          </table>
-          </div>
-          <div class="calen-list-btn">
-            <button class="calen-btn1"><span class="lb-grey">今 日</span></button>
-            <div class="calen-btn2">
-              <button id="pickDay_btn"><span class="lb-green">設 定</span></button>
-              <button id="btn_close" type="button"><a class="lb-white" href="#">戻 る</a></button>
-            </div>
-          </div>
+  </div>
+</div>
+<!--Popup-->
+<div id="popup" class="popup">
+  <div class="popup_content">
+    <div class="calendar-container">
+      <div class="calendar-header">
+      <span id="prev"><img class="img-calen-btn" src="/assets/images/img_prev.png"></span>
+      <div class="group-select">
+      <select class="calen-select" id="calen_select_years">
+      </select><span>年</span>
+      <select class="calen-select" id="calen_select_months">
+        <option value="0">1</option>
+        <option value="1">2</option>
+        <option value="2">3</option>
+        <option value="3">4</option>
+        <option value="4">5</option>
+        <option value="5">6</option>
+        <option value="6">7</option>
+        <option value="7">8</option>
+        <option value="8">9</option>
+        <option value="9">10</option>
+        <option value="10">11</option>
+        <option value="11">12</option>
+      </select><span>月</span>
+      </div>
+      <span id="next"><img class="img-calen-btn" src="/assets/images/img_next.png"></span>
+      </div>
+      <div class="calen-show">
+      <table id="calen_table">
+        <tbody>
+        <tr class="calen-days">
+          <td>日</td>
+          <td>月</td>
+          <td>火</td>
+          <td>水</td>
+          <td>木</td>
+          <td>金</td>
+          <td>土</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+      </table>
+      </div>
+      <div class="calen-list-btn">
+        <button class="calen-btn1"><span class="lb-grey">今 日</span></button>
+        <div class="calen-btn2">
+          <button id="pickDay_btn"><span class="lb-green">設 定</span></button>
+          <button id="btn_close" type="button"><a class="lb-white" href="#">戻 る</a></button>
         </div>
       </div>
     </div>
@@ -818,14 +819,6 @@
 <script src="./assets/js/tab.js"></script>
 <script src="./assets/js/cookie.js"></script>
 <script src="./assets/js/detail.js"></script>
-
-<script type="text/javascript">
-  if(navigator.cookieEnabled) {
-    var name = getCookie('name');
-    $('#code').val(name);
-  } else {alert("please start cookie to get data!");}
-
-
-</script>
+<script src="./assets/js/getdata.js"></script>
 </body>
 </html>

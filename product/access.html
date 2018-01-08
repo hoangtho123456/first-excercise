@@ -85,16 +85,17 @@
             <dt>介護</dt>
           </dl>
         </dl>
-      </div>
-      <div id="popup" class="popup">
-        <div class="popup_content">
-          <div class="calendar-container">
-		    <div class="calendar-header">
+      </div>         
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup_content">
+        <div class="calendar-container">
+		  <div class="calendar-header">
 		    	<span id="prev"><img class="img-calen-btn" src="assets/images/img_prev.png"></span>
 			    <div class="group-select">
-				  <select class="calen-select" id="calen_select_years" onchange="chooseFastYear();">
+				  <select class="calen-select" id="calen_select_years">
 				  </select><span>年</span>
-				  <select class="calen-select" id="calen_select_months" onchange="chooseFastMonth();">
+				  <select class="calen-select" id="calen_select_months">
 				    <option value="0">1</option>
 				    <option value="1">2</option>
 					<option value="2">3</option>
@@ -110,8 +111,8 @@
 				   </select><span>月</span>
 			    </div>
 	            <span id="next"><img class="img-calen-btn" src="assets/images/img_next.png"></span>
-		    </div>
-		    <div class="calen-show">
+		  </div>
+		  <div class="calen-show">
 		      <table id="calen_table">
 		      <tbody>
 		      <tr class="calen-days">
@@ -179,17 +180,16 @@
 		      </tr>
 		      </tbody>
 		      </table>
-		    </div>
-		    <div class="calen-list-btn">
-		      <button class="calen-btn1"><span class="lb-grey">今 日</span></button>
-		      <div class="calen-btn2">
-		      	<button id="pickDay_btn"><span class="lb-green">設 定</span></button>
-   		        <button id="btn_close" type="button"><a class="lb-white" href="#">戻 る</a></button>
-		      </div>
-		    </div>
 		  </div>
-        </div>
-      </div>   
+	      <div class="calen-list-btn">
+	        <button class="calen-btn1"><span class="lb-grey">今 日</span></button>
+	        <div class="calen-btn2">
+	      	  <button id="pickDay_btn"><span class="lb-green">設 定</span></button>
+		      <button id="btn_close" type="button"><a class="lb-white" href="#">戻 る</a></button>
+	        </div>
+		  </div>
+		</div>
+      </div>
     </div>
     <script src="./assets/js/jquery-3.2.1.min.js"></script>
     <script src="./assets/js/calen.js"></script>

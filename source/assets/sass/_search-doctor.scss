@@ -58,7 +58,6 @@
       display: flex;
       width: calc-percent(80, 276);
       justify-content: flex-end;
-      //padding-right: 2px;
       align-items: center;
       @include label-green;
       @include respond-to(364) {
@@ -76,9 +75,6 @@
       	border: 1px solid $colorGrey;
       	border-radius: 5px;
       	background-color: $colorYellow;
-        @include respond-to(320) {
-          max-width: 200px;
-        }
       }
     }
     button {width: calc-percent(49, 205);}

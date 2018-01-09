@@ -55,10 +55,12 @@ $(LI_CHILD).bind('click', function() {
 */
 $(ROW).on('click', function () {
   if(navigator.cookieEnabled) {
-    if (getCookie('url').indexOf('detail.html') != -1) {
+    if (getCookie('url').indexOf('detail.html') != -1 || getCookie('url').indexOf('access.html') != -1) {
       setCookie('name',$(this).children('td').eq(2).text(),-1);
       window.open('detail.html#tab1', '_self');
-    } else {window.open("user-info.html", '_self');}
+    } else {
+      window.open("user-info.html", '_self');
+    }
   } else {alert("please start cookie to get data!");} 
 });
 
@@ -87,7 +89,8 @@ function SetActive() {
 *check url to open corresponding web.
 */
 function checkURL() {
-  if(document.URL.indexOf('detail.html') != -1 || document.URL.indexOf('menu.html') != -1) {
+  if(document.URL.indexOf('detail.html') != -1 || document.URL.indexOf('menu.html') != -1 
+        || document.URL.indexOf('access.html') != -1) {
     if(navigator.cookieEnabled) {
       setCookie('url',URL, 1);
     } else {alert("please start cookie to get data!");}

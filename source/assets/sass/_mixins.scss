@@ -21,3 +21,17 @@
   $vw-context: $width * 0.01;
   @return ($size / $vw-context) * 1vw;
 }
+
+@mixin btn-size($bg, $color, $font) {
+  padding: 5px 10px;
+  font-weight: $font;
+  border: none;
+  background: $bg;
+  color: $color;
+}
+@mixin btn-detail($color, $bg, $bor) {
+  border: $bor;
+  border-radius: 5px;
+  color: $color;
+  background: $bg;
+}

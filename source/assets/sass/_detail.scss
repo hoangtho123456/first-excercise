@@ -36,10 +36,8 @@
     }
     &-right {
       width: calc-percent(135,306);
-      flex-direction: row-reverse;
       display: flex;
       justify-content: space-between;
-      margin-right: 2px;
       @extend %tb-flex-between;
       @include respond-to(480) {
         width: calc-percent(170,306);
@@ -56,12 +54,15 @@
           }
         }
         &:first-child {
-          height: 28px;
+          height: 30px;
           @include respond-to(480) {
-            height: 25px;
+            height: 27px;
           }
           a {
-            @extend %btn-white;
+            color: white;
+            background: #595959;
+            @extend %tb-flex;
+            @extend %tb-flex-center;
           }
         }
         &:nth-of-type(2) {
@@ -124,15 +125,44 @@
 }
 .detail {
   &-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    background-color: #ffffcc;
-    border: 2px solid #a6d2ff;
-    padding: 5px 10px 5px;
     box-sizing: border-box;
     margin: 5px auto 10px;
     word-spacing: 40px;
     @include respond-to(480) {
       word-spacing: 10px;
+    }
+    .btn-regist {
+      display: flex;
+      align-items: center;
+      justify-content: center;//104
+      width: calc-percent(520 - 382- 38, 520);
+      height: 30px;
+      text-align: center;
+      font-weight: normal;
+      border: none;
+      background: $colorRed;
+      color: $colorWhite;
+      @include respond-to(330) {font-size: 13px;}
+    }
+    .info-status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc-percent(382 - 2, 520);
+      height: 30px;
+      padding: 0 10px;
+      text-align: center;
+      font-size: 13px;
+      border-radius: 70px;
+      background: $colorRed;
+      color: $colorWhite;
+      @include respond-to(330) {
+        font-size: 11px;
+      }
     }
   }
   &-group-item {
@@ -366,6 +396,37 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        .selectize-control {
+          width: 65%;
+          height: 8vw;
+          max-height: 30px;
+          min-height: 15px;
+          margin-left: 2px;
+          margin-right: 5px;
+          text-align: center;
+          //border: 1px solid $colorGrey;
+          border-radius: 5px;
+          @include respond-to(480) {
+            font-size: 13px;
+            width: 67%;
+          }
+          @include respond-to(320) {
+            width: 75.5%;
+          }
+          .selectize-input {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border: 1px solid $colorGrey;
+            border-radius: 5px;
+          }
+          .selectize-dropdown-content {
+            .option {
+              border-top: 1px solid #ccc;
+            }
+          }
+        }
         input {
           padding: 4px 10px;
           width: calc-percent(165, 278);
@@ -428,8 +489,10 @@
     height: auto;
     margin-top: 10px;
     border-collapse: collapse;
-    border: 2px solid #D9ECFF;
-    tr {border: 2px solid #D9ECFF;}
+    border: 2px solid #99ccff;
+    .active { @include btn-detail($colorWhite!important, #203864 !important,
+                                 1px solid #203864 !important);}
+    tr {border: 2px solid #99ccff;}
     input {
       border: 1px solid $colorGrey;
       border-radius: 5px;
@@ -437,9 +500,9 @@
     a {
       @extend %btn-grey;
       width: calc-percent(39, 227);
-      height: 6.2vw;
+      height: 5.1vw;
       max-height: 30px;
-      min-height: 27px;
+      min-height: 25px;
       color: #fff;
       font-size: 15px;
         @include respond-to(480) {
@@ -448,7 +511,7 @@
         }
     }
     tr {
-      td:last-child {padding: 2px 5px;}
+      td:last-child {padding: 5px 5px;}
       &:nth-of-type(1) {
         td:last-child{
           display: flex;
@@ -461,15 +524,15 @@
             color: $colorStrongBlue;
             background-color: $colorYellow;
             &:nth-of-type(1) {
-              width: calc-percent(46, 227);
-              height: 5.8vw;
+              width: calc-percent(43, 227);
+              height: 5.1vw;
               max-height: 22px;
               min-height: 15px;
               @include respond-to(480) {width: calc-percent(45, 227);}
             }
             &:nth-of-type(2) {
               width: calc-percent(106, 227);
-              height: 5.8vw;
+              height: 5.1vw;
               max-height: 22px;
               @include respond-to(392) {width: calc-percent(94, 227);}
             }
@@ -484,14 +547,14 @@
             color: $colorBlack;
             background-color: $colorFBlue;
             &:nth-of-type(1) {
-              width: calc-percent(81, 227);
-              height: 5.8vw;
-              max-height: 22px;
-              min-height: 15px;
+              width: calc-percent(92, 227);
+              height: 5.1vw;
+              max-height: 25px;
+              min-height: 22px;
             }
           }
           button {
-            margin-left: 10px; 
+            margin-left: 5px; 
             width: 31px;
             @include respond-to(480) {width: 25px;}
           }
@@ -503,42 +566,34 @@
             padding: 4px 10px;
             text-align: center;
             &:nth-of-type(1) {
-              width: calc-percent(46, 227);
-              height: 5.8vw;
+              width: calc-percent(43, 227);
+              height: 5.1vw;
               max-height: 22px;
               color: $colorBlack;
-              background-color: #D9ECFF;
-            }
-            &:nth-of-type(2) {
-              width: calc-percent(46, 227);
-              height: 5.8vw;
-              max-height: 23px;
-              color: $colorBlue;
               background-color: $colorYellow;
             }
-          }
-          select {
-            width: calc-percent(58, 327);
-            margin: 0 20px 0;
-            height: 8.6vw;
-            max-height: 30px;
-            min-height: 23px; 
-            text-align: center;
-            text-align-last: center;
-            color: $colorBlack;
-            border: 1px solid $colorGrey;
-            border-radius: 5px;
-            @include respond-to(480) {
-              width: calc-percent(63, 327);
-            }
-            @include respond-to(416) {
-              margin: 2px 4px;
-              width: calc-percent(91, 327);
-              font-size: 13px;
-            }
-            option {
-              overflow: visible;
+            &:nth-of-type(2) {
+              width: calc-percent(40, 327);
+              padding: 4px 0;
+              height: 5.1vw;
+              max-height: 22px; 
               text-align: center;
+              text-align-last: center;
+              color: $colorBlack;
+              background-color: $colorYellow;
+              border: 1px solid $colorGrey;
+              border-radius: 5px;
+              @include respond-to(416) {
+                font-size: 13px;
+              }  
+            }
+            &:nth-of-type(3) {
+              width: calc-percent(43, 227);
+              height: 5.1vw;
+              max-height: 23px;
+              margin-left: 2px;
+              color: $colorBlack;
+              background-color: $colorYellow;
             }
           }
         }
@@ -546,29 +601,31 @@
       &:nth-of-type(4) {
         td:last-child{
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           align-items: center;
           input {
             padding: 4px 10px;
             text-align: left;
             color: $colorBlack;
-            background-color: $colorFBlue;
+            background-color: $colorYellow;
             &:nth-of-type(1) {
-              width: calc-percent(101, 227);
+              width: calc-percent(85, 227);
               height: 5.3vw;
               max-height: 20px;
+              margin-right: 10px;
               @include respond-to(480) {
                 font-size: 15px;
-                width: calc-percent(155, 342);
+                //width: calc-percent(155, 342);
               }
             }
           }
+          a:last-child {margin-left: 20px;}
         }
       }//row 4
       &:nth-of-type(5) {
         td:last-child{
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           align-items: center;
           input {
             padding: 4px 10px;
@@ -576,21 +633,23 @@
             color: $colorBlack;
             background-color: $colorWhite;
             &:nth-of-type(1) {
-              width: calc-percent(101, 227);
+              width: calc-percent(85, 227);
               height: 5.3vw;
               max-height: 20px;
+              margin-right: 10px;
               @include respond-to(480) {
                 font-size: 15px;
-                width: calc-percent(155, 342);
+                //width: calc-percent(155, 342);
               }
             }
           }
+          a:last-child {margin-left: 20px;}
         }
       }//row 5
       &:nth-of-type(6) {
         td:last-child{
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           align-items: center;
           input {
             padding: 4px 10px;
@@ -598,15 +657,17 @@
             color: $colorBlack;
             background-color: $colorWhite;
             &:nth-of-type(1) {
-              width: calc-percent(101, 227);
+              width: calc-percent(85, 227);
               height: 5.3vw;
               max-height: 20px;
+              margin-right: 10px;
               @include respond-to(480) {
                 font-size: 15px;
-                width: calc-percent(155, 342);
+                //width: calc-percent(155, 342);
               }
             }
           }
+          a:last-child {margin-left: 20px;}
         }
       }//row 6
       &:nth-of-type(7) {
@@ -617,9 +678,16 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 2px;
+            &:first-child {margin-bottom: 5px;}
             &-label {
+              display: flex;
+              justify-content: center;
+              align-items: center;
               width: calc-percent(61, 215);
-              text-align: right;
+              text-align: center;
+              height: 5.4vw;
+              max-height: 27px;
+              min-height: 27px;
               @include label-blue;
               @include respond-to(480) {width: calc-percent(57, 215);}
               @include respond-to(439) {width: calc-percent(65, 215);}
@@ -631,14 +699,13 @@
               -moz-appearance: none;
               appearance: none;
               width: calc-percent(148, 215);
-              height: 8.6vw;
-              max-height: 30px;
-              min-height: 24px; 
+              height: 5.4vw;
+              max-height: 29px;
+              min-height: 29px; 
               text-align: center;
               text-align-last: center;
               color: $colorBlack;
               border: 1px solid $colorGrey;
-              background-color: $colorYellow;
               border-radius: 5px;
               @include respond-to(480) {
                 width: calc-percent(153, 215);
@@ -654,14 +721,17 @@
             width: calc-percent(109, 215);
             display: flex;
             & > li {
+              display: flex;
+              justify-content: center;
+              align-items: center;
               width: 50%;
-              padding: 4px 12px 6px;
+              margin-left: 2px;
+              height: 5.4vw;
+              max-height: 28px;
+              min-height: 28px;
+              //padding: 4px 12px 6px;
               text-align: center;
-              border: 1px solid $colorGrey;
-              &:nth-of-type(2) {border-left: none;}
-              @include respond-to(416) {
-                padding: 4px 0 6px;
-              } 
+              @include btn-detail($colorBlack, $colorWhite, 1px solid $colorBlue); 
             }
             @include respond-to(416) {width: calc-percent(123, 215);} 
           }
@@ -669,8 +739,6 @@
       }//row 7
       &:nth-of-type(8) {
         td:last-child{
-            width: calc-percent(213, 215);
-            display: flex;
             margin-bottom: 2px;
         }
         .check-box:nth-of-type(odd) {margin-right: 10px;}
@@ -691,7 +759,7 @@
           select {
             width: calc-percent(165, 215);
             height: 8.4vw;
-            padding: 0 10px;
+            padding: 0 1px;
             max-height: 30px;
             min-height: 23px;
             justify-content: center;
@@ -728,15 +796,15 @@
       }//row 11
     }
     .check-box {
-      width: calc-percent(51, 216);
-      padding: 4px 12px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc-percent(78, 216);
+      height: 5.4vw;
+      max-height: 28px;
+      min-height: 28px;
       text-align: center;
-      border: 1px solid $colorGrey;
-      input[type="checkbox"] {
-        padding: 2px;
-        border: 1px solid $colorBlack;
-      }
-      @include respond-to(480) {padding: 4px 3px 6px;}
+      @include btn-detail($colorBlack, $colorWhite, 1px solid $colorBlue);
       @include respond-to(416) {width: calc-percent(78, 216);}
     }
     .close {
@@ -744,30 +812,30 @@
       height: 6.8vw;
       max-height: 30px;
       min-height: 23px;
-      margin-left: 25px;
       text-align: center;
       display: inherit;
       justify-content: center;
       color: $colorWhite;
-      background-color: $colorGrey;
+      background-color: $colorSGrey;
       border: none;
       @include respond-to(480) {
         width: calc-percent(19, 227) ;
         height: 5.9vw;
-        min-height: 25px; 
-        margin-left: 20px;
+        min-height: 25px;
       }
     }
     &-title {
-      width: 89px;
-      padding: 5px 0 5px 10px;
+      width: 70px;
+      padding: 5px 5px 5px 15px;
       height: 20px;
       text-align: left;
-      color: $colorWhite;
-      background-color: $colorBlue;
+      font-weight: bold;
+      border-right: 2px solid #99ccff;
+      color: $colorBlack;
+      background-color: $colorCFBlue;
       @include respond-to(480) {
-        width: 75px;
-        padding-left: 6px;
+        width: 62px;
+        padding-left: 10px;
       }
       label {
         display: block;

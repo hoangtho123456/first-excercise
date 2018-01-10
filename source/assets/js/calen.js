@@ -184,7 +184,7 @@ function chooseFastYear() {
 */
 function chooseAnyDay() {
   var i = 0;
-
+  PICKED_DAY.value = CUR_YEAR + "-" + (CUR_MON + 1) + "-" + CUR_DAY;
   for (i = 7; i < 49; i++) {
     CELL_DAYS[i].addEventListener("click", function() {
       var dayCheck = this.innerHTML;

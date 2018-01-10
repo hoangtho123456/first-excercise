@@ -13,11 +13,15 @@
   </head>
   <body>
     <header class="related-head">
-        <h1 class="head-login-title1 letter-space">訪 問 実 績</h1>	  
+        <div class="inner">
+			<div class="wrap">
+				<h1 class="head-login-title1 letter-space">訪 問 実 績</h1>
+				<a class="btn-white btn-white-right" href="menu.html">戻 る</a>
+			</div>
+		</div>
     </header>
     <div class="inner">
   	  <div class="wrap">
-        <a class="btn-white btn-white-right" href="menu.html">戻 る</a>
         <div class="clear-fix"></div>
         <ul class="access-list-btn">
           <li>
@@ -27,23 +31,41 @@
               <img class="img-calendar" src="assets/images/calendar.png" alt="label-calen">
             </button>
           </li>
-          <li><button class="btn-grey1">前</button></li>
+          <li><button class="btn-grey1">&lt;</button></li>
           <li><button class="btn-grey1">今日</button></li>
-          <li><button class="btn-grey1">翌</button></li>
+          <li><button class="btn-grey1">&gt;</button></li>
         </ul>
-        <div class="left-box">
-          <button class="btn-grey">↓</button>
-          <button class="btn-grey">↑</button>
-        </div>
-        <div class="right-box">
-          <a class="btn-grey" href="detail_list.html">利用者抽出</a>
-          <a class="btn-blue" href="">新 規</a>
-        </div>
+		 <div class="box1">
+			 <div class="box-left">
+				 <a class="btn-red" href="#">実 績 登 録</a>
+			 </div>
+			 <div class="box-right">
+				 <a class="btn-blue" href="">新 規</a>
+			 </div>
+		 </div>
+		  <div class="clear-fix"></div>
+        <div class="box2">
+			<div class="left-box">
+				<button class="btn-grey">↑</button>
+				<button class="btn-white1">↓</button>
+
+				<button class="btn-grey ml-10">自</button>
+				<button class="btn-white1">他</button>
+
+				<a class="btn-grey ml-10" href="detail_list.html">利用者抽出</a>
+			</div>
+		</div>
         <div class="clear-fix"></div>
         <dl class="dl-info-access dl-top">
           <dl>
             <dt>2017-11-01</dt>
-            <dd>09:20-10:20 (01:00)</dd>
+            <dd>
+				<div class="cb_red">
+					<input type="checkbox" class="cb_item">
+					<label></label>
+				</div>
+				09:20-10:20 (01:00)
+			</dd>
             <dd class="dd-last"></dd>
           </dl>
           <dl>

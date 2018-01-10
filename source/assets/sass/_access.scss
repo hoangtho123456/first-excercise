@@ -1,47 +1,17 @@
 /*
 *access.html
 */
-.letter-space {letter-spacing: 10px;}
 .label-calen {
   border: none;
   vertical-align: middle;
   padding: 0;
   background-color: $colorWhite;
 }
-.btn-white {
-  @extend %btn-white;
-  background-color: $colorWhite;
-  &-right {
-    float: right;
-    margin-bottom: 5px;
-    padding: 5px 20px;
-    font-weight: bold;
-    color: $colorBlack;
-    border: 2px solid $colorBlack;
-    @include  respond-to(480) {
-      padding: 3px 10px;
-    }
-  }
-}
-.btn-grey {
-  height: auto;
-  padding: 7px 22px;
-  color: $colorWhite;
-  background-color: $colorGrey;
-  border: none;
-  @include  respond-to(480) {
-    padding: 7px 10px;
-  }
-}
-.btn-blue {
-  padding: 7px 25px;
-  color: $colorWhite;
-  border: none;
-  background-color: $colorStrongBlue; 
-  }
+
 img.img-calendar {
   max-width: 100%;
   vertical-align: middle;
+  margin-bottom: 8px;
 }
 
 //list button
@@ -151,4 +121,68 @@ img.img-calendar {
 .text-blue {
   color: $colorStrongBlue;
   font-weight: 500; 
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0 5px;
+}
+
+.box1{
+  margin: 15px 0px 15px 0px;
+  width: 100%;
+}
+
+.box2{
+  //margin-top: 15px;
+}
+
+.btn-red{
+  background-color: #C00000;
+  color: $colorWhite;
+  height: auto;
+  padding: 7px 22px;
+  @include  respond-to(480) {
+    padding: 7px 10px;
+  }
+}
+.box-left{
+  margin: 0 20% 15px 20%;
+  float: left;
+}
+.box-right{
+  float: right;
+}
+
+.btn-white1{
+  height: auto;
+  padding: 7px 22px;
+  color: $colorGrey;
+  background-color: $colorWhite;
+  border: 1px solid $colorGrey;
+  display: inline-block;
+  @include  respond-to(480) {
+    padding: 7px 10px;
+  }
+}
+
+.ml-10{
+  margin-left: 10px;
+}
+
+.cb_red{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background-color: red;
+  label{
+    display: block;
+    width: 20px;
+    height: 20px;
+
+  }
+  .cb_red input[type=checkbox]:checked {
+    background: white;
+  }
 }

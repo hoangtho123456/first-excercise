@@ -10,14 +10,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Smart Phone Program for Visiting Nurse Business software</title>
   <link type="text/css" rel="stylesheet" href="./assets/css/main.css">
+  <link type="text/css" rel="stylesheet" href="./assets/css/selectize.default.css">
 </head>
 <body>
 <header>
-  <h1 class="head-login-title1">訪 問 実 績</h1>
+  <div class="inner">
+    <div class="wrap flex">
+      <a class="btn-yellow" href="menu.html">編 集</a>
+      <h1 class="head-login-title1 letter-space">訪 問 実 績</h1>
+      <a class="btn-white" href="menu.html">戻 る</a>
+    </div>
+  </div>
 </header>
 <div class="inner">
   <div class="wrap">
     <div class="list-top-btn">
+      <input class="btn-red" type="button" name="削 除" value="削 除">
       <ul class="list-top-arrow">
         <li>
           <a href=""><</a>
@@ -28,18 +36,19 @@
       </ul>
       <ul class="list-top-right">
         <li>
-          <a href="menu.html">戻 る</a>
+          <a href="menu.html">複 写</a>
         </li>
         <li>
           <a href="">新 規</a>
         </li>
         <li id="copy_btn">
-          <a href="">複 写</a>
+          <a href="">保 存</a>
         </li>
       </ul>
     </div>
     <div class="detail-info">
-      00005 鈴木 一郎 10：20 ～ 11：20
+      <a class="btn-regist" href="" name="実績登録">実績登録</a>
+      <div class="info-status">実績登録済み 2017/12/12 14:23:25</div>
     </div>
     <ul class="list-tab list-tab-js">
       <li class="active"><a href="#tab1">基 本</a></li>
@@ -69,30 +78,22 @@
             </td>
           </tr>
           <tr>
-            <td class="record-tb1-title">訪問時刻</td>
+            <td class="record-tb1-title">訪 問 <br>時 刻</td>
             <td>
-              <input type="text" name="">
-              <select>
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="30">30</option>
-                <option value="40">40</option>
-                <option value="50">50</option>
-                <option value="60">60</option>
-                <option value="70">70</option>
-                <option value="80">80</option>
-                <option value="90">90</option>
-                <option value="100">100</option>
-                <option value="110">110</option>
-                <option value="120">120</option>
-              </select>
-              <input type="text" name="">
+              <div class=" flex-start">
+                <label class="blue-text">自</label>
+                <input type="text" name=""><label class="blue-text">－</label>
+                <input type="text" name="">
+                <label class="blue-text">－至</label>
+                <input type="text" name="">
+              </div>
             </td>
           </tr>
           <tr>
             <td class="record-tb1-title">担当1</td>
             <td>
               <input type="text" name="">
+              <a href="#" class="close del-text-js">x</a>
               <a href="#">選 択</a>
             </td>
           </tr>
@@ -113,17 +114,17 @@
             </td>
           </tr>
           <tr>
-            <td class="record-tb1-title">保険区分</td>
+            <td class="record-tb1-title">保険<br>区分</td>
             <td>
               <div class="radio-form">
                 <ul class="list-radio">
-                  <li><input id="ra_1" type="radio" name="radio"> 医 療</li>
-                  <li class="active"><input id="ra_2" type="radio" name="radio"> 介 護</li>
+                  <li>医 療</li>
+                  <li class="active"> 介 護</li>
                 </ul>
-                <div class="check-box active"><input type="checkbox" name="checkbox"> 保険外</div>
+                <div class="check-box active">保険外</div>
               </div>
               <div class="radio-form">
-                <label class="radio-form-label">保険外の内容</label>
+                <div class="radio-form-label active">保険外の内容</div>
                 <select class="radio-form-select">
                   <option value="電話対応">電話対応</option>
                   <option value="電話対応">電話対応</option>
@@ -134,14 +135,16 @@
             </td>
           </tr>
           <tr>
-            <td class="record-tb1-title">開始/終了</td>
+            <td class="record-tb1-title">開 始<br>終 了</td>
             <td>
-              <div class="check-box active"><input type="checkbox" name="checkbox"> 訪問開始</div>
-              <div class="check-box active"><input type="checkbox" name="checkbox"> 訪問終了</div>
+              <div class="flex-start">
+                <div class="check-box active">訪問開始</div>
+                <div class="check-box">訪問終了</div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td class="record-tb1-title">医療材料</td>
+            <td class="record-tb1-title">医 療<br>材 料</td>
             <td>
               <select>
                 <option value="電話対応">あいうえおかきくけこ</option>
@@ -154,7 +157,7 @@
             </td>
           </tr>
           <tr>
-            <td class="record-tb1-title">相対ｻｰﾋﾞｽ</td>
+            <td class="record-tb1-title">相 対<br>ｻｰﾋﾞ ｽ</td>
             <td>
               <select>
                 <option value="電話対応">あいうえおかきくけこ</option>
@@ -165,7 +168,7 @@
             </td>
           </tr>
           <tr>
-            <td class="record-tb1-title">総合事業</td>
+            <td class="record-tb1-title">総 合<br>事 業</td>
             <td>
               <select>
                 <option value="電話対応">あいうえおかきくけこ</option>
@@ -203,14 +206,23 @@
         <tr>
           <td class="fixed-tb1-title"><label>肺雑音</label></td>
           <td>
-            <input class="text-near-x-js" name="ide1" list="ide1">
-            <datalist id="ide1">
+            <select id="select-beast">-->
+              <option value="aa">aa</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="bb">bb</option>
               <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
               <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
               <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
               <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
-              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
-            </datalist>
+            </select>
+            <!--<input class="text-near-x-js" name="ide1" list="ide1">-->
+            <!--<datalist id="ide1">-->
+              <!--<option value="あいうえおかきくけこ">あいうえおかきくけこ</option>-->
+              <!--<option value="あいうえおかきくけこ">あいうえおかきくけこ</option>-->
+              <!--<option value="あいうえおかきくけこ">あいうえおかきくけこ</option>-->
+              <!--<option value="あいうえおかきくけこ">あいうえおかきくけこ</option>-->
+              <!--<option value="あいうえおかきくけこ">あいうえおかきくけこ</option>-->
+            <!--</datalist>-->
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
@@ -815,10 +827,14 @@
   </div>
 </div>
 <script src="./assets/js/jquery-3.2.1.min.js"></script>
+<script  src="./assets/js/selectize.js"></script>
 <script src="./assets/js/calen.js"></script>
 <script src="./assets/js/tab.js"></script>
 <script src="./assets/js/cookie.js"></script>
 <script src="./assets/js/detail.js"></script>
 <script src="./assets/js/getdata.js"></script>
+<script src="./assets/js/select.js"></script>
+<script>
+</script>
 </body>
 </html>

@@ -35,3 +35,10 @@
   color: $color;
   background: $bg;
 }
+@mixin detail-input($pad, $align, $color, $bg) {
+  padding: $pad;
+  text-align: $align;
+  font-weight: 500;
+  color: $color;
+  background-color: $bg;
+}

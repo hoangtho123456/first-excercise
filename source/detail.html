@@ -16,17 +16,17 @@
 <header>
   <div class="inner">
     <div class="wrap flex">
-      <a class="btn-yellow" href="menu.html">編 集</a>
+      <button class="btn-yellow btn-edit-js" href="menu.html">編集中</button>
       <h1 class="head-login-title1 letter-space">訪 問 実 績</h1>
-      <a class="btn-white" href="menu.html">戻 る</a>
+      <a class="btn-white" href="access.html">戻 る</a>
     </div>
   </div>
 </header>
 <div class="inner">
   <div class="wrap">
-    <div class="list-top-btn">
-      <input class="btn-red" type="button" name="削 除" value="削 除">
-      <ul class="list-top-arrow">
+    <div class="list-top-btn list-top-btn-js">
+      <input class="btn-red btn-red-js" type="button" name="削 除" value="削 除">
+      <ul class="list-top-arrow list-top-arrow-js">
         <li>
           <a href=""><</a>
         </li>
@@ -34,22 +34,23 @@
           <a href="">></a>
         </li>
       </ul>
-      <ul class="list-top-right">
+      <ul class="list-top-right list-top-right-js">
         <li>
-          <a href="menu.html">複 写</a>
+          <a id="copy_btn">複 写</a>
         </li>
         <li>
           <a href="">新 規</a>
         </li>
-        <li id="copy_btn">
+        <li>
           <a href="">保 存</a>
         </li>
       </ul>
     </div>
     <div class="detail-info">
       <a class="btn-regist" href="" name="実績登録">実績登録</a>
-      <div class="info-status">実績登録済み 2017/12/12 14:23:25</div>
-    </div>
+      <div class="info-status info-status-js">実 績 未 登 録</div>
+    </div><!--実績登録済み 2017/12/12 14:23:25-->
+    <div class="detail-info detail-info-block detail-info-js">00005 <span>鈴木 一郎</span> 10：20～11：20</div>
     <ul class="list-tab list-tab-js">
       <li class="active"><a href="#tab1">基 本</a></li>
       <li><a href="#tab2"> 定 型</a></li>
@@ -92,7 +93,7 @@
           <tr>
             <td class="record-tb1-title">担当1</td>
             <td>
-              <input type="text" name="">
+              <input class="text-near-x-js" type="text" name="">
               <a href="#" class="close del-text-js">x</a>
               <a href="#">選 択</a>
             </td>
@@ -183,33 +184,49 @@
     </div>
     <div class="tab-js" id="tab2">
       <table class="fixed-tb">
-        <tr>
-          <td class="fixed-tb-title"><label>体 温</label></td>
-          <td><input type="text" name="" value="36.5"></td>
-          <td class="fixed-tb-title"><label>SPo2</label></td>
-          <td><input type="text" name="" value="100"></td>
+        <tr class="title-tr">
+          <td class="fixed-tb-title"></td>
+          <td class="fixed-tb-title"><label>測定値</label></td>
+          <td class="fixed-tb-title"><label>コメント</label></td>
         </tr>
         <tr>
-          <td class="fixed-tb-title"><label>呼吸数</label></td>
-          <td><input type="text" name="" value="20"></td>
-          <td class="fixed-tb-title"><label>血 圧</label></td>
-          <td><input type="text" name="" value="150"></td>
+          <td class="fixed-tb-title"><label>体 温</label></td>
+          <td class="blue-text"><input type="text" name="" value="36.5">℃</td>
+          <td><input type="text" name="" value="□□□"></td>
         </tr>
         <tr>
           <td class="fixed-tb-title"><label>脈 拍</label></td>
-          <td><input type="text" name="" value="60"></td>
-          <td class="fixed-tb-title"></td>
-          <td></td>
+          <td class="blue-text"><input type="text" name="" value="60">回／分</td>
+          <td><input type="text" name="" value="□□□"></td>
         </tr>
+        <tr>
+          <td class="fixed-tb-title"><label>呼吸数</label></td>
+          <td class="blue-text"><input type="text" name="" value="20">回／分</td>
+          <td><input type="text" name="" value="□□□"></td>
+        </tr>
+        <tr>
+          <td class="fixed-tb-title" rowspan="2"><label>血 圧</label></td>
+          <td class="blue-text pd-all">最高<input type="text" name="" value="150">mmHg</td>
+          <td rowspan="2"><input type="text" name="" value="□□□"></td>
+        </tr>
+        <tr>
+          <td class="blue-text pd-all">最高<input type="text" name="" value="100">mmHg</td>
+        </tr>
+
+        <tr>
+          <td class="fixed-tb-title"><label>SPo2</label></td>
+          <td class="blue-text"><input type="text" name="" value="100">%</td>
+          <td><input type="text" name="" value="□□□"></td>
+        </tr>
+
       </table>
       <table class="fixed-tb1">
         <tr>
-          <td class="fixed-tb1-title"><label>肺雑音</label></td>
+          <td class="fixed-tb1-title"><label>呼吸音</label></td>
           <td>
-            <select id="select-beast">-->
-              <option value="aa">aa</option>
+            <select class="select-beast">
               <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
-              <option value="bb">bb</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
               <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
               <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
               <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
@@ -229,363 +246,363 @@
         <tr>
           <td class="fixed-tb1-title"><label>肺雑音</label></td>
           <td>
-            <input class="text-near-x-js" name="ide" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>酸素</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
+            <a class="fixed-tb1-close del-text-js">x</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fixed-tb1-title"><label>呼吸音</label></td>
+          <td>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>肺雑音</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
-            <a class="fixed-tb1-close del-text-js">x</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="fixed-tb1-title"><label>肺雑音</label></td>
-          <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>酸素</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
+            <a class="fixed-tb1-close del-text-js">x</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fixed-tb1-title"><label>呼吸音</label></td>
+          <td>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>肺雑音</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
-            <a class="fixed-tb1-close del-text-js">x</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="fixed-tb1-title"><label>肺雑音</label></td>
-          <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>酸素</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
+            <a class="fixed-tb1-close del-text-js">x</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fixed-tb1-title"><label>呼吸音</label></td>
+          <td>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>肺雑音</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
-            <a class="fixed-tb1-close del-text-js">x</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="fixed-tb1-title"><label>肺雑音</label></td>
-          <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>酸素</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
+            <a class="fixed-tb1-close del-text-js">x</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fixed-tb1-title"><label>呼吸音</label></td>
+          <td>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>肺雑音</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
-            <a class="fixed-tb1-close del-text-js">x</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="fixed-tb1-title"><label>肺雑音</label></td>
-          <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>酸素</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
+            <a class="fixed-tb1-close del-text-js">x</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fixed-tb1-title"><label>呼吸音</label></td>
+          <td>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>肺雑音</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
-            <a class="fixed-tb1-close del-text-js">x</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="fixed-tb1-title"><label>肺雑音</label></td>
-          <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>酸素</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
+            <a class="fixed-tb1-close del-text-js">x</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fixed-tb1-title"><label>呼吸音</label></td>
+          <td>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>肺雑音</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
-            <a class="fixed-tb1-close del-text-js">x</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="fixed-tb1-title"><label>肺雑音</label></td>
-          <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>酸素</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
+            <a class="fixed-tb1-close del-text-js">x</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fixed-tb1-title"><label>呼吸音</label></td>
+          <td>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>肺雑音</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
-            <a class="fixed-tb1-close del-text-js">x</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="fixed-tb1-title"><label>肺雑音</label></td>
-          <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>酸素</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr><tr>
           <td class="fixed-tb1-title"><label>排痰状況</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>腸蠕動</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
         <tr>
           <td class="fixed-tb1-title"><label>排便状況</label></td>
           <td>
-            <input class="text-near-x-js" name="" list="ide">
-            <datalist id="ide">
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-              <option value="あいうえおかきくけこ" />
-            </datalist>
+            <select class="select-beast">
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+              <option value="あいうえおかきくけこ">あいうえおかきくけこ</option>
+            </select>
             <a class="fixed-tb1-close del-text-js">x</a>
           </td>
         </tr>
@@ -596,128 +613,133 @@
         <li>
           <p class="title-green">項目タイトル-1 </p>
           <ul>
-            <li>あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js bg-input" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
           </ul>
         </li>
         <li>
           <p class="title-green">項目タイトル-2 </p>
           <ul>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
           </ul>
         </li>
         <li>
           <p class="title-green">項目タイトル-3 </p>
           <ul>
-            <li class="blue">あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
           </ul>
         </li>
         <li>
           <p class="title-green">項目タイトル-4 </p>
           <ul>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
           </ul>
         </li>
         <li>
           <p class="title-green">項目タイトル-5</p>
           <ul>
-            <li>あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
           </ul>
         </li>
         <li>
           <p class="title-green">項目タイトル-6</p>
           <ul>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
           </ul>
         </li>
         <li>
           <p class="title-green">項目タイトル-7</p>
           <ul>
-            <li class="blue">あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
           </ul>
         </li>
         <li>
           <p class="title-green">項目タイトル-8</p>
           <ul>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
           </ul>
         </li>
         <li>
           <p class="title-green">項目タイトル-9</p>
           <ul>
-            <li class="blue">あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
           </ul>
         </li>
         <li>
           <p class="title-green">項目タイトル-10</p>
           <ul>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li class="blue">あいうえおかき</li>
-            <li>あいうえおかき</li>
-            <li>あいうえおかき</li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li class="blue"><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
+            <li><input class="text-near-x-js" name="" value="あいうえおかき"></li>
           </ul>
         </li>
       </ul>
     </div>
     <div class="detail-tab4 tab-js" id="tab4">
-      <h2 class="tab4-title">項目タイトル</h2>
       <div class="detail-tab4-content">
         <p>鈴木一郎山鈴木一郎山鈴木一郎山鈴木一郎山鈴木一 鈴木一郎山鈴木一郎山鈴木一郎山鈴木一郎山鈴木一 鈴木一郎山鈴木一郎山鈴木一郎山鈴木一郎山鈴木一</p>
       </div>
     </div>
     <div class="tab-js" id="tab5">
       <div class="detail-photo">
-        <p class="txt-blue">写真1</p>
-        <img src="assets/images/pic_01.jpg">
         <ul class="detail-photo-btn">
-          <li><a href="#">張 込</a> </li>
-          <li><a href="#">消 去</a> </li>
+          <li class="txt-blue">写真1</li>
+          <li><a href="#">消 去</a></li>
         </ul>
+        <img src="assets/images/pic_01.jpg">
+        <a href="#" class="detail-stowage">張 込</a>
       </div>
       <div class="detail-photo">
-        <p class="txt-blue">写真2</p>
-        <img src="assets/images/pic_02.jpg">
         <ul class="detail-photo-btn">
-          <li><a href="#">張 込</a> </li>
-          <li><a href="#">消 去</a> </li>
+          <li class="txt-blue">写真2</li>
+          <li><a href="#">消 去</a></li>
         </ul>
+        <img src="assets/images/pic_02.jpg">
+        <a href="#" class="detail-stowage">張 込</a>
       </div>
+    </div>
+    <div class="alert alert-js">
+      ＜注意＞訪問実績を複写しました。<br>
+    訪問日、訪問開始時刻、訪問終了時刻、担
+    当者等を確認し必要に応じて設定してくだ
+    さい。最後に「保存」してください。
     </div>
   </div>
 </div>
@@ -831,10 +853,9 @@
 <script src="./assets/js/calen.js"></script>
 <script src="./assets/js/tab.js"></script>
 <script src="./assets/js/cookie.js"></script>
+<script src="./assets/js/access.js"></script>
 <script src="./assets/js/detail.js"></script>
 <script src="./assets/js/getdata.js"></script>
 <script src="./assets/js/select.js"></script>
-<script>
-</script>
 </body>
 </html>

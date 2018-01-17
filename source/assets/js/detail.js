@@ -14,10 +14,33 @@ var RADIO_BTN = $(".list-radio li input[type='radio']");
 var CHECKBOX = $(".check-box input[type='checkbox']");
 var URL = document.URL;
 
-/*========Event handler============*/
+/*====variable of copy btn, edit btn,btn control status=====*/
+var COPY_BTN = $('#copy_btn');
+var ALERT = $('.alert');
+
+/*========Event handler detail============*/
 $(document).ready(function () {
-  SetActive();
   checkURL();
+});
+
+/*
+*click btn copy, show alert
+*/
+$(COPY_BTN).on('click', function() {
+  if(ALERT.css('display') === 'none') {
+    ALERT.css('display', 'block');
+    ALERT.fadeOut(8000);
+  } else  {
+    ALERT.css('display', 'none');
+    $(ALERT).stop(true, true);
+  }
+});
+$('body').click(function(event){
+  var $target = $(event.target);
+  if(!$target.is(COPY_BTN)) {
+    $(ALERT).hide();
+    $(ALERT).stop(true, true);
+  } 
 });
 
 /*
@@ -55,9 +78,12 @@ $(LI_CHILD).bind('click', function() {
 */
 $(ROW).on('click', function () {
   if(navigator.cookieEnabled) {
-    if (getCookie('url').indexOf('detail.html') != -1 || getCookie('url').indexOf('access.html') != -1) {
+    if (getCookie('url').indexOf('detail.html') != -1) {
       setCookie('name',$(this).children('td').eq(2).text(),-1);
       window.open('detail.html#tab1', '_self');
+    } else if(getCookie('url').indexOf('access.html') != -1) { 
+      setCookie('name',$(this).children('td').eq(2).text(),-1);
+      window.open('access.html', '_self');
     } else {
       window.open("user-info.html", '_self');
     }

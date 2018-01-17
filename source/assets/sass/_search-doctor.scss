@@ -1,46 +1,76 @@
 .search {
   &-top {
-    &-btn {
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  padding-left: 20px;
-	}
-	&-arrow {
-	  width: calc-percent(261,306);
-	  margin-bottom: 10px;
-	  padding-left: 20px;
-	  display: flex;
-	  justify-content: space-between;
-	  @extend %tb-flex-between;
-	  & > li {
-	    width: calc-percent(125,261);
-	    height: 35px;
-	    border: 1px solid $colorBlue;
-	    border-radius: 5px;
-	    @include respond-to(480) {height: 27px;}
-	    a {		
-	      display: flex;
-	      width: 100%;
-	      height: 100%;
-	      font-size: 18px;
-	      color: #000;
-	      align-items: center;
-	      justify-content: center;
-	      &:active {
-	        color: $colorWhite;
-	        background-color: $colorBlue;
-	      }
-	      @include respond-to(480) {font-size: 15px;}
-	    }
-	  }
-    }
+    display: inline-block;
+    width: calc-percent(244, 294);
+    padding-left: 20px;
+    margin-bottom: 60px;
     &-title {
-      @include label-green;
+      display: block;
+      @include label-blue;
+      margin-bottom: 5px;	
+    }
+    &-group {
+      display: flex;
       justify-content: space-between;
-      margin-top: 5px;	
+      align-items: center;
+      label {
+        font-weight: 500;
+        color: $colorGreen;
+      }
+      input {
+        width: calc-percent(195, 244);
+        box-sizing: border-box;
+        height: 5.2vw; 
+        max-height: 25px;
+        min-height: 24px;
+        padding: 0 5px;
+        border: 1px solid $colorGrey;
+        border-radius: 5px;
+        background-color: $colorYellow;
+        @include respond-to(396) {
+          width: calc-percent(190, 244);
+        }
+      }
+      a {
+        @extend %btn-grey;
+        width: calc-percent(23 - 7, 244);
+        text-align: center;
+        height: 5.4vw;
+        max-height: 27px;
+        min-height: 25px;
+      }
     }
   }
+  &-doc {
+    &-grey {
+      height: 5.4vw;
+      max-height: 35px;
+      min-height: 28px;
+      color: $colorWhite;
+      background-color: #595959;
+      border: none;
+    }
+  }
+  &-list-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc-percent(280, 294);
+    margin-top: 5px;
+    li {
+      width: calc-percent(45, 205);
+      a{
+        display: flex;
+        font-size: 18px;
+        align-items: center;
+        justify-content: center;
+        @include respond-to(480) {
+          font-size: 14px;
+        }           
+      }
+    }
+  }
+
   &-tb {
     width: calc-percent(280, 306);
     display: flex;

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('#select-beast').selectize({
+  $('.select-beast').selectize({
     create: true,
     sortField: 'text'
   });

@@ -1,6 +1,10 @@
 /**
 *file style.scss
 */
+@font-face {
+  font-family: 'sinkin-sans';
+  src: url('/assets/fonts/Nobile-BoldItalic.ttf');
+}
 html {
   border: 0;
   font-family: inherit;
@@ -62,14 +66,15 @@ header{
     	background-color: #d9ecff;
     }
 }
-
+.fl-left {float: left;}
+.fl-right {float: right;}
 .wrap {
   width: 100%;
   display: block;
   margin: 0 auto;
   max-width: 500px;
   height: auto;
-    position: relative;
+  position: relative;
 }
 .btn-sub {
   display: block;
@@ -219,10 +224,10 @@ header{
   color: $colorSBlue;
   text-align: center;
   font: {
-    weight: bold;
-    size: 32px;
+    weight: 700;
+    size: 36px;
     style: italic;
-    family: fantasy;
+    family: fantasy, sinkin-sans;
   }
   letter-spacing: 2px;
 }
@@ -237,21 +242,17 @@ header{
   @extend %btn-white;
   @include btn-size($colorWhite, $colorBlack, bold);
   &-right {
-      position: absolute;
-      right: 0%;
-      top: 10%;
+    position: absolute;
+    right: 0%;
+    top: 2%;
     float: right;
-    padding: 2px 20px;
-    @include  respond-to(480) {
-      padding: 3px 10px;
-    }
   }
 }
 .btn-grey {
   height: auto;
-  padding: 7px 22px;
+  padding: 6px 18px;
   color: $colorWhite;
-  background-color: $colorGrey;
+  background-color: $colorSGrey;
   border: none;
   @include  respond-to(480) {
     padding: 7px 10px;
@@ -269,7 +270,6 @@ header{
 .btn-red {
   @include btn-size(red, $colorWhite, normal);
 }
-
 /*Flex box*/
 .flex-start {
   display: flex;

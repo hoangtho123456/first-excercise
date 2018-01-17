@@ -135,10 +135,22 @@
     @include respond-to(480) {
       word-spacing: 10px;
     }
+    &-block {
+      word-spacing: 20px;
+      padding: 6px 10px 8px;
+      border: 2px solid $colorBor;
+      background: $colorYellow;
+      span {
+        margin-right: 50px;
+        @include respond-to(480) {
+          margin-right: 30px;
+        }
+      }
+    }
     .btn-regist {
       display: flex;
       align-items: center;
-      justify-content: center;//104
+      justify-content: center;
       width: calc-percent(520 - 382- 38, 520);
       height: 30px;
       text-align: center;
@@ -158,8 +170,9 @@
       text-align: center;
       font-size: 13px;
       border-radius: 70px;
-      background: $colorRed;
-      color: $colorWhite;
+      background: $colorYellow;
+      border: 1px solid #cc3300;
+      color: $colorBlack;
       @include respond-to(330) {
         font-size: 11px;
       }
@@ -184,13 +197,23 @@
           height: 25px;
         }
         &.blue {
-          background: #00b0f0;
+          background: #203864;
           color: #fff;
+          input{
+            background: #203864;
+            color: #fff;
+          }
+        }
+        input{
+          border: none;
+          width: 100%;
+          text-align: center;
         }
       }
       .title-green {
         color: #19b861;
         text-align: center;
+        font-weight: 500;
         margin: 10px auto 5px;
       }
       &:nth-of-type(2n) {
@@ -204,7 +227,9 @@
     justify-content: center;
     width: 100%;
     img {
-      margin: auto calc-percent(9,255) 15px calc-percent(14,255);
+      width: 160px;
+      height: 160px;
+      margin: auto calc-percent(9,255) 15px calc-percent(4,255);
     }
     &-btn {
       width: calc-percent(40,255);
@@ -222,10 +247,8 @@
           height: 100%;
         }
         &:first-child {
-          margin-bottom: 10px;
-          a {
-            @extend %btn-grey;
-          }
+          font-weight: 600;
+          margin-bottom: 4px;
         }
         &:last-child {
           a {
@@ -233,7 +256,15 @@
           }
         }
       }
-
+    }
+    .detail-stowage {
+      width: calc-percent(40,255);
+      height: 35px;
+      @extend  %btn-strongblue;
+      @include respond-to(480) {
+        width: calc-percent(44,255);
+        height: 30px;
+      }
     }
   }
 }
@@ -312,15 +343,7 @@
 .detail-tab4 {
     width: 96%;
     margin-top: 15px;
-    h2{
-      max-width: 100%;
-      padding: 5px 8px 10px;
-      color: $colorWhite;
-      background-color: $colorBlue;
-      border-top: 2px solid #99ccff;
-      border-right: 2px solid #99ccff;
-      border-left: 2px solid #99ccff;  
-    }
+    
     &-content {
       padding: 10px 20px 5px 12px;
       border: 2px solid #99ccff;
@@ -353,24 +376,27 @@
     border: 2px solid #D9ECFF;
     td {
       border: 2px solid #D9ECFF;
+      padding-left: 5px;
       input {
-        width: 34px;
-        padding: 0 10px 5px;
+        width: 50px;
+        padding: 0 5px 2px;
         text-align: center;
         border: 1px solid $colorGrey;
         border-radius: 5px;
+        margin:0px 3px 0px 3px;
       }
       &:nth-of-type(2) {
-        width: calc-percent(40, 178);
+        width: calc-percent(93, 178);
       }
     }
     &-title {
-      width: 69px;
+      width: 30px;
       padding: 5px;
       height: 20px;
       text-align: center;
-      color: $colorWhite;
-      background-color: $colorBlue;
+      color: $colorBlack;
+      font-weight: bold;
+      background-color: #CCFFFF;
       @include respond-to(480) {
         max-width: 45px;
       }
@@ -404,18 +430,20 @@
           margin-left: 2px;
           margin-right: 5px;
           text-align: center;
-          //border: 1px solid $colorGrey;
           border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           @include respond-to(480) {
             font-size: 13px;
-            width: 67%;
+            width: 70%;
           }
           @include respond-to(320) {
-            width: 75.5%;
+            width: 82%;
           }
           .selectize-input {
             width: 100%;
-            height: 100%;
+            height: 80%;
             display: flex;
             align-items: center;
             border: 1px solid $colorGrey;
@@ -445,14 +473,15 @@
       }
     }
     &-title {
-      width: 89px;
+      width: 125px;
       padding: 5px;
       height: 20px;
       text-align: left;
-      color: $colorWhite;
-      background-color: $colorBlue;
+      color: $colorBlack;
+      font-weight: bold;
+      background-color: #CCFFFF;
       @include respond-to(480) {
-        width: 75px;
+        width: 90px;
       }
       label {
         display: block;
@@ -481,17 +510,32 @@
     }
   }
 }
+/*thanh*/
+.fixed-tb{
+  .title-tr{
+    td{
+      height: 20px;
+      padding: 5px;
+      text-align: left;
+    }
+  }
+}
+.pd-all{
+  padding: 4px;
+}
+
 
 /*tab1*/
 .record {
   &-tb1 {
     width: 100%;
     height: auto;
-    margin-top: 10px;
+    margin: 10px 0;
     border-collapse: collapse;
     border: 2px solid #99ccff;
-    .active { @include btn-detail($colorWhite!important, #203864 !important,
-                                 1px solid #203864 !important);}
+    .active { 
+      @include btn-detail($colorWhite!important, #203864 !important, 1px solid #203864 !important);
+    }
     tr {border: 2px solid #99ccff;}
     input {
       border: 1px solid $colorGrey;
@@ -518,11 +562,7 @@
           justify-content: space-between;
           align-items: center;
           input {
-            padding: 4px 10px;
-            text-align: center;
-            font-weight: 500;
-            color: $colorStrongBlue;
-            background-color: $colorYellow;
+            @include detail-input(4px 10px, center, $colorStrongBlue, $colorYellow);
             &:nth-of-type(1) {
               width: calc-percent(43, 227);
               height: 5.1vw;
@@ -542,10 +582,7 @@
       &:nth-of-type(2) {
         td:last-child{
           input {
-            padding: 4px 10px;
-            text-align: center;
-            color: $colorBlack;
-            background-color: $colorFBlue;
+            @include detail-input(4px 10px, center, $colorBlack, $colorFBlue);
             &:nth-of-type(1) {
               width: calc-percent(92, 227);
               height: 5.1vw;
@@ -614,15 +651,14 @@
               max-height: 20px;
               margin-right: 10px;
               @include respond-to(480) {
-                font-size: 15px;
-                //width: calc-percent(155, 342);
+                font-size: 14px;
               }
             }
           }
           a:last-child {margin-left: 20px;}
         }
       }//row 4
-      &:nth-of-type(5) {
+      &:nth-of-type(5), &:nth-of-type(6) {
         td:last-child{
           display: flex;
           justify-content: flex-start;
@@ -639,37 +675,13 @@
               margin-right: 10px;
               @include respond-to(480) {
                 font-size: 15px;
-                //width: calc-percent(155, 342);
               }
             }
           }
           a:last-child {margin-left: 20px;}
         }
-      }//row 5
-      &:nth-of-type(6) {
-        td:last-child{
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          input {
-            padding: 4px 10px;
-            text-align: left;
-            color: $colorBlack;
-            background-color: $colorWhite;
-            &:nth-of-type(1) {
-              width: calc-percent(85, 227);
-              height: 5.3vw;
-              max-height: 20px;
-              margin-right: 10px;
-              @include respond-to(480) {
-                font-size: 15px;
-                //width: calc-percent(155, 342);
-              }
-            }
-          }
-          a:last-child {margin-left: 20px;}
-        }
-      }//row 6
+      }//row 5, row 6
+      
       &:nth-of-type(7) {
         td:last-child{
           .radio-form {
@@ -695,17 +707,14 @@
               @include respond-to(353) {width: calc-percent(89, 215);}
             }
             &-select {
-              -webkit-appearance: none; 
-              -moz-appearance: none;
-              appearance: none;
               width: calc-percent(148, 215);
-              height: 5.4vw;
-              max-height: 29px;
-              min-height: 29px; 
+              height: 8.4vw;
+              max-height: 28px;
+              min-height: 23px; 
               text-align: center;
               text-align-last: center;
               color: $colorBlack;
-              border: 1px solid $colorGrey;
+              border: 2px solid $colorGrey;
               border-radius: 5px;
               @include respond-to(480) {
                 width: calc-percent(153, 215);
@@ -729,7 +738,6 @@
               height: 5.4vw;
               max-height: 28px;
               min-height: 28px;
-              //padding: 4px 12px 6px;
               text-align: center;
               @include btn-detail($colorBlack, $colorWhite, 1px solid $colorBlue); 
             }
@@ -851,4 +859,18 @@
       border: none;
     }
   }
+}
+.alert {
+  position: absolute;
+  left: 13%;
+  top: 6%;
+  display: none;
+  width: 50%;
+  max-width: 328px;
+  min-width: 224px;
+  height: auto;
+  padding: 15px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 10px;
 }

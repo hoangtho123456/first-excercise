@@ -1,0 +1,153 @@
+/**
+*file style.scss
+*/
+@font-face {
+  font-family: 'sinkin-sans';
+  src: url('/assets/fonts/Nobile-BoldItalic.ttf');
+}
+html {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+body,
+div,
+span,
+object, 
+iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, 
+q, strong, 
+tt, var, dl, dt, dd, ol, ul, li, form, label, legend, 
+caption, tbody, tfoot, thead,header, footer { @extend html; }
+ul, ol {list-style-type: none;}
+a {text-decoration: none;}
+a, button {cursor: pointer;}
+:focus {outline: 0;}
+body {
+  font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
+  background: $colorWhite;
+  font-size: 16px;
+  @include  respond-to(480) {
+    font-size: 14px;
+  }
+}
+.clear-fix {
+  content: "";
+    clear: both;
+    display: table;
+}
+.inner {
+  width: 95%;
+  min-width: 760px;
+  max-width: 760px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  clear: both;
+  height: auto;
+}
+select {
+  width: 200px;
+}
+
+.header {
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    img {
+      width: 28%;
+      height: auto;
+    }
+  }
+  &-title {
+    width: 70%;
+    height: auto;
+    padding: 5px;
+    text-align: left;
+    p {
+      margin: 10px 10px 10px 0;
+      padding: 25px;
+      font: {
+        weight: bold;
+        size: 24px;
+      }
+      border-radius: 10px;
+      border: 2px solid black;
+      border-bottom: 3px solid black;
+    }
+    label {
+      font-size: 12px;
+    }
+  }
+}
+
+.map {
+  &-news {
+    width: 80%;
+    height: 200px;
+    margin: 0 0 5px;
+    padding-top: 10px;
+    text-align: center;
+    border: 2px solid black;
+    p:last-child {
+      margin-top: 40px;
+      text-align: left;
+    }
+  }
+  &-group {
+    width: 90%;
+    height: auto;
+    &-radio {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 70px;
+      p {
+        font-weight: bold;
+      }
+    }
+    &-select {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 70px;
+      .select1 {
+        width: 30%;
+      }
+      input {
+        max-width: 100%;
+        height: 3.4vw;
+        max-height: 25px;
+        min-height: 25px;
+      }
+    }
+    &-check {
+      width: 90%;
+      height: auto;
+      span {
+        display: inline-block;
+        margin-right: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.img-pdf {
+    vertical-align: middle;
+    width: 8%;
+}
+.btn-submit {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  background: pink;
+  border: none;
+}

@@ -35,7 +35,7 @@ oReq.onload = function(e) {
   
   //get key name of object result
   var keyName = Object.keys(result);
-  var keyName3 = keyName[3].split("・");
+  //var keyName3 = keyName[3].split("・");
   
   //show list name of continents
   for (var i = 0; i < keyName.length; i++) {

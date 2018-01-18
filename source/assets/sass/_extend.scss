@@ -121,10 +121,15 @@
   visibility: hidden;
 }
 //tho
-
+%btn-strongblue {
+  background: #203864;
+  color: #fff;
+  @extend %tb-flex;
+  @extend %tb-flex-center;
+}
 //myht
 %btn-grey {
-  background: #7F7F7F;
+  background: #595959;
   color: #fff;
   @extend %tb-flex;
   @extend %tb-flex-center;

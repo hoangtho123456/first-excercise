@@ -1,0 +1,215 @@
+.list {
+  &-top {
+    &-btn {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-arrow {
+      width: calc-percent(60,306);
+      display: flex;
+      justify-content: space-between;
+      @extend %tb-flex-between;
+    }
+    &-arrow {
+      width: calc-percent(60,306);
+      @extend %tb-flex-between;
+      @include respond-to(480) {
+        width: calc-percent(65,306);
+      }
+      li {
+        width: calc-percent(34,73);
+        height: 30px;
+        @include respond-to(480) {
+          height: 27px;
+        }
+        a {
+          @extend %btn-grey;
+          color: #fff;
+          font-size: 18px;
+          width: 100%;
+          height: 100%;
+          @include respond-to(480) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    &-right {
+      width: calc-percent(135,306);
+      flex-direction: row-reverse;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 2px;
+      @extend %tb-flex-between;
+      @include respond-to(480) {
+        width: calc-percent(170,306);
+      }
+      li {
+        width: calc-percent(58,183);
+        a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          font-size: 16px;
+          @include respond-to(480) {
+            font-size: 14px;
+          }
+        }
+        &:first-child {
+          height: 28px;
+          @include respond-to(480) {
+            height: 25px;
+          }
+          a {
+            @extend %btn-white;
+          }
+        }
+        &:nth-of-type(2) {
+          height: 30px;
+          @include respond-to(480) {
+            height: 27px;
+          }
+          a {
+            @extend %btn-blue;
+          }
+        }
+        &:last-child {
+          height: 30px;
+          @include respond-to(480) {
+            height: 27px;
+          }
+          a {
+            @extend %btn-green;
+          }
+        }
+      }
+    }
+  }
+
+  &-tab {
+    width: 100%;
+    @extend %tb-flex-between;
+    border-bottom: 2px solid #0033CC;
+    li {
+      width: calc-percent(58,306);
+      height: 40px;
+      background: #D9ECFF;
+      border: 1px solid #0033CC;
+      border-bottom: 0;
+      height: 32px;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      @include respond-to(480) {
+        width: calc-percent(57,306);
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        padding-top: 2px;
+        @extend %tb-flex;
+        @extend %tb-flex-center;
+        color: #000;
+      }
+      @include respond-to(480) {
+        height: 28px;
+      }
+      &.active {
+        background: #0033CC;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.detail {
+  &-info {
+    width: 100%;
+    background-color: #ffffcc;
+    border: 2px solid #a6d2ff;
+    padding: 5px 10px 5px;
+    box-sizing: border-box;
+    margin: 5px auto 10px;
+    word-spacing: 40px;
+    @include respond-to(480) {
+      word-spacing: 10px;
+    }
+  }
+  &-group-item {
+    display: flex;
+    margin: 10px auto 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    &>li {
+      margin-right: 2%;
+      width: 49%;
+      &>ul>li {
+        @extend %tb-flex;
+        @extend %tb-flex-center;
+        height: 30px;
+        border: 1px solid #66b3ff;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        @include respond-to(480) {
+          height: 25px;
+        }
+        &.blue {
+          background: #00b0f0;
+          color: #fff;
+        }
+      }
+      .title-green {
+        color: #19b861;
+        text-align: center;
+        margin: 10px auto 5px;
+      }
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+  &-photo {
+    @extend %tb-flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    img {
+      //width: calc-percent(120,255);
+      //max-width: 120px;
+      margin: auto calc-percent(9,255) 15px calc-percent(14,255);
+    }
+    &-btn {
+      width: calc-percent(40,255);
+      @include respond-to(480) {
+        width: calc-percent(44,255);
+      }
+      li {
+        width: 100%;
+        height: 35px;
+        @include respond-to(480) {
+          height: 30px;
+        }
+        a {
+          width: 100%;
+          height: 100%;
+        }
+        &:first-child {
+          margin-bottom: 10px;
+          a {
+            @extend %btn-grey;
+          }
+        }
+        &:last-child {
+          a {
+            @extend  %btn-red;
+          }
+        }
+      }
+
+    }
+  }
+}
+.txt-blue {
+  color: #1c49d2;
+  line-height: 1.5;
+}

@@ -58,24 +58,51 @@
       </div>
     </div>
 
-    <div class="map-group-check">
-      <span><input type="checkbox" name="check" value="州">州(しゅう)</span>
-      <span><input type="checkbox" name="check" value="首都">首(しゅ)都(と)</span>
-      <span><input type="checkbox" name="check" value="面積">面(めん)積(せき)</span>
-      <span><input type="checkbox" name="check" value="人口">人(じん)口(こう)</span>
-      <span><input type="checkbox" name="check" value="平均寿命">平(へい)均(きん)寿(じゅ)命(みょう)</span>
-      <span><input type="checkbox" name="check" value="主な宗教">主(おも)な言(げん)語(ご)</span>
-      <span><input type="checkbox" name="check" value="国・地域の旗について">国(こっ)旗(き)（地(ち)域(いき)の旗(はた)）について</span>
-      <span><input type="checkbox" name="check" value="通貨">通(つう)貨(か)</span>
-      <span><input type="checkbox" name="check" value="伝統的な料理">伝(でん)統(とう)的(てき)な料(りょう)理(り)</span>
-      <span><input type="checkbox" name="check" value="さかんなスポーツや国技">さかんなスポーツ</span>
-      <span><input type="checkbox" name="check" value="過去のオリンピック開催都市（夏季）">過(か)去(こ)のオリンピック開(かい)催(さい)都(と)市(し)</span>
-      <span><input type="checkbox" name="check" value="2016年リオオリンピックでのメダルかくとく数">2016年(ねん)リオオリンピックでのかくとくメダル数(すう)</span>
+    <div class="map-group-check map-group-check-js" >
+      <span>
+        <input id="data_check1" type="checkbox" name="check" value="州">
+        <label for="data_check1">州</label>
+      </span>
+      <span>
+        <input id="data_check2" type="checkbox" name="check" value="首都">
+        <label for="data_check2">首都</label>
+      </span>
+      <span>
+        <input id="data_check3" type="checkbox" name="check" value="面積">
+        <label for="data_check3">面積</label></span>
+      <span>
+        <input id="data_check4" type="checkbox" name="check" value="人口">
+        <label for="data_check4">人口</label></span>
+      <span>
+        <input id="data_check5" type="checkbox" name="check" value="平均寿命">
+        <label for="data_check5">平均寿命</label></span>
+      <span>
+        <input id="data_check6" type="checkbox" name="check" value="主な宗教">
+        <label for="data_check6">主な言語</label></span>
+      <span>
+        <input id="data_check7" type="checkbox" name="check" value="国・地域の旗について">
+        <label for="data_check7">国旗（地域の旗）について</label></span>
+      <span>
+        <input id="data_check8" type="checkbox" name="check" value="通貨">
+        <label for="data_check8">通貨</label></span>
+      <span>
+        <input id="data_check9" type="checkbox" name="check" value="伝統的な料理">
+        <label for="data_check9">伝統的な料理</label></span>
+      <span>
+        <input id="data_check10" type="checkbox" name="check" value="さかんなスポーツや国技">
+        <label for="data_check10">さかんなスポーツ</label></span>
+      <span>
+        <input id="data_check11" type="checkbox" name="check" value="過去のオリンピック開催都市（夏季）">
+        <label for="data_check11">過去のオリンピック開催都市</label></span>
+      <span>
+        <input id="data_check12" type="checkbox" name="check" value="2016年リオオリンピックでのメダルかくとく数">
+        <label for="data_check12">2016年リオオリンピックでのかくとくメダル数</label></span>
     </div>
-    <button class="btn-submit">調(しら)べる</button>
+    <button class="btn-submit btn-submit-js">調べる</button>
   </div>
   <script src="./assets/js/jquery-3.2.1.min.js"></script>
   <script src="./assets/js/jquery.autocomplete.js"></script>
+  <script src="./assets/js/cookie.js"></script>
   <script src="./assets/js/xlsx.full.min.js"></script>
   <script type="text/javascript" src="./assets/js/behavior.js"></script>
   <script type="text/javascript" src="./assets/js/js.js"></script>

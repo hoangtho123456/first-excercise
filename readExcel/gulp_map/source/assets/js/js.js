@@ -1,8 +1,16 @@
-var url = "H30データベースもと.xlsx";
+/*
+*js load data from excel
+*js layout index.html
+*Author: Dang Hoang Tho(danghoangtho1994@gmail.com)
+*/
 
-var BTN_SUBMIT = $(".btn-submit-js");
-var LIST_DATA = [];
-var arr = [];
+/*============variable============*/
+var url = "H30データベースもと.xlsx"; // link file excel
+
+var BTN_SUBMIT = $(".btn-submit-js"); // button submit
+var LIST_DATA = []; //list data of the specific nation which got from select box or search input
+var arr = []; //list data of all nations use for search
+
 var CHECKBOX1 = $("#data_check1");
 var CHECKBOX2 = $("#data_check2");
 var CHECKBOX3 = $("#data_check3");
@@ -16,10 +24,9 @@ var CHECKBOX10 = $("#data_check10");
 var CHECKBOX11 = $("#data_check11");
 var CHECKBOX12 = $("#data_check12");
 
-var CONTINENTS = $("#continents");
-var NATION_SEARCH = $("#search");
-var NATIONS = $('#nations');
-var SEARCH = $('#search');
+var CONTINENTS = $("#continents"); //select box continents
+var NATION_SEARCH = $("#search");  //input search nations, it is not depend from continents select-box
+var NATIONS = $('#nations'); //select box nation
 //Get data from excel
 var RESULT = {};
 
@@ -39,7 +46,8 @@ oReq.onload = function() {
 
   var data = new Uint8Array(arraybuffer);
   var workbook = XLSX.read(data, { type: "array" });
-
+  
+  //get list data nations follow sheet name.
   workbook.SheetNames.forEach(function(sheetName) {
     var roa = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], { header: 1 });
     if (roa.length > 0) {
@@ -49,13 +57,12 @@ oReq.onload = function() {
 
   //get key name of object RESULT
   var keyName = Object.keys(RESULT);
-
   clickSelect(keyName);
 
   /*
    *click pick any continents will show corresponding data nation
    */
-  $(SEARCH).autocomplete({
+  $(NATION_SEARCH).autocomplete({
     source: [arr]
   });
 }
@@ -81,8 +88,14 @@ $("#continents").on('click', function() {
   }
 });
 
+/*
+*click button submit, browser will get data(depend on checkbox was not disabled) 
+*of the specific nation and send to info.html
+*/
 BTN_SUBMIT.on('click', function() {
   var country = '';
+  //if select nation was not disabled, browser will get data follow select box nation
+  //else, search input was not disabled, browser will get data follow input search nation
   if (!NATION_SELECT.attr('disabled')) {
     country = NATION_SELECT.val();
 
@@ -92,7 +105,6 @@ BTN_SUBMIT.on('click', function() {
           if (RESULT[key][i][1] === country) {
             sessionStorage.setItem("nation", RESULT[key][i][1]);
             LIST_DATA = RESULT[key][i];
-            console.log(LIST_DATA);
             break;
           }
         }
@@ -106,14 +118,19 @@ BTN_SUBMIT.on('click', function() {
           if (RESULT[key][i][1] === country) {
             sessionStorage.setItem("nation", RESULT[key][i][1]);
             LIST_DATA = RESULT[key][i];
-            console.log(LIST_DATA);
             break;
-          }
+          } 
+        }
+        //if value was entered that didnt found in list data, set nation name = ''
+        if (sessionStorage.getItem("nation") !== country) {
+           sessionStorage.setItem("nation", "");
         }
       }
     }
   }
-  clickCheckBox();
+  //get data from checkbox was click, if checkbox was not click,
+  //data of that checkbox will not be sent to info.html
+  clickCheckBox();  
   window.open('info.html', '_self');
 });
 
@@ -139,14 +156,18 @@ function clickSelect(keyName) {
   }
 }
 
+/*
+ *Pick data to send to info.html 
+ */
 function clickCheckBox() {
+  //if Storage local was undefined, browser will not execute action bellow 
   if (typeof(Storage) !== 'undefined') {
     if (CHECKBOX1.prop("checked")) {
       if (LIST_DATA[2] !== undefined) {
         sessionStorage.setItem("州", LIST_DATA[2]);
       }
     } else {
-      sessionStorage.removeItem("州");
+      sessionStorage.removeItem("州"); //if dont click checkbox, its data will not send
     }
 
     if (CHECKBOX2.prop("checked")) {
@@ -155,7 +176,6 @@ function clickCheckBox() {
         console.log(LIST_DATA[3]);
       }
     } else {
-      //setCookie("首都", '', -1);
       sessionStorage.removeItem("首都");
     }
 
@@ -251,5 +271,4 @@ function clickCheckBox() {
       sessionStorage.removeItem("2016年リオオリンピックでのメダルかくとく数");
     }
   }
-
 }

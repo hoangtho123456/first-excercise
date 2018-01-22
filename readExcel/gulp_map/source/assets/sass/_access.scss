@@ -24,6 +24,7 @@
   }
   &-compare {
     font-weight: bold;
+    padding: 5px;
     color: black;
     background: white;
     border: 1px solid black;
@@ -37,5 +38,11 @@
     a {
       text-decoration: underline;
     }
+  }
+  &-return {
+    display: inline-block;
+    width: 80px;
+    margin-left: 100px;
+    text-align: center;
   }
 }

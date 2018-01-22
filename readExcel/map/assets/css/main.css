@@ -517,7 +517,7 @@ body {
   width: 95%;
   min-width: 760px;
   max-width: 760px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   display: block;
   position: relative;
   clear: both;
@@ -526,6 +526,9 @@ body {
 
 select {
   width: 200px;
+  height: 5.4vw;
+  max-height: 30px;
+  min-height: 25px;
 }
 
 .header-content {
@@ -638,6 +641,11 @@ select {
   width: 30%;
 }
 
+.map-group-select .select1 label {
+  text-align: left;
+  font-weight: bold;
+}
+
 .map-group-select input {
   max-width: 100%;
   height: 3.4vw;
@@ -646,14 +654,70 @@ select {
 }
 
 .map-group-check {
-  width: 90%;
-  height: auto;
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /*Hide the browser's default checkbox*/
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Show the checkmark when checked */
 }
 
-.map-group-check span {
-  display: inline-block;
-  margin-right: 30px;
-  margin-bottom: 10px;
+.map-group-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.map-group-check .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #eee;
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Style the checkmark/indicator */
+}
+
+.map-group-check .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.map-group-check .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.map-group-check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.map-group-check input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.map-group-check input:checked ~ .checkmark:after {
+  display: block;
 }
 
 .img-pdf {
@@ -663,11 +727,97 @@ select {
 
 .btn-submit {
   display: block;
+  width: 100px;
   margin: 0 auto;
   text-align: center;
+  font-weight: bold;
   padding: 10px;
   background: pink;
-  border: none;
+  border: 1px solid #eee;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.input-search {
+  background: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid black;
+}
+
+.info-content {
+  margin-bottom: 20px;
+}
+
+.info-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  height: 50px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  text-align: left;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+  border: 2px solid black;
+}
+
+.info p {
+  margin-bottom: 10px;
+}
+
+.info-p-tit {
+  font-weight: bold;
+  text-align: left;
+}
+
+.info-compare {
+  font-weight: bold;
+  padding: 5px;
+  color: black;
+  background: white;
+  border: 1px solid black;
+}
+
+.info-link {
+  width: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+.info-link a {
+  text-decoration: underline;
+}
+
+.info-return {
+  display: inline-block;
+  width: 80px;
+  margin-left: 100px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 480px) {

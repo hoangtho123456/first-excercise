@@ -1,7 +1,10 @@
-var RADIO = $(".map-group-radio input[type='radio']");
-var SELECT1 = $(".select1-js");
-var SELECT2 = $(".select2-js");
-
+var RADIO = $(".map-group-radio input[type='radio']"); //radio for hide/how select box
+var SELECT1 = $(".select1-js"); //select box in left
+var SELECT2 = $(".select2-js"); //select box in right
+var NATION_SELECT = $("#nations");
+var NATION_SEARCH = $("#search");
+var BTN_SUBMIT = $(".btn-submit-js");
+/*=======Event handler========*/
 $(document).ready(function() {
   SetActive();
 });

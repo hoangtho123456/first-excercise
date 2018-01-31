@@ -2,6 +2,8 @@
 *js layout info.html
 *Author: Dang Hoang Tho(danghoangtho1994@gmail.com)
 */
+
+/*=========Variable=========*/
 var COUNTRY_NAME = $('.country-name-js'); //country name label
 var LIST_INFO = $('.info-p-tit'); //list info of specific nation was picked from index.html
 var BTN_COMPARE = $('.info-compare-js');
@@ -19,6 +21,7 @@ var INFO_JA10 = $('#infoFirst_10');
 var INFO_JA11 = $('#infoFirst_11');
 var INFO_JA12 = $('#infoFirst_12');
 var INFO_JA13 = $('#infoFirst_13');
+
 /*=========Event handler=========*/
 $(document).ready(function() {
   showListInfo();
@@ -115,6 +118,9 @@ function showInfoJa() {
   }
 }
 
+/*
+*Show list info of picked nations from index.html
+*/
 function showListInfo() {
   if(typeof(Storage) !== 'undefined') {
     console.log(sessionStorage.getItem("nation"));
@@ -126,6 +132,7 @@ function showListInfo() {
           if(sessionStorage.getItem("州") !== null) {
             LIST_INFO.eq(i).next().text(sessionStorage.getItem("州"));
           } else {
+            //set display for label and its parent("p") is none if it has not data
             LIST_INFO.eq(i).css("display", "none");
             LIST_INFO.eq(i).parent().css("display", "none");
           }

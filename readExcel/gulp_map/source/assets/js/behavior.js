@@ -1,9 +1,14 @@
+/*
+*js layout index.html
+*Select box's action when page loaded.
+*Author: Dang Hoang Tho(danghoangtho1994@gmail.com)
+*/
+
+/*=======Variable========*/
 var RADIO = $(".map-group-radio input[type='radio']"); //radio for hide/how select box
 var SELECT1 = $(".select1-js"); //select box in left
 var SELECT2 = $(".select2-js"); //select box in right
-var NATION_SELECT = $("#nations");
-var NATION_SEARCH = $("#search");
-var BTN_SUBMIT = $(".btn-submit-js");
+
 /*=======Event handler========*/
 $(document).ready(function() {
   SetActive();

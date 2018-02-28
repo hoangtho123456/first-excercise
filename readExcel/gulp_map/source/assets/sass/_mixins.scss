@@ -8,6 +8,12 @@
   }
 }
 
+@mixin respond-phone($media) {
+  @media only screen and (min-width: $media + 'px') {
+    @content;
+  } 
+}
+
 @mixin label-green () {
 	font-weight: 500;
 	color: $colorGreen;
@@ -41,4 +47,24 @@
   font-weight: 500;
   color: $color;
   background-color: $bg;
+}
+
+@mixin login-text() {
+  text-align: left;
+  opacity: 1;
+  font: {
+    weight: 600;
+    size: 24px; 
+  }
+}
+
+@mixin btn-style() {
+  color: $colorWhite;
+  border-radius: 5px;
+  background: $colorStrongBlue;
+  border: 2px solid $colorBlue;
+  &:hover {
+    color: $colorBlack !important;
+    background: $colorWhite;
+  }
 }

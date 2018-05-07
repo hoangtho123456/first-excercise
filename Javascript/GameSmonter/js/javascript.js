@@ -11,7 +11,7 @@ var SCORE = 10;
 var HEART = 3;
 var LEVEL = 1;
 var BOOM = 3;
-var LV_SPEED = [1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 4]; //speed of moonster follow level
+var LV_SPEED = [1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 5]; //speed of moonster follow level
 var LV_NUMBER_MONSTER = [1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var LV_SCORE = [1, 50, 100, 150, 200, 250, 350, 450, 800, 1600, 3200, 6400];
 var LV_POSITION = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -94,7 +94,7 @@ var monster5 = new Monster(630, 90, 630, 90, 240, 240, 4, 0, IMG_MONSTER5); //le
 var monster6 = new Monster(630, 270, 630, 270, 320, 240, 5, 0, IMG_MONSTER6); //right center
 var monster7 = new Monster(630, 490, 630, 490, 240, 240, 6, 0, IMG_MONSTER7); //right bottom 
 var monster8 = new Monster(330, 490, 330, 490, 240, 240, 7, 0, IMG_MONSTER8); //left bottom
-var monster9 = new Monster(330, 270, 330, 270, 0, 0, 8, 1, IMG_MONSTER9);//329center
+var monster9 = new Monster(330, 270, 330, 270, 0, 0, 8, 1, IMG_MONSTER9);//center
 var monsters = [monster1, monster2, monster3, monster4, monster5, monster6, monster7, monster8, monster9];
 
 //function start game, if status = 1 (Play) play game. If status = 0 is stop or status = 2 is pause
@@ -105,8 +105,8 @@ function startGame() {
         randomMonster();
         gameMode();
     }
-    requestAnimation(startGame);
-    //setTimeout(startGame, 1000 / 60);
+    //requestAnimation(startGame);
+    setTimeout(startGame, 1000 / 60);
 }
 //Draw theme
 function drawTheme() {

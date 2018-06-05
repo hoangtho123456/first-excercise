@@ -1,0 +1,59 @@
+* {
+}
+.center {
+    display:  block;
+    width: 700px;
+    margin: 0 auto;
+}
+article.tin {
+    width:  700px;
+    height: 200px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #84cae4;
+}
+
+.tin img {
+    float:  left;
+    margin-right: 12px;
+}
+
+span.gio {
+    font-weight:  bold;
+    color: #777;
+}
+
+a.tieude {
+    font-family:  arial;
+    display:  block;
+    text-decoration: none;
+    text-align:  left;
+    padding-top:  10px;
+    color: black;
+    font-size:  18px;
+    padding-bottom:  10px;
+    line-height: 25px;
+}
+
+a.tieude:hover {
+    opacity: 0.5;
+}
+
+a.danhmuc:hover {
+    background:  black;
+    color: white;
+}
+
+a.danhmuc {
+    text-decoration: none;
+    font-size: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    color: black;
+    border: 1px solid grey;
+    padding: 2px 3px;
+}
+
+.tin p {
+    color: gray;
+}

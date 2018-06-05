@@ -67,11 +67,12 @@ body {
 	margin: 0 8px;
 	position: relative;
 }
+.divMenu .supMenu li a {display: block;}
 .divMenu .supMenu li:hover .menu{
 	display:block;
 	position: absolute;
 	z-index: 999;
-	top: 18px;
+	//top: 18px;
 	left: 0;
 }
 .divMenu .supMenu li:hover .menu li:hover .subMenuBar{

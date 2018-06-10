@@ -127,7 +127,6 @@ gulp.task('watch', function () {
     gulp.watch(paths.html.src, ['html'])
     gulp.watch(paths.xlsx.src, ['xlsx'])
     gulp.watch(paths.scripts.src, ['js'])
-    gulp.watch(paths.scripts.src, ['js'])
     gulp.watch(paths.images.src, paths.fonts.src, paths.css.src, ['copy'])
 })
 //default

@@ -1,0 +1,43 @@
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+@function calc-img($target) {
+  @return ($target / 2) + px;
+}
+
+@mixin respond-to($media) {
+  @media only screen and (max-width: $media + 'px') {
+    @content;
+  }
+}
+
+@mixin respond-phone($media) {
+  @media only screen and (min-width: $media + 'px') {
+    @content;
+  } 
+}
+
+@mixin label-green () {
+	font-weight: 500;
+	color: $colorGreen;
+}
+@mixin label-blue () {
+	font-weight: 500;
+	color: $colorStrongBlue;
+}
+@mixin f-sp() {
+  display: inline-block;
+  width: 100%;
+  text-align:  center;
+  li {
+    display:  inline-block;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@function get-vw($width, $size) {
+  $vw-context: $width * 0.01;
+  @return ($size / $vw-context) * 1vw;
+}

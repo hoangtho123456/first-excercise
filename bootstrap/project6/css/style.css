@@ -1,0 +1,166 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.top1 {
+	display:  block;
+    width:  100%;
+    height:  auto;
+    padding: 20% 0;
+    background: url(../images/bg.jpg) 100% 100%;
+}
+
+.top1 h1 {
+    font-size: 40px;
+}
+
+.top1 p {
+    font-size:  16px;
+}
+
+.top1 .btn.btn-default {
+    border:  none;
+    border-radius:  0;
+    background: #6a6161;
+    color: white;
+}
+
+.top1 a.btn.btn-default:hover {background: #b5abab;}
+
+.top2 h2 {
+    font-size: 28px;
+}
+
+.top2 p {
+    font-size: 14px;
+}
+
+.top2 {
+    padding: 30px 0;
+}
+
+.top3 {
+    color: white;
+    background: #7a7ab3;
+    padding-bottom: 30px;
+}
+
+.top3 h2 {
+    font-size: 28px;
+    padding-top: 30px;
+}
+
+hr.botline {
+    width: 12%;
+    margin:  0 auto;
+    margin-bottom: 32px;
+}
+
+.bigicon .fa {
+    width: 80px;
+    background:  white;
+    color: #2196F3;
+    height:  80px;
+    line-height: 80px;
+    border-radius: 50%;
+    font-size: 40px;
+}
+a.btn.btn-default {
+    border:  none;
+    border-radius:  0;
+    font-size: 13px;
+}
+
+.top4.bg {
+    height: 180px;
+    background: url(../images/office.jpg);
+    padding: 46px 0;
+    /* background-size:  cover; */
+}
+
+.top4.bg {}
+
+.top4 h2 {
+    font-size:  41px;
+    color: hsl(88, 7%, 25%);
+}
+
+h2 {}
+
+img.img-responsive {}
+
+.top5 img.img-responsive {
+    /* margin-bottom: 20px; */
+    /* width: 100%; */
+    margin: 0 auto 20px;
+    width: 95%;
+    height:  50%;
+}
+
+img.img-responsive:hover {
+    opacity: 0.5;
+}
+
+.top5 a.btn.btn-default {
+    color:  white;
+    border-radius: 0;
+    border: none;
+    background: #918080;
+}
+
+.top6.blue {
+    background: #2196F3;
+    padding: 40px 0;
+}
+
+a.btn1.btn.btn-default, a.btn2.btn.btn-default {
+    background: #1d1b1b;
+    border-radius:  2px;
+    /* border: 1px; */
+    color: white;
+}
+
+footer {
+    padding: 40px 0;
+}
+
+/*btn top*/
+.btn-top {
+    position:  fixed;
+    top: 6px;
+    background: #000000ab;
+    color: white;
+    right: 6px;
+    padding: 10px 15px;
+}
+
+.btn-top a.fa.fa-bars {
+    color:  white;
+    font-size: 20px;
+}
+
+.right-menu {
+    color:  white;
+    position:  fixed;
+    right:  -300px;
+    top: 0;
+    background:  black;
+    height:  1900px;
+    width:  300px;
+    z-index: 3;
+    transition:  all 0.5s;
+}
+.out {right: 0;}
+
+ul.colmenu {
+    list-style: none;
+}
+
+.colmenu a {
+  color: white;
+  padding: 10px 15px;
+  display:  block;
+  font-size: 15px;
+  border-bottom: 1px solid gray;
+}

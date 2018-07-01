@@ -1,0 +1,233 @@
+
+*{margin:0;padding:0; }
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+nav.navbar.navbar-default {
+    height: 111px;
+    margin-bottom: 0;
+    background: #3b4478;
+}
+
+ul.nav.navbar-nav.navbar-right {
+    padding-top:  30px;
+}
+
+.navbar-default .navbar-brand {
+    margin-top: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    color:  white;
+}
+
+body {
+    font-family:  'Montserrat', sans-serif;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-size:  14px;
+    font-weight: 500;
+    color:  white;
+    text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-brand:focus {
+    color: #72be7e;
+}
+
+/*blue bg*/
+.bluebg {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 70px 0;
+    background: #009688;
+}
+.star {
+    width: 313px;
+    margin:  0 auto;
+    height: 5px;
+    margin: 30px auto;
+    background: white;
+}
+
+.star i {
+    position: relative;
+    top: -26px;
+    padding: 10px;
+    font-size: 40px;
+    color: white;
+    background: #009688;
+}
+.bluebg h1 {
+    color: white;
+    font-size: 38px;
+    text-transform:  uppercase;
+    font-weight: 520;
+}
+.bluebg .text-center p {
+    font-size:  18px;
+    color:  white;
+}
+
+.portfolio {
+    padding-top:  110px;
+}
+
+.portfolio h2 {
+    font-size: 42px;
+    color: #4c84b0;
+}
+
+.portfolio .star, .contactme .star {
+    width:  230px;
+    background:  black;
+}
+
+.portfolio .star i, .contactme .star i {
+    color:  black;
+    background: white;
+}
+
+.product {
+    position:  relative;
+    margin-bottom: 30px;
+}
+
+.phongto {
+    position:  absolute;
+    width:  100%;
+    height:  100%;
+    top: 0;
+    left:  0;
+    text-align:  center;
+    background: #8BC34A;
+    line-height: 19.6;
+    opacity:  0;
+    transition: all 0.5s;
+    cursor:  pointer;
+}
+
+.phongto i {
+    font-size:  48px;
+    color:  white;
+}
+
+.product:hover .phongto {
+    opacity:  0.8;
+}
+
+/*about*/
+.about {
+    margin: 40px 0;
+    padding-top:  40px;
+    padding-bottom:  70px;
+    color:  white;
+    background: #009688;
+}
+
+.about h2 {font-size:  3em;}
+
+a.btn.btn-default.btn-download {
+    background:  no-repeat;
+    border: 1px solid white;
+    padding:  10px 20px;
+    margin:  20px auto;
+    font-size: 1.2em;
+}
+
+/*contact*/
+.contactme {
+    padding-top:  40px;
+    margin-bottom: 50px;
+}
+
+.contactme h2 {
+    font-size:  42px;
+}
+
+input.form-control {
+    box-shadow:  0 0 0 transparent;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 5px;
+    display:  block;
+    font-size:  16px;
+}
+
+.contactme textarea {
+    font-size:  20px;
+    color: gray;
+    padding: 10px 5px;
+    border:  none;
+    width:  100%;
+    height:  200px;
+    border-bottom:  1px solid #ccc;
+}
+
+.btn-send {padding: 22px 22px;background: #4CAF50;border: 1px solid #4CAF50;}
+
+/*footer*/
+
+.foot1 {
+    background: #414e95;
+    color:  white;
+    padding-top:  50px;
+    padding-bottom: 70px;
+}
+
+.foot1 h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding-bottom: 19px;
+}
+
+footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-size:  15px;
+    font-weight: normal;
+}
+
+footer li {
+    display: inline;
+    list-style-type:  none;
+}
+
+footer li a {
+    color:  white;
+    padding: 12px;
+    border:  1px solid white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin: 0 10px;
+    transition: all 0.8s;
+    font-size: 20px!important;
+}
+
+footer ul {
+    display: inline;
+}
+
+.foot2 {
+    background: #1e2447;
+    color:  white;
+    padding: 10px;
+}
+
+.foot2 p {
+    font-size: 12px;
+    padding-top: 8px;
+}
+
+footer ul li > a:hover {
+    background:  white;
+    color: #629962;
+    text-decoration:  none;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color:  white;
+    background:  black;
+}

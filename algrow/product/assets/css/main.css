@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.cons-box2, .also-row {
+.header1-contact, .cons-box2, .also-row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -7,12 +7,20 @@
   display: flex;
 }
 
-.cons-box2, .also-row {
+.header1-contact, .cons-box2, .also-row {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
      -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.wrap {
+  position: relative;
+}
+
+a.btn-nav {
+  position: absolute;
 }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -463,6 +471,7 @@ template {
 }
 
 /**
+*author: dang hoang tho
 *file style.scss
 */
 @font-face {
@@ -473,17 +482,27 @@ template {
 
 @font-face {
   font-family: '游ゴシック';
-  src: url("../fonts/yugothib.ttf");
+  src: url("../fonts/yugothib.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: 'ヒラギノ角ゴ Pro', "Hiragino Kaku Gothic Pro";
+  font-family: 'ヒラギノ角ゴ Pro';
   src: url("../fonts/Hiragino-Sans-GB-W6.otf") format("otf");
 }
 
 @font-face {
-  font-family: 'Meiryo', 'メイリオ';
-  src: url("../fonts/meiryo.ttc") format("ttc");
+  font-family: "Hiragino Kaku Gothic Pro";
+  src: url("../fonts/Hiragino-Sans-GB-W6.otf") format("otf");
+}
+
+@font-face {
+  font-family: 'Meiryo';
+  src: url("../fonts/meiryo.ttc");
+}
+
+@font-face {
+  font-family: 'メイリオ';
+  src: url("../fonts/meiryo.ttc");
 }
 
 a {
@@ -499,10 +518,10 @@ a:hover {
 
 body {
   min-width: 1000px;
-  font-size: 14px;
+  font-size: .9rem;
   font-weight: 500;
+  font-family: "Meiryo", "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Koburi", sans-serif;
   color: #7a7a7a;
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ",  "Meiryo", "Koburi", sans-serif;
   background: #ffffff;
 }
 
@@ -514,6 +533,7 @@ body {
   display: none !important;
 }
 
+/* button show inline */
 .btn-pc-in {
   display: inline !important;
 }
@@ -532,6 +552,7 @@ body {
   display: block;
   min-width: 1000px;
   padding-top: 21px;
+  border-top: 10px solid #0f5c9b;
 }
 
 .header1 {
@@ -546,16 +567,6 @@ body {
 }
 
 .header1-contact {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   float: right;
   width: 502px;
   padding-top: 11px;
@@ -590,7 +601,6 @@ body {
   max-width: 950px;
   height: auto;
   margin: 0 auto;
-  position: relative;
 }
 
 .banner {
@@ -604,12 +614,13 @@ body {
 
 .banner-text h1 {
   display: inline-block;
-  border: 1px solid white;
+  border: 2px solid white;
   padding: 18px 17px;
   color: white;
   font-weight: 500;
 }
 
+/* banner images */
 img.img-banner-tit {
   display: none;
 }
@@ -686,6 +697,7 @@ img.img-banner-tit {
   padding-bottom: 0;
 }
 
+/* construction */
 .cons {
   display: block;
   padding: 60px 0 70px;
@@ -707,7 +719,7 @@ img.img-banner-tit {
   padding: 17px 0 40px;
   font-size: 12px;
   font-family: sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   color: #4273a6;
 }
 
@@ -733,12 +745,20 @@ img.img-banner-tit {
   color: #0f5c9b;
 }
 
+.cons-box2-col3-h2 {
+  padding: 16px 0 !important;
+}
+
+.cons-box2-col3 a img {
+  vertical-align: middle;
+}
+
 img.home2 {
   margin-top: 3px;
 }
 
 img.home3 {
-  margin-top: -6px;
+  margin-top: -7px;
 }
 
 .also-row {
@@ -759,23 +779,24 @@ img.home3 {
 
 .also-col1 {
   position: relative;
+  height: 387px;
   left: -50px;
 }
 
 .also-col2 {
   margin-top: 65px;
-  margin-right: 75px;
+  margin-right: 65px;
 }
 
 .also-col2 h2 {
   font-family: sans-serif;
   color: black;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .also-col2 p {
-  margin-bottom: 31px;
+  margin-bottom: 30px;
   color: #636363;
   line-height: 1.45;
 }
@@ -811,7 +832,7 @@ img.home3 {
 }
 
 .address-btn1 {
-  display: block;
+  max-width: 480px;
   margin: 0 auto 28px;
   text-align: center;
 }
@@ -830,23 +851,20 @@ img.home3 {
 }
 
 .footer {
-  padding: 42px 0;
+  padding: 21px 31px;
   background: #ccc;
 }
 
 .footer-l1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 574px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .footer-l1 li {
-  list-style-type: none;
+  display: inline-block;
   padding: 0 20px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  list-style-type: none;
   border-left: 1px solid #898989;
 }
 
@@ -861,26 +879,22 @@ img.home3 {
 }
 
 .footer-l2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 636px;
-  margin: 14px auto 0;
+  text-align: center;
 }
 
 .footer-l2 li {
-  list-style-type: none;
+  display: inline-block;
   padding: 0 20px;
+  margin-bottom: 10px;
+  list-style-type: none;
   border-left: 1px solid #898989;
 }
 
 .footer-l2 li a {
   display: block;
-  color: #5e5e5e;
   font-size: 14px;
   text-decoration: none;
+  color: #5e5e5e;
 }
 
 .footer-l2 li:last-child {
@@ -895,7 +909,6 @@ img.home3 {
 
 a.btn-nav {
   display: none;
-  position: absolute;
   width: 14%;
   right: 0;
   height: 100%;
@@ -908,22 +921,6 @@ a.btn-nav {
 a.btn-nav img {
   width: 100%;
   height: 100%;
-}
-
-ul.footer-l1, ul.footer-l2 {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-}
-
-.footer {
-  padding: 21px 31px;
-}
-
-.footer-l1 li, .footer-l2 li {
-  display: inline-block;
-  padding: 0 10px;
-  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -944,15 +941,12 @@ ul.footer-l1, ul.footer-l2 {
     display: inline !important;
   }
   .header {
+    padding: 5px 20px 15px 5%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
     min-width: 100%;
-    padding-left: 5%;
-    padding-bottom: 15px;
     border-top: 10px solid #0f5c9b;
-    padding-top: 5px;
-    padding-right: 20px;
   }
   .header1 {
     height: auto;
@@ -1052,7 +1046,7 @@ ul.footer-l1, ul.footer-l2 {
   }
   .cons-box2-col3 h2 {
     font-size: 12px;
-    padding: 6px 0;
+    padding: 6px 0 !important;
   }
   .also-row {
     display: block;
